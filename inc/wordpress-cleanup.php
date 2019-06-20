@@ -45,7 +45,9 @@ add_filter( 'wp_default_scripts', 'tkm_dequeue_jquery_migrate' );
  *
  */
 function tkm_header_meta_tags() {
+	echo '<meta http-equiv="content-type" content="' . get_bloginfo( 'html_type' ) . '">';
 	echo '<meta charset="' . get_bloginfo( 'charset' ) . '">';
+	echo '<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">';
 	echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
 	echo '<link rel="profile" href="http://gmpg.org/xfn/11">';
 	echo '<link rel="pingback" href="' . get_bloginfo( 'pingback_url' ) . '">';
