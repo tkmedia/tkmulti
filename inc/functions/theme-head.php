@@ -164,7 +164,7 @@ if( ! function_exists( 'tkmulti_styles' ) )
 		wp_enqueue_style( 'v4-shims', THEME_URI . '/assets/css/v4-shims.min.css', array(), filemtime( THEME_URI . '/assets/css/v4-shims.min.css' ) );
 		wp_enqueue_style( 'global', THEME_URI . '/assets/css/global.css', array(), filemtime( THEME_URI . '/assets/css/global.css' ) );
 		wp_enqueue_style( 'aos', THEME_URI . '/assets/css/aos.css', array(), filemtime( THEME_URI . '/assets/css/aos.css' ) );
-		wp_enqueue_style( 'fancybox', THEME_URI . '/assets/css/fancybox.css', array(), filemtime( THEME_URI . '/assets/css/jquery.fancybox.min.css' ) );
+		wp_enqueue_style( 'fancybox', THEME_URI . '/assets/css/jquery.fancybox.min.css', array(), filemtime( THEME_URI . '/assets/css/jquery.fancybox.min.css' ) );
 		
 		wp_enqueue_style( 'main-style', THEME_URI . '/assets/css/main.css', array(), filemtime( THEME_URI . '/assets/css/main.css' ) );
 
@@ -240,7 +240,7 @@ function woocommerce_support() {
  * Theme Fonts URL
  * --------------------------------------------------------------------------- */
 function tkmulti_theme_fonts_url() {
-	$font_families = apply_filters( 'tkmulti_theme_fonts', array( 'Source+Assistant:200,400,600,700' ) );
+	$font_families = apply_filters( 'tkmulti_theme_fonts', array( 'Assistant:200,400,600,700' ) );
 	$query_args = array(
 		'family' => implode( '|', $font_families ),
 		'subset' => 'hebrew,latin',
