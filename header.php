@@ -37,7 +37,7 @@ $logo_side = get_option( 'options_header_logo_side' );
 $nav_layout = get_option( 'options_menu_item_layout' );
 $top_panel_show = get_option( 'options_header_top_panel_show' );
 
-echo '<body id="body-' . the_ID() . '" class="' . join( ' ', get_body_class( 'loading' ) ) . '"' . tkm_schema_body() . '>';
+echo '<body id="body-' . the_ID() . '" class="' . join( ' ', get_body_class( 'loading' ) ) . '"' . tkmulti_schema_body() . '>';
 if ( function_exists( 'wp_body_open' ) ) {
 	wp_body_open();
 }
