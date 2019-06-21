@@ -47,3 +47,21 @@ echo '<div id="page" class="site ' . $site_style . ' ' . $header_style . ' ' . $
 	tha_header_before();
 	echo '<header id="header-container" class="header-bar animated clearfix fixedHeader sticky_header ' . if (is_front_page()) { . 'front_header_container' . } elseif (is_tax( 'product_cat' ) || is_category() ) { . 'archive_header_container' . } elseif ( is_singular() ) { . 'deafault_header_container' . } else { . 'deafault_header_container' . } . ' ' . $logo_side . '" itemscope="itemscope" itemtype="http://schema.org/WPHeader" role="banner">';
 		echo '<div class="header_wrapper_bg">';
+
+			if( $top_panel_show ) {
+			echo '<div class="header_topbar_container top_panel">';
+				echo '<div class="header_topbar_container_inner wrap">';
+					get_template_part( 'partials/header/top-bar' );
+				echo '</div>';
+			echo '</div>';				
+			}
+			
+			echo '<div class="header_wrapper wrap">';
+
+
+			echo '</div>';
+		echo '</div>';
+	echo '</header>';
+	
+echo '<main id="main_content" role="main">';
+	echo '<div class="site_overlay"></div>';
