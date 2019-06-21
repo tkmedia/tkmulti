@@ -38,3 +38,12 @@ $nav_layout = get_option( 'options_menu_item_layout' );
 $top_panel_show = get_option( 'options_header_top_panel_show' );
 
 echo '<body id="body-' . the_ID() . '" class="' . join( ' ', get_body_class( 'loading' ) ) . '"' . tkm_schema_body() . '>';
+if ( function_exists( 'wp_body_open' ) ) {
+	wp_body_open();
+}
+tha_body_top();
+echo '<div id="page" class="site ' . $site_style . ' ' . $header_style . ' ' . $header_color . '">';
+	echo '<a class="skip-link screen-reader-text" href="#main-content">' . esc_html__( 'Skip to content', 'tkmulti' ) . '</a>';
+	tha_header_before();
+	echo '<header id="header-container" class="header-bar animated clearfix fixedHeader sticky_header ' . if (is_front_page()) { . 'front_header_container' . } elseif (is_tax( 'product_cat' ) || is_category() ) { . 'archive_header_container' . } elseif ( is_singular() ) { . 'deafault_header_container' . } else { . 'deafault_header_container' . } . ' ' . $logo_side . '" itemscope="itemscope" itemtype="http://schema.org/WPHeader" role="banner">';
+		echo '<div class="header_wrapper_bg">';
