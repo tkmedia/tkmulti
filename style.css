@@ -1,0 +1,26 @@
+/*
+Theme Name: TKM Starter V2
+Theme URI: https://www.tkmedia.co.il/%D7%94%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D-%D7%A9%D7%9C%D7%A0%D7%95/%D7%91%D7%A0%D7%99%D7%99%D7%AA-%D7%90%D7%AA%D7%A8%D7%99-%D7%95%D7%95%D7%A8%D7%93%D7%A4%D7%A8%D7%A1-wordpress/
+Author: Tal Katz
+Author URI: https://www.tkmedia.co.il
+Description: tkmulti a WordPress theme from Scratch 
+Version: 2.0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: tkmulti
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+/* TGM ------------------------------------------------------------------------------- */
+
+.tgmpa.wrap .mfn-tgm-message { background: #dce7f7 none repeat scroll 0 0; border-left: 3px solid #b9cbe4; margin: 20px 0; padding: 20px; font-size: 21px; font-weight: 300;}
+
+
+/* Database Reset -------------------------------------------------------------------- */
+
+.tools_page_database-reset #wpbody-content #vc_license-activation-notice,
+.tools_page_database-reset #wpbody-content #setting-error-tgmpa,
+.tools_page_database-reset #wpbody-content #message{display:none}
