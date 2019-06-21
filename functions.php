@@ -42,7 +42,7 @@ require_once( LIBS_DIR .'/theme-functions.php' );
 require_once( LIBS_DIR .'/theme-head.php' );
 
 // ACF Fields -----------------------------------------------------------------
-require_once( THEME_DIR .'/acf-blocks-site.php' );
+require_once( THEME_DIR .'/inc/acf-blocks-site.php' );
 
 // Custom template tags for this theme ----------------------------------------
 //require( LIBS_DIR .'/template-tags.php' );
@@ -56,22 +56,17 @@ require( THEME_DIR .'/inc/customizer.php' );
 // Functions Parts ------------------------------------------------------------
 require( THEME_DIR .'/inc/login-logo.php' );
 require( THEME_DIR .'/inc/navigation.php' );
-
+require( THEME_DIR .'/inc/loop.php' );
+require( THEME_DIR .'/inc/tinymce.php' );
+require( THEME_DIR .'/inc/disable-editor.php' );
+require( THEME_DIR .'/inc/amp.php' );
+require( THEME_DIR .'/inc/display-posts.php' );
+require( THEME_DIR .'/inc/instantpage.php' );
 
 // WooCommerce ----------------------------------------------------------------
 if ( class_exists( 'WooCommerce' ) ) {
 	require_once( THEME_DIR . '/inc/woocommerce.php' );
 }
 
-
-//require get_template_directory() . '/inc/sidebar-layouts.php';
-
-//require get_template_directory() . '/inc/loop.php';
-//require get_template_directory() . '/inc/tinymce.php';
-//require get_template_directory() . '/inc/disable-editor.php';
-//require get_template_directory() . '/inc/amp.php';
-//require get_template_directory() . '/inc/display-posts.php';
-//require get_template_directory() . '/inc/instantpage.php';
-//require get_template_directory() . '/inc/wpforms.php';
 add_filter( 'get_comment_date', '__return_empty_string' );
 add_filter( 'get_comment_time', '__return_empty_string' );
