@@ -1,0 +1,82 @@
+/* ACF Flexible Field Style */
+.acf-flexible-content .layout .acf-fc-layout-handle {
+    color: #ffffff !important;
+    font-size: 17px !important;
+    background: #0085ba;
+}
+.acf-flexible-content .layout {
+    border: 1px solid #0085ba !important;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?nf3iv4');
+  src:  url('../fonts/icomoon.eot?nf3iv4#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?nf3iv4') format('truetype'),
+    url('../fonts/icomoon.woff?nf3iv4') format('woff'),
+    url('../fonts/icomoon.svg?nf3iv4#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[class^="icon-"], [class*=" icon-"] {font-family: 'icomoon' !important;speak: none;font-style: normal;font-weight: normal;font-variant: normal;text-transform: none;line-height: 1;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
+
+.icon-arrow-back:before {content: "\e900";}
+.icon-arrow-next:before {content: "\e901";}
+.icon-play:before {content: "\e902";}
+.icon-grid:before {content: "\e903";}
+.icon-down-arrow:before {content: "\e904";}
+.icon-phone-wapp:before {content: "\e905";}
+.icon-waze:before {content: "\e906";}
+.icon-cross-out:before {content: "\e910";}
+.icon-row-full:before {content: "\e907";color: #4c4c4c;}
+.icon-row-2:before {content: "\e908";color: #4c4c4c;}
+.icon-row-3:before {content: "\e909";color: #4c4c4c;}
+.icon-row-4:before {content: "\e90a";color: #4c4c4c;}
+.icon-row-2-1:before {content: "\e90b";color: #4c4c4c;}
+.icon-row-1-2:before {content: "\e90c";color: #4c4c4c;}
+.icon-row-2-1-1:before {content: "\e90d";color: #4c4c4c;}
+.icon-row-1-2-1:before {content: "\e90e";color: #4c4c4c;}
+.icon-row-1-1-2:before {content: "\e90f";color: #4c4c4c;}
+.icon-row-1-3-1:before {content: "\e911";color: #4c4c4c;}
+.icon-row-5:before {content: "\e912";color: #4c4c4c;}
+.icon-row-6:before {content: "\e913";color: #4c4c4c;}
+.icon-row-1-4:before {content: "\e914";color: #4c4c4c;}
+.icon-row-4-1:before {content: "\e915";color: #4c4c4c;}
+.icon-row-2-2-1:before {content: "\e916";color: #4c4c4c;}
+
+ul.acf-radio-list [class^="icon-"] {font-size: 25px;}
+
+/* Plugin - Minimum Featured Image Size - Style */
+.mfis_publishing_disabled {background: #f8745a;}
+.mfis_publishing_disabled > span.mfis_icon {margin-right: 0px;color: #f8735a;margin-left: 20px;}
+
+/* Product Category Edit Page */
+.taxonomy-product_cat #edittag {max-width: 1600px;}
+
+/* Kadence Blocks */
+.rtl .editor-row-first-column__resizer {right: 0;left: auto;}
+.rtl .right-column-width-size {right: 100%;left: auto;}
+.rtl .left-column-width-size {left: 0px;right: auto;}
+.rtl .left-column-width-size {padding-left:10px; padding-right: 0px;}
+.rtl .right-column-width-size {padding-right:10px; padding-left: 0px;}
+.rtl .components-resizable-box__handle.components-resizable-box__handle-right {left: -5px;right: auto !important;}
+
+.rtl .wp-block-kadence-advancedbtn .kt-btn-wrap {margin-right: 0px;margin-left: 5px;}
+.rtl .wp-block-kadence-advancedbtn .kt-btn-wrap:last-child {margin-left: 0px;}
+.rtl .wp-block-kadence-advancedbtn .btn-area-wrap {margin-right: 0px;margin-left: 5px;margin-right: 5px;}
+.rtl .wp-block-kadence-advancedbtn .btn-area-wrap:last-child {margin-left: 0px;}
+
+.rtl .components-button-group.kt-size-type-options {text-align: left;}
+.rtl .kt-size-tabs {padding-top: 30px;}
+
+/* Content Blocks
+-------------------------------------------------------------- */
+/* Sercive Icon Col */
+.si_services_item {position: relative;}
+span.si_services_item_icon {position: absolute;right: 0;top: 0.73em;z-index: 10;font-size: 3.1em;padding: 1px;font-weight: 300;}
+span.si_services_item_icon i {font-weight: 300 !important;}
+.si_services_item_info {padding-top: 3.5em;position: relative;}
+.si_services_item_number {color: #f7f7f7;font-size: 8.214em;font-weight: bolder;line-height: 1;text-transform: uppercase;position: absolute;z-index: 0;top: 0;right: 0;display: inline-block;text-align: right;}
+.si_services_item_title {padding-right: 3em;font-size: 2rem;font-weight: 400;line-height: 1;text-transform: uppercase;letter-spacing: 0.6px;}
+.si_services_item_content {margin-top: 2em;max-width: 94%;color: #898e91;}
+.si_services_item_button.si_item_button {margin: 1.5em 0 1.2em;color: #d72323;font-size: 1.143em;font-weight: 400;font-style: normal;line-height: 1.5em;text-decoration: none;text-transform: uppercase;letter-spacing: 1px;}
