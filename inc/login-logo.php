@@ -11,16 +11,16 @@
  * Login Logo URL
  *
  */
-function tkm_login_header_url( $url ) {
+function tkmulti_login_header_url( $url ) {
     return esc_url( home_url() );
 }
-add_filter( 'login_headerurl', 'tkm_login_header_url' );
+add_filter( 'login_headerurl', 'tkmulti_login_header_url' );
 add_filter( 'login_headertext', '__return_empty_string' );
 /**
  * Login Logo
  *
  */
-function tkm_login_logo() {
+function tkmulti_login_logo() {
 	$logo_path = '/assets/images/logo.png';
 	if( ! file_exists( get_stylesheet_directory() . $logo_path ) )
 		return;
@@ -41,4 +41,4 @@ function tkm_login_logo() {
     </style>
     <?php
 }
-add_action( 'login_head', 'tkm_login_logo' );
+add_action( 'login_head', 'tkmulti_login_logo' );
