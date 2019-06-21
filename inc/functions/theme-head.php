@@ -167,6 +167,7 @@ if( ! function_exists( 'tkmulti_styles' ) )
 		wp_enqueue_style( 'fancybox', THEME_URI . '/assets/css/jquery.fancybox.min.css', array(), filemtime( THEME_URI . '/assets/css/jquery.fancybox.min.css' ) );
 		
 		wp_enqueue_style( 'main-style', THEME_URI . '/assets/css/main.css', array(), filemtime( THEME_URI . '/assets/css/main.css' ) );
+		wp_enqueue_style( 'main-style', THEME_URI . 'site-main.css', array(), filemtime( THEME_URI . 'site-main.css' ) );
 
 		// Google Fonts ----------------------------------------------------------
 		wp_enqueue_style( 'tkmulti-fonts', tkmulti_theme_fonts_url() );
