@@ -9,13 +9,13 @@
 **/
 // Duplicate 'the_content' filters
 global $wp_embed;
-add_filter( 'tkm_the_content', array( $wp_embed, 'run_shortcode' ), 8 );
-add_filter( 'tkm_the_content', array( $wp_embed, 'autoembed'     ), 8 );
-add_filter( 'tkm_the_content', 'wptexturize'        );
-add_filter( 'tkm_the_content', 'convert_chars'      );
-add_filter( 'tkm_the_content', 'wpautop'            );
-add_filter( 'tkm_the_content', 'shortcode_unautop'  );
-add_filter( 'tkm_the_content', 'do_shortcode'       );
+add_filter( 'tkmulti_the_content', array( $wp_embed, 'run_shortcode' ), 8 );
+add_filter( 'tkmulti_the_content', array( $wp_embed, 'autoembed'     ), 8 );
+add_filter( 'tkmulti_the_content', 'wptexturize'        );
+add_filter( 'tkmulti_the_content', 'convert_chars'      );
+add_filter( 'tkmulti_the_content', 'wpautop'            );
+add_filter( 'tkmulti_the_content', 'shortcode_unautop'  );
+add_filter( 'tkmulti_the_content', 'do_shortcode'       );
 /**
  * Get the first term attached to post
  *
@@ -24,7 +24,7 @@ add_filter( 'tkm_the_content', 'do_shortcode'       );
  * @param int $post_id
  * @return string/object
  */
-function tkm_first_term( $taxonomy = 'category', $field = false, $post_id = false ) {
+function tkmulti_first_term( $taxonomy = 'category', $field = false, $post_id = false ) {
 	$post_id = $post_id ? $post_id : get_the_ID();
 	$term = false;
 	// Use WP SEO Primary Term
@@ -74,7 +74,7 @@ function tkm_first_term( $taxonomy = 'category', $field = false, $post_id = fals
  * @param bool $conditional, whether to add $optional_class or not
  * @return string $classes
  */
-function tkm_class( $base_classes, $optional_class, $conditional ) {
+function tkmulti_class( $base_classes, $optional_class, $conditional ) {
 	return $conditional ? $base_classes . ' ' . $optional_class : $base_classes;
 }
 /**
@@ -88,7 +88,7 @@ function tkm_class( $base_classes, $optional_class, $conditional ) {
  * @param bool $join, whether to join classes (return string) or not (return array)
  * @return string/array $classes
  */
-function tkm_column_class( $classes = array(), $current = false, $join = true ) {
+function tkmulti_column_class( $classes = array(), $current = false, $join = true ) {
 	if( false === $current )
 		return $classes;
 	$columns = array( 2, 3, 4, 6 );
@@ -114,7 +114,7 @@ function tkm_column_class( $classes = array(), $current = false, $join = true ) 
  * @param int $image_id
  * @return string $output
  */
-function tkm_bg_image_style( $image_id = false, $image_size = 'full' ) {
+function tkmulti_bg_image_style( $image_id = false, $image_size = 'full' ) {
 	if( !empty( $image_id ) )
 		return ' style="background-image: url(' . wp_get_attachment_image_url( $image_id, $image_size ) . ');"';
 }
@@ -130,7 +130,7 @@ function tkm_bg_image_style( $image_id = false, $image_size = 'full' ) {
  * to only specify a `$size` parameter in the svg methods.
  *
  */
-function tkm_icon( $atts = array() ) {
+function tkmulti_icon( $atts = array() ) {
 	$atts = shortcode_atts( array(
 		'icon'	=> false,
 		'group'	=> 'utility',
@@ -159,7 +159,7 @@ function tkm_icon( $atts = array() ) {
  * Has Action
  *
  */
-function tkm_has_action( $hook ) {
+function tkmulti_has_action( $hook ) {
 	ob_start();
 	do_action( $hook );
 	$output = ob_get_clean();
