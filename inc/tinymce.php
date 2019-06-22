@@ -56,3 +56,19 @@
  	return $settings;
  }
  add_filter( 'tiny_mce_before_init', 'tkmulti_mce_before_init' );
+
+/* ---------------------------------------------------------------------------
+ * Add Font Size to Wordpress Visual Editor
+ * --------------------------------------------------------------------------- */
+function tkmulti_buttons( $buttons ) {
+
+    array_unshift( $buttons, 'fontsizeselect' );
+    return $buttons;
+  }
+add_filter( 'mce_buttons_2', 'tkmulti_buttons' );
+
+function tkmulti_font_size( $initArray ){
+    $initArray['fontsize_formats'] = "9px 10px 11px 12px 13px 14px 15px 16px 17px 18px 19px 20px 22px 24px 28px 30px 35px 40px 45px 50px";
+    return $initArray;
+  }
+add_filter( 'tiny_mce_before_init', 'tkmulti_font_size' );
