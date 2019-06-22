@@ -1,4 +1,4 @@
-<?php 
+<?php
 $one_block_width = get_sub_field('flex_one_col_block_width');
 $one_column_title = get_sub_field('flex_one_col_title');
 $one_column_subtitle = get_sub_field('flex_one_col_subtitle');
@@ -30,14 +30,14 @@ $RGB_color_r = hex2rgb($Hex_color_r);
 $Final_Rgb_color_r = implode(", ", $RGB_color_r);
 $Hex_color_l = $one_col_bg_l;
 $RGB_color_l = hex2rgb($Hex_color_l);
-$Final_Rgb_color_l = implode(", ", $RGB_color_l);			
+$Final_Rgb_color_l = implode(", ", $RGB_color_l);
 
 if ( $one_hide_mobile && wp_is_mobile() ) {
 //HIDE ON MOBILE
 } else { ?>
 
 <div class="flex_content_cols <?php echo $one_mobile_cols;?> <?php echo $one_block_width;?>" <?php if( $one_col_order ){ ?>style="order:<?php echo $one_col_order; ?>;"<?php } ?>>
-	<section id="section-<?php echo $row;?>-<?php echo $count;?>" data-aos="<?php echo $one_col_animation;?>"  class="page_flexible page_flexible_content button_<?php echo $one_col_btn_color;?> section-<?php echo $row;?>-<?php echo $count;?> count_sections_<?php echo $count;?> <?php if( $one_col_background ) { ?>one_col_background<?php } ?> <?php if( $one_col_ver_align ) { ?>one_col_ver_align<?php } ?>" style="width:<?php echo $one_column_width; ?>%;margin:0 auto;padding: 30px;<?php if( $one_col_bg_radius ) { ?>border-radius:15px;<?php } ?><?php if( $one_col_bg_r || $one_col_bg_l) { ?>background: <?php echo $one_col_bg_r; ?>;background: -moz-linear-gradient(right, rgba(<?php echo $Final_Rgb_color_r; ?>,1) 0%, rgba(<?php echo $Final_Rgb_color_l; ?>,1) 100%);background: -webkit-linear-gradient(<?php echo $one_col_bg_rotate; ?>deg, rgba(<?php echo $Final_Rgb_color_r; ?>,1) 0%, rgba(<?php echo $Final_Rgb_color_l; ?>,1) 100%);background: linear-gradient(right, rgba(<?php echo $Final_Rgb_color_r; ?>,1) 0%, rgba(<?php echo $Final_Rgb_color_l; ?>,1) 100%);<?php } ?>">
+	<section id="section-<?php echo $row;?>-<?php echo $count;?>" data-aos="<?php echo $one_col_animation;?>"  class="page_flexible page_flexible_content button_<?php echo $one_col_btn_color;?> section-<?php echo $row;?>-<?php echo $count;?> count_sections_<?php echo $count;?> <?php if( $one_col_ver_align ) { ?>one_col_ver_align<?php } ?>" style="width:<?php echo $one_column_width; ?>%;margin:0 auto;padding: 30px;<?php if( $one_col_bg_radius ) { ?>border-radius:15px;<?php } ?><?php if( $one_col_bg_r || $one_col_bg_l) { ?>background: <?php echo $one_col_bg_r; ?>;background: -moz-linear-gradient(right, rgba(<?php echo $Final_Rgb_color_r; ?>,1) 0%, rgba(<?php echo $Final_Rgb_color_l; ?>,1) 100%);background: -webkit-linear-gradient(<?php echo $one_col_bg_rotate; ?>deg, rgba(<?php echo $Final_Rgb_color_r; ?>,1) 0%, rgba(<?php echo $Final_Rgb_color_l; ?>,1) 100%);background: linear-gradient(right, rgba(<?php echo $Final_Rgb_color_r; ?>,1) 0%, rgba(<?php echo $Final_Rgb_color_l; ?>,1) 100%);<?php } ?>">
 
 		<div class="content_one_column flexible_page_element" itemprop="text">
 			<div class="content_one_column_wrap content_wrap">
@@ -62,5 +62,5 @@ if ( $one_hide_mobile && wp_is_mobile() ) {
 			</div>
 		</div>
 	</section>
-</div>	
-<?php } ?>	
+</div>
+<?php } ?>
