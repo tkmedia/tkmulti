@@ -1658,10 +1658,12 @@ button.main_btn.style3:hover,
 .masthead_clean .yoast_breadcrumb {position: relative;background: #000;}
 .masthead_clean .masthead_content_container_wrap {padding: 0;}
 
+
 @media (min-width: 768px) {
 	.masthead_clean #breadcrumbs {text-align: right;}
 }
 @media (max-width: 767px) {
+	.masthead_clean .masthead_content {display: flex;align-items: center;}
 	#home_masthead .masthead_clean #top-slider .single-slider-img, 
 	#home_masthead .masthead_clean #top-slider .slides {height: 300px !important;}
 }
