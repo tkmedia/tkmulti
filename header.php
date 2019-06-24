@@ -49,6 +49,9 @@ tha_body_top();
 	<div id="page" class="site <?php echo $site_style; ?> <?php echo $header_style; ?> <?php echo $header_color; ?>">
 		<a class="skip-link screen-reader-text" href="#main_content"><?php _e( 'Skip to content', 'tkmulti' ) ?></a>
 		<?php tha_header_before(); ?>
+		
+		<?php get_template_part( 'partials/header/hamburger' ); ?>
+		
 		<header id="header-container" class="header-bar animated clearfix fixedHeader sticky_header <?php if (is_front_page()) { ?>front_header_container<?php } elseif (is_tax( 'product_cat' ) || is_category() ) { ?>archive_header_container<?php } elseif ( is_singular() ) { ?>deafault_header_container<?php } else { ?>deafault_header_container<?php } ?> <?php echo $logo_side; ?>" itemscope="itemscope" itemtype="http://schema.org/WPHeader" role="banner">
 			<div class="header_wrapper_bg">
 				<?php tha_header_top(); ?>
