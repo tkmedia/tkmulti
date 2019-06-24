@@ -3,6 +3,8 @@ $flex_image_block_width = get_sub_field('flex_image_block_width');
 $flex_image_mobile_cols = get_sub_field('flex_image_mobile');
 $flex_image_order = get_sub_field('flex_image_order');
 $flex_image_hide_mobile = get_sub_field('flex_image_hide_mobile');
+$flex_image_break = get_sub_field('flex_image_break');
+$flex_image_block_align = get_sub_field('flex_image_block_align');
 
 $flex_image = get_sub_field('flex_image');
 
@@ -43,7 +45,7 @@ if ( $flex_image_hide_mobile && wp_is_mobile() ) {
 //HIDE ON MOBILE
 } else { ?>
 
-<div class="flex_content_cols <?php echo $flex_image_mobile_cols;?> <?php echo $flex_image_block_width;?>" <?php if( $flex_image_order ){ ?>style="order:<?php echo $flex_image_order; ?>;"<?php } ?>>
+<div class="flex_content_cols <?php echo $flex_image_mobile_cols;?> <?php echo $flex_image_block_width;?> <?php if( $flex_image_break ){ ?><?php echo $flex_image_block_align; ?><?php } ?>" <?php if( $flex_image_order ){ ?>style="order:<?php echo $flex_image_order; ?>;"<?php } ?>>
 	<section id="section-<?php echo $row;?>-<?php echo $count;?>" class="page_flexible page_flexible_content section-<?php echo $row;?>-<?php echo $count;?> count_sections_<?php echo $count;?>" data-aos="<?php echo $image_animation;?>">
 		<div class="flex_image_container flexible_page_element <?php echo $flex_image_title_location;?>">
 		<div class="flex_image_row row-flex">	
@@ -123,5 +125,7 @@ if ( $flex_image_hide_mobile && wp_is_mobile() ) {
 		</div>
 		</div>
 	</section>
-</div>				
+</div>	
+<?php if( $flex_image_break ){ ?><div class="break"></div><?php } ?>
+			
 <?php } ?>
