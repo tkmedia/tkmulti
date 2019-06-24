@@ -49,7 +49,7 @@ $btn_bg_color =  get_post_meta( get_the_ID(), 'page_masthead_btn_bg_color', true
 				<?php 							
 				if ($title_location == 'slider_content_inn' ) { ?>
 				<div class="masthead_clean_content">
-					<div class="masthead_content wrap row-flex bottom-xs between-xs">
+					<div class="masthead_content wrap row-flex bottom-xs between-xs <?php echo($title_hor); ?>-xs">
 						<div class="masthead_content_container col-xs-12 col-md">
 							<div class="masthead_content_container_wrap">
 								<h1 class="entry-title masthead_content_title" itemprop="headline">
