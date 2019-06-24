@@ -3,6 +3,8 @@ $img_content_width = get_sub_field('flex_img_content_width');
 $img_content_order = get_sub_field('flex_img_content_order');
 $img_content_mobile = get_sub_field('flex_img_content_mobile');
 $img_content_hide_mobile = get_sub_field('flex_img_content_hide_mobile');
+$img_content_break = get_sub_field('flex_img_content_break');
+$img_content_block_align = get_sub_field('flex_img_content_block_align');
 
 $img_content_style = get_sub_field('flex_img_content_style');
 $img_content_type = get_sub_field('flex_img_content_type');
@@ -29,7 +31,7 @@ if ( $img_content_hide_mobile && wp_is_mobile() ) {
 //HIDE ON MOBILE
 } else { ?>
 
-<div class="flex_content_cols <?php echo $img_content_mobile;?> <?php echo $img_content_width;?>" <?php if( $img_content_order ){ ?>style="order:<?php echo $img_content_order; ?>;"<?php } ?>>
+<div class="flex_content_cols <?php echo $img_content_mobile;?> <?php echo $img_content_width;?> <?php if( $img_content_break ){ ?><?php echo $img_content_block_align; ?><?php } ?>" <?php if( $img_content_order ){ ?>style="order:<?php echo $img_content_order; ?>;"<?php } ?>>
 	<section id="section-<?php echo $row;?>-<?php echo $count;?>" class="page_flexible page_flexible_content section-<?php echo $row;?>-<?php echo $count;?> count_sections_<?php echo $count;?>" data-aos="<?php echo $img_content_animation;?>">
 
 		<div class="flex_img_content flexible_page_element" itemprop="text">
@@ -162,4 +164,6 @@ if ( $img_content_hide_mobile && wp_is_mobile() ) {
 	</script>
 	
 </div>
+<?php if( $img_content_break ){ ?><div class="break"></div><?php } ?>
+
 <?php } ?>
