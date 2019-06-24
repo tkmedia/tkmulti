@@ -3,6 +3,9 @@ $style_title_block_width = get_sub_field('flex_style_title_block_width');
 $flex_style_title_mobile = get_sub_field('flex_style_title_mobile');
 $title_hide_mobile = get_sub_field('flex_style_title_hide_mobile');
 $title_order = get_sub_field('flex_style_title_order');
+$title_break = get_sub_field('flex_style_title_break');
+$title_block_align = get_sub_field('flex_style_title_block_align');
+
 $title_type = get_sub_field('flex_style_title_type');
 $title_header = get_sub_field('flex_style_title_header');
 $title_size = get_sub_field('flex_style_title_size');
@@ -20,7 +23,7 @@ if ( $title_hide_mobile && wp_is_mobile() ) {
 //HIDE ON MOBILE
 } else { ?>
 
-<div class="flex_content_cols <?php echo $flex_style_title_mobile;?> <?php echo $style_title_block_width;?>" <?php if( $title_order ){ ?>style="order:<?php echo $title_order; ?>;"<?php } ?>>
+<div class="flex_content_cols <?php echo $flex_style_title_mobile;?> <?php echo $style_title_block_width;?> <?php if( $title_break ){ ?><?php echo $title_block_align; ?><?php } ?>" <?php if( $title_order ){ ?>style="order:<?php echo $title_order; ?>;"<?php } ?>>
 	<section id="section-<?php echo $row;?>-<?php echo $count;?>" class="page_flexible page_flexible_content section-<?php echo $row;?>-<?php echo $count;?> count_sections_<?php echo $count;?>" data-aos="<?php echo $style_title_animation;?>">
 
 		<div class="flex_style_title flexible_page_element" itemprop="text">
@@ -76,5 +79,6 @@ if ( $title_hide_mobile && wp_is_mobile() ) {
 			</div>
 		</div>
 	</section>
-</div>			
+</div>	
+<?php if( $title_break ){ ?><div class="break"></div><?php } ?>		
 <?php } ?>	
