@@ -77,7 +77,7 @@ if( have_rows('flex_content_rows') ): $row = 1;?>
 			get_template_part('partials/row-divider-top' );
 		} ?>
 		
-		<div class="container_wrap <?php if(!$row_wrap) { ?>wrap<?php } ?> row-flex <?php if($row_col_padding) { ?>col_nopadding<?php } ?> <?php if($row_ver_align) { ?>middle-xs<?php } ?> <?php echo $row_top_wrap_line; ?> <?php echo $row_bottom_wrap_line; ?> <?php echo $row_right_wrap_line; ?> <?php echo $row_Left_wrap_line; ?>">
+		<div class="container_wrap row-flex<?php if(!$row_wrap) { ?> wrap <?php } if($row_col_padding) { ?> col_nopadding <?php } if($row_ver_align) { ?> middle-xs <?php } if($row_top_wrap_line) { echo $row_top_wrap_line; } ?> <?php if($row_bottom_wrap_line) { echo $row_bottom_wrap_line; } ?> <?php if($row_right_wrap_line) { echo $row_right_wrap_line; } ?> <?php if($row_Left_wrap_line) { echo $row_Left_wrap_line; }?>">
 		<!-- flex_content_cols -->
 				
 		<?php
@@ -123,6 +123,19 @@ if( have_rows('flex_content_rows') ): $row = 1;?>
 		if( $bottom_divider_section ) {
 			get_template_part('partials/row-divider-bottom' );
 		} ?>
+
+		<script>
+		jQuery(function($) {
+			$(window).load(function(){
+				get_elemnt_width();
+			    function get_elemnt_width(){
+				    var first_elemnt = $('#flex-row-<?php echo $row;?> .container_wrap .flex_content_cols.col-xs-12.col-md-12:first-child .clean-title').outerWidth();
+				    $('#flex-row-<?php echo $row;?> .container_wrap.top-middle-left .container_wrap_line.wrap_line_top').css('width', 'calc(45% - ' + first_elemnt + 'px / 2)');
+				    $('#flex-row-<?php echo $row;?> .container_wrap.top-middle-right .container_wrap_line.wrap_line_top').css('width', 'calc(45% - ' + first_elemnt + 'px / 2)');
+			    }
+		    });	
+		});
+		</script>   
 				
 	</div>
 	
