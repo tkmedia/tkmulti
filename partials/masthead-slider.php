@@ -6,11 +6,14 @@ $title_location = get_post_meta( get_the_ID(), 'page_masthead_title_location', t
 $title_hor = get_post_meta( get_the_ID(), 'page_masthead_title_hor', true );
 $title_ver = get_post_meta( get_the_ID(), 'page_masthead_title_ver', true );
 
+$btn_type = get_post_meta( get_the_ID(), 'page_masthead_btn_type', true );
 $btn_style = get_post_meta( get_the_ID(), 'page_masthead_btn_style', true );
 $btn1_text = get_post_meta( get_the_ID(), 'page_masthead_btn1_text', true );
 $btn1_link = get_post_meta( get_the_ID(), 'page_masthead_btn1_link', true );
 $btn2_text = get_post_meta( get_the_ID(), 'page_masthead_btn2_text', true );
 $btn2_link = get_post_meta( get_the_ID(), 'page_masthead_btn2_link', true );
+$btn1_img = get_field('page_masthead_btn1_img');
+$btn2_img = get_field('page_masthead_btn2_img');
 
 $page_top_slider_content = get_post_meta( get_the_ID(), 'page_top_slider_content', true );
 $masthead_background_color = get_field('masthead_background_color');
@@ -46,7 +49,8 @@ $masthead_background_color = get_field('masthead_background_color');
 </style>
 
 <div id="home_masthead" itemprop="text">	
-	<div class="home_masthead intro-section <?php echo($title_location); ?> masthead_full_slider">	
+	<div class="home_masthead intro-section <?php echo($title_location); ?> masthead_full_slider <?php echo $btn_type; ?>
+">	
 		<?php
 		set_query_var( 'masthead_top_divider_section_type', $masthead_top_divider_section );
 		set_query_var( 'masthead_top_divider_section_color', $masthead_top_divider_section_color );
@@ -304,20 +308,38 @@ $masthead_background_color = get_field('masthead_background_color');
 							<div class="home_masthead_text" style="color: <?php echo($text_color); ?>;"><?php echo $page_masthead_text; ?></div>
 							<?php } ?>
 
-							<?php if( $btn1_link ) { ?> 
-							<div class="custom_icon_btn masthead_btn <?php echo $btn_style; ?>">
-								<a href="<?php echo $btn1_link; ?>" class="masthead_btn_link">
-									<button class="section_readmore_link watch_btn hoverLink" style="color:<?php echo $btn_color; ?>;background:<?php echo $btn_bg_color; ?>;"><?php echo $btn1_text; ?></button>
-								</a>
-							</div>
-							<?php } ?>						
-							<?php if( $btn2_link ) { ?> 
-							<div class="custom_icon_btn masthead_btn <?php echo $btn_style; ?>">
-								<a href="<?php echo $btn2_link; ?>" class="masthead_btn_link">
-									<button class="section_readmore_link watch_btn hoverLink" style="color:<?php echo $btn_color; ?>;background:<?php echo $btn_bg_color; ?>;"><?php echo $btn2_text; ?></button>
-								</a>
-							</div>
-							<?php } ?>						
+							<?php if( $btn_type == 'btn_text' ) { ?>
+								<?php if( $btn1_link ) { ?> 
+								<div class="custom_icon_btn masthead_btn <?php echo $btn_style; ?>">
+									<a href="<?php echo $btn1_link; ?>" class="masthead_btn_link">
+										<button class="section_readmore_link watch_btn hoverLink" style="color:<?php echo $btn_color; ?>;background:<?php echo $btn_bg_color; ?>;"><?php echo $btn1_text; ?></button>
+									</a>
+								</div>
+								<?php } ?>						
+								<?php if( $btn2_link ) { ?> 
+								<div class="custom_icon_btn masthead_btn <?php echo $btn_style; ?>">
+									<a href="<?php echo $btn2_link; ?>" class="masthead_btn_link">
+										<button class="section_readmore_link watch_btn hoverLink" style="color:<?php echo $btn_color; ?>;background:<?php echo $btn_bg_color; ?>;"><?php echo $btn2_text; ?></button>
+									</a>
+								</div>
+								<?php } ?>	
+							<?php } elseif( $btn_type == 'btn_img' ) { ?>
+								<?php if( $btn1_img ) { ?> 
+								<div class="custom_icon_btn masthead_btn btn_img">
+									<a href="<?php echo $btn1_link; ?>" class="masthead_btn_link">
+										<?php echo wp_get_attachment_image( $btn1_img, 'full' ); ?>
+									</a>
+								</div>
+								<?php } ?>						
+								<?php if( $btn2_img ) { ?> 
+								<div class="custom_icon_btn masthead_btn btn_img">
+									<a href="<?php echo $btn2_link; ?>" class="masthead_btn_link">
+										<?php echo wp_get_attachment_image( $btn2_img, 'full' ); ?>
+									</a>
+								</div>
+								<?php } ?>	
+							
+							<?php } ?>				
 						
 						<?php } else { 
 							$title_color = get_post_meta( get_the_ID(), 'page_masthead_title_color', true );
@@ -341,23 +363,43 @@ $masthead_background_color = get_field('masthead_background_color');
 							<div class="home_masthead_text" style="color: <?php echo($text_color); ?>;"><?php echo $page_masthead_text; ?></div>
 							<?php } ?>
 
-							<?php if( $btn1_link ) { ?> 
-							<div class="custom_icon_btn masthead_btn <?php echo $btn_style; ?>">
-								<a href="<?php echo $btn1_link; ?>" class="masthead_btn_link">
-									<button class="section_readmore_link watch_btn hoverLink"><?php echo $btn1_text; ?></button>
-								</a>
-							</div>
-							<?php } ?>						
-							<?php if( $btn2_link ) { ?> 
-							<div class="custom_icon_btn masthead_btn <?php echo $btn_style; ?>">
-								<a href="<?php echo $btn2_link; ?>" class="masthead_btn_link">
-									<button class="section_readmore_link watch_btn hoverLink"><?php echo $btn2_text; ?></button>
-								</a>
-							</div>
-							<?php } ?>						
+							<?php if( $btn_type == 'btn_text' ) { ?>
+								<?php if( $btn1_link ) { ?> 
+								<div class="custom_icon_btn masthead_btn <?php echo $btn_style; ?>">
+									<a href="<?php echo $btn1_link; ?>" class="masthead_btn_link">
+										<button class="section_readmore_link watch_btn hoverLink" style="color:<?php echo $btn_color; ?>;background:<?php echo $btn_bg_color; ?>;"><?php echo $btn1_text; ?></button>
+									</a>
+								</div>
+								<?php } ?>						
+								<?php if( $btn2_link ) { ?> 
+								<div class="custom_icon_btn masthead_btn <?php echo $btn_style; ?>">
+									<a href="<?php echo $btn2_link; ?>" class="masthead_btn_link">
+										<button class="section_readmore_link watch_btn hoverLink" style="color:<?php echo $btn_color; ?>;background:<?php echo $btn_bg_color; ?>;"><?php echo $btn2_text; ?></button>
+									</a>
+								</div>
+								<?php } ?>	
+							<?php } ?>
 						<?php } ?>	
 						</div>													
 					</div>
+					<?php if( $btn_type == 'btn_img' ) { ?>
+					<div class="masthead_btn_img_row">
+						<?php if( $btn1_img ) { ?> 
+						<div class="custom_icon_btn masthead_btn btn_img">
+							<a href="<?php echo $btn1_link; ?>" class="masthead_btn_link">
+								<?php echo wp_get_attachment_image( $btn1_img, 'full' ); ?>
+							</a>
+						</div>
+						<?php } ?>						
+						<?php if( $btn2_img ) { ?> 
+						<div class="custom_icon_btn masthead_btn btn_img">
+							<a href="<?php echo $btn2_link; ?>" class="masthead_btn_link">
+								<?php echo wp_get_attachment_image( $btn2_img, 'full' ); ?>
+							</a>
+						</div>
+						<?php } ?>	
+					</div>
+					<?php } ?>				
 						
 				</div>
 				<?php if ( !is_front_page() ) { ?>
