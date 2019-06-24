@@ -324,22 +324,27 @@ $masthead_background_color = get_field('masthead_background_color');
 								</div>
 								<?php } ?>	
 							<?php } elseif( $btn_type == 'btn_img' ) { ?>
-								<?php if( $btn1_img ) { ?> 
-								<div class="custom_icon_btn masthead_btn btn_img">
-									<a href="<?php echo $btn1_link; ?>" class="masthead_btn_link">
-										<?php echo wp_get_attachment_image( $btn1_img, 'full' ); ?>
-									</a>
-								</div>
-								<?php } ?>						
-								<?php if( $btn2_img ) { ?> 
-								<div class="custom_icon_btn masthead_btn btn_img">
-									<a href="<?php echo $btn2_link; ?>" class="masthead_btn_link">
-										<?php echo wp_get_attachment_image( $btn2_img, 'full' ); ?>
-									</a>
-								</div>
-								<?php } ?>	
-							
+							<div class="masthead_btn_img_row">
+								<div class="masthead_btn_img_flex row-flex center-xs">
+									<?php if( $btn1_img ) { ?> 
+									<div class="custom_icon_btn btn_img col-xs-6">
+										<a href="<?php echo $btn1_link; ?>" class="masthead_btn_link">
+											<div class="masthead_btn"><?php echo wp_get_attachment_image( $btn1_img, 'full' ); ?></div>
+										</a>
+									</div>
+									<?php } ?>						
+									<?php if( $btn2_img ) { ?> 
+									<div class="custom_icon_btn btn_img col-xs-6">
+										<a href="<?php echo $btn2_link; ?>" class="masthead_btn_link">
+											<div class="masthead_btn"><?php echo wp_get_attachment_image( $btn2_img, 'full' ); ?></div>
+										</a>
+									</div>
+									<?php } ?>
+								</div>	
+							</div>
 							<?php } ?>				
+							
+										
 						
 						<?php } else { 
 							$title_color = get_post_meta( get_the_ID(), 'page_masthead_title_color', true );
@@ -384,20 +389,22 @@ $masthead_background_color = get_field('masthead_background_color');
 					</div>
 					<?php if( $btn_type == 'btn_img' ) { ?>
 					<div class="masthead_btn_img_row">
-						<?php if( $btn1_img ) { ?> 
-						<div class="custom_icon_btn masthead_btn btn_img">
-							<a href="<?php echo $btn1_link; ?>" class="masthead_btn_link">
-								<?php echo wp_get_attachment_image( $btn1_img, 'full' ); ?>
-							</a>
-						</div>
-						<?php } ?>						
-						<?php if( $btn2_img ) { ?> 
-						<div class="custom_icon_btn masthead_btn btn_img">
-							<a href="<?php echo $btn2_link; ?>" class="masthead_btn_link">
-								<?php echo wp_get_attachment_image( $btn2_img, 'full' ); ?>
-							</a>
-						</div>
-						<?php } ?>	
+						<div class="masthead_btn_img_flex row-flex center-xs">
+							<?php if( $btn1_img ) { ?> 
+							<div class="custom_icon_btn btn_img col-xs-6">
+								<a href="<?php echo $btn1_link; ?>" class="masthead_btn_link">
+									<div class="masthead_btn"><?php echo wp_get_attachment_image( $btn1_img, 'full' ); ?></div>
+								</a>
+							</div>
+							<?php } ?>						
+							<?php if( $btn2_img ) { ?> 
+							<div class="custom_icon_btn btn_img col-xs-6">
+								<a href="<?php echo $btn2_link; ?>" class="masthead_btn_link">
+									<div class="masthead_btn"><?php echo wp_get_attachment_image( $btn2_img, 'full' ); ?></div>
+								</a>
+							</div>
+							<?php } ?>
+						</div>	
 					</div>
 					<?php } ?>				
 						
