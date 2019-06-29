@@ -3,6 +3,8 @@ $gallery_grid_block_width = get_sub_field('flex_gallery_grid_block_width');
 $gallery_grid_order = get_sub_field('flex_gallery_grid_order');
 $gallery_grid_mobile = get_sub_field('flex_gallery_grid_mobile');
 $gallery_grid_hide_mobile = get_sub_field('flex_gallery_grid_hide_mobile');
+$gallery_grid_break = get_sub_field('flex_gallery_grid_break');
+$gallery_grid_block_align = get_sub_field('flex_gallery_grid_block_align');
 
 $content_gallery_grid = get_sub_field('flex_gallery_grid_img');
 $content_gallery_grid_title = get_sub_field('flex_gallery_grid_title');
@@ -22,7 +24,7 @@ if ( $gallery_grid_hide_mobile && wp_is_mobile() ) {
 //HIDE ON MOBILE
 } else { ?>
 
-<div class="flex_content_cols <?php echo $gallery_grid_mobile;?> <?php echo $gallery_grid_block_width;?>" <?php if( $gallery_grid_order ){ ?>style="order:<?php echo $gallery_grid_order; ?>;"<?php } ?>>
+<div class="flex_content_cols <?php echo $gallery_grid_mobile;?> <?php echo $gallery_grid_block_width;?> <?php if( $gallery_grid_break ){ ?><?php echo $gallery_grid_block_align; ?><?php } ?>" <?php if( $gallery_grid_order ){ ?>style="order:<?php echo $gallery_grid_order; ?>;"<?php } ?>>
 	<section id="section-<?php echo $row;?>-<?php echo $count;?>" class="page_flexible page_flexible_content section-<?php echo $row;?>-<?php echo $count;?> count_sections_<?php echo $count;?>" data-aos="<?php echo $gallery_grid_animation;?>">
 
 		<div class="grid_gallery flexible_page_element <?php echo $content_gallery_grid_type; ?>" itemprop="text">
@@ -202,4 +204,5 @@ if ( $gallery_grid_hide_mobile && wp_is_mobile() ) {
 	</script>							    
 	
 </div>
+<?php if( $gallery_grid_break ){ ?><div class="break"></div><?php } ?>
 <?php } ?>
