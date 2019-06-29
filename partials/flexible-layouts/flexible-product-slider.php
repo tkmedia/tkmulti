@@ -3,6 +3,8 @@ $product_slider_block_width = get_sub_field('flex_product_slider_block_width');
 $product_slider_mobile = get_sub_field('flex_product_slider_mobile');
 $product_slider_hide_mobile = get_sub_field('flex_product_slider_hide_mobile');
 $product_slider_order = get_sub_field('flex_product_slider_order');
+$product_slider_break = get_sub_field('flex_product_slider_break');
+$product_slider_block_align = get_sub_field('flex_product_slider_block_align');
 
 $product_slider_row = get_sub_field('flex_product_slider_row');
 $product_slider_title = get_sub_field('flex_product_slider_title');
@@ -17,7 +19,7 @@ if ( $product_slider_hide_mobile && wp_is_mobile() ) {
 //HIDE ON MOBILE
 } else { ?>
 
-<div class="flex_content_cols <?php echo $product_slider_mobile;?> <?php echo $product_slider_block_width;?>" <?php if( $product_slider_order ){ ?>style="order:<?php echo $product_slider_order; ?>;"<?php } ?>>
+<div class="flex_content_cols <?php echo $product_slider_mobile;?> <?php echo $product_slider_block_width;?> <?php if( $product_slider_break ){ ?><?php echo $product_slider_block_align; ?><?php } ?>" <?php if( $product_slider_order ){ ?>style="order:<?php echo $product_slider_order; ?>;"<?php } ?>>
 	<section id="section-<?php echo $row;?>-<?php echo $count;?>" class="page_flexible page_flexible_content section-<?php echo $row;?>-<?php echo $count;?> count_sections_<?php echo $count;?>" data-aos="<?php echo $product_slider_animation;?>">
 
 		<div class="flexible_articles flexible_page_element flex_product_slider articles_slider_<?php echo $product_slider_block_width; ?>" itemprop="text">
@@ -89,4 +91,5 @@ if ( $product_slider_hide_mobile && wp_is_mobile() ) {
 	</script>							
 
 </div>
+<?php if( $product_slider_break ){ ?><div class="break"></div><?php } ?>
 <?php } ?>
