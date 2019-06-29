@@ -4,6 +4,8 @@ $client_slider_mobile_cols = get_sub_field('flex_client_slider_mobile');
 $client_slider_hide_mobile = get_sub_field('flex_client_slider_hide_mobile');
 $client_slider_order = get_sub_field('flex_client_slider_order');
 $client_slider_animation = get_sub_field('flex_client_slider_animation');
+$client_slider_break = get_sub_field('flex_client_slider_break');
+$client_slider_block_align = get_sub_field('flex_client_slider_block_align');
 
 $client_src = get_sub_field('flex_client_src');
 $client_slider_count = get_sub_field('flex_client_slider_count');
@@ -17,7 +19,7 @@ if ( $client_slider_hide_mobile && wp_is_mobile() ) {
 //HIDE ON MOBILE
 } else { ?>
 
-<div class="flex_content_cols <?php echo $client_slider_mobile_cols;?> <?php echo $client_slider_width;?>" <?php if( $client_slider_order ){ ?>style="order:<?php echo $client_slider_order; ?>;"<?php } ?>>
+<div class="flex_content_cols <?php echo $client_slider_mobile_cols;?> <?php echo $client_slider_width;?> <?php if( $client_slider_break ){ ?><?php echo $client_slider_block_align; ?><?php } ?>" <?php if( $client_slider_order ){ ?>style="order:<?php echo $client_slider_order; ?>;"<?php } ?>>
 	<section id="section-<?php echo $row;?>-<?php echo $count;?>" class="page_flexible page_flexible_content section-<?php echo $row;?>-<?php echo $count;?> count_sections_<?php echo $count;?>" data-aos="<?php echo $client_slider_animation;?>">
 		
 		<div class="client_slider flexible_page_element" itemprop="text">
@@ -128,7 +130,7 @@ if ( $client_slider_hide_mobile && wp_is_mobile() ) {
 				
 			</div>
 		</div>
-		
 	</section>
 </div>
+<?php if( $client_slider_break ){ ?><div class="break"></div><?php } ?>
 <?php } ?>
