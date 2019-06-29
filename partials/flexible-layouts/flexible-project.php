@@ -3,6 +3,8 @@ $project_block_width = get_sub_field('flex_project_block_width');
 $project_mobile_cols = get_sub_field('flex_project_mobile');
 $project_order = get_sub_field('flex_project_order');
 $project_hide_mobile = get_sub_field('flex_project_hide_mobile');
+$project_break = get_sub_field('flex_project_break');
+$project_block_align = get_sub_field('flex_project_block_align');
 
 $project_title = get_sub_field('flex_project_title');
 $project_title_color = get_sub_field('flex_project_title_color');
@@ -27,7 +29,7 @@ if ( $project_hide_mobile && wp_is_mobile() ) {
 //HIDE ON MOBILE
 } else { ?>
 
-<div class="flex_content_cols <?php echo $project_mobile_cols;?> <?php echo $project_block_width;?>" <?php if( $project_order ){ ?>style="order:<?php echo $project_order; ?>;"<?php } ?>>
+<div class="flex_content_cols <?php echo $project_mobile_cols;?> <?php echo $project_block_width;?> <?php if( $project_break ){ ?><?php echo $project_block_align; ?><?php } ?>" <?php if( $project_order ){ ?>style="order:<?php echo $project_order; ?>;"<?php } ?>>
 	<section id="section-<?php echo $row;?>-<?php echo $count;?>" class="page_flexible page_flexible_content section-<?php echo $row;?>-<?php echo $count;?> count_sections_<?php echo $count;?>" data-aos="<?php echo $project_animation;?>">
 		<div class="flex_project_container flexible_page_element">
 			<div class="flex_project">
@@ -91,5 +93,6 @@ if ( $project_hide_mobile && wp_is_mobile() ) {
 			</div>
 		</div>
 	</section>
-</div>				
+</div>	
+<?php if( $project_break ){ ?><div class="break"></div><?php } ?>			
 <?php } ?>
