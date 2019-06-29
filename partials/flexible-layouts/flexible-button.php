@@ -3,6 +3,8 @@ $button_block_width = get_sub_field('flex_main_button_block_width');
 $button_order = get_sub_field('flex_main_button_order');
 $button_mobile = get_sub_field('flex_main_button_mobile');
 $button_hide_mobile = get_sub_field('flex_main_button_hide_mobile');
+$button_break = get_sub_field('flex_main_button_break');
+$button_block_align = get_sub_field('flex_main_button_block_align');
 
 $button_text = get_sub_field('flex_main_button_text');
 $button_link_type = get_sub_field('flex_main_button_link_type');
@@ -26,7 +28,7 @@ if ( $button_hide_mobile && wp_is_mobile() ) {
 //HIDE ON MOBILE
 } else { ?>
 
-<div class="flex_content_cols <?php echo $button_mobile;?> <?php echo $button_block_width;?>" <?php if( $button_order ){ ?>style="order:<?php echo $button_order; ?>;"<?php } ?>>
+<div class="flex_content_cols <?php echo $button_mobile;?> <?php echo $button_block_width;?> <?php if( $button_break ){ ?><?php echo $button_block_align; ?><?php } ?>" <?php if( $button_order ){ ?>style="order:<?php echo $button_order; ?>;"<?php } ?>>
 	<section id="section-<?php echo $row;?>-<?php echo $count;?>" class="page_flexible page_flexible_content section-<?php echo $row;?>-<?php echo $count;?> count_sections_<?php echo $count;?>" data-aos="<?php echo $buttont_animation;?>">
 
 		<div class="flex_main_button flexible_page_element" itemprop="text">
@@ -95,4 +97,5 @@ if ( $button_hide_mobile && wp_is_mobile() ) {
 		
 	</section>
 </div>
+<?php if( $button_break ){ ?><div class="break"></div><?php } ?>
 <?php } ?>
