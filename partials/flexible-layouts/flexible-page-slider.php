@@ -3,6 +3,8 @@ $artcile_slider_block_width = get_sub_field('flex_artcile_slider_block_width');
 $artcile_slider_mobile = get_sub_field('flex_artcile_slider_mobile');
 $artcile_slider_hide_mobile = get_sub_field('flex_artcile_slider_hide_mobile');
 $artcile_slider_order = get_sub_field('flex_artcile_slider_order');
+$artcile_slider_break = get_sub_field('flex_artcile_slider_break');
+$artcile_slider_block_align = get_sub_field('flex_artcile_slider_block_align');
 
 $flex_article_slider_title = get_sub_field('flex_artcile_slider_title');
 $flex_article_slider = get_sub_field('flex_article_slider');
@@ -23,7 +25,7 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 //HIDE ON MOBILE
 } else { ?>
 
-<div class="flex_content_cols <?php echo $artcile_slider_mobile;?> <?php echo $artcile_slider_block_width;?>" <?php if( $artcile_slider_order ){ ?>style="order:<?php echo $artcile_slider_order; ?>;"<?php } ?>>
+<div class="flex_content_cols <?php echo $artcile_slider_mobile;?> <?php echo $artcile_slider_block_width;?> <?php if( $artcile_slider_break ){ ?><?php echo $artcile_slider_block_align; ?><?php } ?>" <?php if( $artcile_slider_order ){ ?>style="order:<?php echo $artcile_slider_order; ?>;"<?php } ?>>
 	<section id="section-<?php echo $row;?>-<?php echo $count;?>" class="page_flexible page_flexible_content section-<?php echo $row;?>-<?php echo $count;?> count_sections_<?php echo $count;?>" data-aos="<?php echo $article_slider_animation;?>">
 
 		<div class="flexible_articles flexible_page_element flex_articles_slider flex_slider articles_slider_<?php echo $article_slider_style; ?>" itemprop="text">
@@ -400,4 +402,5 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 					
 	</script>	
 </div>
+<?php if( $artcile_slider_break ){ ?><div class="break"></div><?php } ?>
 <?php } ?>
