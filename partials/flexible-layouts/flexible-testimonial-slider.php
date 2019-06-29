@@ -3,6 +3,8 @@ $testimonial_slider_block_width = get_sub_field('flex_testimonial_slider_block_w
 $testimonial_slider_order = get_sub_field('flex_testimonial_slider_order');
 $testimonial_slider_mobile = get_sub_field('flex_testimonial_slider_mobile');
 $testimonial_slider_hide_mobile = get_sub_field('flex_testimonial_slider_hide_mobile');
+$testimonial_slider_break = get_sub_field('flex_testimonial_slider_break');
+$testimonial_slider_block_align = get_sub_field('flex_testimonial_slider_block_align');
 
 $testimonial_slider = get_sub_field('flex_testimonial_slider');
 $testimonial_slider_style = get_sub_field('flex_testimonial_slider_style');
@@ -13,7 +15,7 @@ if ( $testimonial_slider_hide_mobile && wp_is_mobile() ) {
 //HIDE ON MOBILE
 } else { ?>
 
-<div class="flex_content_cols <?php echo $testimonial_slider_mobile;?> <?php echo $testimonial_slider_block_width;?>" <?php if( $testimonial_slider_order ){ ?>style="order:<?php echo $testimonial_slider_order; ?>;"<?php } ?>>
+<div class="flex_content_cols <?php echo $testimonial_slider_mobile;?> <?php echo $testimonial_slider_block_width;?> <?php if( $testimonial_slider_break ){ ?><?php echo $testimonial_slider_block_align; ?><?php } ?>" <?php if( $testimonial_slider_order ){ ?>style="order:<?php echo $testimonial_slider_order; ?>;"<?php } ?>>
 	<section id="section-<?php echo $row;?>-<?php echo $count;?>" class="page_flexible page_flexible_content section-<?php echo $row;?>-<?php echo $count;?> count_sections_<?php echo $count;?>" data-aos="<?php echo $testimonial_slider_animation;?>">
 
 		<div class="testimonial_slider flexible_page_element" itemprop="text">
@@ -132,4 +134,5 @@ if ( $testimonial_slider_hide_mobile && wp_is_mobile() ) {
 		</script>					
 	</section>
 </div>
+<?php if( $testimonial_slider_break ){ ?><div class="break"></div><?php } ?>
 <?php } ?>
