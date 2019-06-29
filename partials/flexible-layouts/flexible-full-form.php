@@ -3,6 +3,8 @@ $full_form_block_width = get_sub_field('flex_full_form_block_width');
 $full_form_mobile = get_sub_field('flex_full_form_mobile');
 $full_form_hide_mobile = get_sub_field('flex_full_form_hide_mobile');
 $full_form_order = get_sub_field('flex_full_form_order');
+$full_form_break = get_sub_field('flex_full_form_break');
+$full_form_block_align = get_sub_field('flex_full_form_block_align');
 
 $default_flex_form_title =  get_field('default_flex_form_title', 'option');
 $default_flex_form_subtitle =  get_field('default_flex_form_subtitle', 'option');
@@ -19,7 +21,7 @@ if ( $full_form_hide_mobile && wp_is_mobile() ) {
 //HIDE ON MOBILE
 } else { ?>
 
-<div class="flex_content_cols <?php echo $full_form_mobile;?> <?php echo $full_form_block_width;?>" <?php if( $full_form_order ){ ?>style="order:<?php echo $full_form_order; ?>;"<?php } ?>>
+<div class="flex_content_cols <?php echo $full_form_mobile;?> <?php echo $full_form_block_width;?> <?php if( $full_form_break ){ ?><?php echo $full_form_block_align; ?><?php } ?>" <?php if( $full_form_order ){ ?>style="order:<?php echo $full_form_order; ?>;"<?php } ?>>
 	<section id="section-<?php echo $row;?>-<?php echo $count;?>" class="page_flexible page_flexible_content section-<?php echo $row;?>-<?php echo $count;?> count_sections_<?php echo $count;?>" data-aos="<?php echo $full_form_animation;?>">
 
 		<div class="flex_form flexible_page_element" itemprop="text">
@@ -62,4 +64,5 @@ if ( $full_form_hide_mobile && wp_is_mobile() ) {
 
 	</section>
 </div>
+<?php if( $full_form_break ){ ?><div class="break"></div><?php } ?>
 <?php } ?>
