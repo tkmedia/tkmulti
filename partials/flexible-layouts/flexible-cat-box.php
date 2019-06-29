@@ -3,6 +3,8 @@ $cat_box_grid_block_width = get_sub_field('flex_cat_box_grid_block_width');
 $cat_box_grid_order = get_sub_field('flex_cat_box_grid_order');
 $cat_box_grid_mobile = get_sub_field('flex_cat_box_grid_mobile');
 $cat_box_grid_hide_mobile = get_sub_field('flex_cat_box_grid_hide_mobile');
+$cat_box_grid_break = get_sub_field('flex_cat_box_grid_break');
+$cat_box_grid_block_align = get_sub_field('flex_cat_box_grid_block_align');
 
 $cat_box_grid = get_sub_field('flex_cat_box_grid');
 $cat_box_grid_count = get_sub_field('flex_cat_box_grid_count');
@@ -17,7 +19,7 @@ if ( $cat_box_grid_hide_mobile && wp_is_mobile() ) {
 //HIDE ON MOBILE
 } else { ?>
 
-<div class="flex_content_cols <?php echo $cat_box_grid_mobile;?> <?php echo $cat_box_grid_block_width;?>" <?php if( $cat_box_grid_order ){ ?>style="order:<?php echo $cat_box_grid_order; ?>;"<?php } ?>>
+<div class="flex_content_cols <?php echo $cat_box_grid_mobile;?> <?php echo $cat_box_grid_block_width;?> <?php if( $cat_box_grid_break ){ ?><?php echo $cat_box_grid_block_align; ?><?php } ?>" <?php if( $cat_box_grid_order ){ ?>style="order:<?php echo $cat_box_grid_order; ?>;"<?php } ?>>
 	<section id="section-<?php echo $row;?>-<?php echo $count;?>" class="page_flexible page_flexible_content section-<?php echo $row;?>-<?php echo $count;?> count_sections_<?php echo $count;?>" data-aos="<?php echo $cat_box_grid_animation;?>">
 
 		<div class="cat_box_grid flexible_page_element" itemprop="text">
@@ -108,4 +110,5 @@ if ( $cat_box_grid_hide_mobile && wp_is_mobile() ) {
 			
 	</section>
 </div>
+<?php if( $cat_box_grid_break ){ ?><div class="break"></div><?php } ?>
 <?php } ?>
