@@ -3,6 +3,8 @@ $gallery_slider_width = get_sub_field('flex_gallery_slider_block_width');
 $gallery_slider_mobile_cols = get_sub_field('flex_gallery_slider_mobile');
 $gallery_slider_hide_mobile = get_sub_field('flex_gallery_slider_hide_mobile');
 $gallery_slider_order = get_sub_field('flex_gallery_slider_order');
+$gallery_slider_break = get_sub_field('flex_gallery_slider_break');
+$gallery_slider_block_align = get_sub_field('flex_gallery_slider_block_align');
 
 $gallery_slider_title = get_sub_field('flex_gallery_slider_title');
 $gallery_slider_subtitle = get_sub_field('flex_gallery_slider_subtitle');
@@ -21,7 +23,7 @@ if ( $gallery_slider_hide_mobile && wp_is_mobile() ) {
 //HIDE ON MOBILE
 } else { ?>
 
-<div class="flex_content_cols <?php echo $gallery_slider_mobile_cols;?> <?php echo $gallery_slider_width;?>" <?php if( $gallery_slider_order ){ ?>style="order:<?php echo $gallery_slider_order; ?>;"<?php } ?>>
+<div class="flex_content_cols <?php echo $gallery_slider_mobile_cols;?> <?php echo $gallery_slider_width;?> <?php if( $gallery_slider_break ){ ?><?php echo $gallery_slider_block_align; ?><?php } ?>" <?php if( $gallery_slider_order ){ ?>style="order:<?php echo $gallery_slider_order; ?>;"<?php } ?>>
 	<section id="section-<?php echo $row;?>-<?php echo $count;?>" class="page_flexible page_flexible_content section-<?php echo $row;?>-<?php echo $count;?> count_sections_<?php echo $count;?>" data-aos="<?php echo $gallery_slider_animation;?>">
 		
 		<div class="gallery_slider flexible_page_element" itemprop="text">
@@ -134,7 +136,6 @@ if ( $gallery_slider_hide_mobile && wp_is_mobile() ) {
 						</div>
 					</div>
 				</div>
-
 				<?php endif; ?>
 				<script>					
 				jQuery(function($) {
@@ -210,17 +211,12 @@ if ( $gallery_slider_hide_mobile && wp_is_mobile() ) {
 							swiper: galleryThumbs,
 						},
 				    });
-					
-					
 				}); 				
 				</script>								
 				
 			</div>
 		</div>
-
-		
-		
-		
 	</section>
 </div>
+<?php if( $gallery_slider_break ){ ?><div class="break"></div><?php } ?>
 <?php } ?>
