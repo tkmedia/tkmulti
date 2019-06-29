@@ -3,6 +3,8 @@ $qa_accordion_block_width = get_sub_field('flex_qa_accordion_block_width');
 $qa_accordion_order = get_sub_field('flex_qa_accordion_order');
 $qa_accordion_mobile = get_sub_field('flex_qa_accordion_mobile');
 $qa_accordion_hide_mobile = get_sub_field('flex_qa_accordion_hide_mobile');
+$qa_accordion_break = get_sub_field('flex_qa_accordion_break');
+$qa_accordion_block_align = get_sub_field('flex_qa_accordion_block_align');
 
 $qa_accordion_title = get_sub_field('flex_qa_accordion_title');
 $page_qa_subtitle = get_sub_field('flex_page_qa_subtitle');
@@ -17,7 +19,7 @@ if ( $qa_accordion_hide_mobile && wp_is_mobile() ) {
 //HIDE ON MOBILE
 } else { ?>
 
-<div class="flex_content_cols <?php echo $qa_accordion_mobile;?> <?php echo $qa_accordion_block_width;?>" <?php if( $qa_accordion_order ){ ?>style="order:<?php echo $qa_accordion_order; ?>;"<?php } ?>>
+<div class="flex_content_cols <?php echo $qa_accordion_mobile;?> <?php echo $qa_accordion_block_width;?> <?php if( $qa_accordion_break ){ ?><?php echo $qa_accordion_block_align; ?><?php } ?>" <?php if( $qa_accordion_order ){ ?>style="order:<?php echo $qa_accordion_order; ?>;"<?php } ?>>
 	<section id="section-<?php echo $row;?>-<?php echo $count;?>" class="page_flexible page_flexible_content section-<?php echo $row;?>-<?php echo $count;?> count_sections_<?php echo $count;?>" data-aos="<?php echo $qa_accordion_animation;?>">
 
 		<div class="content_page_qa flexible_page_element qa_icon_<?php echo $qa_accordion_icon; ?>" itemprop="text">
@@ -99,5 +101,6 @@ if ( $qa_accordion_hide_mobile && wp_is_mobile() ) {
 
 		</div>
 	</section>
-</div>			
+</div>	
+<?php if( $qa_accordion_break ){ ?><div class="break"></div><?php } ?>		
 <?php } ?>	
