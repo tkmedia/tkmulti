@@ -3,6 +3,8 @@ $bulletin_list_block_width = get_sub_field('bulletin_list_block_width');
 $bulletin_list_mobile_cols = get_sub_field('flex_bulletin_list_mobile');
 $bulletin_list_hide_mobile = get_sub_field('flex_bulletin_list_hide_mobile');
 $bulletin_list_order = get_sub_field('flex_bulletin_list_order');
+$bulletin_list_break = get_sub_field('flex_bulletin_list_break');
+$bulletin_list_block_align = get_sub_field('flex_bulletin_list_block_align');
 
 $bulletin_list_title = get_sub_field('flex_bulletin_list_title');
 $bulletin_list_subtitle = get_sub_field('flex_bulletin_list_subtitle');
@@ -27,7 +29,7 @@ if ( $bulletin_list_hide_mobile && wp_is_mobile() ) {
 //HIDE ON MOBILE
 } else { ?>
 
-<div class="flex_content_cols <?php echo $bulletin_list_mobile_cols;?> <?php echo $bulletin_list_block_width;?>" <?php if( $bulletin_list_order ){ ?>style="order:<?php echo $bulletin_list_order; ?>;"<?php } ?>>
+<div class="flex_content_cols <?php echo $bulletin_list_mobile_cols;?> <?php echo $bulletin_list_block_width;?> <?php if( $bulletin_list_break ){ ?><?php echo $bulletin_list_block_align; ?><?php } ?>" <?php if( $bulletin_list_order ){ ?>style="order:<?php echo $bulletin_list_order; ?>;"<?php } ?>>
 	<section id="section-<?php echo $row;?>-<?php echo $count;?>" class="page_flexible page_flexible_content section-<?php echo $row;?>-<?php echo $count;?> count_sections_<?php echo $count;?>" data-aos="<?php echo $bulletin_list_animation;?>">
 		
 		<div class="bulletin_list flexible_page_element" itemprop="text">
@@ -109,4 +111,5 @@ if ( $bulletin_list_hide_mobile && wp_is_mobile() ) {
 
 	</section>
 </div>
+<?php if( $bulletin_list_break ){ ?><div class="break"></div><?php } ?>
 <?php } ?>
