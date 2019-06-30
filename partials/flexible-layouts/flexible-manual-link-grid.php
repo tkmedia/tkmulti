@@ -48,7 +48,9 @@ if ( $link_grid_hide_mobile && wp_is_mobile() ) {
 					    <div class="grid-item col-xs-<?php echo $m_xs_cols; ?> col-sm-<?php echo $m_sm_cols; ?> col-md-<?php echo $m_md_cols; ?>">
 							<a href="<?php echo $flex_masonary_link; ?>" class="img_info_link">
 							<div class="grid-item-inner">
+								<div class="grid-item-inner-img">
 								<?php echo wp_get_attachment_image( $flex_masonary_img, 'product-500c' ); ?>
+								</div>
 								<?php if( $flex_masonary_subtitle || $flex_masonary_title ) { ?>
 								<div class="flex_masonary_content <?php echo $text_position; ?>" style="color:<?php echo $flex_masonary_title_color; ?>;">
 									<div class="flex_masonary_content_wrap">
