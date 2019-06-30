@@ -27,29 +27,27 @@ define( 'LANG_DIR', THEME_DIR. '/languages' );
 load_theme_textdomain( 'tkmulti', get_template_directory() . '/languages' );
 load_theme_textdomain( 'tkm-opts', LANG_DIR );	// backend
 
-
 /* ----------------------------------------------------------------------------
  * Loads Theme Functions
  * ---------------------------------------------------------------------------- */
 
 // Functions ------------------------------------------------------------------
-require( get_template_directory() . '/inc/tha-theme-hooks.php' );
-require( get_template_directory() . '/inc/wordpress-cleanup.php' );
-require( get_template_directory() . '/inc/helper-functions.php' );
-
-require_once( get_template_directory() . '/inc/theme-functions.php' );
+require( get_template_directory() . '/inc/functions/functionstha-theme-hooks.php' );
+require( get_template_directory() . '/inc/functions/wordpress-cleanup.php' );
+require( get_template_directory() . '/inc/functions/helper-functions.php' );
+require_once( get_template_directory() . '/inc/functions/theme-functions.php' );
 
 // Header ---------------------------------------------------------------------
-require_once( get_template_directory() . '/inc/theme-head.php' );
+require_once( get_template_directory() . '/inc/functions/theme-head.php' );
 
 // ACF Fields -----------------------------------------------------------------
 require_once( get_template_directory() . '/inc/acf-blocks-site.php' );
 
 // Custom template tags for this theme ----------------------------------------
-//require( LIBS_DIR .'/template-tags.php' );
+//require( get_template_directory() . '/inc/functions/template-tags.php' );
 
 // Custom functions that act independently of the theme templates -------------
-//require( LIBS_DIR .'/tweaks.php' );
+//require( get_template_directory() . '/inc/functions/tweaks.php' );
 
 // Include our Theme Customizer code. -----------------------------------------
 require( get_template_directory() . '/inc/customizer.php' );
