@@ -15,12 +15,12 @@ $link_grid_count = get_sub_field('flex_manual_link_grid_count');
 $link_grid_animation = get_sub_field('flex_manual_link_grid_animation');
 
 	if ( $link_grid_count == 2 ) : $m_xs_cols = "12"; $m_sm_cols = "6"; $m_md_cols = "6"; 
-	elseif ( $link_grid_count == 3 ) : $m_xs_cols = "6"; $m_sm_cols = "4"; $m_md_cols = "4"; 
-	elseif ( $link_grid_count == 4 ) : $m_xs_cols = "6"; $m_sm_cols = "4"; $m_md_cols = "3"; 
-	elseif ( $link_grid_count == 5 ) : $m_xs_cols = "6"; $m_sm_cols = "4"; $m_md_cols = "20";
-	elseif ( $link_grid_count == 6 ) : $m_xs_cols = "6"; $m_sm_cols = "3"; $m_md_cols = "2";
-	elseif ( $link_grid_count == 7 ) : $m_xs_cols = "6"; $m_sm_cols = "3"; $m_md_cols = "seven";
-	elseif ( $link_grid_count == 8 ) : $m_xs_cols = "6"; $m_sm_cols = "3"; $m_md_cols = "eight";
+	elseif ( $link_grid_count == 3 ) : $m_xs_cols = "6"; $m_sm_cols = "4"; $m_md_cols = "4"; $m_lg_cols = "4"; 
+	elseif ( $link_grid_count == 4 ) : $m_xs_cols = "6"; $m_sm_cols = "4"; $m_md_cols = "3"; $m_lg_cols = "3";  
+	elseif ( $link_grid_count == 5 ) : $m_xs_cols = "6"; $m_sm_cols = "4"; $m_md_cols = "20"; $m_lg_cols = "20"; 
+	elseif ( $link_grid_count == 6 ) : $m_xs_cols = "6"; $m_sm_cols = "3"; $m_md_cols = "2"; $m_lg_cols = "2"; 
+	elseif ( $link_grid_count == 7 ) : $m_xs_cols = "6"; $m_sm_cols = "3"; $m_md_cols = "seven"; $m_lg_cols = "seven"; 
+	elseif ( $link_grid_count == 8 ) : $m_xs_cols = "6"; $m_sm_cols = "3"; $m_md_cols = "20"; $m_lg_cols = "eight"; 
 	endif;
 
 
@@ -46,7 +46,7 @@ if ( $link_grid_hide_mobile && wp_is_mobile() ) {
 						$flex_masonary_link = get_sub_field('flex_masonary_link');
 						$flex_masonary_title_color = get_sub_field('flex_masonary_title_color');
 					?>
-					    <div class="grid-item col-xs-<?php echo $m_xs_cols; ?> col-sm-<?php echo $m_sm_cols; ?> col-md-<?php echo $m_md_cols; ?>">
+					    <div class="grid-item col-xs-<?php echo $m_xs_cols; ?> col-sm-<?php echo $m_sm_cols; ?> col-md-<?php echo $m_md_cols; ?> col-lg-<?php echo $m_lg_cols; ?>">
 							<a href="<?php echo $flex_masonary_link; ?>" class="img_info_link">
 							<div class="grid-item-inner">
 								<div class="grid-item-inner-img">
