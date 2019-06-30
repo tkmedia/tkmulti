@@ -124,6 +124,7 @@ if( have_rows('flex_content_rows') ): $row = 1;?>
 			get_template_part('partials/row-divider-bottom' );
 		} ?>
 
+		<?php if( $row_top_wrap_line ) { ?>
 		<script>
 		jQuery(function($) {
 			$(window).load(function(){
@@ -136,6 +137,7 @@ if( have_rows('flex_content_rows') ): $row = 1;?>
 		    });	
 		});
 		</script>   
+		<?php } ?>
 				
 	</div>
 	
