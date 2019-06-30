@@ -728,7 +728,7 @@ a:hover {text-decoration: none;}
 h2.section_title.section_title_icon {position: relative;}
 h2.section_title.section_title_icon:before {content: "\6c";font-family: "star";font-size: 17px;display: inline-block;color: #ad914f;line-height: 1;padding-left: 10px;}
 
-.fancybox-container {z-index: 999999992;}
+.fancybox-container {z-index: 999999992 !important;}
 
 @media (min-width: 992px) {
 	.fancybox-navigation .fancybox-button {height: 120px; width: 90px;}
