@@ -38,7 +38,7 @@ if ( $link_grid_hide_mobile && wp_is_mobile() ) {
 				<div class="masonary_grid <?php if( $link_grid_bw ) { ?>masonary_bw<?php } ?>">
 					
 					<?php if( $link_grid_type == 'box-layout' ) { ?>
-					<div class="layout row-flex">
+					<div class="layout row-flex center-xs">
 					<?php while ( have_rows('flex_manual_link_grid_grid') ) : the_row(); 
 						$flex_masonary_img = get_sub_field('flex_masonary_img');
 						$flex_masonary_title = get_sub_field('flex_masonary_title');
