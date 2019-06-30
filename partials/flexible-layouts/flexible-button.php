@@ -61,6 +61,7 @@ if ( $button_hide_mobile && wp_is_mobile() ) {
 			</div>
 		</div>
 
+		<?php if( $button_link_type == 'form_link' ): ?>
 		<?php 
 		$popup_contact_title = get_option( 'options_default_flex_form_title' );
 		$popup_contact_subtext = get_option( 'options_default_flex_form_subtitle' );
@@ -94,6 +95,7 @@ if ( $button_hide_mobile && wp_is_mobile() ) {
 			</div>
 		
 		</div>
+		<?php endif; ?>
 		
 	</section>
 </div>
