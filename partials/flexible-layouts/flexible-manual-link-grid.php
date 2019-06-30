@@ -5,6 +5,7 @@ $link_grid_mobile = get_sub_field('flex_manual_link_grid_mobile');
 $link_grid_hide_mobile = get_sub_field('flex_manual_link_grid_hide_mobile');
 $link_grid_break = get_sub_field('flex_manual_link_grid_break');
 $link_grid_block_align = get_sub_field('flex_manual_link_grid_block_align');
+$link_grid_style = get_sub_field('flex_manual_link_grid_style');
 
 $link_grid_type = get_sub_field( 'flex_manual_link_grid_type' );
 $link_grid_grid = get_sub_field( 'flex_manual_link_grid_grid' );
@@ -30,7 +31,7 @@ if ( $link_grid_hide_mobile && wp_is_mobile() ) {
 <div class="flex_content_cols <?php echo $link_grid_mobile;?> <?php echo $link_grid_block_width;?> <?php if( $link_grid_break ){ ?><?php echo $link_grid_block_align; ?><?php } ?>" <?php if( $link_grid_order ){ ?>style="order:<?php echo $link_grid_order; ?>;"<?php } ?>>
 	<section id="section-<?php echo $row;?>-<?php echo $count;?>" class="page_flexible page_flexible_content section-<?php echo $row;?>-<?php echo $count;?> count_sections_<?php echo $count;?>" data-aos="<?php echo $link_grid_animation;?>">
 
-		<div class="masonary_grid_link <?php echo $link_grid_type; ?> flexible_page_element" itemprop="text">
+		<div class="masonary_grid_link <?php echo $link_grid_type; ?> grid-<?php echo $link_grid_style; ?> flexible_page_element" itemprop="text">
 			<div class="masonary_grid_link_wrap">
 
 				<?php if( $link_grid_grid ) { ?>
