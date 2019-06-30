@@ -18,6 +18,8 @@ $link_grid_animation = get_sub_field('flex_manual_link_grid_animation');
 	elseif ( $link_grid_count == 4 ) : $m_xs_cols = "6"; $m_sm_cols = "4"; $m_md_cols = "3"; 
 	elseif ( $link_grid_count == 5 ) : $m_xs_cols = "6"; $m_sm_cols = "4"; $m_md_cols = "20";
 	elseif ( $link_grid_count == 6 ) : $m_xs_cols = "6"; $m_sm_cols = "3"; $m_md_cols = "2";
+	elseif ( $link_grid_count == 7 ) : $m_xs_cols = "6"; $m_sm_cols = "3"; $m_md_cols = "seven";
+	elseif ( $link_grid_count == 8 ) : $m_xs_cols = "6"; $m_sm_cols = "3"; $m_md_cols = "eight";
 	endif;
 
 
