@@ -32,7 +32,7 @@ load_theme_textdomain( 'tkm-opts', LANG_DIR );	// backend
  * ---------------------------------------------------------------------------- */
 
 // Functions ------------------------------------------------------------------
-require( get_template_directory() . '/inc/functions/functionstha-theme-hooks.php' );
+require( get_template_directory() . '/inc/functions/tha-theme-hooks.php' );
 require( get_template_directory() . '/inc/functions/wordpress-cleanup.php' );
 require( get_template_directory() . '/inc/functions/helper-functions.php' );
 require_once( get_template_directory() . '/inc/functions/theme-functions.php' );
