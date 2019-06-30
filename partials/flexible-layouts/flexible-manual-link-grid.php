@@ -24,7 +24,6 @@ $link_grid_animation = get_sub_field('flex_manual_link_grid_animation');
 	elseif ( $link_grid_count == 8 ) : $m_xs_cols = "6"; $m_sm_cols = "3"; $m_md_cols = "20"; $m_lg_cols = "eight"; 
 	endif;
 
-
 if ( $link_grid_hide_mobile && wp_is_mobile() ) {
 //HIDE ON MOBILE
 } else { ?>
