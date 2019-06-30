@@ -1681,6 +1681,11 @@ button.main_btn.style3:hover,
 @media (min-width: 768px) {
 	.top-video-container-wrap {overflow:hidden;}
 	.top-video-container {height: 450px;overflow:hidden;}
+	.in-popup .content_youtube_vid_wrap, 
+	.in-popup .content_youtube_vid, 
+	.in-popup .media_item_video, 
+	.in-popup .video_item_bg {height: 100%;}
+	.in-popup .video_item_bg img {width: 100%;height: 100%;object-fit: cover;}
 }
 @media (min-width: 992px) {
 	.top-video-container {top:0px;}
