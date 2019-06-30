@@ -3520,6 +3520,12 @@ transform:translate(0px,0);
 .testimonial_slider .swiper-button-prev:after, 
 .testimonial_slider .swiper-container-rtl .swiper-button-next:after {color: #c1c1c1;}
 
+/* ## Full Youtube Vid */
+.media_item_video {position: relative;}
+.content_youtube_vid {position: relative;}
+.content_youtube_vid .video_overlay {position: absolute;top: 0;right: 0;left: 0;color: #fff;z-index: 99;text-align: center;background: rgba(0,0,0,0.2);height: 100%;justify-items: center;justify-content: center;display: flex;align-items: center;justify-content: center;}
+.content_youtube_vid .video_overlay i {font-size: 60px;color: #ff0002;}
+
 /* Divider section styles 
 -------------------------------------------------------------- */
 #home_masthead .flex_content_row_divider_top, 
