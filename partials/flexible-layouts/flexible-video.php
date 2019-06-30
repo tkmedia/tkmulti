@@ -32,7 +32,7 @@ if ( $video_hide_mobile && wp_is_mobile() ) {
 <div class="flex_content_cols <?php echo $video_mobile;?> <?php echo $video_block_width;?> <?php if( $video_break ){ ?><?php echo $video_block_align; ?><?php } ?>" <?php if( $video_order ){ ?>style="order:<?php echo $video_order; ?>;"<?php } ?>>
 	<section id="section-<?php echo $row;?>-<?php echo $count;?>" class="page_flexible page_flexible_content section-<?php echo $row;?>-<?php echo $count;?> count_sections_<?php echo $count;?>"<?php if( $video_animation ){ ?> data-aos="<?php echo $video_animation;?>"<?php } ?>>
 		
-		<div class="content_youtube_vid flexible_page_element <?php echo $video_open_style;?>" itemprop="text">
+		<div class="content_youtube_vid flexible_page_element <?php echo $video_open_style;?> <?php echo $video_image_type;?>" itemprop="text">
 			<div class="content_youtube_vid_wrap">
 				<?php if( $video_open_style == 'on-page' ): ?>
 					<div class="content_youtube_vid_container">
