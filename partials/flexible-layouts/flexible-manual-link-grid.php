@@ -14,7 +14,8 @@ $text_position = get_sub_field('flex_manual_link_grid_text_position');
 $link_grid_count = get_sub_field('flex_manual_link_grid_count');
 $link_grid_animation = get_sub_field('flex_manual_link_grid_animation');
 
-	if ( $link_grid_count == 2 ) : $m_xs_cols = "12"; $m_sm_cols = "6"; $m_md_cols = "6"; 
+	if ( $link_grid_count == 1 ) : $m_xs_cols = "12"; $m_sm_cols = "12"; $m_md_cols = "12"; $m_lg_cols = "12"; 
+	elseif ( $link_grid_count == 2 ) : $m_xs_cols = "12"; $m_sm_cols = "6"; $m_md_cols = "6"; $m_lg_cols = "6"; 
 	elseif ( $link_grid_count == 3 ) : $m_xs_cols = "6"; $m_sm_cols = "4"; $m_md_cols = "4"; $m_lg_cols = "4"; 
 	elseif ( $link_grid_count == 4 ) : $m_xs_cols = "6"; $m_sm_cols = "4"; $m_md_cols = "3"; $m_lg_cols = "3";  
 	elseif ( $link_grid_count == 5 ) : $m_xs_cols = "6"; $m_sm_cols = "4"; $m_md_cols = "20"; $m_lg_cols = "20"; 
