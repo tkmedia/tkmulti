@@ -3107,6 +3107,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', e
 .page_qa_row_accordion .page_qa_item_question.q_open:before {color: #2ecbe2;}
 .page_qa_row_accordion .page_qa_item_answer {border-top: none;color: #111;background: #efefef;font-size: 18px;}
 
+.content_page_qa.qa_icon_plusminus .accordion_question {padding: 0;}
+
 @media only screen and (min-width: 768px) {
 	.page_qa_col_qa {padding-right: 40px;}
 }
