@@ -47,7 +47,7 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 				    <div class="page_link_grid_item articles_grid_item col-xs-<?= $ag_xs_cols; ?> col-sm-<?= $ag_sm_cols; ?> col-md-<?= $ag_md_cols; ?>">
 					    
 					<?php if( $article_grid_style == 'style1' ){ ?>    
-						<div class="articles_grid_item_container">
+						<div class="articles_grid_item_container title_<?php echo $article_grid_title_position;?>">
 							<div class="articles_grid_item_img box_effect">
 								<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'קישור לעמוד %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
 									
