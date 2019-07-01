@@ -3537,7 +3537,7 @@ transform:translate(0px,0);
 	.in-popup .media_item_video, 
 	.in-popup .video_item_bg {height: 100%;}
 	.in-popup .video_item_bg img {width: 100%;height: 100%;object-fit: cover;}
-	.in-popup .video_item_bg {min-height: 400px;}
+	.in-popup.custom-img .video_item_bg {min-height: 400px;}
 }
 
 /* Divider section styles 
