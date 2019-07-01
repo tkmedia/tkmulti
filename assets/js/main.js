@@ -395,21 +395,6 @@ jQuery(function($) {
 	});
 	$('.content_accordion_col > .content_accordion_subcol > .content_accordion_item').on("keydown", function(ev){ if (ev.which == 13) { $(this).click(); } });
 
-	//* ## Page Accordion Q&A split 2 columns (Option #1)
-    $.fn.splitList = function() {
-        var that = this,
-            li = $('.page_qa_two_item', that),
-            len = li.length,
-            half = Math.round(len / 2);
-            //half = Math.floor(len / 2);
-        return that.each(function() {
-            li.slice(0, half).wrapAll('<div class="page_qa_subcol col-sx-12 col-sm-6"></div>');
-            li.slice(half, len).wrapAll('<div class="page_qa_subcol col-sx-12 col-sm-6"></div>');
-        });
-    };
-    $( ".page_qa_one_item" ).wrapAll( "<div class='page_qa_subcol' />");
-    
-	$('.page_qa_col').splitList();
 	
 	//* ## Page Accordion Q&A split 2 columns (Option #2)
 	/*
@@ -420,26 +405,6 @@ jQuery(function($) {
 	$li.filter(function(i){ return i >= half; }).wrapAll('<div class="page_qa_subcol col-sx-12 col-sm-6">');
 	*/
 
-	//* ## Page Accordion Q&A - with split 2 columns .page_qa_subcol
-	$('.page_qa_col > .page_qa_subcol > .page_qa_item').attr('tabindex', '0');
-	$('.page_qa_col > .page_qa_subcol > .page_qa_item > .page_qa_item_answer').attr('aria-hidden', 'true');
-	$('.page_qa_col > .page_qa_subcol > .page_qa_item > .page_qa_item_question').attr('aria-expanded', 'false');
-	$('.page_qa_col > .page_qa_subcol > .page_qa_item > .page_qa_item_answer').attr('aria-expanded', 'false');
-	$('.page_qa_col > .page_qa_subcol > .page_qa_item').click(function(){
-		if($(this).children('.page_qa_item_answer').attr('aria-hidden') == 'true') {
-			$(this).children('.page_qa_item_answer').attr('aria-hidden', 'false');
-			$(this).children('.basic').attr('aria-expanded', 'true');
-			$(this).children('.page_qa_item_answer').attr('aria-expanded', 'ture');
-			$(this).children('.page_qa_item_question').addClass('q_open');
-		} else {
-			$(this).children('.page_qa_item_answer').attr('aria-hidden', 'true');
-			$(this).children('.basic').attr('aria-expanded', 'false');
-			$(this).children('.page_qa_item_answer').attr('aria-expanded', 'false');
-			$(this).children('.page_qa_item_question').removeClass('q_open');
-		}
-		$(this).children('.page_qa_item_answer').slideToggle();
-	});
-	$('.page_qa_col > .page_qa_subcol > .page_qa_item').on("keydown", function(ev){ if (ev.which == 13) { $(this).click(); } });
 	
 	
 	//* ## Vertical Tab */
