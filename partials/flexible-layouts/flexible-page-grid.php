@@ -77,6 +77,24 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 										</div>		
 										<?php }
 									endif; ?>
+									<?php if( $article_grid_title_position == 'inside' ): ?>
+									<div class="page_grid_inside">
+										<h3 itemprop="name" class="page_link_grid_item_title no-line" style="font-size: <?php echo $artcile_grid_title_size;?>px;color:<?php echo $artcile_grid_title_color;?>;"><?php the_title(); ?></h3>
+										<?php 
+										$excerpt = get_field('page_masthead_excerpt');
+										if( $excerpt ) { ?>
+										<div class="articles_grid_item_text">	
+											<div class="page_links_item_intro">
+												<?php 
+												//echo custom_field_excerpt();
+												//echo wp_trim_words($excerpt,7); 
+												echo wp_html_excerpt( $excerpt, $grid_excerpt_length, '...' ); ?>
+											</div>
+										</div>
+										<?php } ?> 
+										<div class="articles_grid_item_indicator"></div>
+									</div>
+									<?php endif; ?>
 								</div>
 								<?php if( $article_grid_title_position == 'bottom' ): ?>
 								<div class="page_link_grid_item_title_wrap">
@@ -85,7 +103,7 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 								<?php endif; ?>
 								
 								<?php
-								if( $grid_show_info ) { 
+								if( $grid_show_info && $article_grid_title_position == 'bottom' || $article_grid_title_position == 'top' ) { 
 								$excerpt = get_field('page_masthead_excerpt');
 								if( $excerpt ) { ?>
 								<div class="articles_grid_item_text">	
