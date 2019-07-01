@@ -3099,7 +3099,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', e
 .page_qa_item {padding: 20px;}
 .page_qa_question {padding-bottom: 15px;font-weight: bold;font-size: 19px;}
 
-.page_qa_row_accordion .page_qa_col {padding-top: 0;padding-bottom: 0;}
+.page_qa_row_accordion .page_qa_col {padding-top: 0;padding-bottom: 0;margin: 0;}
 .page_qa_row_accordion .page_qa_item.page_qa_one_col {width: 100%;}
 .page_qa_row_accordion .page_qa_item {padding: 0;margin-bottom: 5px;}
 .page_qa_row_accordion .page_qa_item_question {color: #000;font-size: 21px;position: relative;padding: 15px 60px 15px 20px;cursor: pointer;font-weight: 600;}
