@@ -92,7 +92,6 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 											</div>
 										</div>
 										<?php } ?> 
-										<div class="articles_grid_item_indicator"></div>
 									</div>
 									<?php endif; ?>
 								</div>
