@@ -101,6 +101,62 @@ if ( $qa_accordion_hide_mobile && wp_is_mobile() ) {
 
 		</div>
 	</section>
+	
+	<?php if( $qa_accordion_style == 'tabs' ) { ?>	
+	<script>					
+	jQuery(function($) {
+
+	}); 				
+	</script>								
+	<?php } ?>
+	
+	<?php if( $qa_accordion_style == 'accordion' ) { ?>	
+	<script>					
+	jQuery(function($) {
+
+		//* ## Page Accordion Q&A split 2 columns (Option #1)
+	    $.fn.splitList = function() {
+	        var that = this,
+	            li = $('.section-<?php echo $row;?>-<?php echo $count;?> .page_qa_two_item', that),
+	            len = li.length,
+	            half = Math.round(len / 2);
+	            //half = Math.floor(len / 2);
+	        return that.each(function() {
+	            li.slice(0, half).wrapAll('<div class=".section-<?php echo $row;?>-<?php echo $count;?> page_qa_subcol col-sx-12 col-sm-6"></div>');
+	            li.slice(half, len).wrapAll('<div class=".section-<?php echo $row;?>-<?php echo $count;?> page_qa_subcol col-sx-12 col-sm-6"></div>');
+	        });
+	    };
+	    $( ".section-<?php echo $row;?>-<?php echo $count;?> .page_qa_one_item" ).wrapAll( "<div class='page_qa_subcol' />");
+	    
+		$('.section-<?php echo $row;?>-<?php echo $count;?> .page_qa_col').splitList();
+		
+		//* ## Page Accordion Q&A - with split 2 columns .page_qa_subcol
+		$('.section-<?php echo $row;?>-<?php echo $count;?> .page_qa_col > .page_qa_subcol > .page_qa_item').attr('tabindex', '0');
+		$('.section-<?php echo $row;?>-<?php echo $count;?> .page_qa_col > .page_qa_subcol > .page_qa_item > .page_qa_item_answer').attr('aria-hidden', 'true');
+		$('.section-<?php echo $row;?>-<?php echo $count;?> .page_qa_col > .page_qa_subcol > .page_qa_item > .page_qa_item_question').attr('aria-expanded', 'false');
+		$('.section-<?php echo $row;?>-<?php echo $count;?> .page_qa_col > .page_qa_subcol > .page_qa_item > .page_qa_item_answer').attr('aria-expanded', 'false');
+		$('.section-<?php echo $row;?>-<?php echo $count;?> .page_qa_col > .page_qa_subcol > .page_qa_item').click(function(){
+			if($(this).children('.page_qa_item_answer').attr('aria-hidden') == 'true') {
+				$(this).children('.page_qa_item_answer').attr('aria-hidden', 'false');
+				$(this).children('.basic').attr('aria-expanded', 'true');
+				$(this).children('.page_qa_item_answer').attr('aria-expanded', 'ture');
+				$(this).children('.page_qa_item_question').addClass('q_open');
+			} else {
+				$(this).children('.page_qa_item_answer').attr('aria-hidden', 'true');
+				$(this).children('.basic').attr('aria-expanded', 'false');
+				$(this).children('.page_qa_item_answer').attr('aria-expanded', 'false');
+				$(this).children('.page_qa_item_question').removeClass('q_open');
+			}
+			$(this).children('.page_qa_item_answer').slideToggle();
+		});
+		$('.section-<?php echo $row;?>-<?php echo $count;?> .page_qa_col > .page_qa_subcol > .page_qa_item').on("keydown", function(ev){ if (ev.which == 13) { $(this).click(); } });
+		
+
+	}); 				
+	</script>								
+	<?php } ?>
+	
+	
 </div>	
 <?php if( $qa_accordion_break ){ ?><div class="break"></div><?php } ?>		
 <?php } ?>	
