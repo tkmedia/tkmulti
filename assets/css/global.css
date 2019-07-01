@@ -2604,6 +2604,7 @@ transition: all .5s;}
 -moz-transition: all .5s;
 -o-transition: all .5s;
 transition: all .5s;}
+.page_link_grid_wrap.grid_style1 .title_inside {position: relative;}
 .page_link_grid_wrap.grid_style1 .title_inside .page_grid_inside {opacity: 1;transform: translateX(-50%);transition: transform .6s ease-out .1s;bottom: 60px;width: 85%;left: 50%;color: #fff;overflow: hidden;pointer-events: none;position: absolute;z-index: 1;left: 50%;}
 
 
