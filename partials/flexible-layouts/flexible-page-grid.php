@@ -15,12 +15,14 @@ $article_grid_style = get_sub_field('flex_article_grid_style');
 $flex_article_grid_paginate = get_sub_field('flex_article_grid_paginate');
 $flex_article_grid_perpage = get_sub_field('flex_article_grid_perpage');
 $grid_show_info = get_sub_field('flex_article_grid_show_info');
+$grid_excerpt_length = get_sub_field('flex_article_grid_excerpt_length');
 $flex_article_grid = get_sub_field('flex_article_grid');
 $article_grid_count = get_sub_field('flex_article_grid_count');
 $article_grid_img = get_sub_field('flex_article_grid_img');
 $article_grid_animation = get_sub_field('flex_article_grid_animation');
 
-if ( $article_grid_count == 2 ) : $ag_xs_cols = "12"; $ag_sm_cols = "6"; $ag_md_cols = "6"; 
+if ( $article_grid_count == 1 ) : $ag_xs_cols = "12"; $ag_sm_cols = "12"; $ag_md_cols = "12"; 
+elseif ( $article_grid_count == 2 ) : $ag_xs_cols = "12"; $ag_sm_cols = "6"; $ag_md_cols = "6"; 
 elseif ( $article_grid_count == 3 ) : $ag_xs_cols = "12"; $ag_sm_cols = "4"; $ag_md_cols = "4"; 
 elseif ( $article_grid_count == 4 ) : $ag_xs_cols = "12"; $ag_sm_cols = "3"; $ag_md_cols = "3";
 elseif ( $article_grid_count == 5 ) : $ag_xs_cols = "12"; $ag_sm_cols = "3"; $ag_md_cols = "20"; 
@@ -34,7 +36,7 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 	<section id="section-<?php echo $row;?>-<?php echo $count;?>" class="page_flexible page_flexible_content section-<?php echo $row;?>-<?php echo $count;?> count_sections_<?php echo $count;?>" data-aos="<?php echo $article_grid_animation;?>">
 
 		<div class="flexible_articles flexible_page_element" itemprop="text">
-			<div class="page_link_grid_wrap grid_<?php echo $article_grid_style;?> grid_title_<?php echo $artcile_grid_title_color;?> grid_title_<?php echo $artcile_grid_title_align;?>">
+			<div class="page_link_grid_wrap grid_<?php echo $article_grid_style;?> grid_title_<?php echo $artcile_grid_title_align;?>">
 				
 				<?php if( $flex_article_grid_paginate == 'no-paginate' ) { ?>
 				
@@ -43,13 +45,15 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 				<?php setup_postdata($post); ?>                     
 			    
 				    <div class="page_link_grid_item articles_grid_item col-xs-<?= $ag_xs_cols; ?> col-sm-<?= $ag_sm_cols; ?> col-md-<?= $ag_md_cols; ?>">
+					    
+					<?php if( $article_grid_style == 'style1' ){ ?>    
 						<div class="articles_grid_item_container">
 							<div class="articles_grid_item_img box_effect">
 								<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'קישור לעמוד %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
 									
 								<?php if( $article_grid_title_position == 'top' ): ?>
 								<div class="page_link_grid_item_title_wrap">
-									<h3 itemprop="name" class="page_link_grid_item_title no-line" style="font-size: <?php echo $artcile_grid_title_size;?>px;"><?php the_title(); ?></h3>
+									<h3 itemprop="name" class="page_link_grid_item_title no-line" style="font-size:<?php echo $artcile_grid_title_size;?>px;color:<?php echo $artcile_grid_title_color;?>;"><?php the_title(); ?></h3>
 								</div>
 								<?php endif; ?>
 								
@@ -57,6 +61,7 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 									<?php if( $article_grid_img == 'main_img' ): ?>
 										<div class="page_img">
 											<?php echo the_post_thumbnail('inside-post'); ?>
+											<div class="page_img_border"></div>
 										</div>
 									<?php endif; ?>
 									
@@ -75,7 +80,7 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 								</div>
 								<?php if( $article_grid_title_position == 'bottom' ): ?>
 								<div class="page_link_grid_item_title_wrap">
-									<h3 itemprop="name" class="page_link_grid_item_title no-line" style="font-size: <?php echo $artcile_grid_title_size;?>px;"><?php the_title(); ?></h3>
+									<h3 itemprop="name" class="page_link_grid_item_title no-line" style="font-size: <?php echo $artcile_grid_title_size;?>px;color:<?php echo $artcile_grid_title_color;?>;"><?php the_title(); ?></h3>
 								</div>
 								<?php endif; ?>
 								
@@ -88,7 +93,7 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 										<?php 
 										//echo custom_field_excerpt();
 										//echo wp_trim_words($excerpt,7); 
-										echo wp_html_excerpt( $excerpt, 30, '...' ); ?>
+										echo wp_html_excerpt( $excerpt, $grid_excerpt_length, '...' ); ?>
 									</div>
 								</div>
 								<?php 
@@ -98,6 +103,11 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 								</a>
 							</div>	
 						</div>
+					<?php } elseif( $article_grid_style == 'style2' ){ ?>	
+					
+					<?php } elseif( $article_grid_style == 'style3' ){ ?>		
+					
+					<?php } ?>	
 				    </div>
 			    <?php endforeach; ?>
 			    <?php wp_reset_postdata(); ?>
@@ -137,7 +147,7 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 									
 								<?php if( $article_grid_title_position == 'top' ): ?>
 								<div class="page_link_grid_item_title_wrap">
-									<h3 itemprop="name" class="page_link_grid_item_title no-line" style="font-size: <?php echo $artcile_grid_title_size;?>px;"><?php the_title(); ?></h3>
+									<h3 itemprop="name" class="page_link_grid_item_title no-line" style="font-size: <?php echo $artcile_grid_title_size;?>px;color:<?php echo $artcile_grid_title_color;?>;"><?php the_title(); ?></h3>
 								</div>
 								<?php endif; ?>
 								
@@ -164,7 +174,7 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 								</div>
 								<?php if( $article_grid_title_position == 'bottom' ): ?>
 								<div class="page_link_grid_item_title_wrap">
-									<h3 itemprop="name" class="page_link_grid_item_title no-line" style="font-size: <?php echo $artcile_grid_title_size;?>px;"><?php the_title(); ?></h3>
+									<h3 itemprop="name" class="page_link_grid_item_title no-line" style="font-size: <?php echo $artcile_grid_title_size;?>px;color:<?php echo $artcile_grid_title_color;?>;"><?php the_title(); ?></h3>
 								</div>
 								<?php endif; ?>
 								
@@ -177,7 +187,7 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 										<?php 
 										//echo custom_field_excerpt();
 										//echo wp_trim_words($excerpt,7); 
-										echo wp_html_excerpt( $excerpt, 30, '...' ); ?>
+										echo wp_html_excerpt( $excerpt, $grid_excerpt_length, '...' ); ?>
 									</div>
 								</div>
 								<?php 
