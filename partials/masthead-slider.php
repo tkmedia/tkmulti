@@ -453,6 +453,8 @@ jQuery(function($) {
 	        topSlider.css('height', "calc(100vh - " + header_height + "px)");
 	        topSliderImg.css('height', "calc(100vh - " + header_height + "px)");
 	        $('.masthead_content_container').css('padding-top', header_height);
+	        $('.slider_content_bottom #main-top-slider').css('padding-top', header_height);
+	         
 	    }
     });	
 
