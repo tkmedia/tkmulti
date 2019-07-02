@@ -1186,7 +1186,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 @media (max-width: 991px) {
 	.header-logo.desktop_logo {display: none;}
 	.header-logo {width: 190px;padding: 0;margin: auto;}
-	#branding {display: inline-block;top: 14px;left: calc(50% - 133px);}
+	#branding {display: inline-block;top: 14px;left: calc(50% - 133px);position: initial;display: block;}
 	.header_top_panel_col.top_panel_col_right {width: 60%;display: none;}
 	.header_top_panel_col.top_panel_col_left {width: 40%;margin-right: auto;}
 	.branding {padding: 0;}
