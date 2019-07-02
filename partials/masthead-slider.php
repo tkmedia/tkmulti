@@ -280,21 +280,24 @@ $masthead_background_color = get_field('masthead_background_color');
 					  </div>
 					</div>
 			    </div>
+			    
+			    <?php
+				$title_color = get_post_meta( get_the_ID(), 'page_masthead_title_color', true );
+				$text_color = get_post_meta( get_the_ID(), 'page_masthead_text_color', true );
+				$btn_color = get_post_meta( get_the_ID(), 'page_masthead_btn_color', true );
+				$btn_bg_color = get_post_meta( get_the_ID(), 'page_masthead_btn_bg_color', true );
+				$page_masthead_title = esc_html(get_post_meta( get_the_ID(), 'page_masthead_title', true ));
+				$page_masthead_text = wpautop(get_post_meta( get_the_ID(), 'page_masthead_text', true ));
+				$masthead_title_hide = get_post_meta( get_the_ID(), 'page_masthead_title_hide', true );
+				    
+				if( !$masthead_title_hide || $page_masthead_text ) { ?>
+			    
 			    <div class="masthead_content_overlay"></div>
 				<div class="masthead_content wrap row-flex <?php echo($title_hor); ?>-xs <?php echo($title_ver); ?>-xs <?php echo($title_location); ?>">
 					<div class="masthead_content_container col-xs-12">
 						<div class="masthead_content_container_wrap">
 							
-						<?php 							
-						if ($title_location == 'slider_content_bottom' ) {
-							$title_color = get_post_meta( get_the_ID(), 'page_masthead_title_color', true );
-							$text_color = get_post_meta( get_the_ID(), 'page_masthead_text_color', true );
-							$btn_color = get_post_meta( get_the_ID(), 'page_masthead_btn_color', true );
-							$btn_bg_color = get_post_meta( get_the_ID(), 'page_masthead_btn_bg_color', true );
-							$page_masthead_title = esc_html(get_post_meta( get_the_ID(), 'page_masthead_title', true ));
-							$page_masthead_text = wpautop(get_post_meta( get_the_ID(), 'page_masthead_text', true ));
-							$masthead_title_hide = get_post_meta( get_the_ID(), 'page_masthead_title_hide', true );
-						?>
+						<?php if ($title_location == 'slider_content_bottom' ) { ?>
 							<?php if( !$masthead_title_hide ) { ?>
 							<h1 class="entry-title masthead_content_title" itemprop="headline" style="color: <?php echo($title_color); ?>;">
 								<?php if( $page_masthead_title ) { ?>
@@ -346,15 +349,7 @@ $masthead_background_color = get_field('masthead_background_color');
 							
 										
 						
-						<?php } else { 
-							$title_color = get_post_meta( get_the_ID(), 'page_masthead_title_color', true );
-							$text_color = get_post_meta( get_the_ID(), 'page_masthead_text_color', true );
-							$btn_color = get_post_meta( get_the_ID(), 'page_masthead_btn_color', true );
-							$btn_bg_color = get_post_meta( get_the_ID(), 'page_masthead_btn_bg_color', true );
-							$page_masthead_title = esc_html(get_post_meta( get_the_ID(), 'page_masthead_title', true ));
-							$page_masthead_text = wpautop(get_post_meta( get_the_ID(), 'page_masthead_text', true ));
-							$masthead_title_hide = get_post_meta( get_the_ID(), 'page_masthead_title_hide', true );
-						?>
+						<?php } else { ?>
 							<?php if( !$masthead_title_hide ) { ?>
 							<h1 class="entry-title masthead_content_title <?php if ( !is_front_page() ) { ?>masthead_content_title_single<?php } ?>" itemprop="headline">
 								<?php if( $page_masthead_title ) { ?>
@@ -409,6 +404,8 @@ $masthead_background_color = get_field('masthead_background_color');
 					<?php } ?>				
 						
 				</div>
+				<?php } ?>
+				
 				<?php if ( !is_front_page() ) { ?>
 				<div class="yoast_breadcrumb breadcrumb_content_in_slider">
 					<div class="yoast_breadcrumb_wrap wrap">
