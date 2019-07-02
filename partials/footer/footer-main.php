@@ -1,41 +1,61 @@
 <?php 
 $header_phone = get_option( 'options_header_phone' );
 $footer_content_text = wpautop(get_option( 'options_footer_content_text' ));
-$footer_content_text_left = wpautop(get_option( 'options_footer_content_text_left' ));	
+$footer_content_text_left = wpautop(get_option( 'options_footer_content_text_left' ));
+
+$footer_fixed_show = get_option( 'options_footer_bar_show' );
+$footer_search_show = get_option( 'options_footer_search_show' );
+$footer_link_show = get_option( 'options_footer_link_show' );
+$footer_popup_show = get_option( 'options_footer_popup_show' );
+
+$footer_fixed_link_btn = get_option( 'options_footer_fixed_link_btn' );
+$footer_fixed_link_page = get_option( 'options_footer_fixed_link_page' );
+$footer_fixed_link_icon = get_option( 'options_footer_fixed_link_icon' );
+
+$footer_form_title = get_option( 'options_footer_form_title' );
+$footer_form_subtitle = get_option( 'options_footer_form_subtitle' );
+$footer_form_id = get_option( 'options_footer_form_id' );
+
 //$footer_content_text = get_field('footer_content_text','option');
 ?>
 
+<?php if( $footer_fixed_show ){ ?>
 <div id="footer_mobile_fix" class="footer_mobile_fix">
 	<div class="footer_mobile_fix_row row-flex middle-xs center-xs">
 
+		<?php if( $footer_search_show ){ ?>
 		<div class="footer_form_fix_col col-xs-4">
 			<div class="mobile_footer_links">
 				<a data-fancybox data-src="#footer_search" href="javascript:;">
 					<i class="fal fa-search"></i>
-					<p>חיפוש</p>
+					<p><?php _e('Search', 'tkmulti'); ?></p>
 				</a>
 			</div>
 		</div>
-		
+		<?php } ?>
+		<?php if( $footer_link_show ){ ?>
 		<div class="footer_form_fix_col col-xs-4">
 			<div class="mobile_footer_links">
-				<a href="#">
-					<i class="fal fa-map-marker-alt"></i>
-					<p>סניפים</p>
+				<a href="<?php echo $footer_fixed_link_page;?>">
+					<?php echo $footer_fixed_link_icon;?>
+					<p><?php echo $footer_full_contnet_block_width;?></p>
 				</a>
 			</div>
 		</div>
-		
+		<?php } ?>
+		<?php if( $footer_popup_show ){ ?>
 		<div class="footer_form_fix_col col-xs-4">
 			<div class="mobile_footer_links">
 				<a data-fancybox data-src="#contact_form_popup" href="javascript:;">
 					<i class="fal fa-envelope"></i>
-					<p>צור קשר</p>
+					<p><?php _e('Contact', 'tkmulti'); ?></p>
 				</a>
 			</div>
 		</div>
-		
+		<?php } ?>
 	</div>
+	
+	<?php if( $footer_search_show ){ ?>
 	<div id="footer_search" style="display: none;">
 		<div id="popup-search">
 			<div class="search_bar">
@@ -43,18 +63,38 @@ $footer_content_text_left = wpautop(get_option( 'options_footer_content_text_lef
 			</div>
 		</div>
 	</div>
-
+	<?php } ?>
+	<?php if( $footer_popup_show && $footer_form_id ): ?>
 	<div id="contact_form_popup" style="display: none;">
 		<div id="popup-contact-form">
 			<div class="popup-contact-form clearfix">
-				<div class="contact-form-page">
-					<?php echo do_shortcode( '[contact-form-7 id="257" title="טופס כללי לרחב"]' );  ?>
+				<?php if( $footer_form_title ) { ?>
+				<div class="contact-title">
+					<div class="popup_contact_title"><?php echo $footer_form_title; ?></div>
+				</div>
+				<?php } ?>
+				<?php if( $footer_form_subtitle ) { ?>
+				<div class="contact-title">
+					<div class="popup_contact_subtext"><?php echo $footer_form_subtitle; ?></div>
+				</div>
+				<?php } ?>
+				<div class="full_form_id">
+					<?php 
+					foreach( $footer_form_id as $form ):
+					$form_id= $form->ID; ?>
+					<div class="full_form_id_wrap">
+						<?php echo do_shortcode( '[contact-form-7 id="'.$form_id.'" ]' ); ?>
+					</div>
+					
+					<?php endforeach; ?>
 				</div>
 			</div>
 		</div>
 	</div>
+	<?php endif; ?>
 
 </div>
+<?php } ?>
 
 <div id="footer_container" class="footer-main">
 	<div id="footer">
