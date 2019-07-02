@@ -41,10 +41,10 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 				<?php if( $flex_article_grid_paginate == 'no-paginate' ) { ?>
 				
 				<div class="articles_grid_item_row page_grid row-flex">
-				<?php foreach( $flex_article_grid as $post ): ?>
+				<?php foreach( $flex_article_grid as $post ): $item = 1; ?>
 				<?php setup_postdata($post); ?>                     
 			    
-				    <div class="page_link_grid_item articles_grid_item col-xs-<?= $ag_xs_cols; ?> col-sm-<?= $ag_sm_cols; ?> col-md-<?= $ag_md_cols; ?>">
+				    <div class="page_link_grid_item articles_grid_item item-<?php echo $item;?> col-xs-<?= $ag_xs_cols; ?> col-sm-<?= $ag_sm_cols; ?> col-md-<?= $ag_md_cols; ?>">
 					    
 					<?php if( $article_grid_style == 'style1' ){ ?>    
 						<div class="articles_grid_item_container title_<?php echo $article_grid_title_position;?>">
@@ -98,8 +98,8 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 											    //function to get current div height
 											    function get_text_height(){
 											        //var footer_height = $('#footer_container').height();
-											        var text_height = $('.section-<?php echo $row;?>-<?php echo $count;?> .page_links_item_intro').outerHeight();
-											        $('.section-<?php echo $row;?>-<?php echo $count;?> .page_links_item_intro').css('margin-bottom', -text_height);
+											        var text_height = $('.section-<?php echo $row;?>-<?php echo $count;?> .item-<?php echo $item;?> .page_links_item_intro').outerHeight();
+											        $('.section-<?php echo $row;?>-<?php echo $count;?> .item-<?php echo $item;?> .page_links_item_intro').css('margin-bottom', -text_height);
 											    }
 										    });	
 										}); 
@@ -139,7 +139,7 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 					
 					<?php } ?>	
 				    </div>
-			    <?php endforeach; ?>
+			    <?php $item++;endforeach; ?>
 			    <?php wp_reset_postdata(); ?>
 				</div> 
 				
@@ -162,7 +162,7 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 				 ?>
 								
 				<div class="articles_grid_item_row page_grid row-flex">
-				<?php foreach( $flex_article_grid as $post ): ?>
+				<?php foreach( $flex_article_grid as $post ): $item = 1;?>
 				<?php setup_postdata($post);
 				    $grid_row++;
 				    // Ignore this item if $row is lower than $min
@@ -170,7 +170,7 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 				    // Stop loop completely if $row is higher than $max
 				    if($grid_row > $max) { break; } ?>                     
 			    
-				    <div class="page_link_grid_item articles_grid_item col-xs-<?= $ag_xs_cols; ?> col-sm-<?= $ag_sm_cols; ?> col-md-<?= $ag_md_cols; ?>">
+				    <div class="page_link_grid_item articles_grid_item item-<?php echo $item;?> col-xs-<?= $ag_xs_cols; ?> col-sm-<?= $ag_sm_cols; ?> col-md-<?= $ag_md_cols; ?>">
 						<div class="articles_grid_item_container">
 							<div class="articles_grid_item_img box_effect">
 								<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'קישור לעמוד %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
@@ -228,7 +228,7 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 							</div>	
 						</div>
 				    </div>
-			    <?php endforeach; ?>
+			    <?php $item++;endforeach; ?>
 			    <?php wp_reset_postdata(); ?>
 				</div> 
 				<?php } ?>    
