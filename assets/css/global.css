@@ -1536,8 +1536,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 /* Masthead slider */
 .slider_content_bottom .masthead_content_container {padding: 20px;}
 .masthead_content_container_wrap {position: relative;padding: 25px;}
-.front-page .masthead_content_container_wrap:before {content: '';top:0;right: 0;width: 50%;height: 60%;border-top:2px solid #fff;border-right: 2px solid #fff;position: absolute; }
-.front-page .masthead_content_container_wrap:after {content: '';bottom:0;left: 0;width: 50%;height: 60%;border-bottom:2px solid #fff;border-left: 2px solid #fff;position: absolute; }
 
 #home_masthead .home_masthead_text {-webkit-animation: 3s ease 0s normal forwards 1 fadeInUp;animation: 3s ease 0s normal forwards 1 fadeInUp;animation-delay: 1s;opacity: 0;}
 #home_masthead h1.entry-title.masthead_content_title {-webkit-animation: 3s ease 0s normal forwards 1 fadeInUp;animation: 3s ease 0s normal forwards 1 fadeInUp;animation-delay: .5s;opacity: 0;}
