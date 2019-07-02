@@ -66,7 +66,7 @@ if ( $button_hide_mobile && wp_is_mobile() ) {
 		$popup_contact_title = get_option( 'options_default_flex_form_title' );
 		$popup_contact_subtext = get_option( 'options_default_flex_form_subtitle' );
 		?>
-		<div style="display: none;" id="popop-form-<?php echo $row;?>-<?php echo $count;?>" class="button-popop-form">
+		<div style="display: none;max-width: 800px;" id="popop-form-<?php echo $row;?>-<?php echo $count;?>" class="button-popop-form">
 		
 			<div class="button-popop-form-wrap">
 				
