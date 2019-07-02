@@ -91,6 +91,19 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 												echo wp_html_excerpt( $excerpt, $grid_excerpt_length, '...' ); ?>
 											</div>
 										</div>
+										<script>
+										jQuery(function($) {
+											$(window).load(function(){
+												get_text_height();
+											    //function to get current div height
+											    function get_text_height(){
+											        //var footer_height = $('#footer_container').height();
+											        var text_height = $('.section-<?php echo $row;?>-<?php echo $count;?> .page_links_item_intro').outerHeight();
+											        $('.section-<?php echo $row;?>-<?php echo $count;?> .page_links_item_intro').css('margin-bottom', -text_height);
+											    }
+										    });	
+										}); 
+										</script>										
 										<?php } ?> 
 									</div>
 									<?php endif; ?>
