@@ -123,7 +123,6 @@ if ( $gallery_slider_hide_mobile && wp_is_mobile() ) {
 										<?php echo wp_get_attachment_image( $image['ID'], $gallery_slider_size); ?>
 										<?php //echo wp_get_attachment_image( $image, $gallery_slider_size ); ?>
 					                </div>
-					                <i class="fal fa-search-plus"></i>
 					            <?php endforeach; ?>
 							    </div>
 						    </div>
