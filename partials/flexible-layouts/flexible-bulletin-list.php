@@ -5,6 +5,7 @@ $bulletin_list_hide_mobile = get_sub_field('flex_bulletin_list_hide_mobile');
 $bulletin_list_order = get_sub_field('flex_bulletin_list_order');
 $bulletin_list_break = get_sub_field('flex_bulletin_list_break');
 $bulletin_list_block_align = get_sub_field('flex_bulletin_list_block_align');
+$bulletin_list_animation = get_sub_field('flex_bulletin_list_animation');
 
 $bulletin_list_title = get_sub_field('flex_bulletin_list_title');
 $bulletin_list_subtitle = get_sub_field('flex_bulletin_list_subtitle');
@@ -15,7 +16,7 @@ $bulletin_list_img_position = get_sub_field('bulletin_list_img_position');
 $bulletin_list_img_align = get_sub_field('bulletin_list_img_align');
 $bulletin_list_img_num = get_sub_field('bulletin_list_img_num');
 $bulletin_list_size = get_sub_field('flex_bulletin_list_size');
-$bulletin_list_animation = get_sub_field('flex_bulletin_list_animation');
+$bulletin_list_icon_size = get_sub_field('flex_bulletin_list_icon_size');
 
 if ( $bulletin_list_img_num == 1 ) : $bl_xs_cols = "12"; $bl_sm_cols = "12"; $bl_md_cols = "12"; 
 elseif ( $bulletin_list_img_num == 2 ) : $bl_xs_cols = "12"; $bl_sm_cols = "6"; $bl_md_cols = "6"; 
@@ -78,7 +79,8 @@ if ( $bulletin_list_hide_mobile && wp_is_mobile() ) {
 									</div>
 									<?php endif; ?>	
 									<?php if( $bulletin_list_style == 'bulletin_font' ): ?>
-									<div class="flex_bulletin_list_icon">
+									<style>.flex_bulletin_list_icon, .flex_bulletin_list_icon_inner i {font-size:<?php echo $bulletin_list_icon_size; ?>px;}</style>
+									<div class="flex_bulletin_list_icon" style="">
 										<div class="flex_bulletin_list_icon_inner" style="color:<?php echo $bulletin_icon_font_color; ?>;"><?php echo $bulletin_list_icon; ?></div>
 									</div>
 									<?php endif; ?>	
