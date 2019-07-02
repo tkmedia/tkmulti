@@ -14,7 +14,7 @@ $footer_fixed_link_icon = get_option( 'options_footer_fixed_link_icon' );
 
 $footer_form_title = get_option( 'options_footer_form_title' );
 $footer_form_subtitle = get_option( 'options_footer_form_subtitle' );
-$footer_form_id = get_option( 'options_footer_form_id' );
+$footer_form_id = get_field( 'footer_form_id','option' );
 
 //$footer_content_text = get_field('footer_content_text','option');
 ?>
