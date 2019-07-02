@@ -1666,8 +1666,8 @@ button.main_btn.style3:hover,
 
 @media (max-width: 767px) {
 	#home_masthead #top-slider .single-slider-img, #home_masthead #top-slider .slides {height: 700px !important;}
-	.slider_content_bottom #home_masthead #top-slider .single-slider-img, 
-	.slider_content_bottom #home_masthead #top-slider .slides {height: auto !important;}
+	#home_masthead .slider_content_bottom #top-slider .single-slider-img, 
+	#home_masthead .slider_content_bottom #top-slider .slides {height: auto !important;}
 	#js-next1, #js-prev1, #js-page1 {display: none !important;}
 	h1.entry-title.masthead_content_title {font-size: 40px !important;}
 	.yoast_breadcrumb {font-size: 17px;}
