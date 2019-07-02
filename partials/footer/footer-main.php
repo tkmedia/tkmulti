@@ -81,7 +81,7 @@ $footer_form_id = get_option( 'options_footer_form_id' );
 				<div class="full_form_id">
 					<?php 
 					foreach( $footer_form_id as $form ):
-					$form_id= $form->ID; ?>
+					$form_id = $form->ID; ?>
 					<div class="full_form_id_wrap">
 						<?php echo do_shortcode( '[contact-form-7 id="'.$form_id.'" ]' ); ?>
 					</div>
