@@ -35,9 +35,9 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 						
 					<?php if( $article_slider_source == 'manual' ): ?>
 						
-						<?php foreach( $flex_article_slider as $post ): ?>
+						<?php foreach( $flex_article_slider as $post ): $item = 1;?>
 						<?php setup_postdata($post); ?>
-					    <div class="page_link_slider_item articles_slider_item swiper-slide">
+					    <div class="page_link_slider_item articles_slider_item swiper-slide item-<?php echo $item;?>">
 							<div class="articles_slider_item_container">
 								<div class="articles_slider_item_img box_effect">
 									<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'קישור לעמוד %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
@@ -76,8 +76,8 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 											    //function to get current div height
 											    function get_text_height(){
 											        //var footer_height = $('#footer_container').height();
-											        var text_height = $('.section-<?php echo $row;?>-<?php echo $count;?> .articles_grid_item_text').outerHeight();
-											        $('.section-<?php echo $row;?>-<?php echo $count;?> .articles_grid_item_text').css('margin-bottom', -text_height);
+											        var text_height = $('.section-<?php echo $row;?>-<?php echo $count;?> .item-<?php echo $item;?> .articles_grid_item_text').outerHeight();
+											        $('.section-<?php echo $row;?>-<?php echo $count;?> .item-<?php echo $item;?> .articles_grid_item_text').css('margin-bottom', -text_height);
 											    }
 										    });	
 										}); 
@@ -163,7 +163,7 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 								</div>	
 							</div>
 					    </div>
-					    <?php endforeach; ?>
+					    <?php $item++;endforeach; ?>
 					    <?php wp_reset_postdata(); ?> 
 					<?php endif; ?>    
 				    <?php if( $article_slider_source == 'page' || $article_slider_source == 'post' || $article_slider_source == 'child' ):
@@ -197,11 +197,11 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 							);
 					    }
 						$the_queryA = new WP_Query( $argsA );
-						if ( $the_queryA->have_posts() ) :
+						if ( $the_queryA->have_posts() ) : $item = 1;
 					    ?>
 						<?php while ( $the_queryA->have_posts() ) : $the_queryA->the_post(); ?>
 						<?php setup_postdata($post); ?>
-						    <div class="page_link_slider_item articles_slider_item swiper-slide">
+						    <div class="page_link_slider_item articles_slider_item swiper-slide item-<?php echo $item;?>">
 								<div class="articles_slider_item_container">
 									<div class="articles_slider_item_img box_effect">
 										<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'קישור לעמוד %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
@@ -240,8 +240,8 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 												    //function to get current div height
 												    function get_text_height(){
 												        //var footer_height = $('#footer_container').height();
-												        var text_height = $('.section-<?php echo $row;?>-<?php echo $count;?> .articles_grid_item_text').outerHeight();
-												        $('.section-<?php echo $row;?>-<?php echo $count;?> .articles_grid_item_text').css('margin-bottom', -text_height);
+												        var text_height = $('.section-<?php echo $row;?>-<?php echo $count;?> .item-<?php echo $item;?> .articles_grid_item_text').outerHeight();
+												        $('.section-<?php echo $row;?>-<?php echo $count;?> .item-<?php echo $item;?> .articles_grid_item_text').css('margin-bottom', -text_height);
 												    }
 											    });	
 											}); 
@@ -316,7 +316,7 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 									</div>	
 								</div>
 						    </div>
-						    <?php endwhile; ?>
+						    <?php $item++;endwhile; ?>
 						    <?php wp_reset_postdata(); ?> 				
 						<?php endif; ?>
 					<?php endif; ?>    				
