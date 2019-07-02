@@ -802,7 +802,7 @@ button.main_btn:hover input[type="submit"] {color: #9e8b59 !important;}
 
 /* Header
 -------------------------------------------------------------- */
-header#header-container {z-index: 999999;width: 100%;right: 0;left: 0;top: 0;position: absolute;}
+header#header-container {z-index: 999999;width: 100%;right: 0;left: 0;top: 0;position: absolute;min-height: 50px;}
 .header_menu_container_wrap {background-color: rgba(0, 0, 0, 0.66);-webkit-box-shadow: 1px 5px 5px rgba(0,0,0,.41);-moz-box-shadow: 1px 5px 5px rgba(0,0,0,.41);box-shadow: 1px 5px 5px rgba(0,0,0,.41);}
 header.full_row_box {background: rgba(0, 0, 0, 0.75) !important;}
 
