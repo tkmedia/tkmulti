@@ -229,21 +229,22 @@ $page_top_slider_content = get_post_meta( get_the_ID(), 'mobile_page_top_slider_
 					</div>
 			        
 			    </div>
+			    <?php
+				$title_color = get_post_meta( get_the_ID(), 'mobile_page_masthead_title_color', true );
+				$text_color = get_post_meta( get_the_ID(), 'mobile_page_masthead_text_color', true );
+				$btn_color = get_post_meta( get_the_ID(), 'mobile_page_masthead_btn_color', true );
+				$btn_bg_color = get_post_meta( get_the_ID(), 'mobile_page_masthead_btn_bg_color', true );
+				$page_masthead_title = get_post_meta( get_the_ID(), 'mobile_page_masthead_title', true );
+				$page_masthead_text = get_post_meta( get_the_ID(), 'mobile_page_masthead_text', true );
+				$masthead_title_hide = get_post_meta( get_the_ID(), 'page_masthead_title_hide', true );
+				
+				if( !$masthead_title_hide || $page_masthead_text ) { ?>    
 
 				<div class="masthead_content wrap row-flex <?php echo($title_hor); ?>-xs <?php echo($title_ver); ?>-xs <?php echo($title_location); ?>">
 					<div class="masthead_content_container col-xs-12">
 						<div class="masthead_content_container_wrap">
 							
-						<?php 							
-						if ($title_location == 'slider_content_bottom' ) {
-							$title_color = get_post_meta( get_the_ID(), 'mobile_page_masthead_title_color', true );
-							$text_color = get_post_meta( get_the_ID(), 'mobile_page_masthead_text_color', true );
-							$btn_color = get_post_meta( get_the_ID(), 'mobile_page_masthead_btn_color', true );
-							$btn_bg_color = get_post_meta( get_the_ID(), 'mobile_page_masthead_btn_bg_color', true );
-							$page_masthead_title = get_post_meta( get_the_ID(), 'mobile_page_masthead_title', true );
-							$page_masthead_text = get_post_meta( get_the_ID(), 'mobile_page_masthead_text', true );
-							$masthead_title_hide = get_post_meta( get_the_ID(), 'page_masthead_title_hide', true );
-						?>
+						<?php if ($title_location == 'slider_content_bottom' ) { ?>
 							<?php if( !$masthead_title_hide ) { ?>
 							<h1 class="entry-title masthead_content_title" itemprop="headline" style="color: <?php echo($title_color); ?>;">
 								<?php if( $page_masthead_title ) { ?>
@@ -272,15 +273,8 @@ $page_top_slider_content = get_post_meta( get_the_ID(), 'mobile_page_top_slider_
 							</div>
 							<?php } ?>						
 						
-						<?php } else { 
-							$title_color = get_post_meta( get_the_ID(), 'mobile_page_masthead_title_color', true );
-							$text_color = get_post_meta( get_the_ID(), 'mobile_page_masthead_text_color', true );
-							$btn_color = get_post_meta( get_the_ID(), 'mobile_page_masthead_btn_color', true );
-							$btn_bg_color = get_post_meta( get_the_ID(), 'mobile_page_masthead_btn_bg_color', true );
-							$page_masthead_title = get_post_meta( get_the_ID(), 'mobile_page_masthead_title', true );
-							$page_masthead_text = get_post_meta( get_the_ID(), 'mobile_page_masthead_text', true );
-							$masthead_title_hide = get_post_meta( get_the_ID(), 'page_masthead_title_hide', true );
-						?>
+						<?php } else { ?>
+						
 							<?php if( !$masthead_title_hide ) { ?>
 							<h1 class="entry-title masthead_content_title" itemprop="headline">
 								<?php if( $page_masthead_title ) { ?>
@@ -313,7 +307,7 @@ $page_top_slider_content = get_post_meta( get_the_ID(), 'mobile_page_top_slider_
 						</div>													
 					</div>	
 				</div>
-
+				<?php } ?>
 
 				<?php if ( !is_front_page() ) { ?>
 				<div class="yoast_breadcrumb">
