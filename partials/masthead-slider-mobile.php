@@ -102,7 +102,7 @@ $page_top_slider_content = get_post_meta( get_the_ID(), 'mobile_page_top_slider_
 							$btn_bg_color = get_post_meta( get_the_ID(), 'mobile_page_masthead_btn_bg_color', true );
 							$page_masthead_title = get_post_meta( get_the_ID(), 'mobile_page_masthead_title', true );
 							$page_masthead_text = get_post_meta( get_the_ID(), 'mobile_page_masthead_text', true );
-							$masthead_title_hide = get_post_meta( get_the_ID(), 'mobile_page_masthead_title_hide', true );
+							$masthead_title_hide = get_post_meta( get_the_ID(), 'page_masthead_title_hide', true );
 
 							?>
 							<?php if( !$masthead_title_hide ) { ?>
@@ -140,7 +140,7 @@ $page_top_slider_content = get_post_meta( get_the_ID(), 'mobile_page_top_slider_
 							$btn_bg_color = get_post_meta( get_the_ID(), 'mobile_page_masthead_btn_bg_color', true );
 							$page_masthead_title = get_post_meta( get_the_ID(), 'mobile_page_masthead_title', true );
 							$page_masthead_text = get_post_meta( get_the_ID(), 'mobile_page_masthead_text', true );
-							$masthead_title_hide = get_post_meta( get_the_ID(), 'mobile_page_masthead_title_hide', true );
+							$masthead_title_hide = get_post_meta( get_the_ID(), 'page_masthead_title_hide', true );
 						?>
 							<?php if( !$masthead_title_hide ) { ?>
 							<h1 class="entry-title masthead_content_title" itemprop="headline">
@@ -242,7 +242,7 @@ $page_top_slider_content = get_post_meta( get_the_ID(), 'mobile_page_top_slider_
 							$btn_bg_color = get_post_meta( get_the_ID(), 'mobile_page_masthead_btn_bg_color', true );
 							$page_masthead_title = get_post_meta( get_the_ID(), 'mobile_page_masthead_title', true );
 							$page_masthead_text = get_post_meta( get_the_ID(), 'mobile_page_masthead_text', true );
-							$masthead_title_hide = get_post_meta( get_the_ID(), 'mobile_page_masthead_title_hide', true );
+							$masthead_title_hide = get_post_meta( get_the_ID(), 'page_masthead_title_hide', true );
 						?>
 							<?php if( !$masthead_title_hide ) { ?>
 							<h1 class="entry-title masthead_content_title" itemprop="headline" style="color: <?php echo($title_color); ?>;">
@@ -279,7 +279,7 @@ $page_top_slider_content = get_post_meta( get_the_ID(), 'mobile_page_top_slider_
 							$btn_bg_color = get_post_meta( get_the_ID(), 'mobile_page_masthead_btn_bg_color', true );
 							$page_masthead_title = get_post_meta( get_the_ID(), 'mobile_page_masthead_title', true );
 							$page_masthead_text = get_post_meta( get_the_ID(), 'mobile_page_masthead_text', true );
-							$masthead_title_hide = get_post_meta( get_the_ID(), 'mobile_page_masthead_title_hide', true );
+							$masthead_title_hide = get_post_meta( get_the_ID(), 'page_masthead_title_hide', true );
 						?>
 							<?php if( !$masthead_title_hide ) { ?>
 							<h1 class="entry-title masthead_content_title" itemprop="headline">
