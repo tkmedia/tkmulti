@@ -200,8 +200,11 @@ $page_top_slider_content = get_post_meta( get_the_ID(), 'mobile_page_top_slider_
 			            <?php foreach( $slider_images as $slider_image ): ?>
 				        <div class="single-slider-img-item single-slider-item swiper-slide">
 			                <div class="single-slider-img swiper-slide-cover">
-				                <?php //echo wp_get_attachment_image( $slider_image['ID'], 'full' ); ?>
+				                <?php if ($title_location == 'slider_content_bottom' ) { ?>
+				                <?php echo wp_get_attachment_image( $slider_image['ID'], 'full' ); 
+				                } else { ?>
 								<div class="slide-inner" style="background-image:url(<?php echo $slider_image['url']; ?>)"></div>
+								<?php } ?>
 			                </div>
 				        </div>
 			            <?php endforeach; ?>
