@@ -5,6 +5,7 @@ $article_grid_mobile = get_sub_field('flex_article_grid_mobile');
 $article_grid_hide_mobile = get_sub_field('flex_article_grid_hide_mobile');
 $article_grid_break = get_sub_field('flex_article_grid_break');
 $article_grid_block_align = get_sub_field('flex_article_grid_block_align');
+$article_grid_animation = get_sub_field('flex_article_grid_animation');
 
 $article_grid_title_position = get_sub_field('flex_article_grid_title_position');
 $artcile_grid_title_size = get_sub_field('flex_article_grid_title_size');
@@ -19,7 +20,8 @@ $grid_excerpt_length = get_sub_field('flex_article_grid_excerpt_length');
 $flex_article_grid = get_sub_field('flex_article_grid');
 $article_grid_count = get_sub_field('flex_article_grid_count');
 $article_grid_img = get_sub_field('flex_article_grid_img');
-$article_grid_animation = get_sub_field('flex_article_grid_animation');
+$article_grid_img_effect = get_sub_field('flex_article_grid_img_effect');
+
 
 if ( $article_grid_count == 1 ) : $ag_xs_cols = "12"; $ag_sm_cols = "12"; $ag_md_cols = "12"; 
 elseif ( $article_grid_count == 2 ) : $ag_xs_cols = "12"; $ag_sm_cols = "6"; $ag_md_cols = "6"; 
@@ -36,7 +38,7 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 	<section id="section-<?php echo $row;?>-<?php echo $count;?>" class="page_flexible page_flexible_content section-<?php echo $row;?>-<?php echo $count;?> count_sections_<?php echo $count;?>" data-aos="<?php echo $article_grid_animation;?>">
 
 		<div class="flexible_articles flexible_page_element" itemprop="text">
-			<div class="page_link_grid_wrap grid_<?php echo $article_grid_style;?> grid_title_<?php echo $artcile_grid_title_align;?>">
+			<div class="page_link_grid_wrap grid_<?php echo $article_grid_style;?> grid_title_<?php echo $artcile_grid_title_align;?><?php if( $article_grid_img_effect ) { ?> grid_bw<?php } ?> ">
 				
 				<?php if( $flex_article_grid_paginate == 'no-paginate' ) { ?>
 				
