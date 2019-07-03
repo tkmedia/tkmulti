@@ -88,7 +88,9 @@ if ( $gallery_grid_hide_mobile && wp_is_mobile() ) {
 				    
 				    <?php } else { ?>
 					<?php 
-					if ( $gallery_cols == 3 ) : $g_xs_cols = "6"; $g_sm_cols = "4"; $g_md_cols = "4";
+					if ( $gallery_cols == 1 ) : $g_xs_cols = "12"; $g_sm_cols = "12"; $g_md_cols = "12";
+					elseif ( $gallery_cols == 2 ) : $g_xs_cols = "12"; $g_sm_cols = "6"; $g_md_cols = "6";
+					elseif ( $gallery_cols == 3 ) : $g_xs_cols = "12"; $g_sm_cols = "4"; $g_md_cols = "4";
 					elseif ( $gallery_cols == 4 ) : $g_xs_cols = "6"; $g_sm_cols = "4"; $g_md_cols = "3";
 					elseif ( $gallery_cols == 5 ) : $g_xs_cols = "6"; $g_sm_cols = "3"; $g_md_cols = "20"; 
 					elseif ( $gallery_cols == 6 ) : $g_xs_cols = "6"; $g_sm_cols = "3"; $g_md_cols = "2";
