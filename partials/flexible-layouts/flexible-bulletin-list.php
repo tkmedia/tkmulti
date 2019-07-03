@@ -74,7 +74,7 @@ if ( $bulletin_list_hide_mobile && wp_is_mobile() ) {
 									<?php if( $bulletin_list_style == 'bulletin_img' ): ?>
 									<div class="flex_bulletin_list_icon bulletin_list_img">
 										<div class="list_icon">
-											<?php echo wp_get_attachment_image( $bulletin_list_img, 'inside-post' ); ?>
+											<?php echo wp_get_attachment_image( $bulletin_list_img, $bulletin_list_icon_size ); ?>
 										</div>
 									</div>
 									<?php endif; ?>	
