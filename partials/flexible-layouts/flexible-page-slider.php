@@ -312,10 +312,27 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 												</div>
 												<div class="page_link_slider_item_title_wrap">
 													<div class="page_link_slider_item_title_inner">
-														<h3 itemprop="name" class="page_link_slider_item_title no-line" style="color:<?php echo $artcile_slider_title_color;?>;font-size:<?php echo $artcile_slider_title_size;?>;"><?php the_title(); ?></h3>
-														<div class="slider_item_title_icon" style="color:<?php echo $artcile_slider_title_color;?>;"><span class="icon-cube"></span></div>
+														<div class="slider_item_title_icon" style="color:<?php echo $artcile_slider_title_color;?>;">
+															<?php if( $artcile_slider_title_icon ){ ?>
+															<?php echo $artcile_slider_title_icon;?>
+															<?php } else { ?>
+															<span class="icon-cube"></span>
+															<?php } ?>
+														</div>
 													</div>
 												</div>
+											</div>
+										<?php } elseif( $article_slider_style == 'style5' ){ ?>	
+											<div class="page_link_slider_item_img">
+												<div class="page_img">
+													<?php echo the_post_thumbnail('article-400'); ?>
+													<div class="page_img_border"></div>
+												</div>
+											</div>
+											<div class="page_link_slider_item_title_wrap">
+												<h3 itemprop="name" class="page_link_slider_item_title no-line" style="color:<?php echo $artcile_slider_title_color;?>;justify-content:<?php echo $artcile_slider_title_align;?>;font-size:<?php echo $artcile_slider_title_size;?>px;"><?php the_title(); ?></h3>
+												
+												<div class="entry-date"><?php echo get_the_date('d.m.y'); ?></div>
 											</div>
 										<?php } ?> 
 										
