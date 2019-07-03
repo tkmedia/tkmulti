@@ -37,6 +37,8 @@ $header_color = get_option( 'options_header_bg_color' );
 $logo_side = get_option( 'options_header_logo_side' );
 $nav_layout = get_option( 'options_menu_item_layout' );
 $top_panel_show = get_option( 'options_header_top_panel_show' );
+$panel_bg_color = get_field('header_top_panel_bg_color','option');
+$panel_font_color = get_field('header_top_panel_font_color','option');
 ?>
 
 <body <?php body_class( 'loading' ); ?> <?php tkmulti_schema_body(); ?> id="body-<?php the_ID(); ?>">
@@ -58,7 +60,7 @@ tha_body_top();
 			<div class="header_wrapper_bg">
 				<?php tha_header_top(); ?>
 				<?php if( $top_panel_show ) { ?>
-				<div class="header_topbar_container top_panel">
+				<div class="header_topbar_container top_panel" style="background:<?php echo $panel_bg_color; ?>;">
 					<div class="header_topbar_container_inner wrap">
 						<?php get_template_part( 'partials/header/top-bar' ); ?>
 					</div>
