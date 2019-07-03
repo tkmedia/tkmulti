@@ -5,6 +5,8 @@ $header_email_icon = get_field('header_email_icon','option');
 $social_links = get_field('header_top_nav_left','option');
 $show_phone = get_field('header_top_panel_phone_show','option');
 $show_nav = get_field('header_top_panel_nav_show','option');
+$panel_bg_color = get_field('header_top_panel_bg_color','option');
+$panel_font_color = get_field('header_top_panel_font_color','option');
 
 if( have_rows('header_top_nav_left','option') || $header_phone || $show_nav ): ?>
 <div id="header-info">
@@ -16,7 +18,7 @@ if( have_rows('header_top_nav_left','option') || $header_phone || $show_nav ): ?
 			$social_links_link = get_sub_field('header_top_nav_left_link');
 		?>
 
-			<li class="social-item social_link">
+			<li class="social-item social_link" style="color:<?php echo $panel_font_color; ?>;">
 				<a href="<?php echo $social_links_link; ?>" target="_blank" class="social_media">
 					<?php echo $social_links_icon; ?>
 				</a>
@@ -25,9 +27,9 @@ if( have_rows('header_top_nav_left','option') || $header_phone || $show_nav ): ?
 	    <?php endwhile; ?>
 	    <?php if( $show_phone && $header_phone ) { ?>
 	    <li class="social-item site_phone">
-		    <a href="tel:<?php echo $header_phone; ?>">
+		    <a href="tel:<?php echo $header_phone; ?>" style="color:<?php echo $panel_font_color; ?>!important;">
 			    <span class="site_phone_pre"><?php echo $header_phone; ?></span>
-			    <i class="fas fa-phone-volume"></i>
+			    <i class="fas fa-phone-volume" style="color:<?php echo $panel_font_color; ?>!important;"></i>
 		    </a>
 	    </li>
 	    <?php } ?>
