@@ -48,7 +48,7 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 			    
 				    <?php if( $article_grid_style == 'style1' || $article_grid_style == 'style2' ){ ?> 
 				    <div class="page_link_grid_item articles_grid_item item-<?php echo $item;?> col-xs-<?= $ag_xs_cols; ?> col-sm-<?= $ag_sm_cols; ?> col-md-<?= $ag_md_cols; ?>">
-					<?php } else { ?>    
+					<?php } elseif( $article_grid_style == 'style3' ) { ?>    
 				    <div class="page_link_grid_item articles_grid_item item-<?php echo $item;?>">
 					<?php } ?>    
 					<?php if( $article_grid_style == 'style1' ){ ?>    
