@@ -404,11 +404,6 @@ jQuery(function($) {
 	$li.filter(function(i){ return i < half; }).wrapAll('<div class="page_qa_subcol col-sx-12 col-sm-6">');
 	$li.filter(function(i){ return i >= half; }).wrapAll('<div class="page_qa_subcol col-sx-12 col-sm-6">');
 	*/
-
-while(($children = $(':not(.page_link_grid_wrap.grid_style3 .page_link_grid_item:nth-child(2n+1))')).length) {
-    $children.wrapAll($('<div class="parent"></div>'));
-}	
-	//$li.filter(function(i){ return i < half; }).wrapAll('<div class="page_qa_subcol col-sx-12 col-sm-6">');
 	
 	
 	//* ## Vertical Tab */
