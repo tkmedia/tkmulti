@@ -41,8 +41,8 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 				<?php if( $flex_article_grid_paginate == 'no-paginate' ) { ?>
 				
 				<div class="articles_grid_item_row page_grid row-flex">
-				<?php foreach( $flex_article_grid as $post ): $item = 1; ?>
-				<?php setup_postdata($post); ?>                     
+				<?php $item = 1; foreach( $flex_article_grid as $post ): ?>
+				<?php setup_postdata($post); $item++; ?>                     
 			    
 				    <div class="page_link_grid_item articles_grid_item item-<?php echo $item;?> col-xs-<?= $ag_xs_cols; ?> col-sm-<?= $ag_sm_cols; ?> col-md-<?= $ag_md_cols; ?>">
 					    
@@ -139,7 +139,7 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 					
 					<?php } ?>	
 				    </div>
-			    <?php $item++;endforeach; ?>
+			    <?php endforeach; ?>
 			    <?php wp_reset_postdata(); ?>
 				</div> 
 				
@@ -162,8 +162,8 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 				 ?>
 								
 				<div class="articles_grid_item_row page_grid row-flex">
-				<?php foreach( $flex_article_grid as $post ): $item = 1;?>
-				<?php setup_postdata($post);
+				<?php $item = 1; foreach( $flex_article_grid as $post ): ?>
+				<?php setup_postdata($post); $item++;
 				    $grid_row++;
 				    // Ignore this item if $row is lower than $min
 				    if($grid_row < $min) { continue; }
@@ -228,7 +228,7 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 							</div>	
 						</div>
 				    </div>
-			    <?php $item++;endforeach; ?>
+			    <?php endforeach; ?>
 			    <?php wp_reset_postdata(); ?>
 				</div> 
 				<?php } ?>    
