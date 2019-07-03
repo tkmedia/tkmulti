@@ -178,7 +178,7 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 								<div class="page_link_grid_item_img">
 									<?php if( $article_grid_img == 'main_img' ): ?>
 										<div class="page_img">
-											<?php echo the_post_thumbnail('inside-post'); ?>
+											<?php echo the_post_thumbnail('gallery-800'); ?>
 											<div class="page_img_border"></div>
 										</div>
 									<?php endif; ?>
@@ -187,15 +187,14 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 										$page_main_icon = get_field('page_main_icon');
 										if( $page_main_icon ) { ?>
 										<div class="page_img hover_img_mask" style="background:url(<?php echo wp_get_attachment_url( $page_main_icon, 'inside-post-360' ); ?>) 50% 50% / cover no-repeat;">
-											<?php echo the_post_thumbnail('inside-post'); ?>
+											<?php echo the_post_thumbnail('gallery-800'); ?>
 										</div>
 										<?php } else { ?> 
 										<div class="page_img">
-											<?php echo the_post_thumbnail('inside-post'); ?> 
+											<?php echo the_post_thumbnail('gallery-800'); ?> 
 										</div>		
 										<?php }
 									endif; ?>
-									<?php if( $article_grid_title_position == 'inside' ): ?>
 									<div class="page_grid_inside">
 										<h3 itemprop="name" class="page_link_grid_item_title no-line" style="font-size: <?php echo $artcile_grid_title_size;?>px;color:<?php echo $artcile_grid_title_color;?>;"><?php the_title(); ?></h3>
 										<?php 
@@ -224,7 +223,6 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 										</script>										
 										<?php } ?> 
 									</div>
-									<?php endif; ?>
 								</div>
 								</a>
 							</div>	
