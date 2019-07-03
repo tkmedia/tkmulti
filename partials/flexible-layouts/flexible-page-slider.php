@@ -310,8 +310,10 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 												<div class="page_img">
 													<?php echo the_post_thumbnail('inside-post'); ?>
 												</div>
+												
 												<div class="page_link_slider_item_title_wrap">
 													<div class="page_link_slider_item_title_inner">
+														<h3 itemprop="name" class="page_link_slider_item_title no-line" style="color:<?php echo $artcile_slider_title_color;?>;font-size:<?php echo $artcile_slider_title_size;?>px;"><?php the_title(); ?></h3>
 														<div class="slider_item_title_icon" style="color:<?php echo $artcile_slider_title_color;?>;">
 															<?php if( $artcile_slider_title_icon ){ ?>
 															<?php echo $artcile_slider_title_icon;?>
