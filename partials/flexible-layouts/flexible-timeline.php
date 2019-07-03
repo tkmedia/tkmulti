@@ -108,7 +108,7 @@ if ( $timeline_hide_mobile && wp_is_mobile() ) {
 				        options<?php echo $count;?> = {
 				            //direction: 'horizontal',
 				            loop: true,
-				            slidesPerView : <?php echo $client_slider_count;?>,
+				            slidesPerView : 4,
 				            autoplayDisableOnInteraction: false,
 							pagination: {
 								el: '.timeline-<?php echo $count;?> .swiper-pagination',
@@ -130,7 +130,7 @@ if ( $timeline_hide_mobile && wp_is_mobile() ) {
 							//effect: 'fade',  
 							breakpoints: {
 								768: {
-									slidesPerView : <?php echo $client_slider_count_mobile;?>,
+									slidesPerView : 2,
 						        }
 							}
 							        
@@ -140,7 +140,7 @@ if ( $timeline_hide_mobile && wp_is_mobile() ) {
 				    } else {
 				        options<?php echo $count;?> = {
 				            loop: false,
-				            slidesPerView : <?php echo $client_slider_count;?>,
+				            slidesPerView : 4,
 				            autoplay: false,
 				            watchOverflow: true,
 				            navigation: false,
