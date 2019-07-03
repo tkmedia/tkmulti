@@ -958,6 +958,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 .split_row_box .logo_side_left #branding {justify-content: flex-end;}
 .split_row_box .logo_side_right #branding {justify-content: flex-start;}
 
+.split_row_box .branding {padding: 0;}
+
 @media (min-width: 992px) {
 
 }
