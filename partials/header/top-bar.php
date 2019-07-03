@@ -35,6 +35,7 @@ if( have_rows('header_top_nav_left','option') || $header_phone || $show_nav ): ?
 	    <?php } ?>
 	</ul>
 	<?php if( $show_nav ) { ?>
+	<style>#menu-panel>li {color:<?php echo $panel_font_color; ?>!important;}</style>
 	<div id="panel-nav" class="panel-nav" role="navigation">
 		<?php wp_nav_menu(
 			array(
