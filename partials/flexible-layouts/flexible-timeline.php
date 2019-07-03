@@ -21,6 +21,7 @@ if ( $timeline_hide_mobile && wp_is_mobile() ) {
 				<div class="timeline_block_row">
 						<div class="timeline_block_row_wrap">
 						    <div class="swiper-container timeline_container timeline_block_<?php echo $count;?>">
+							    <div class="timeline_container_line"></div>
 							    <div class="swiper-wrapper">
 					            <?php //foreach( $client_slider_image as $image ): ?>
 					                <div class="timeline_block_item swiper-slide">
