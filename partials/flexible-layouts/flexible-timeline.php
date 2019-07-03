@@ -20,7 +20,7 @@ if ( $timeline_hide_mobile && wp_is_mobile() ) {
 
 				<div class="timeline_block_row">
 						<div class="timeline_block_row_wrap">
-							<div class="timeline_container_line_top"></div>
+							
 						    <div class="swiper-container timeline_container timeline_block_<?php echo $count;?>">
 							    <div class="timeline_container_line"></div>
 							    <div class="swiper-wrapper">
@@ -29,6 +29,7 @@ if ( $timeline_hide_mobile && wp_is_mobile() ) {
 						                <div class="timeline_block_item_inner">
 										
 											<div class="timeline_block_item_top">1994</div>
+											<div class="timeline_container_line_top"></div>
 											<div class="timeline_block_item_bottom">
 												בוגר הפקולטה למשפטים
 בהצטיינות באוניברסיטה
@@ -46,6 +47,7 @@ if ( $timeline_hide_mobile && wp_is_mobile() ) {
 בהצטיינות באוניברסיטה
 העברית בירושליים L.L.B
 											</div>
+											<div class="timeline_container_line_top"></div>
 											<div class="timeline_block_item_bottom">1995
 											</div>
 										
@@ -59,6 +61,7 @@ if ( $timeline_hide_mobile && wp_is_mobile() ) {
 בהצטיינות באוניברסיטה
 העברית בירושליים L.L.B
 </div>
+											<div class="timeline_container_line_top"></div>
 											<div class="timeline_block_item_bottom">1997
 											</div>
 										
@@ -69,6 +72,7 @@ if ( $timeline_hide_mobile && wp_is_mobile() ) {
 						                <div class="timeline_block_item_inner">
 										
 											<div class="timeline_block_item_top">2005</div>
+											<div class="timeline_container_line_top"></div>
 											<div class="timeline_block_item_bottom">
 												בוגר הפקולטה למשפטים
 בהצטיינות באוניברסיטה
@@ -85,6 +89,7 @@ if ( $timeline_hide_mobile && wp_is_mobile() ) {
 בהצטיינות באוניברסיטה
 העברית בירושליים L.L.B
 </div>
+											<div class="timeline_container_line_top"></div>
 											<div class="timeline_block_item_bottom">2010
 											</div>
 										
