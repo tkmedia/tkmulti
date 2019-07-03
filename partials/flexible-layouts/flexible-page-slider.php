@@ -16,6 +16,7 @@ $artcile_slider_title_align = get_sub_field('flex_artcile_slider_title_align');
 $artcile_slider_title_color = get_sub_field('flex_artcile_slider_title_color');
 $artcile_slider_title_size = get_sub_field('flex_artcile_slider_title_size');
 $artcile_slider_button_color = get_sub_field('flex_artcile_slider_button_color');
+$artcile_slider_title_icon = get_sub_field('flex_artcile_slider_title_icon');
 
 $article_slider_source = get_sub_field('flex_article_slider_source');
 $article_slider_latest = get_sub_field('flex_article_slider_latest');
@@ -142,7 +143,13 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 											<div class="page_link_slider_item_title_wrap">
 												<div class="page_link_slider_item_title_inner">
 													<h3 itemprop="name" class="page_link_slider_item_title no-line" style="color:<?php echo $artcile_slider_title_color;?>;font-size:<?php echo $artcile_slider_title_size;?>px;"><?php the_title(); ?></h3>
-													<div class="slider_item_title_icon" style="color:<?php echo $artcile_slider_title_color;?>;"><span class="icon-cube"></span></div>
+													<div class="slider_item_title_icon" style="color:<?php echo $artcile_slider_title_color;?>;">
+														<?php if( $artcile_slider_title_icon ){ ?>
+														<?php echo $artcile_slider_title_icon;?>
+														<?php } else { ?>
+														<span class="icon-cube"></span>
+														<?php } ?>
+													</div>
 												</div>
 											</div>
 										</div>
