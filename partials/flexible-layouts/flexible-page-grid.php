@@ -134,7 +134,34 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 							</div>	
 						</div>
 					<?php } elseif( $article_grid_style == 'style2' ){ ?>	
-					
+						<div class="articles_grid_item_container title_<?php echo $artcile_grid_title_align;?>">
+							<div class="articles_grid_item_container_wrap">
+								<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'קישור לעמוד %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
+									<div class="articles_grid_item_row row-flex">
+										<div class="articles_grid_item_img col-xs-12 col-sm-6 col-md-4 col-lg-3">
+											<?php echo the_post_thumbnail('inside-post'); ?>
+										</div>
+										<div class="articles_grid_item_content col-xs-12 col-sm-6 col-md-8 col-lg-9">
+											<div class="articles_grid_item_inside">
+												<h3 itemprop="name" class="page_link_grid_item_title no-line" style="font-size: <?php echo $artcile_grid_title_size;?>px;color:<?php echo $artcile_grid_title_color;?>;"><?php the_title(); ?></h3>
+												<?php 
+												$excerpt = get_field('page_masthead_excerpt');
+												if( $excerpt ) { ?>
+												<div class="articles_grid_item_text">	
+													<div class="page_links_item_intro">
+														<?php 
+														//echo custom_field_excerpt();
+														//echo wp_trim_words($excerpt,7); 
+														echo wp_html_excerpt( $excerpt, $grid_excerpt_length, '...' ); ?>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>	
+						</div>
 					<?php } elseif( $article_grid_style == 'style3' ){ ?>		
 					
 					<?php } ?>	
