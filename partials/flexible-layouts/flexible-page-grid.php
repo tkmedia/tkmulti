@@ -49,7 +49,7 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 				    <?php if( $article_grid_style == 'style1' || $article_grid_style == 'style2' ){ ?> 
 				    <div class="page_link_grid_item articles_grid_item item-<?php echo $item;?> col-xs-<?= $ag_xs_cols; ?> col-sm-<?= $ag_sm_cols; ?> col-md-<?= $ag_md_cols; ?>">
 					<?php } else { ?>    
-				    <div class="page_link_grid_item articles_grid_item item-<?php echo $item;?> col-xs-12 col-sm-6 col-md-6">
+				    <div class="page_link_grid_item articles_grid_item item-<?php echo $item;?>">
 					<?php } ?>    
 					<?php if( $article_grid_style == 'style1' ){ ?>    
 						<div class="articles_grid_item_container title_<?php echo $article_grid_title_position;?>">
