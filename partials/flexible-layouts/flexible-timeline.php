@@ -28,8 +28,8 @@ if ( $timeline_hide_mobile && wp_is_mobile() ) {
 					                <div class="timeline_block_item swiper-slide">
 						                <div class="timeline_block_item_inner">
 										
-											<div class="timeline_block_item_date">1994</div>
-											<div class="timeline_block_item_content">
+											<div class="timeline_block_item_top">1994</div>
+											<div class="timeline_block_item_bottom">
 												בוגר הפקולטה למשפטים
 בהצטיינות באוניברסיטה
 העברית בירושליים L.L.B
@@ -41,8 +41,35 @@ if ( $timeline_hide_mobile && wp_is_mobile() ) {
 					                <div class="timeline_block_item swiper-slide">
 						                <div class="timeline_block_item_inner">
 										
-											<div class="timeline_block_item_date">1995</div>
-											<div class="timeline_block_item_content">
+											<div class="timeline_block_item_top">
+												בוגר הפקולטה למשפטים
+בהצטיינות באוניברסיטה
+העברית בירושליים L.L.B
+											</div>
+											<div class="timeline_block_item_bottom">1995
+											</div>
+										
+						                </div>
+					                </div>
+
+					                <div class="timeline_block_item swiper-slide">
+						                <div class="timeline_block_item_inner">
+										
+											<div class="timeline_block_item_top">												בוגר הפקולטה למשפטים
+בהצטיינות באוניברסיטה
+העברית בירושליים L.L.B
+</div>
+											<div class="timeline_block_item_bottom">1997
+											</div>
+										
+						                </div>
+					                </div>
+
+					                <div class="timeline_block_item swiper-slide">
+						                <div class="timeline_block_item_inner">
+										
+											<div class="timeline_block_item_top">2005</div>
+											<div class="timeline_block_item_bottom">
 												בוגר הפקולטה למשפטים
 בהצטיינות באוניברסיטה
 העברית בירושליים L.L.B
@@ -54,37 +81,11 @@ if ( $timeline_hide_mobile && wp_is_mobile() ) {
 					                <div class="timeline_block_item swiper-slide">
 						                <div class="timeline_block_item_inner">
 										
-											<div class="timeline_block_item_date">1997</div>
-											<div class="timeline_block_item_content">
-												בוגר הפקולטה למשפטים
+											<div class="timeline_block_item_top">												בוגר הפקולטה למשפטים
 בהצטיינות באוניברסיטה
 העברית בירושליים L.L.B
-											</div>
-										
-						                </div>
-					                </div>
-
-					                <div class="timeline_block_item swiper-slide">
-						                <div class="timeline_block_item_inner">
-										
-											<div class="timeline_block_item_date">2005</div>
-											<div class="timeline_block_item_content">
-												בוגר הפקולטה למשפטים
-בהצטיינות באוניברסיטה
-העברית בירושליים L.L.B
-											</div>
-										
-						                </div>
-					                </div>
-
-					                <div class="timeline_block_item swiper-slide">
-						                <div class="timeline_block_item_inner">
-										
-											<div class="timeline_block_item_date">2010</div>
-											<div class="timeline_block_item_content">
-												בוגר הפקולטה למשפטים
-בהצטיינות באוניברסיטה
-העברית בירושליים L.L.B
+</div>
+											<div class="timeline_block_item_bottom">2010
 											</div>
 										
 						                </div>
