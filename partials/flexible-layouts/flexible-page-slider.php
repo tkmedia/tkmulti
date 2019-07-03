@@ -35,8 +35,8 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 						
 					<?php if( $article_slider_source == 'manual' ): ?>
 						
-						<?php foreach( $flex_article_slider as $post ): $item = 1;?>
-						<?php setup_postdata($post); ?>
+						<?php $item = 1; foreach( $flex_article_slider as $post ): ?>
+						<?php setup_postdata($post); $item++;?>
 					    <div class="page_link_slider_item articles_slider_item swiper-slide item-<?php echo $item;?>">
 							<div class="articles_slider_item_container">
 								<div class="articles_slider_item_img box_effect">
@@ -163,7 +163,7 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 								</div>	
 							</div>
 					    </div>
-					    <?php $item++;endforeach; ?>
+					    <?php endforeach; ?>
 					    <?php wp_reset_postdata(); ?> 
 					<?php endif; ?>    
 				    <?php if( $article_slider_source == 'page' || $article_slider_source == 'post' || $article_slider_source == 'child' ):
