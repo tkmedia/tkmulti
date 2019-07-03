@@ -100,7 +100,7 @@ if ( $gallery_grid_hide_mobile && wp_is_mobile() ) {
 					<div class="gallery_row row-flex">
 				        <?php foreach( $content_gallery_grid as $image ): ?>
 							<figure class="gallery_item col-xs-<?php echo $g_xs_cols; ?> col-sm-<?php echo $g_sm_cols; ?> col-md-<?php echo $g_md_cols; ?>" style="display: none;">
-					            <a data-fancybox="gallery" data-caption="<?php echo $s_image['alt']; ?>" href="<?php echo $image['url']; ?>">
+					            <a data-fancybox="gallery" data-caption="<?php echo $image['alt']; ?>" href="<?php echo $image['url']; ?>">
 					            	<div class="image-hover"><?php echo wp_get_attachment_image( $image['ID'], $size ); ?></div>
 					            	<i class="far fa-search"></i>
 					            </a>
