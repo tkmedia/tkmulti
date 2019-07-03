@@ -172,12 +172,6 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 							<div class="articles_grid_item_img box_effect">
 								<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'קישור לעמוד %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
 									
-								<?php if( $article_grid_title_position == 'top' ): ?>
-								<div class="page_link_grid_item_title_wrap">
-									<h3 itemprop="name" class="page_link_grid_item_title no-line" style="font-size:<?php echo $artcile_grid_title_size;?>px;color:<?php echo $artcile_grid_title_color;?>;"><?php the_title(); ?></h3>
-								</div>
-								<?php endif; ?>
-								
 								<div class="page_link_grid_item_img">
 									<?php if( $article_grid_img == 'main_img' ): ?>
 										<div class="page_img">
@@ -229,28 +223,6 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 									</div>
 									<?php endif; ?>
 								</div>
-								<?php if( $article_grid_title_position == 'bottom' ): ?>
-								<div class="page_link_grid_item_title_wrap">
-									<h3 itemprop="name" class="page_link_grid_item_title no-line" style="font-size: <?php echo $artcile_grid_title_size;?>px;color:<?php echo $artcile_grid_title_color;?>;"><?php the_title(); ?></h3>
-								</div>
-								<?php endif; ?>
-								
-								<?php
-								if( $grid_show_info && $article_grid_title_position == 'bottom' || $article_grid_title_position == 'top' ) { 
-								$excerpt = get_field('page_masthead_excerpt');
-								if( $excerpt ) { ?>
-								<div class="articles_grid_item_text">	
-									<div class="page_links_item_intro">
-										<?php 
-										//echo custom_field_excerpt();
-										//echo wp_trim_words($excerpt,7); 
-										echo wp_html_excerpt( $excerpt, $grid_excerpt_length, '...' ); ?>
-									</div>
-								</div>
-								<?php 
-									} 
-								}
-								?> 
 								</a>
 							</div>	
 						</div>
