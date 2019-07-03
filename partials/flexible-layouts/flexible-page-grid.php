@@ -159,7 +159,7 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 												</div>
 												<?php } ?>
 												
-												<div class="articles_grid_item_readon">קרא עוד <<</div>
+												<div class="articles_grid_item_readon">קרא עוד >></div>
 
 											</div>
 										</div>
