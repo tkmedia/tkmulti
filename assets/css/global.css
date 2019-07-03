@@ -2801,6 +2801,15 @@ transition: all .5s;}
 .page_link_grid_wrap.grid_style3 .title_inside .page_links_item_intro {padding: 15px 10px 15px;transition: margin-bottom .3s ease-out;}
 .page_link_grid_wrap.grid_style3 .title_inside:hover .page_links_item_intro {margin-bottom: 0px !important;}
 
+.page_link_grid_wrap.grid_style3 .articles_grid_item {box-sizing: border-box;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    -ms-flex-preferred-size: 50%;
+    -webkit-flex-basis: 50%;
+    flex-basis: 50%;
+    max-width: 50%;}
 
 /* GForms Style */
 html[dir=rtl] .gform_wrapper span.ginput_left, 
