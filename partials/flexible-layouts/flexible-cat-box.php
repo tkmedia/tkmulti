@@ -10,7 +10,7 @@ $cat_box_grid = get_sub_field('flex_cat_box_grid');
 $cat_box_grid_count = get_sub_field('flex_cat_box_grid_count');
 $cat_box_grid_animation = get_sub_field('flex_cat_box_grid_animation');
 
-if ( $cat_box_grid_count == 1 ) : $ag_xs_cols = "12"; $ag_sm_cols = "6"; $ag_md_cols = "6"; 
+if ( $cat_box_grid_count == 1 ) : $ag_xs_cols = "12"; $ag_sm_cols = "12"; $ag_md_cols = "12"; 
 elseif ( $cat_box_grid_count == 2 ) : $ag_xs_cols = "12"; $ag_sm_cols = "6"; $ag_md_cols = "6"; 
 elseif ( $cat_box_grid_count == 3 ) : $ag_xs_cols = "12"; $ag_sm_cols = "6"; $ag_md_cols = "4";
 endif; 
