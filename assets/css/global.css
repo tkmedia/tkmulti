@@ -1727,7 +1727,7 @@ button.main_btn.style3:hover,
 .masthead_clean_content.content_slider_content_bottom .yoast_breadcrumb {position: relative;background: none;}
 .masthead_clean .yoast_breadcrumb {position: relative;background: none;}
 .masthead_clean_content.content_slider_content_bottom #breadcrumbs {text-align: right;color: #20211d;}
-.masthead_clean .masthead_content_container {padding-bottom: 0;} 
+.masthead_clean .masthead_content_container {padding-bottom: 0;margin: 0 auto;} 
 .masthead_clean h1.entry-title.masthead_content_title {padding-bottom: 0;}
 .masthead_clean #js-pagevertical1 {display: none !important;}
 .masthead_clean_intro .home_masthead_text {color: inherit;padding: 20px;}
