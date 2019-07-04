@@ -2424,7 +2424,7 @@ button.section_readmore_link.button_icon_right .flex_main_button_icon {order: -1
 .flex_bulletin_list.icons_medium.inline_layout .bulletin_list_img .list_icon {max-width: 150px;}
 .flex_bulletin_list.icons_big.inline_layout .bulletin_list_img .list_icon {max-width: 360px;}
 
-.flex_bulletin_list_item_wrap.img_flex {}
+.flex_bulletin_list_item_wrap.img_flex {padding-bottom: 5px;}
 .flex_bulletin_list_item_wrap.img_flex .flex_bulletin_list_icon {margin: 0;}
 
 .flex_bulletin_list_item_wrap.img_block .flex_bulletin_list_icon {width: auto;max-width: 100%;padding: 0px;margin: auto;}
