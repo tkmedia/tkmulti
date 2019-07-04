@@ -53,7 +53,7 @@ function theme_add_body_class( $classes ) {
 			    </div>
 
 				<div class="masthead_clean_content">
-					<div class="masthead_content wrap row-flex bottom-xs between-xs <?php echo($title_hor); ?>-xs">
+					<div class="masthead_content wrap row-flex bottom-xs between-xs center-xs">
 						<div class="masthead_content_container col-xs-12 col-md">
 							<div class="masthead_content_container_wrap">
 								<?php								
