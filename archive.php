@@ -66,7 +66,12 @@ function theme_add_body_class( $classes ) {
 									} elseif( is_archive() ) {
 										$title = get_the_archive_title();
 										$description = get_the_archive_description();
+									} elseif( ! is_post_type_archive() ) {
+										$title = single_cat_title();
+									} else {
+										$title = post_type_archive_title();
 									}
+									
 									if( empty( $title ) && empty( $description ) )
 										return;
 									if( get_query_var( 'paged' ) ) {
