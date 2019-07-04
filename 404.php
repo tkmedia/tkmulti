@@ -19,7 +19,7 @@ $page_main_intro = get_field('page_masthead_text');
 
 <!-- MastHead -->
 <div id="home_masthead" itemprop="text">	
-	<div class="home_masthead intro-section masthead_clean <?php echo($title_location); ?>">	
+	<div class="home_masthead intro-section masthead_clean <?php //echo($title_location); ?>">	
 	<!-- Top Slider -->
 		<div id="main-top-slider">
 		
