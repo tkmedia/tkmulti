@@ -162,7 +162,7 @@ function theme_add_body_class( $classes ) {
 				        
 				</div>
 				
-				        <?php theme_numeric_posts_nav(); ?>
+				        <?php //theme_numeric_posts_nav(); ?>
 				        
 				    <?php else : ?>
 				    
