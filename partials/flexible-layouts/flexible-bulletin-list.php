@@ -80,7 +80,7 @@ if ( $bulletin_list_hide_mobile && wp_is_mobile() ) {
 									</div>
 									<?php endif; ?>	
 									<?php if( $bulletin_list_style == 'bulletin_font' ): ?>
-									<div class="flex_bulletin_list_icon" style="font-size:<?php echo $bulletin_list_icon_size; ?>px;">
+									<div class="flex_bulletin_list_icon" style="font-size:<?php echo $bulletin_list_icon_size; ?>px;width: calc(<?php echo $bulletin_list_icon_size; ?> + 40px);">
 										<div class="flex_bulletin_list_icon_inner" style="color:<?php echo $bulletin_icon_font_color; ?>;"><?php echo $bulletin_list_icon; ?></div>
 									</div>
 									<?php endif; ?>	
