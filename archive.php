@@ -14,7 +14,7 @@
  */
 add_filter( 'body_class', 'theme_add_body_class' );
 function theme_add_body_class( $classes ) {
-   $classes[] = 'archive-page';
+   $classes[] = 'archive-page default_page';
    return $classes;
 }
 
@@ -121,3 +121,22 @@ if( ! empty( $description ) ) { ?>
 // Build the page
 require get_template_directory() . '/index.php';
  ?>
+<script>
+jQuery(function($) {
+
+	// Auto Padding content top
+	$(window).load(function(){
+		get_header_height();
+	    //function to get current div height
+	    function get_header_height(){
+	        //var footer_height = $('#footer_container').height();
+	        var header_height = $('.block_header #header-container').outerHeight();
+	        topSlider = $("#home_masthead #top-slider .slides");
+	        topSliderImg = $("#home_masthead #top-slider .single-slider-img");
+	        topSlider.css('height', "calc(100vh - " + header_height + "px)");
+	        topSliderImg.css('height', "calc(100vh - " + header_height + "px)");
+	    }
+    });	
+
+});
+</script>  
