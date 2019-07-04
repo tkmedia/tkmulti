@@ -57,7 +57,7 @@ if ( $timeline_hide_mobile && wp_is_mobile() ) {
 				    if ( $(".timeline_block_<?php echo $count;?> .swiper-slide").length > 1 ) {
 				        options<?php echo $count;?> = {
 				            //direction: 'horizontal',
-				            loop: true,
+				            loop: false,
 				            slidesPerView : 4,
 				            autoplayDisableOnInteraction: false,
 							pagination: {
@@ -96,7 +96,7 @@ if ( $timeline_hide_mobile && wp_is_mobile() ) {
 				            navigation: false,
 				        }
 				    }
-				    var topSlider<?php echo $count;?> = new Swiper('.timeline_block_<?php echo $count;?>', options<?php echo $count;?>);								
+				    var timelineSlider<?php echo $count;?> = new Swiper('.timeline_block_<?php echo $count;?>', options<?php echo $count;?>);								
 					
 				}); 				
 				</script>								
