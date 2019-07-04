@@ -176,7 +176,7 @@ function theme_add_body_class( $classes ) {
 
 		</div><!-- .entry-content -->
 	</div><!-- .page-container -->
-</article><!-- #post-## -->	
+</div><!-- #post-## -->	
 
 	
 <?php get_footer(); ?>
