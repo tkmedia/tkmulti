@@ -84,7 +84,7 @@ if ( $testimonial_slider_hide_mobile && wp_is_mobile() ) {
 		    if ( $("#section-<?php echo $row;?>-<?php echo $count;?> .swiper-slide").length > 1 ) {
 		        options<?php echo $row;?><?php echo $count;?> = {
 		            //direction: 'horizontal',
-		            loop: true,
+		            loop: false,
 		            slidesPerView : <?php echo $testimonial_slider_count;?>,
 		            autoplayDisableOnInteraction: false,
 					pagination: {
@@ -123,7 +123,7 @@ if ( $testimonial_slider_hide_mobile && wp_is_mobile() ) {
 		            navigation: false,
 		        }
 		    }
-		    var qaSlider<?php echo $row;?><?php echo $count;?> = new Swiper('#section-<?php echo $row;?>-<?php echo $count;?> .swiper-container ', options<?php echo $row;?><?php echo $count;?>);	
+		    var timeSlider<?php echo $row;?><?php echo $count;?> = new Swiper('#section-<?php echo $row;?>-<?php echo $count;?> .swiper-container ', options<?php echo $row;?><?php echo $count;?>);	
 		    
 		    if ( $("#section-<?php echo $row;?>-<?php echo $count;?> .swiper-slide:not(.swiper-slide-duplicate)").length > 1 ) {
 		        $('#section-<?php echo $row;?>-<?php echo $count;?> .swiper-button-next').show();
