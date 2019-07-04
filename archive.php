@@ -111,7 +111,6 @@ function theme_add_body_class( $classes ) {
 <div class="masthead_clean_intro">
 	<?php echo '<div class="home_masthead_text wrap archive-description">' . apply_filters( 'tkmulti_the_content', $description ) . '</div>'; ?>
 </div>
-<?php } ?>	
 
 <?php 
 // Build the page
