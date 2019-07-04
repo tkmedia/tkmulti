@@ -507,5 +507,26 @@ jQuery(function($) {
         }
     }
     var topSliderProduct = new Swiper('.top-product-slider', optionsProduct);									
+
+	// Flex page grid - style 3
+	var $grid_item_skip = $('.page_link_grid_wrap.grid_style3 .page_link_grid_item:nth-child(3n+1)');
+	$grid_items = $(".page_link_grid_wrap.grid_style3 .page_link_grid_item").not('.page_link_grid_wrap.grid_style3 .page_link_grid_item:nth-child(3n+1)');
+	$grid_item_skip.addClass('check1');
+	$grid_items.addClass('check2');
+
+	// Flex page grid - style 3
+	for (var i = 0; i < $grid_items.length; i += 2) {
+	  $grid_items.slice(i, i + 2).wrapAll('<div class="grid_item_wrap wrap_' + (i > 0 && i % 2 == 0 && i % 4 != 0 ? 'offsetRow' : '') + '"><div class="grid_item_row row-flex"></div></div>')
+	}
+
+	// Flex timeline 
+	$(window).load(function(){
+		get_timeline_height();
+	    function get_timeline_height(){
+	        var time_height = $('.timeline_block_row_wrap').outerHeight();
+	        $('.timeline_block_item_top').css('height','calc(' + time_height + 'px - 40px)');
+	        $('.timeline_block_item_bottom').css('height','calc(' + time_height + 'px - 40px)');
+	    }
+	});	
 	   				
 });
