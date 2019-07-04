@@ -7,6 +7,8 @@ $timeline_animation = get_sub_field('flex_timeline_animation');
 $timeline_break = get_sub_field('flex_timeline_break');
 $timeline_block_align = get_sub_field('flex_timeline_block_align');
 
+$timeline_block = get_sub_field('flex_timeline_block');
+
 if ( $timeline_hide_mobile && wp_is_mobile() ) {
 //HIDE ON MOBILE
 } else { ?>
@@ -20,86 +22,26 @@ if ( $timeline_hide_mobile && wp_is_mobile() ) {
 
 				<div class="timeline_block_row">
 						<div class="timeline_block_row_wrap">
-							
+							<?php if( have_rows('flex_timeline_block') ): ?>
 						    <div class="swiper-container timeline_container timeline_block_<?php echo $count;?>">
-							    <div class="timeline_container_line"></div>
 							    <div class="swiper-wrapper">
-					            <?php //foreach( $client_slider_image as $image ): ?>
+								<?php while( have_rows('flex_timeline_block') ): the_row(); 
+									$flex_timeline_block_date = get_sub_field('flex_timeline_block_date');
+									$flex_timeline_block_content = get_sub_field('flex_timeline_block_content');
+									?>
 					                <div class="timeline_block_item swiper-slide">
 						                <div class="timeline_block_item_inner">
 										
-											<div class="timeline_block_item_top">1994</div>
+											<div class="timeline_block_item_top"><?php echo $flex_timeline_block_date; ?></div>
 											<div class="timeline_container_line_top"></div>
-											<div class="timeline_block_item_bottom">
-												בוגר הפקולטה למשפטים
-בהצטיינות באוניברסיטה
-העברית בירושליים L.L.B
-											</div>
-										
+											<div class="timeline_block_item_bottom"><?php echo $flex_timeline_block_content; ?></div>
 						                </div>
 					                </div>
-					                
-					                <div class="timeline_block_item swiper-slide">
-						                <div class="timeline_block_item_inner">
-										
-											<div class="timeline_block_item_top">
-												בוגר הפקולטה למשפטים
-בהצטיינות באוניברסיטה
-העברית בירושליים L.L.B
-											</div>
-											<div class="timeline_container_line_top"></div>
-											<div class="timeline_block_item_bottom">1995
-											</div>
-										
-						                </div>
-					                </div>
-
-					                <div class="timeline_block_item swiper-slide">
-						                <div class="timeline_block_item_inner">
-										
-											<div class="timeline_block_item_top">												בוגר הפקולטה למשפטים
-בהצטיינות באוניברסיטה
-העברית בירושליים L.L.B
-</div>
-											<div class="timeline_container_line_top"></div>
-											<div class="timeline_block_item_bottom">1997
-											</div>
-										
-						                </div>
-					                </div>
-
-					                <div class="timeline_block_item swiper-slide">
-						                <div class="timeline_block_item_inner">
-										
-											<div class="timeline_block_item_top">2005</div>
-											<div class="timeline_container_line_top"></div>
-											<div class="timeline_block_item_bottom">
-												בוגר הפקולטה למשפטים
-בהצטיינות באוניברסיטה
-העברית בירושליים L.L.B
-											</div>
-										
-						                </div>
-					                </div>
-
-					                <div class="timeline_block_item swiper-slide">
-						                <div class="timeline_block_item_inner">
-										
-											<div class="timeline_block_item_top">												בוגר הפקולטה למשפטים
-בהצטיינות באוניברסיטה
-העברית בירושליים L.L.B
-</div>
-											<div class="timeline_container_line_top"></div>
-											<div class="timeline_block_item_bottom">2010
-											</div>
-										
-						                </div>
-					                </div>
-					                
-					            <?php //endforeach; ?>
+					            <?php endwhile; ?>
 							    </div>
 						    </div>
-
+							<?php endif; ?>
+							
 						    <!-- Add Arrows -->
 						    <div class="swiper-pagination style1"></div>
 						    <div class="swiper-button-next"></div>
