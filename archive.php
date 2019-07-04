@@ -32,7 +32,7 @@ function theme_add_body_class( $classes ) {
 			$slider_images = get_field('page_main_top_slider');
 			$default_masthead_bg =  get_field('default_main_masthead_bg', 'option');?>
 			<div class="top-slider-bg top-slider-bg-multiple">
-			    <div id="top-slider" class="swiper-container style3 swiper-scale-effect" style="direction: ltr;">
+			    <div id="top-slider" class="swiper-container style3 swiper-scale-effect" style="direction: ltr;height: 30vh !important;">
 				    <?php if( $slider_images ) { ?>
 			        <div class="slides single-slider swiper-wrapper">
 			            <?php foreach( $slider_images as $slider_image ): ?>
