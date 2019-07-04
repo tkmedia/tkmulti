@@ -57,7 +57,7 @@ function theme_add_body_class( $classes ) {
 						<div class="masthead_content_container col-xs-12 col-md">
 							<div class="masthead_content_container_wrap">
 								<?php								
-								function tkmulti_archive_header() {
+								//function tkmulti_archive_header() {
 									$title = $subtitle = $description = false;
 									if( is_home() ) {
 										$title = get_the_title( get_option( 'page_for_posts' ) );
@@ -82,8 +82,8 @@ function theme_add_body_class( $classes ) {
 										echo '<h1 class="entry-title masthead_content_title archive-title" itemprop="headline">' . $title . '</h1>';
 									if( !empty( $subtitle ) )
 										echo '<h4>' . $subtitle . '</h4>';
-								}
-								add_action( 'tha_content_while_before', 'tkmulti_archive_header' );
+								//}
+								//add_action( 'tha_content_while_before', 'tkmulti_archive_header' );
 								?>								
 							</div>	
 						</div>
