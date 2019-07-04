@@ -57,5 +57,7 @@ function ea_archive_header() {
 }
 add_action( 'tha_content_while_before', 'ea_archive_header' );
 
+get_template_part('partials/archive_header_top');
+
 // Build the page
 require get_template_directory() . '/index.php';
