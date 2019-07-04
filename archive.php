@@ -107,11 +107,13 @@ function theme_add_body_class( $classes ) {
 	</div>
 	
 </div>
-<?php if( ! empty( $description ) ) ?>
+<?php 
+$description = get_the_archive_description();
+if( ! empty( $description ) ) { ?>
 <div class="masthead_clean_intro">
 	<?php echo '<div class="home_masthead_text wrap archive-description">' . apply_filters( 'tkmulti_the_content', $description ) . '</div>'; ?>
 </div>
-
+<?php } ?>
 <?php 
 // Build the page
 require get_template_directory() . '/index.php';
