@@ -130,22 +130,4 @@ if ($title_location == 'slider_content_bottom' ) { ?>
 <?php } ?>	
 
 
-<script>
-jQuery(function($) {
-
-	// Auto Padding content top
-	$(window).load(function(){
-		get_header_height();
-	    //function to get current div height
-	    function get_header_height(){
-	        //var footer_height = $('#footer_container').height();
-	        var header_height = $('.block_header #header-container').outerHeight();
-	        topSlider = $("#home_masthead #top-slider .slides");
-	        topSliderImg = $("#home_masthead #top-slider .single-slider-img");
-	        topSlider.css('height', "calc(100vh - " + header_height + "px)");
-	        topSliderImg.css('height', "calc(100vh - " + header_height + "px)");
-	    }
-    });	
-
-});
-</script>   
+ 
