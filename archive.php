@@ -24,7 +24,7 @@ function theme_add_body_class( $classes ) {
  */
  ?> 
 <div id="home_masthead" itemprop="text">	
-	<div class="home_masthead intro-section masthead_clean <?php echo($title_location); ?>">	
+	<div class="home_masthead intro-section masthead_clean">	
 	<!-- Top Slider -->
 		<div id="main-top-slider">
 		
@@ -52,8 +52,6 @@ function theme_add_body_class( $classes ) {
 			        </div>			        
 			    </div>
 
-				<?php 							
-				if ($title_location == 'slider_content_inn' ) { ?>
 				<div class="masthead_clean_content">
 					<div class="masthead_content wrap row-flex bottom-xs between-xs <?php echo($title_hor); ?>-xs">
 						<div class="masthead_content_container col-xs-12 col-md">
@@ -87,7 +85,7 @@ function theme_add_body_class( $classes ) {
 						
 					</div>
 				</div>
-				<?php } ?>
+
 			    <!-- Add Arrows -->
 			    <div id="js-pagevertical1" class="swiper-pagination style1"></div>
 			    <div id="js-next1" class="swiper-button-next"></div>
