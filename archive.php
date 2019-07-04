@@ -127,7 +127,7 @@ function theme_add_body_class( $classes ) {
 			<?php } ?>
 			<?php 
 			// Build the page
-			require get_template_directory() . '/index.php';
+			//require get_template_directory() . '/index.php';
 			 ?>
 			<script>
 			jQuery(function($) {
