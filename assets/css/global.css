@@ -2058,7 +2058,7 @@ transition:         all 0.3s ease-in-out;
 .magazin_style2 .articles_grid_item_text {padding: 0;}
 .magazin_style2 h3 {justify-content: flex-start;text-align: start;}
 .magazin_style2 .articles_grid_item_text {text-align: start;}
-.magazin_style2 img{-webkit-filter: grayscale(100%);filter: grayscale(100%); /* FF 35+ */transition: filter .5s ease-in-out;}
+.magazin_style2 img{-webkit-filter: grayscale(100%);filter: grayscale(100%);}
 .magazin_style2 .articles_grid_item_container:hover img  {transition: filter .5s ease-in-out;-webkit-filter: grayscale(0%);filter: grayscale(0%);}
 .magazin_style2  .articles_grid_item_content {
     padding: 25px;
