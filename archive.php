@@ -23,6 +23,9 @@ $post_id = 'category_'.$term_id;
 $archive_main_img = get_field('archive_main_img', $post_id);
 $default_masthead_bg =  get_field('default_main_masthead_bg', 'option');
 
+$archive_article_display = get_field('archive_article_display', $post_id);
+$archive_article_style = get_field('archive_article_style', $post_id);
+
 /**
  * Archive Header
  *
@@ -144,16 +147,25 @@ $default_masthead_bg =  get_field('default_main_masthead_bg', 'option');
 			    });	
 			
 			});
-			</script>  
+			</script> 
+			 
+			<?php
+			if ( $archive_article_display == 1 ) : $cg_xs_cols = "12"; $cg_sm_cols = "12"; $cg_md_cols = "12"; 
+			elseif ( $archive_article_display == 2 ) : $cg_xs_cols = "12"; $cg_sm_cols = "6"; $cg_md_cols = "6"; 
+			elseif ( $archive_article_display == 3 ) : $cg_xs_cols = "12"; $cg_sm_cols = "4"; $cg_md_cols = "4"; 
+			elseif ( $archive_article_display == 4 ) : $cg_xs_cols = "12"; $cg_sm_cols = "3"; $cg_md_cols = "3";
+			elseif ( $archive_article_display == 5 ) : $cg_xs_cols = "12"; $cg_sm_cols = "3"; $cg_md_cols = "20"; 
+			endif; 
+			?>
 			
-			<div class="magazine_page_index wrap">
+			<div class="magazine_page_index wrap magazin_<?= $archive_article_style; ?>">
 				<div class="magazine_page_grid row-flex articles_grid_item_row center-xs">
 					
 				    <?php if ( have_posts() ) : ?>
 				    
 				        <?php while ( have_posts() ) : the_post(); ?>
 				        
-							<div class="magazine_page_grid_item col-xs-12 col-sm-6 col-md-4 col-lg-3">
+							<div class="magazine_page_grid_item col-xs-<?= $cg_xs_cols; ?> col-sm-<?= $cg_sm_cols; ?> col-md-<?= $cg_md_cols; ?>">
 								<div class="magazine_page_item_container">
 									<div class="magazine_page_item_img">
 										<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'קישור לעמוד %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
