@@ -2045,6 +2045,8 @@ transition: all .3s ease-in-out;opacity: 0;}
 transition:         all 0.3s ease-in-out;
 }
 
+
+
 /* ## Single Article */
 .article_main_col.article_side_content {padding: 60px 0;}
 h2.single_article_grid_title.section_title {font-size: 34px;line-height: 1.1;}
