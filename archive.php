@@ -182,7 +182,7 @@ $archive_article_style = get_field('archive_article_style', $post_id);
 									
 									<?php } elseif( $archive_article_style == 'style2' ){ ?>	
 									
-										<div class="articles_grid_item_container title_<?php echo $artcile_grid_title_align;?>">
+										<div class="articles_grid_item_container">
 											<div class="articles_grid_item_container_wrap">
 												<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Link to page %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
 													<div class="articles_grid_item_row row-flex">
