@@ -2060,6 +2060,18 @@ transition:         all 0.3s ease-in-out;
 .magazin_style2 .articles_grid_item_text {text-align: start;}
 .magazin_style2 img{-webkit-filter: grayscale(100%);filter: grayscale(100%); /* FF 35+ */transition: filter .5s ease-in-out;}
 .magazin_style2 .articles_grid_item_container:hover img  {transition: filter .5s ease-in-out;-webkit-filter: grayscale(0%);filter: grayscale(0%);}
+.magazin_style2  .articles_grid_item_content {
+    padding: 25px;
+    background: rgb(246,246,246);
+    background: -moz-linear-gradient(45deg, rgba(246,246,246,1) 0%, rgba(239,239,239,1) 100%);
+    background: -webkit-linear-gradient(45deg, rgba(246,246,246,1) 0%,rgba(239,239,239,1) 100%);
+    background: linear-gradient(45deg, rgba(246,246,246,1) 0%,rgba(239,239,239,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#efefef',GradientType=1 );
+}
+.magazin_style2 .articles_grid_item_container {border: none;}
+.magazin_style2 .articles_grid_item h3 {min-height: auto;font-size: 18px;font-weight: bold;}
+.magazin_style2 .articles_grid_item_text {font-size: 17px;}
+.magazin_style2 .articles_grid_item_readon {font-weight: bold;padding-top: 7px;}
 
 
 /* ## Single Article */
