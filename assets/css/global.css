@@ -1736,10 +1736,10 @@ button.main_btn.style3:hover,
 .masthead_clean h1.entry-title.masthead_content_title:after {content: none;}
 .masthead_clean .yoast_breadcrumb {position: relative;background: #000;}
 .masthead_clean .masthead_content_container_wrap {padding: 0;}
-
+.masthead_clean #breadcrumbs {text-align: right;color: #fff;}
 
 @media (min-width: 768px) {
-	.masthead_clean #breadcrumbs {text-align: right;}
+
 }
 @media (max-width: 767px) {
 	.masthead_clean .masthead_content {display: flex;align-items: center;}
