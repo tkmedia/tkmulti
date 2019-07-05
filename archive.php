@@ -167,8 +167,10 @@ $archive_article_style = get_field('archive_article_style', $post_id);
 				        
 							<div class="magazine_page_grid_item col-xs-<?= $cg_xs_cols; ?> col-sm-<?= $cg_sm_cols; ?> col-md-<?= $cg_md_cols; ?>">
 								<div class="magazine_page_item_container">
+									<?php } elseif( $archive_article_style == 'style1' ){ ?>
+									
 									<div class="magazine_page_item_img">
-										<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'קישור לעמוד %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
+										<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Link to page %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
 											<?php echo get_the_post_thumbnail($post->ID, 'block-300'); ?>
 											<div class="magazine_page_item_inner">
 												<div class="magazine_grid_item_text">	
@@ -176,9 +178,106 @@ $archive_article_style = get_field('archive_article_style', $post_id);
 												</div>
 											</div>
 										</a>
-									</div>	
+									</div>
+									
+									<?php } elseif( $archive_article_style == 'style2' ){ ?>	
+									
+										<div class="articles_grid_item_container title_<?php echo $artcile_grid_title_align;?>">
+											<div class="articles_grid_item_container_wrap">
+												<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Link to page %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
+													<div class="articles_grid_item_row row-flex">
+														<div class="articles_grid_item_img col-xs-12 col-sm-6 col-md-4 col-lg-3">
+															<?php echo the_post_thumbnail('inside-post'); ?>
+														</div>
+														<div class="articles_grid_item_content col-xs-12 col-sm-6 col-md-8 col-lg-9">
+															<div class="articles_grid_item_inside">
+																<h3 itemprop="name" class="page_link_grid_item_title no-line" style="font-size: <?php echo $artcile_grid_title_size;?>px;color:<?php echo $artcile_grid_title_color;?>;"><?php the_title(); ?></h3>
+																<?php 
+																$excerpt = get_field('page_masthead_excerpt');
+																if( $excerpt ) { ?>
+																<div class="articles_grid_item_text">	
+																	<div class="page_links_item_intro">
+																		<?php 
+																		//echo custom_field_excerpt();
+																		//echo wp_trim_words($excerpt,7); 
+																		echo wp_html_excerpt( $excerpt, $grid_excerpt_length, '...' ); ?>
+																	</div>
+																</div>
+																<?php } ?>
+																
+																<div class="articles_grid_item_readon">קרא עוד >></div>
+				
+															</div>
+														</div>
+													</div>
+												</a>
+											</div>	
+										</div>
+									<?php } elseif( $archive_article_style == 'style3' ){ ?>		
+										<div class="articles_grid_item_container title_<?php echo $article_grid_title_position;?>">
+											<div class="articles_grid_item_img box_effect">
+												<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'קישור לעמוד %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
+													
+												<div class="page_link_grid_item_img">
+													<?php if( $article_grid_img == 'main_img' ): ?>
+														<div class="page_img">
+															<?php echo the_post_thumbnail('gallery-800'); ?>
+															<div class="page_img_border"></div>
+														</div>
+													<?php endif; ?>
+													
+													<?php if( $article_grid_img == 'main_icon' ):
+														$page_main_icon = get_field('page_main_icon');
+														if( $page_main_icon ) { ?>
+														<div class="page_img hover_img_mask" style="background:url(<?php echo wp_get_attachment_url( $page_main_icon, 'inside-post-360' ); ?>) 50% 50% / cover no-repeat;">
+															<?php echo the_post_thumbnail('gallery-800'); ?>
+														</div>
+														<?php } else { ?> 
+														<div class="page_img">
+															<?php echo the_post_thumbnail('gallery-800'); ?> 
+														</div>		
+														<?php }
+													endif; ?>
+													<div class="page_grid_inside">
+														<h3 itemprop="name" class="page_link_grid_item_title no-line" style="font-size: <?php echo $artcile_grid_title_size;?>px;color:<?php echo $artcile_grid_title_color;?>;"><?php the_title(); ?></h3>
+														<?php 
+														$excerpt = get_field('page_masthead_excerpt');
+														if( $excerpt ) { ?>
+														<div class="articles_grid_item_text">	
+															<div class="page_links_item_intro">
+																<?php 
+																//echo custom_field_excerpt();
+																//echo wp_trim_words($excerpt,7); 
+																echo wp_html_excerpt( $excerpt, $grid_excerpt_length, '...' ); ?>
+															</div>
+														</div>
+														<script>
+														jQuery(function($) {
+															$(window).load(function(){
+																get_text_height();
+															    //function to get current div height
+															    function get_text_height(){
+															        //var footer_height = $('#footer_container').height();
+															        var text_height = $('.section-<?php echo $row;?>-<?php echo $count;?> .item-<?php echo $item;?> .page_links_item_intro').outerHeight();
+															        $('.section-<?php echo $row;?>-<?php echo $count;?> .item-<?php echo $item;?> .page_links_item_intro').css('margin-bottom', -text_height);
+															    }
+														    });	
+														}); 
+														</script>										
+														<?php } ?> 
+													</div>
+												</div>
+												</a>
+											</div>	
+										</div>
+									<?php } ?>	
+									
+										
 								</div>
 							</div>
+							
+							
+							
 				            
 				        <?php endwhile; ?>
 				        
