@@ -3968,13 +3968,13 @@ transition:         all 0.3s ease-in-out;
 .magazine_page_item_container {height: 100%;}
 
 /* ## Single Article */
-.article_main_col.article_side_content {padding: 60px 0;}
-h2.single_article_grid_title.section_title {font-size: 34px;line-height: 1.1;}
+.single-post .article_main_col.article_side_content {padding: 60px 0;}
+.single-post h2.single_article_grid_title.section_title {font-size: 34px;line-height: 1.1;}
 .single-post .page_section {height: 100%;}
-.article_side_content .magazine_page_grid_item h3.magazine_grid_item_title {font-size: 18px;line-height: 1;}
-.magazine_page_grid_item .magazine_page_item_inner:after {content: '';top: 15px;position: absolute;right: 15px;left: 16px;bottom: 15px;}
-.magazine_page_grid_item:hover .magazine_page_item_inner:after {box-shadow: 0px 0px 0px 1px #fff;}
-.single_article_grid_title.section_title {font-size: 25px;}
+.single-post .article_side_content .magazine_page_grid_item h3.magazine_grid_item_title {font-size: 18px;line-height: 1;}
+.single-post .magazine_page_grid_item .magazine_page_item_inner:after {content: '';top: 15px;position: absolute;right: 15px;left: 16px;bottom: 15px;}
+.single-post .magazine_page_grid_item:hover .magazine_page_item_inner:after {box-shadow: 0px 0px 0px 1px #fff;}
+.single-post .single_article_grid_title.section_title {font-size: 25px;}
 
 /* ## Author Article */
 .author-name.author-title {color: #5ba69c;font-size: 24px;font-weight: 600;}
