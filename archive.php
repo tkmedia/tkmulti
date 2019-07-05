@@ -213,7 +213,9 @@ $archive_article_style = get_field('archive_article_style', $post_id);
 												</a>
 											</div>	
 										</div>
-									<?php } elseif( $archive_article_style == 'style3' ){ ?>		
+										
+									<?php } elseif( $archive_article_style == 'style3' ){ ?>
+											
 										<div class="articles_grid_item_container title_<?php echo $article_grid_title_position;?>">
 											<div class="articles_grid_item_img box_effect">
 												<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'קישור לעמוד %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
@@ -270,15 +272,12 @@ $archive_article_style = get_field('archive_article_style', $post_id);
 												</a>
 											</div>	
 										</div>
+										
 									<?php } ?>	
 									
-										
 								</div>
 							</div>
-							
-							
-							
-				            
+
 				        <?php endwhile; ?>
 				        
 				</div>
