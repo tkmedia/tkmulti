@@ -18,6 +18,11 @@ function theme_add_body_class( $classes ) {
    return $classes;
 }
 
+$term_id = get_queried_object()->term_id;
+$post_id = 'category_'.$term_id;
+$archive_main_img = get_field('archive_main_img', $post_id);
+$default_masthead_bg =  get_field('default_main_masthead_bg', 'option');
+
 /**
  * Archive Header
  *
@@ -36,21 +41,13 @@ function theme_add_body_class( $classes ) {
 				<!-- Top Slider -->
 					<div id="main-top-slider">
 					
-						<?php 
-						$slider_images = get_field('page_main_top_slider');
-						$default_masthead_bg =  get_field('default_main_masthead_bg', 'option');?>
 						<div class="top-slider-bg top-slider-bg-multiple">
 						    <div id="top-slider" class="swiper-container style3 swiper-scale-effect" style="direction: ltr;height: 30vh !important;">
-							    <?php if( $slider_images ) { ?>
-						        <div class="slides single-slider swiper-wrapper">
-						            <?php foreach( $slider_images as $slider_image ): ?>
-							        <div class="single-slider-img-item single-slider-item swiper-slide">
-						                <div class="single-slider-img swiper-slide-cover">
-							                <?php //echo wp_get_attachment_image( $slider_image['ID'], 'full' ); ?>
-											<div class="slide-inner" style="background-image:url(<?php echo $slider_image['url']; ?>)"></div>
-						                </div>
+						        <?php if ($archive_main_img) { ?>
+						        <div class="slides single-slider">
+							        <div class="single-slider-img single-slider-item">
+								        <div class="single-slider-img"><?php echo wp_get_attachment_image( $archive_main_img, 'full' ); ?></div>
 							        </div>
-						            <?php endforeach; ?>
 						        <?php } elseif ($default_masthead_bg) { ?>
 						        <div class="slides single-slider">
 							        <div class="single-slider-img single-slider-item">
@@ -156,7 +153,20 @@ function theme_add_body_class( $classes ) {
 				    
 				        <?php while ( have_posts() ) : the_post(); ?>
 				        
-				            <?php get_template_part( 'content-magazine-grid', get_post_format() ); ?>
+							<div class="magazine_page_grid_item col-xs-12 col-sm-6 col-md-4 col-lg-3">
+								<div class="magazine_page_item_container">
+									<div class="magazine_page_item_img">
+										<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'קישור לעמוד %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
+											<?php echo get_the_post_thumbnail($post->ID, 'block-300'); ?>
+											<div class="magazine_page_item_inner">
+												<div class="magazine_grid_item_text">	
+													<h3 itemprop="name" class="magazine_grid_item_title"><?php the_title(); ?></h3>
+												</div>
+											</div>
+										</a>
+									</div>	
+								</div>
+							</div>
 				            
 				        <?php endwhile; ?>
 				        
