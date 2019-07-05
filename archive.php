@@ -167,7 +167,7 @@ $archive_article_style = get_field('archive_article_style', $post_id);
 				        
 							<div class="magazine_page_grid_item col-xs-<?= $cg_xs_cols; ?> col-sm-<?= $cg_sm_cols; ?> col-md-<?= $cg_md_cols; ?>">
 								<div class="magazine_page_item_container">
-									<?php } elseif( $archive_article_style == 'style1' ){ ?>
+									<?php if( $archive_article_style == 'style1' ){ ?>
 									
 									<div class="magazine_page_item_img">
 										<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Link to page %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
