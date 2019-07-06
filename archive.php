@@ -235,7 +235,7 @@ $archive_article_style = get_field('archive_article_style', $post_id);
 																<?php 
 																//echo custom_field_excerpt();
 																//echo wp_trim_words($excerpt,7); 
-																echo wp_html_excerpt( $excerpt, $grid_excerpt_length, '...' ); ?>
+																echo wp_html_excerpt( $excerpt, 100, '...' ); ?>
 															</div>
 														</div>
 														<script>
