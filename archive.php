@@ -191,7 +191,7 @@ $archive_article_style = get_field('archive_article_style', $post_id);
 														</div>
 														<div class="articles_grid_item_content col-xs-12 col-sm-6 col-md-8 col-lg-9">
 															<div class="articles_grid_item_inside">
-																<h3 itemprop="name" class="page_link_grid_item_title no-line" style="font-size: <?php echo $artcile_grid_title_size;?>px;color:<?php echo $artcile_grid_title_color;?>;"><?php the_title(); ?></h3>
+																<h3 itemprop="name" class="page_link_grid_item_title no-line"><?php the_title(); ?></h3>
 																<?php 
 																$excerpt = get_field('page_masthead_excerpt');
 																if( $excerpt ) { ?>
@@ -200,7 +200,7 @@ $archive_article_style = get_field('archive_article_style', $post_id);
 																		<?php 
 																		//echo custom_field_excerpt();
 																		//echo wp_trim_words($excerpt,7); 
-																		echo wp_html_excerpt( $excerpt, $grid_excerpt_length, '...' ); ?>
+																		echo wp_html_excerpt( $excerpt, 100, '...' ); ?>
 																	</div>
 																</div>
 																<?php } ?>
