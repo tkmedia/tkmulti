@@ -216,7 +216,7 @@ $archive_article_style = get_field('archive_article_style', $post_id);
 										
 									<?php } elseif( $archive_article_style == 'style3' ){ ?>
 											
-										<div class="articles_grid_item_container">
+										<div class="articles_grid_item_container title_inside">
 											<div class="articles_grid_item_img box_effect">
 												<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Link to page %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
 													
