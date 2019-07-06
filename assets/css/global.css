@@ -3972,6 +3972,8 @@ transition:         all 0.3s ease-in-out;
 .magazine_page_item_container {height: 100%;}
 
 .archive-page .magazin_style3 h3 {font-size: 24px;}
+.archive-page .page_link_grid_wrap.grid_style3 .page_link_grid_item_img .page_img_border::before, 
+.archive-page .page_link_grid_wrap.grid_style3 .page_link_grid_item_img .page_img_border::after {top: 20px;right: 20px;bottom: 20px;left: 20px;}
 
 /* ## Single Article */
 .single-post .article_main_col.article_side_content {padding: 60px 0;}
