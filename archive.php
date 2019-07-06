@@ -158,15 +158,15 @@ $archive_article_style = get_field('archive_article_style', $post_id);
 			endif; 
 			?>
 			
-			<div class="magazine_page_index wrap magazin_<?= $archive_article_style; ?>">
+			<div class="magazine_page_index wrap magazin_<?= $archive_article_style; ?> page_link_grid_wrap grid_<?php echo $archive_article_style;?>">
 				<div class="magazine_page_grid row-flex articles_grid_item_row center-xs">
 					
-				    <?php if ( have_posts() ) : ?>
+				    <?php if ( have_posts() ) : $article = 1;?>
 				    
 				        <?php while ( have_posts() ) : the_post(); ?>
 				        
 							<div class="magazine_page_grid_item col-xs-<?= $cg_xs_cols; ?> col-sm-<?= $cg_sm_cols; ?> col-md-<?= $cg_md_cols; ?>">
-								<div class="magazine_page_item_container">
+								<div class="magazine_page_item_container article_<?= $article; ?>">
 									<?php if( $archive_article_style == 'style1' ){ ?>
 									
 									<div class="magazine_page_item_img">
@@ -216,9 +216,9 @@ $archive_article_style = get_field('archive_article_style', $post_id);
 										
 									<?php } elseif( $archive_article_style == 'style3' ){ ?>
 											
-										<div class="articles_grid_item_container title_<?php echo $article_grid_title_position;?>">
+										<div class="articles_grid_item_container">
 											<div class="articles_grid_item_img box_effect">
-												<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'קישור לעמוד %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
+												<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Link to page %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
 													
 												<div class="page_link_grid_item_img">
 													<?php if( $article_grid_img == 'main_img' ): ?>
@@ -260,8 +260,8 @@ $archive_article_style = get_field('archive_article_style', $post_id);
 															    //function to get current div height
 															    function get_text_height(){
 															        //var footer_height = $('#footer_container').height();
-															        var text_height = $('.section-<?php echo $row;?>-<?php echo $count;?> .item-<?php echo $item;?> .page_links_item_intro').outerHeight();
-															        $('.section-<?php echo $row;?>-<?php echo $count;?> .item-<?php echo $item;?> .page_links_item_intro').css('margin-bottom', -text_height);
+															        var text_height = $('.article_<?= $article; ?> .page_links_item_intro').outerHeight();
+															        $('.article_<?= $article; ?> .page_links_item_intro').css('margin-bottom', -text_height);
 															    }
 														    });	
 														}); 
@@ -278,7 +278,7 @@ $archive_article_style = get_field('archive_article_style', $post_id);
 								</div>
 							</div>
 
-				        <?php endwhile; ?>
+				        <?php $article++;endwhile; ?>
 				        
 				</div>
 				
