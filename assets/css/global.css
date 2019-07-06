@@ -3971,6 +3971,8 @@ transition:         all 0.3s ease-in-out;
 .magazin_style2 .articles_grid_item_readon {font-weight: bold;padding-top: 7px;text-align: start;}
 .magazine_page_item_container {height: 100%;}
 
+.archive-page .magazin_style3 h3 {font-size: 24px;}
+
 /* ## Single Article */
 .single-post .article_main_col.article_side_content {padding: 60px 0;}
 .single-post h2.single_article_grid_title.section_title {font-size: 34px;line-height: 1.1;}
