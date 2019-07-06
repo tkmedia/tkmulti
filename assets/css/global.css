@@ -2763,6 +2763,10 @@ transition: all .5s;}
 .page_link_grid_wrap.grid_style3 .articles_grid_item.check1 .page_img {height: 100%;}  
 .page_link_grid_wrap.grid_style3 .articles_grid_item.check1 img {height: 100%;width: 100%;object-fit: cover;} 
 
+@media only screen and (max-width: 767px) {
+	.page_link_grid_wrap.grid_style3 .articles_grid_item, 
+	.page_link_grid_wrap.grid_style3 .grid_item_wrap {-ms-flex-preferred-size: 100%;-webkit-flex-basis: 100%;flex-basis: 100%;max-width: 100%;height: auto;}
+}
 
 /* GForms Style */
 html[dir=rtl] .gform_wrapper span.ginput_left, 
