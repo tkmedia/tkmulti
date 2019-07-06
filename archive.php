@@ -152,9 +152,9 @@ $archive_article_style = get_field('archive_article_style', $post_id);
 			<?php
 			if ( $archive_article_display == 1 ) : $cg_xs_cols = "12"; $cg_sm_cols = "12"; $cg_md_cols = "12"; 
 			elseif ( $archive_article_display == 2 ) : $cg_xs_cols = "12"; $cg_sm_cols = "6"; $cg_md_cols = "6"; 
-			elseif ( $archive_article_display == 3 ) : $cg_xs_cols = "12"; $cg_sm_cols = "4"; $cg_md_cols = "4"; 
-			elseif ( $archive_article_display == 4 ) : $cg_xs_cols = "12"; $cg_sm_cols = "3"; $cg_md_cols = "3";
-			elseif ( $archive_article_display == 5 ) : $cg_xs_cols = "12"; $cg_sm_cols = "3"; $cg_md_cols = "20"; 
+			elseif ( $archive_article_display == 3 ) : $cg_xs_cols = "12"; $cg_sm_cols = "6"; $cg_md_cols = "4"; 
+			elseif ( $archive_article_display == 4 ) : $cg_xs_cols = "12"; $cg_sm_cols = "6"; $cg_md_cols = "3";
+			elseif ( $archive_article_display == 5 ) : $cg_xs_cols = "12"; $cg_sm_cols = "6"; $cg_md_cols = "20"; 
 			endif; 
 			?>
 			
