@@ -25,6 +25,8 @@ $share_animation = get_sub_field('flex_share_animation');
 	$s_facebook = get_sub_field( 'flex_s_facebook_show' );
 	$s_whatsapp = get_sub_field( 'flex_s_whatsapp_show' );
 	$s_email = get_sub_field( 'flex_s_email_show' );
+	$s_pinterest = get_sub_field( 'flex_s_pinterest_show' );
+	$s_messenger = get_sub_field( 'flex_s_messenger_show' );
 						
 	$site_phone = get_field('header_phone','option');
 	$phone_title = get_field('site_phone_title','option');
@@ -194,6 +196,8 @@ if ( $share_hide_mobile && wp_is_mobile() ) {
 							        <?php if($s_email) { ?>{ share: "email", label: "<?php echo $email_share;?>" },<?php } ?>
 							        <?php if($s_facebook) { ?>{ share: "facebook", label: "<?php echo $facebook_share;?>" },<?php } ?>
 								    <?php if($s_twitter) { ?>{ share: "twitter", label: "<?php echo $facebook_share;?>" },<?php } ?>
+								    <?php if($s_pinterest) { ?>{ share: "pinterest", label: "<?php echo $pinterest_share;?>" },<?php } ?>
+								    <?php if($s_messenger) { ?>{ share: "messenger", label: "<?php echo $messenger_share;?>" },<?php } ?>
 							        ]
 							    });
 							
