@@ -3195,10 +3195,11 @@ span.button_grid_arrow {width: 20%;justify-content: end;text-align: left;color: 
 .share_contact_title_inner.title_sideline:before {content: '';width: 40px;border-bottom: 3px solid #20221d;position: absolute;right: 0;top: 48%;}
 .share_contact_title {font-size: 22px;font-weight: bold;line-height: 1;}
 .share_contact_subtitle {font-size: 16px;line-height: 1;padding-top: 8px;}
-
+.share_contact_title_col.title_top_title {text-align: center;padding-bottom: 15px;}
 .share_contact .jssocials-shares, 
 .share_contact a.jssocials-share-link, 
 .share_contact .share_contact_c_row {box-sizing: border-box;display: -webkit-box;display: -ms-flexbox;display: flex;-webkit-box-flex: 0;-ms-flex: 0 1 auto;flex: 0 1 auto;-webkit-box-orient: horizontal;-webkit-box-direction: normal;-ms-flex-direction: row;flex-direction: row;-ms-flex-wrap: wrap;flex-wrap: wrap;}
+.share_contact_title_col.title_top_title a.jssocials-share-link {justify-content: center;}
 .share_contact .jssocials-shares .jssocials-share, 
 .share_contact .share_contact_c_row .contact_item {margin: 0;-webkit-box-flex: 1;-ms-flex-positive: 1;flex-grow: 1;-ms-flex-preferred-size: 0;flex-basis: 0;max-width: 100%;box-sizing: border-box;-webkit-box-flex: 0;-ms-flex: 0 0 auto;flex: 0 0 auto;flex: 1 1 auto;}
 .share_contact a.jssocials-share-link {-webkit-box-align: center;-ms-flex-align: center;align-items: center;  background:transparent !important;border: none !important;}
