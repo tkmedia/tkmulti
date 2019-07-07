@@ -3191,8 +3191,8 @@ span.button_grid_arrow {width: 20%;justify-content: end;text-align: left;color: 
 }
 
 /* Contact Block - Share Buttons */
-.share_contact_title_inner {padding-right: 55px;position: relative;}
-.share_contact_title_inner:before {content: '';width: 40px;border-bottom: 3px solid #20221d;position: absolute;right: 0;top: 48%;}
+.share_contact_title_inner.title_sideline {padding-right: 55px;position: relative;}
+.share_contact_title_inner.title_sideline:before {content: '';width: 40px;border-bottom: 3px solid #20221d;position: absolute;right: 0;top: 48%;}
 .share_contact_title {font-size: 22px;font-weight: bold;line-height: 1;}
 .share_contact_subtitle {font-size: 16px;line-height: 1;padding-top: 8px;}
 
