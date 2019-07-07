@@ -92,7 +92,6 @@ if ( $share_hide_mobile && wp_is_mobile() ) {
 							<?php } ?>	
 							<?php if( $main_email && $email_show ) { ?>
 							<div class="contact_item contact_item_email">
-								<a href="#share_contact_popup" class="contact_form_popup_link share_contact_popup Aligner" data-effect="mfp-zoom-in">
 								<a data-fancybox data-src="#popop-form-<?php echo $row;?>-<?php echo $count;?>" href="javascript:;">
 									<span class="contact_item_icon">
 										<i class="fas fa-envelope"></i>
