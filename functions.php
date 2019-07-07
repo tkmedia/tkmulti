@@ -62,11 +62,6 @@ require( get_template_directory() . '/inc/amp.php' );
 require( get_template_directory() . '/inc/display-posts.php' );
 require( get_template_directory() . '/inc/instantpage.php' );
 
-// TGM ------------------------------------------------------------------
-if( is_admin() ){
-	include_once get_template_directory() .'/inc/class-mfn-tgmpa.php';
-}
-
 // WooCommerce ----------------------------------------------------------------
 if ( class_exists( 'WooCommerce' ) ) {
 	require_once( get_template_directory() . '/inc/woocommerce.php' );
