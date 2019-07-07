@@ -218,5 +218,5 @@ if ( $share_hide_mobile && wp_is_mobile() ) {
 		</div>
 	</section>
 </div>
-<?php if( $divider_break ){ ?><div class="break"></div><?php } ?>
+<?php if( $share_break ){ ?><div class="break"></div><?php } ?>
 <?php } ?>
