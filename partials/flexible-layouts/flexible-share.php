@@ -7,6 +7,8 @@ $share_break = get_sub_field('flex_share_break');
 $share_block_align = get_sub_field('flex_share_block_align');
 $share_animation = get_sub_field('flex_share_animation');
 
+	$share_title_show = get_sub_field( 'flex_share_title_show' );
+	$share_title_position = get_sub_field( 'flex_share_title_position' );
 	$share_title = get_sub_field( 'flex_share_title' );
 	$share_subtitle = get_sub_field( 'flex_share_subtitle' );
 	$share_type = get_sub_field( 'flex_share_type' );
@@ -58,8 +60,8 @@ if ( $share_hide_mobile && wp_is_mobile() ) {
 
 				<div class="share_contact_row row-flex middle-xs <?php echo $share_layout; ?> <?php if( !$share_title && !$share_subtitle ) { ?>center-xs<?php } ?>">
 					
-					<?php if( $share_title || $share_subtitle ) { ?>
-					<div class="share_contact_title_col col-xs-12 col-sm-3">
+					<?php if( $share_title_show ) { ?>
+					<div class="share_contact_title_col col-xs-12 title_<?php echo $share_title_position; ?>">
 						<div class="share_contact_title_inner">
 							<?php if( $share_title ) { ?>
 							<div class="share_contact_title"><?php echo $share_title; ?></div>
@@ -69,9 +71,11 @@ if ( $share_hide_mobile && wp_is_mobile() ) {
 							<?php } ?>
 						</div>
 					</div>
-					<?php } ?>
 					
-					<div class="share_contact_type col-xs-12 col-sm-9">
+					<div class="share_contact_type col-xs-12 title_<?php echo $share_title_position; ?>">
+					<?php } else { ?>
+					<div class="share_contact_type col-xs-12">
+					<?php } ?>	
 						<?php if( $share_type == 'contact_icons' ): ?>
 						<div class="share_contact_c_row">
 							<?php if( $whatsapp_num && $whatsapp_show ) { ?>
