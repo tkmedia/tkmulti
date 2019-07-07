@@ -123,7 +123,13 @@ if ( $share_hide_mobile && wp_is_mobile() ) {
 											<div class="contact-form-page">
 												<div class="full_form_id">
 													<div class="full_form_id_wrap">
-														<?php echo do_shortcode( '[contact-form-7 id="'.$default_form_popup.'" ]' ); ?>
+														<?php 
+														foreach( $default_form_popup as $form ):
+														$form_id = $form->ID; ?>
+														<div class="full_form_id_wrap">
+															<?php echo do_shortcode( '[contact-form-7 id="'.$form_id.'" ]' ); ?>
+														</div>
+														<?php endforeach; ?>
 													</div>
 												</div>
 											</div>
