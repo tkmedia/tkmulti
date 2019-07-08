@@ -1,4 +1,4 @@
-<?php 
+<?php
 $link_grid_block_width = get_sub_field('flex_manual_link_grid_block_width');
 $link_grid_order = get_sub_field('flex_manual_link_grid_order');
 $link_grid_mobile = get_sub_field('flex_manual_link_grid_mobile');
@@ -14,14 +14,14 @@ $text_position = get_sub_field('flex_manual_link_grid_text_position');
 $link_grid_count = get_sub_field('flex_manual_link_grid_count');
 $link_grid_animation = get_sub_field('flex_manual_link_grid_animation');
 
-	if ( $link_grid_count == 1 ) : $m_xs_cols = "12"; $m_sm_cols = "12"; $m_md_cols = "12"; $m_lg_cols = "12"; 
-	elseif ( $link_grid_count == 2 ) : $m_xs_cols = "12"; $m_sm_cols = "6"; $m_md_cols = "6"; $m_lg_cols = "6"; 
-	elseif ( $link_grid_count == 3 ) : $m_xs_cols = "6"; $m_sm_cols = "4"; $m_md_cols = "4"; $m_lg_cols = "4"; 
-	elseif ( $link_grid_count == 4 ) : $m_xs_cols = "6"; $m_sm_cols = "4"; $m_md_cols = "3"; $m_lg_cols = "3";  
-	elseif ( $link_grid_count == 5 ) : $m_xs_cols = "6"; $m_sm_cols = "4"; $m_md_cols = "20"; $m_lg_cols = "20"; 
-	elseif ( $link_grid_count == 6 ) : $m_xs_cols = "6"; $m_sm_cols = "3"; $m_md_cols = "2"; $m_lg_cols = "2"; 
-	elseif ( $link_grid_count == 7 ) : $m_xs_cols = "6"; $m_sm_cols = "3"; $m_md_cols = "seven"; $m_lg_cols = "seven"; 
-	elseif ( $link_grid_count == 8 ) : $m_xs_cols = "6"; $m_sm_cols = "3"; $m_md_cols = "20"; $m_lg_cols = "eight"; 
+	if ( $link_grid_count == 1 ) : $m_xs_cols = "12"; $m_sm_cols = "12"; $m_md_cols = "12"; $m_lg_cols = "12";
+	elseif ( $link_grid_count == 2 ) : $m_xs_cols = "12"; $m_sm_cols = "6"; $m_md_cols = "6"; $m_lg_cols = "6";
+	elseif ( $link_grid_count == 3 ) : $m_xs_cols = "6"; $m_sm_cols = "4"; $m_md_cols = "4"; $m_lg_cols = "4";
+	elseif ( $link_grid_count == 4 ) : $m_xs_cols = "6"; $m_sm_cols = "4"; $m_md_cols = "3"; $m_lg_cols = "3";
+	elseif ( $link_grid_count == 5 ) : $m_xs_cols = "6"; $m_sm_cols = "4"; $m_md_cols = "20"; $m_lg_cols = "20";
+	elseif ( $link_grid_count == 6 ) : $m_xs_cols = "6"; $m_sm_cols = "3"; $m_md_cols = "2"; $m_lg_cols = "2";
+	elseif ( $link_grid_count == 7 ) : $m_xs_cols = "6"; $m_sm_cols = "3"; $m_md_cols = "seven"; $m_lg_cols = "seven";
+	elseif ( $link_grid_count == 8 ) : $m_xs_cols = "6"; $m_sm_cols = "3"; $m_md_cols = "20"; $m_lg_cols = "eight";
 	endif;
 
 if ( $link_grid_hide_mobile && wp_is_mobile() ) {
@@ -35,11 +35,11 @@ if ( $link_grid_hide_mobile && wp_is_mobile() ) {
 			<div class="masonary_grid_link_wrap">
 
 				<?php if( $link_grid_grid ) { ?>
-				<div class="masonary_grid <?php if( $link_grid_bw ) { ?>masonary_bw<?php } ?>">
-					
+				<div class="masonary_grid <?php if( $link_grid_bw ) { ?>masonary_bw<?php } ?> <?php echo $text_position; ?>">
+
 					<?php if( $link_grid_type == 'box-layout' ) { ?>
 					<div class="layout row-flex center-xs">
-					<?php while ( have_rows('flex_manual_link_grid_grid') ) : the_row(); 
+					<?php while ( have_rows('flex_manual_link_grid_grid') ) : the_row();
 						$flex_masonary_img = get_sub_field('flex_masonary_img');
 						$flex_masonary_title = get_sub_field('flex_masonary_title');
 						$flex_masonary_subtitle = get_sub_field('flex_masonary_subtitle');
@@ -76,7 +76,7 @@ if ( $link_grid_hide_mobile && wp_is_mobile() ) {
 
 					<?php } elseif( $link_grid_type == 'vid-layout' ) { ?>
 					<div class="layout row-flex">
-					<?php while ( have_rows('flex_manual_link_grid_grid') ) : the_row(); 
+					<?php while ( have_rows('flex_manual_link_grid_grid') ) : the_row();
 						$flex_masonary_img = get_sub_field('flex_masonary_img');
 						$flex_masonary_vid_link = get_sub_field('flex_masonary_vid_link');
 						$flex_masonary_vid_title = get_sub_field('flex_masonary_vid_title');
@@ -98,11 +98,11 @@ if ( $link_grid_hide_mobile && wp_is_mobile() ) {
 					    </div>
 				    <?php endwhile; ?>
 					</div>
-					
+
 				    <?php } else { ?>
-				    
+
 					<div class="layout">
-					<?php while ( have_rows('flex_manual_link_grid_grid') ) : the_row(); 
+					<?php while ( have_rows('flex_manual_link_grid_grid') ) : the_row();
 						$flex_masonary_img = get_sub_field('flex_masonary_img');
 						$flex_masonary_title = get_sub_field('flex_masonary_title');
 						$flex_masonary_subtitle = get_sub_field('flex_masonary_subtitle');
@@ -132,16 +132,16 @@ if ( $link_grid_hide_mobile && wp_is_mobile() ) {
 						</div>
 				    <?php endwhile; ?>
 					</div>
-					
+
 					<?php } ?>
-					
+
 				</div>
 				<?php } ?>
 
 			</div>
 		</div>
 		<?php if( $link_grid_type == 'grid-layout' || $link_grid_type == 'flex-layout' ): ?>
-		<script>					
+		<script>
 		jQuery(function($) {
 			<?php if( $link_grid_type == 'grid-layout' ): ?>
 			$('.grid-layout .grid-item:nth-child(3)').addClass('span-3');
@@ -167,14 +167,14 @@ if ( $link_grid_hide_mobile && wp_is_mobile() ) {
 			$('.flex-layout .col_layout:nth-child(4n+2)').addClass('row-a');
 			$('.flex-layout .col_layout:nth-child(4n+3)').addClass('row-b');
 			$('.flex-layout .col_layout:nth-child(4n+4)').addClass('row-b');
-			
+
 			$('.flex-layout .grid-item').addClass('col-xs-12');
 			//$('.flex-layout .col_layout:nth-child(odd) .grid-item').addClass('col-sm-6');
 			<?php endif; ?>
-		}); 
-		</script>							
+		});
+		</script>
 		<?php endif; ?>
-		
+
 	</section>
 </div>
 <?php if( $link_grid_break ){ ?><div class="break"></div><?php } ?>
