@@ -52,9 +52,6 @@ if ( $one_hide_mobile && wp_is_mobile() ) {
 				<?php } else { ?>
 				<div class="section_content_wrap">
 				<?php } ?>
-					<?php if( $one_column_subtitle ) { ?>
-						<div class="section_subtitle title_<?php echo $one_column_title_a; ?>" itemprop="headline" style="text-align:<?php echo $one_column_title_a; ?> !important;color:<?php echo $one_subtitle_color; ?>;font-size:<?php echo $one_column_subtitle_size; ?>px;"><p><?php echo $one_column_subtitle; ?></p></div>
-					<?php } ?>
 					<div class="content_one_column_container flex_text" style="color:<?php echo $one_text_color; ?>;">
 						<?php echo $one_column_text; ?>
 					</div>
