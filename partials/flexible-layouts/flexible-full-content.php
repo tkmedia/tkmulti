@@ -43,11 +43,15 @@ if ( $one_hide_mobile && wp_is_mobile() ) {
 
 		<div class="content_one_column flexible_page_element" itemprop="text">
 			<div class="content_one_column_wrap content_wrap">
-				<?php if( $one_column_title ) { ?>
-				<h2 class="section_title section_flex_title title_<?php echo $one_column_title_a; ?>" style="text-align:<?php echo $one_column_title_a; ?> !important;color:<?php echo $one_title_color; ?>;font-size:<?php echo $one_column_title_size; ?>px;"><?php echo $one_column_title; ?></h2>
-				<?php } ?>
-				<?php if( $one_column_subtitle ) { ?>
+				<?php if( $one_column_title || $one_column_subtitle ) { ?>
+				<div class="content_one_column_title_wrap">
+					<?php if( $one_column_title ) { ?>
+					<h2 class="section_title section_flex_title title_<?php echo $one_column_title_a; ?>" style="text-align:<?php echo $one_column_title_a; ?> !important;color:<?php echo $one_title_color; ?>;font-size:<?php echo $one_column_title_size; ?>px;"><?php echo $one_column_title; ?></h2>
+					<?php } ?>
+					<?php if( $one_column_subtitle ) { ?>
 					<div class="section_subtitle title_<?php echo $one_column_title_a; ?>" itemprop="headline" style="text-align:<?php echo $one_column_title_a; ?> !important;color:<?php echo $one_subtitle_color; ?>;font-size:<?php echo $one_column_subtitle_size; ?>px;"><p><?php echo $one_column_subtitle; ?></p></div>
+					<?php } ?>
+				</div>
 				<?php } ?>
 				<div class="section_content_wrap content_title_<?php echo $one_column_title_a; ?>">
 					<div class="content_one_column_container flex_text" style="color:<?php echo $one_text_color; ?>;">
