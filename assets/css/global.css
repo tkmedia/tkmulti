@@ -3290,7 +3290,8 @@ span.button_grid_arrow {width: 20%;justify-content: end;text-align: left;color: 
 .flex_articles_box_slider .box_title .articles_grid_item_row.cat_slider_box {background: rgba(0,0,0,0.6);}
 .flex_articles_box_slider .box_title h3.articles_grid_box_content_title {font-size: 48px;color: #fff;font-weight: 600;}
 
-
+.grid-style2 {}
+  
 @media (min-width: 768px) {
 	.flex_articles_box_slider .box_title .articles_slider_item {padding-bottom: 0;}
 	.flex_articles_box_slider .box_title .articles_grid_item_row.cat_slider_box {border-left: 4px solid #fff;border-right: 4px solid #fff;padding-bottom: 0;padding-right: 0;padding-left: 0;}
