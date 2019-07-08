@@ -3310,7 +3310,7 @@ span.button_grid_arrow {width: 20%;justify-content: end;text-align: left;color: 
 /* Grid Masonary link Gallery */
 .masonary_grid_link .grid-item {position: relative;}
 .flex_masonary_content {position: absolute;width: 100%;text-align: center;text-transform: uppercase;color: #fff;height: 100%;top: 0;}
-.flex_masonary_title {font-size: 22px;}
+.flex_masonary_title {font-size: 22px;line-height: 1.2;padding-bottom: 10px;}
 .flex_masonary_subtitle {font-size: 16px;line-height: 1.1;text-transform: none;}
 .flex_masonary_content {padding: 20px 10px;}
 .flex_masonary_content.img_cen_bot {display: flex;align-items: flex-end;justify-content: center;text-align: center;}
