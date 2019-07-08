@@ -137,7 +137,7 @@ if( ! class_exists( 'TGM_Plugin_Activation' ) ){
 			array(
 				'name'               => 'Advanced Custom Fields Pro',
 				'slug'               => 'advanced-custom-fields-pro',
-				'source'             => get_stylesheet_directory_uri() . '/lib/plugins/advanced-custom-fields-pro.zip',
+				'source'             => get_template_directory_uri() . '/lib/plugins/advanced-custom-fields-pro.zip',
 				'required'           => true,
 				'version'            => '',
 				'force_activation'   => false,
@@ -148,7 +148,7 @@ if( ! class_exists( 'TGM_Plugin_Activation' ) ){
 			array(
 				'name'               => 'WP Pusher',
 				'slug'               => 'wppusher',
-				'source'             => get_stylesheet_directory_uri() . '/lib/plugins/wppusher.zip',
+				'source'             => get_template_directory_uri() . '/lib/plugins/wppusher.zip',
 				'required'           => true,
 				'version'            => '',
 				'force_activation'   => false,
