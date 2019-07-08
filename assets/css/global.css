@@ -885,6 +885,8 @@ li.social-item.site_phone a {color: #fff !important;}
 	.header_menu_container.align_start_nav {justify-content: flex-start;}
 	.header_menu_container.align_end_nav {justify-content: flex-end;}
 	.header_menu_container.align_center_nav {justify-content: center;}
+	
+	.header_menu_container.spread_nav .header_menu_container_inner {width: 100%;}
 }
 /* Header Center Logo Nav - Main Nav
 -------------------------------------------------------------- */
