@@ -1294,7 +1294,7 @@ span.header_phone_num.footer_phone_num {display: block;}
 
 /* ## Branding
 -------------------------------------------------------------- */
-.header-logo {width: 200px;padding: 15px 0px;}
+.header-logo {padding: 15px 0px;}
 
 @media only screen and (max-width: 991px) {
 	.branding {padding-right: 50px;}
