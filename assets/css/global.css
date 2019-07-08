@@ -3364,7 +3364,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', e
 .masonary_grid.masonary_bw {}
 .masonary_grid.masonary_bw img{-webkit-filter: grayscale(100%);filter: grayscale(100%); /* FF 35+ */}
 .masonary_grid.masonary_bw .grid-item:hover img  {transition: filter .5s ease-in-out;-webkit-filter: grayscale(0%);filter: grayscale(0%);}
-.masonary_grid_link.grid-style2.img_text_bellow .grid-item {border: 1px solid #ccc;padding: 10px;}
+.masonary_grid_link.grid-style2.img_text_bellow .grid-item-inner {border: 1px solid #ccc;padding: 10px;}
 
 .masonary_grid_link.vid-layout .flex_masonary_content {background: rgba(0,0,0,0.4);}
 .masonary_grid_link.vid-layout i {font-size: 50px;}
