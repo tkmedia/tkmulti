@@ -982,6 +982,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 .header-logo img {height: auto;width: 100%;}
 .header_logo_side_text {padding-right: 25px;line-height: 1;text-transform: uppercase;font-size: 15px;}
 
+.full_row_box .logo_side_start #branding {order: 1;}
+.full_row_box .logo_side_start .header_menu_container {order: 2;}
+.full_row_box .logo_side_end #branding {order: 1;}
+.full_row_box .logo_side_end .header_menu_container {order: 0;}
+
 @media (min-width: 992px) {
 	.header-logo.mobile_logo {display: none;}
 }
