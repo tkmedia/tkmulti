@@ -452,7 +452,7 @@ jQuery(function($) {
 	        topSliderImg = $("#home_masthead #top-slider .single-slider-img");
 	        topSlider.css('height', "calc(100vh - " + header_height + "px)");
 	        topSliderImg.css('height', "calc(100vh - " + header_height + "px)");
-	        $('.masthead_content_container').css('padding-top', header_height);
+	        $('.masthead_content.top-xs .masthead_content_container').css('padding-top', header_height);
 	        $('.slider_content_bottom #main-top-slider').css('padding-top', header_height);
 	         
 	    }
