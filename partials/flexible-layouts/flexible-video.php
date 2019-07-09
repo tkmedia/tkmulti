@@ -89,7 +89,7 @@ if ( $video_hide_mobile && wp_is_mobile() ) {
 			
 			<?php elseif( $video_display == 'video-slider' ): ?>
 			
-				<div class="swiper-container video_slider_<?php echo $count;?>">
+				<div class="swiper-container video_slider_container video_slider_<?php echo $count;?>">
 					<div class="video_slider_item_row swiper-wrapper">
 					<?php $vid_item = 1; while ( have_rows('flex_video_slider') ) : the_row();
 					$video_slider_img = get_sub_field('flex_video_slider_img');
