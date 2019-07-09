@@ -25,7 +25,7 @@ if ( $client_slider_hide_mobile && wp_is_mobile() ) {
 		<div class="client_slider flexible_page_element" itemprop="text">
 			<div class="client_slider_wrap slider-<?php echo $count;?>">				
 
-				<?php if( $client_src == 'option' ): ?>
+				<?php if( $client_src == 'option' ) { ?>
 
 				<div class="client_slider_col gallery_slider_image">
 					<div class="summary-gallery-new">
@@ -50,7 +50,7 @@ if ( $client_slider_hide_mobile && wp_is_mobile() ) {
 					</div>
 				</div>
 				
-				<?php elseif( $client_src == 'from-page' ): ?>
+				<?php } elseif( $client_src == 'from-page' ) { ?>
 
 				<div class="client_slider_col gallery_slider_image">
 					<div class="summary-gallery-new">
@@ -75,7 +75,7 @@ if ( $client_slider_hide_mobile && wp_is_mobile() ) {
 					</div>
 				</div>
 
-				<?php elseif( $client_src == 'from-page-repeater' ): ?>
+				<?php } elseif( $client_src == 'from-page-repeater' ) { ?>
 
 				<div class="client_slider_col gallery_slider_image">
 					<div class="summary-gallery-new">
@@ -116,7 +116,7 @@ if ( $client_slider_hide_mobile && wp_is_mobile() ) {
 					</div>
 				</div>
 
-				<?php endif; ?>
+				<?php } ?>
 				
 				
 				<script>					
