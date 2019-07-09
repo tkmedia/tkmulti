@@ -5,6 +5,7 @@ $img_content_mobile = get_sub_field('flex_img_content_mobile');
 $img_content_hide_mobile = get_sub_field('flex_img_content_hide_mobile');
 $img_content_break = get_sub_field('flex_img_content_break');
 $img_content_block_align = get_sub_field('flex_img_content_block_align');
+$img_content_animation = get_sub_field('flex_img_content_animation');
 
 $img_content_style = get_sub_field('flex_img_content_style');
 $img_content_type = get_sub_field('flex_img_content_type');
@@ -12,6 +13,10 @@ $img_content_title = get_sub_field('flex_img_content_title');
 $img_content_subtitle = get_sub_field('flex_img_content_subtitle');
 $img_content_title_h = get_sub_field('flex_img_content_title_h');
 $img_content_title_s = get_sub_field('flex_img_content_title_s');
+$img_content_title_color = get_sub_field('flex_img_content_title_color');
+$img_content_subtitle_color = get_sub_field('flex_img_content_subtitle_color');
+$img_content_text_color = get_sub_field('flex_img_content_text_color');
+
 $img_content_img = get_sub_field('flex_img_content_img');
 $img_content_img_size = get_sub_field('flex_img_content_img_size');
 $img_content_text_f = get_sub_field('flex_img_content_text_f');
@@ -25,7 +30,7 @@ $img_content_img_side = get_sub_field('flex_img_content_img_side');
 $img_col_layout = get_sub_field('flex_img_content_col_layout');
 $img_content_text_color = get_sub_field('flex_img_content_text_color');					
 $img_content_logo = get_sub_field('flex_img_content_logo');
-$img_content_animation = get_sub_field('flex_img_content_animation');
+
 
 if ( $img_content_hide_mobile && wp_is_mobile() ) {
 //HIDE ON MOBILE
@@ -47,14 +52,18 @@ if ( $img_content_hide_mobile && wp_is_mobile() ) {
 							<?php } ?>
 							<div class="img_content_item_content content_<?php echo $img_content_align; ?>">
 							<?php if( $img_content_title ){ ?>
-								<<?php echo $img_content_title_h; ?> class="img_content_title" style="font-size:<?php echo $img_content_title_s; ?>px;">
+								<<?php echo $img_content_title_h; ?> class="img_content_title" style="font-size:<?php echo $img_content_title_s; ?>px;color:<?php echo $img_content_title_color; ?>;">
 									<?php echo $img_content_title; ?>
 								</<?php echo $img_content_title_h; ?>>
 							<?php } ?>	
+							<?php if( $img_content_subtitle ){ ?>
+								<p class="img_content_subtitle" style="color:<?php echo $img_content_title_color; ?>;">
+									<?php echo $img_content_subtitle; ?>
+								</p>
+							<?php } ?>	
 							<?php if( $img_content_text_f ) { ?>
-								<div class="img_content_item_text">
+								<div class="img_content_item_text" style="color:<?php echo $img_content_text_color; ?>;">
 									<?php echo $img_content_text_f; ?>
-									
 								</div>
 							<?php } ?>
 							<?php if( $img_content_btn || $img_content_link ){ ?>
@@ -70,10 +79,15 @@ if ( $img_content_hide_mobile && wp_is_mobile() ) {
 						<div class="img_content_item_row">
 							<?php if( $img_content_title ){ ?>
 							<div class="img_content_title_top content_<?php echo $img_content_align; ?>">
-								<<?php echo $img_content_title_h; ?> class="img_content_title" style="font-size:<?php echo $img_content_title_s; ?>px;">
+								<<?php echo $img_content_title_h; ?> class="img_content_title" style="font-size:<?php echo $img_content_title_s; ?>px;color:<?php echo $img_content_title_color; ?>;">
 									<?php echo $img_content_title; ?>
 								</<?php echo $img_content_title_h; ?>>
 							</div>
+							<?php } ?>	
+							<?php if( $img_content_subtitle ){ ?>
+								<p class="img_content_subtitle" style="color:<?php echo $img_content_title_color; ?>;">
+									<?php echo $img_content_subtitle; ?>
+								</p>
 							<?php } ?>	
 							<?php if( $img_content_img ){ ?>
 							<div class="img_content_item_img">
@@ -82,9 +96,8 @@ if ( $img_content_hide_mobile && wp_is_mobile() ) {
 							<?php } ?>
 							<div class="img_content_item_content content_<?php echo $img_content_align; ?>">
 							<?php if( $img_content_text_f ) { ?>
-								<div class="img_content_item_text">
+								<div class="img_content_item_text" style="color:<?php echo $img_content_text_color; ?>;">
 									<?php echo $img_content_text_f; ?>
-									
 								</div>
 							<?php } ?>
 							<?php if( $img_content_btn || $img_content_link ){ ?>
@@ -104,18 +117,18 @@ if ( $img_content_hide_mobile && wp_is_mobile() ) {
 									<div class="img_content_item_text_inner">
 										<div class="img_content_item_title">	
 											<?php if( $img_content_title ){ ?>
-												<<?php echo $img_content_title_h; ?> class="img_content_title" style="font-size:<?php echo $img_content_title_s; ?>px;">
+												<<?php echo $img_content_title_h; ?> class="img_content_title" style="font-size:<?php echo $img_content_title_s; ?>px;color:<?php echo $img_content_title_color; ?>;">
 													<?php echo $img_content_title; ?>
 												</<?php echo $img_content_title_h; ?>>
 											<?php } ?>	
 											<?php if( $img_content_subtitle ){ ?>
-												<p class="img_content_subtitle">
+												<p class="img_content_subtitle" style="color:<?php echo $img_content_title_color; ?>;">
 													<?php echo $img_content_subtitle; ?>
 												</p>
 											<?php } ?>	
 										</div>
 										<?php if( $img_content_text_f ){ ?>
-										<div class="img_content_text_f"><?php echo $img_content_text_f; ?></div>
+										<div class="img_content_text_f" style="color:<?php echo $img_content_text_color; ?>;"><?php echo $img_content_text_f; ?></div>
 										<?php } ?>
 										<?php if( $img_content_btn || $img_content_link ){ ?>
 										<div class="img_content_item_button btn_<?php echo $img_content_btn_color; ?>">
