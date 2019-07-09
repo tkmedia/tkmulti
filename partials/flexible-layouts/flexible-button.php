@@ -54,7 +54,7 @@ if ( $button_hide_mobile && wp_is_mobile() ) {
 					<?php if( $button_icon_html && $button_icon == 'button_icon_free' ) { ?>
 						<div class="flex_main_button_icon" style="color:<?php echo $button_icon_color; ?>;"><?php echo $button_icon_html; ?></div>
 					<?php } ?>
-					<?php echo $button_text; ?>
+					<div class="button_text"><?php echo $button_text; ?></div>
 					
 					</button>
 				</a>
