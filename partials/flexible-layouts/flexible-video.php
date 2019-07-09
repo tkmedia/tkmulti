@@ -133,7 +133,7 @@ if ( $video_hide_mobile && wp_is_mobile() ) {
 								);
 								
 								$new_src = add_query_arg($params, $src);
-								$slider_vid_iframe = str_replace($src, $new_src, $iframe);
+								$iframe = str_replace($src, $new_src, $iframe);
 								// add extra attributes to iframe html
 								$attributes = 'frameborder="0"';
 								$iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
