@@ -82,7 +82,7 @@ if ( $img_content_hide_mobile && wp_is_mobile() ) {
 								<<?php echo $img_content_title_h; ?> class="img_content_title" style="font-size:<?php echo $img_content_title_s; ?>px;color:<?php echo $img_content_title_color; ?>;">
 									<?php echo $img_content_title; ?>
 								</<?php echo $img_content_title_h; ?>>
-								<?php if( $img_content_subtitle ){ ?><span class="img_content_subtitle" style="color:<?php echo $img_content_title_color; ?>;"><?php echo $img_content_subtitle; ?></span><?php } ?>	
+								<?php if( $img_content_subtitle ){ ?><span class="img_content_subtitle" style="color:<?php echo $img_content_title_color; ?>;"><p class="img_content_subtitle_inner"><?php echo $img_content_subtitle; ?></p></span><?php } ?>	
 								<?php if( $img_content_img ){ ?>
 							</div>
 							<?php } ?>	
