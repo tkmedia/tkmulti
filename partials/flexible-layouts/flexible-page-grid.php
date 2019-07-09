@@ -171,7 +171,7 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 							</div>	
 						</div>
 					<?php } elseif( $article_grid_style == 'style3' ){ ?>		
-						<div class="articles_grid_item_container title_<?php echo $article_grid_title_position;?>">
+						<div class="articles_grid_item_container title_inside">
 							<div class="articles_grid_item_img box_effect">
 								<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'קישור לעמוד %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
 									
