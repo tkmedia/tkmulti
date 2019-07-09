@@ -2216,7 +2216,7 @@ article ul li:nth-child(4n+4):before {color: #d6d6d6;}
 	.flex_content_rows {}
 }
 
-.container_wrap.row-flex.col_nopadding {margin: 0 auto !important;}
+.container_wrap.row-flex.col_nopadding {margin: 0 auto !important;padding: 0;}
 .col_nopadding .flex_content_cols {padding: 0 !important;}
 
 /* Sercive Icon Col */
