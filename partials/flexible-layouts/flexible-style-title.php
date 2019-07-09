@@ -34,7 +34,7 @@ if ( $title_hide_mobile && wp_is_mobile() ) {
 						<<?php echo $title_header; ?> class="clean-title"  style="text-align:<?php echo $title_align; ?>;font-size:<?php echo $title_size; ?>px;color:<?php echo $title_color; ?>;"><?php echo $title_first; ?>
 						</<?php echo $title_header; ?>>
 						
-						<?php if( $title_last ){ ?><span class="title_last" style="color:<?php echo $title_color; ?>;"><?php echo $title_last; ?></span><?php } ?>						
+						<?php if( $title_last ){ ?><span class="title_last" style="color:<?php echo $subtitle_color; ?>;-webkit-text-fill-color:<?php echo $subtitle_color; ?>;"><?php echo $title_last; ?></span><?php } ?>						
 					<?php endif; ?>
 
 					<?php if( $title_type == 'clean-sideline' ): ?>
