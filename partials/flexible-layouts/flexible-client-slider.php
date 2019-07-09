@@ -23,7 +23,7 @@ if ( $client_slider_hide_mobile && wp_is_mobile() ) {
 	<section id="section-<?php echo $row;?>-<?php echo $count;?>" class="page_flexible page_flexible_content section-<?php echo $row;?>-<?php echo $count;?> count_sections_<?php echo $count;?>" data-aos="<?php echo $client_slider_animation;?>">
 		
 		<div class="client_slider flexible_page_element" itemprop="text">
-			<div class="client_slider_wrap slider-<?php echo $count;?>">				
+			<div class="client_slider_wrap slider-<?php echo $count;?> type-<?php echo $client_src;?>">				
 
 				<?php if( $client_src == 'option' ) { ?>
 
