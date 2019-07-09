@@ -3833,13 +3833,13 @@ transform:translate(0px,0);
 .content_youtube_vid .video_overlay {position: absolute;top: 0;right: 0;left: 0;color: #fff;z-index: 99;text-align: center;background: rgba(0,0,0,0.2);height: 100%;justify-items: center;justify-content: center;display: flex;align-items: center;justify-content: center;}
 .content_youtube_vid .video_overlay i {font-size: 60px;color: #ff0002;}
 .video_slider_container, .video_item_custom_bg {height: 100%;}
+.in-popup .video_item_bg img {width: 100%;height: 100%;object-fit: cover;}
 
 @media (min-width: 768px) {
 	.in-popup .content_youtube_vid_wrap,
 	.in-popup.content_youtube_vid,
 	.in-popup .media_item_video,
 	.in-popup .video_item_bg {height: 100%;}
-	.in-popup .video_item_bg img {width: 100%;height: 100%;object-fit: cover;}
 	.in-popup.custom-img .video_item_bg {min-height: 400px;}
 }
 
