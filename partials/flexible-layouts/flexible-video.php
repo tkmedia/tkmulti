@@ -86,7 +86,7 @@ if ( $video_hide_mobile && wp_is_mobile() ) {
 				</div>	
 				<?php endif; ?>
 			
-			<?php if( $video_display == 'video-slider' ): ?>
+			<?php elseif( $video_display == 'video-slider' ): ?>
 			
 				<div class="swiper-container video_slider_<?php echo $count;?>">
 					<div class="video_slider_item_row swiper-wrapper">
