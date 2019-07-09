@@ -76,6 +76,51 @@ if ( $client_slider_hide_mobile && wp_is_mobile() ) {
 				</div>
 
 				<?php endif; ?>
+				
+				<?php elseif( $client_src == 'from-page-repeater' ): ?>
+
+				<div class="client_slider_col gallery_slider_image">
+					<div class="summary-gallery-new">
+						<div class="full-nomargin">
+						    <div class="swiper-container client-top-<?php echo $count;?>">
+							    <div class="swiper-wrapper">
+								<?php $client_item = 1; while ( have_rows('flex_client_slider_repeater') ) : the_row();
+								$client_img = get_sub_field('flex_client_slider_r_img');
+								$client_title = get_sub_field('flex_client_slider_r_title');
+								$client_title_color = get_sub_field('flex_client_slider_r_title_color');
+								$client_subtitle = get_sub_field('flex_client_slider_r_subtitle');
+								$client_link = get_sub_field('flex_client_slider_r_link');
+								?>
+									<div class="client_slide_item swiper-slide">
+									<?php if( $client_link ){ ?><a href="<?php echo $client_link; ?>"><?php } ?>
+										<div class="client_slide_item_inner">
+											<div class="client_slide_item_img">
+											 <?php echo wp_get_attachment_image( $client_img, $client_slider_size ); ?>
+											</div>
+											<?php if( $client_title ){ ?>
+												<p class="client_title" style="color:<?php echo $client_title_color; ?>;"><?php echo $img_content_subtitle; ?></p>
+											<?php } ?>	
+											<?php if( $client_subtitle ) { ?>
+												<div class="client_subtitle" style="color:<?php echo $client_title_color; ?>;"><?php echo $client_subtitle; ?></div>
+											<?php } ?>
+										</div> 
+									<?php if( $client_link ){ ?></a><?php } ?>
+									</div>
+								<?php $client_item; endwhile; ?>
+							    </div>
+						    </div>
+
+						    <!-- Add Arrows -->
+						    <div class="swiper-pagination style1"></div>
+						    <div class="swiper-button-next"></div>
+						    <div class="swiper-button-prev"></div>
+						</div>
+					</div>
+				</div>
+
+				<?php endif; ?>
+				
+				
 				<script>					
 				jQuery(function($) {
 					
