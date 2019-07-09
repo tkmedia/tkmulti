@@ -21,6 +21,7 @@ $flex_article_grid = get_sub_field('flex_article_grid');
 $article_grid_count = get_sub_field('flex_article_grid_count');
 $article_grid_img = get_sub_field('flex_article_grid_img');
 $article_grid_img_effect = get_sub_field('flex_article_grid_img_effect');
+$article_grid_img_size = get_sub_field('flex_article_grid_img_size');
 
 
 if ( $article_grid_count == 1 ) : $ag_xs_cols = "12"; $ag_sm_cols = "12"; $ag_md_cols = "12"; 
@@ -65,7 +66,7 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 								<div class="page_link_grid_item_img">
 									<?php if( $article_grid_img == 'main_img' ): ?>
 										<div class="page_img">
-											<?php echo the_post_thumbnail('inside-post'); ?>
+											<?php echo the_post_thumbnail($article_grid_img_size); ?>
 											<div class="page_img_border"></div>
 										</div>
 									<?php endif; ?>
@@ -73,12 +74,12 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 									<?php if( $article_grid_img == 'main_icon' ):
 										$page_main_icon = get_field('page_main_icon');
 										if( $page_main_icon ) { ?>
-										<div class="page_img hover_img_mask" style="background:url(<?php echo wp_get_attachment_url( $page_main_icon, 'inside-post-360' ); ?>) 50% 50% / cover no-repeat;">
-											<?php echo the_post_thumbnail('inside-post'); ?>
+										<div class="page_img hover_img_mask" style="background:url(<?php echo wp_get_attachment_url( $page_main_icon, $article_grid_img_size ); ?>) 50% 50% / cover no-repeat;">
+											<?php echo the_post_thumbnail($article_grid_img_size); ?>
 										</div>
 										<?php } else { ?> 
 										<div class="page_img">
-											<?php echo the_post_thumbnail('inside-post'); ?> 
+											<?php echo the_post_thumbnail($article_grid_img_size); ?> 
 										</div>		
 										<?php }
 									endif; ?>
@@ -144,7 +145,7 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 								<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'קישור לעמוד %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
 									<div class="articles_grid_item_row row-flex">
 										<div class="articles_grid_item_img col-xs-12 col-sm-6 col-md-4 col-lg-3">
-											<?php echo the_post_thumbnail('inside-post'); ?>
+											<?php echo the_post_thumbnail($article_grid_img_size); ?>
 										</div>
 										<div class="articles_grid_item_content col-xs-12 col-sm-6 col-md-8 col-lg-9">
 											<div class="articles_grid_item_inside">
@@ -186,12 +187,12 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 									<?php if( $article_grid_img == 'main_icon' ):
 										$page_main_icon = get_field('page_main_icon');
 										if( $page_main_icon ) { ?>
-										<div class="page_img hover_img_mask" style="background:url(<?php echo wp_get_attachment_url( $page_main_icon, 'inside-post-360' ); ?>) 50% 50% / cover no-repeat;">
-											<?php echo the_post_thumbnail('gallery-800'); ?>
+										<div class="page_img hover_img_mask" style="background:url(<?php echo wp_get_attachment_url( $page_main_icon, $article_grid_img_size ); ?>) 50% 50% / cover no-repeat;">
+											<?php echo the_post_thumbnail($article_grid_img_size); ?>
 										</div>
 										<?php } else { ?> 
 										<div class="page_img">
-											<?php echo the_post_thumbnail('gallery-800'); ?> 
+											<?php echo the_post_thumbnail($article_grid_img_size); ?> 
 										</div>		
 										<?php }
 									endif; ?>
@@ -274,7 +275,7 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 								<div class="page_link_grid_item_img">
 									<?php if( $article_grid_img == 'main_img' ): ?>
 										<div class="page_img">
-											<?php echo the_post_thumbnail('inside-post'); ?>
+											<?php echo the_post_thumbnail($article_grid_img_size); ?>
 										</div>
 									<?php endif; ?>
 									
@@ -282,11 +283,11 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 										$page_main_icon = get_field('page_main_icon');
 										if( $page_main_icon ) { ?>
 										<div class="page_img hover_img_mask" style="background:url(<?php echo wp_get_attachment_url( $page_main_icon, 'inside-post-360' ); ?>) 50% 50% / cover no-repeat;">
-											<?php echo the_post_thumbnail('inside-post'); ?>
+											<?php echo the_post_thumbnail($article_grid_img_size); ?>
 										</div>
 										<?php } else { ?> 
 										<div class="page_img">
-											<?php echo the_post_thumbnail('inside-post'); ?> 
+											<?php echo the_post_thumbnail($article_grid_img_size); ?> 
 										</div>		
 										<?php }
 									endif; ?>
