@@ -106,7 +106,7 @@ if ( $client_slider_hide_mobile && wp_is_mobile() ) {
 										</div> 
 									<?php if( $client_link ){ ?></a><?php } ?>
 									</div>
-								<?php $client_item; endwhile; ?>
+								<?php $client_item++; endwhile; ?>
 							    </div>
 						    </div>
 
