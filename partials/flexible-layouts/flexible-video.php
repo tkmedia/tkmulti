@@ -110,12 +110,12 @@ if ( $video_hide_mobile && wp_is_mobile() ) {
 					preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $youtube_vid_url, $match);
 					$youtube_id = $match[1];
 					?>
-						<div class="video_slider_item_item swiper-slide item-<?php echo $item;?>">
+						<div class="video_slider_item_item swiper-slide item-<?php echo $vid_item;?>">
 						<?php if( $video_open_style == 'on-page' ): ?>
 							<div class="content_youtube_vid_container">
 								<?php
 								//$iframe = get_field('oembed');
-								preg_match('/src="(.+?)"/', $slider_vid_iframe, $matches);
+								preg_match('/src="(.+?)"/', $iframe, $matches);
 								$src = $matches[1];
 								$params = array(
 									'controls' => 1,
@@ -133,13 +133,13 @@ if ( $video_hide_mobile && wp_is_mobile() ) {
 								);
 								
 								$new_src = add_query_arg($params, $src);
-								$slider_vid_iframe = str_replace($src, $new_src, $slider_vid_iframe);
+								$slider_vid_iframe = str_replace($src, $new_src, $iframe);
 								// add extra attributes to iframe html
 								$attributes = 'frameborder="0"';
-								$slider_vid_iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
+								$iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
 								
 								// echo $iframe
-								echo $slider_vid_iframe; ?>
+								echo $iframe; ?>
 							</div>
 						<?php endif; ?>
 				
