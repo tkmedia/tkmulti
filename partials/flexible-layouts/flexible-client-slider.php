@@ -75,8 +75,6 @@ if ( $client_slider_hide_mobile && wp_is_mobile() ) {
 					</div>
 				</div>
 
-				<?php endif; ?>
-				
 				<?php elseif( $client_src == 'from-page-repeater' ): ?>
 
 				<div class="client_slider_col gallery_slider_image">
