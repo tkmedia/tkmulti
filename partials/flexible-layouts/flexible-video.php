@@ -14,18 +14,6 @@ $video_link = get_sub_field('flex_video_link');
 
 $video_display = get_sub_field('flex_video_display');
 
-//second false skip ACF pre-processcing
-$youtube_vid_url = get_sub_field('flex_video_link', false, false);
-//get wp_oEmed object, not a public method. new WP_oEmbed() would also be possible
-$oembed = _wp_oembed_get_object();
-//get provider
-$provider = $oembed->get_provider($youtube_vid_url);
-//fetch oembed data as an object
-$oembed_data = $oembed->fetch( $provider, $youtube_vid_url );
-$thumbnail = $oembed_data->thumbnail_url;
-$iframe = $oembed_data->html;
-preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $youtube_vid_url, $match);
-$youtube_id = $match[1];									
 
 if ( $video_hide_mobile && wp_is_mobile() ) {
 //HIDE ON MOBILE
@@ -36,8 +24,21 @@ if ( $video_hide_mobile && wp_is_mobile() ) {
 		
 		<div class="content_youtube_vid flexible_page_element <?php echo $video_open_style;?> <?php echo $video_image_type;?>" itemprop="text">
 			<div class="content_youtube_vid_wrap">
-			<?php if( $video_display == 'video-single' ): ?>
-				
+			<?php if( $video_display == 'video-single' ):
+			//second false skip ACF pre-processcing
+			$youtube_vid_url = get_sub_field('flex_video_link', false, false);
+			//get wp_oEmed object, not a public method. new WP_oEmbed() would also be possible
+			$oembed = _wp_oembed_get_object();
+			//get provider
+			$provider = $oembed->get_provider($youtube_vid_url);
+			//fetch oembed data as an object
+			$oembed_data = $oembed->fetch( $provider, $youtube_vid_url );
+			$thumbnail = $oembed_data->thumbnail_url;
+			$iframe = $oembed_data->html;
+			preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $youtube_vid_url, $match);
+			$youtube_id = $match[1];
+			
+			 ?>									
 				<?php if( $video_open_style == 'on-page' ): ?>
 					<div class="content_youtube_vid_container">
 						<?php
