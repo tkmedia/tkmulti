@@ -154,7 +154,7 @@ if ( $video_hide_mobile && wp_is_mobile() ) {
 							            <img src="https://img.youtube.com/vi/<?php echo $youtube_id; ?>/maxresdefault.jpg">
 							            <?php endif; ?>
 							            <?php if( $video_image_type == 'custom-img' ): ?>
-							            <?php echo wp_get_attachment_image( $video_slider_img, 'inside-post' ); ?>
+							            <div class="video_item_custom_bg"><?php echo wp_get_attachment_image( $video_slider_img, 'inside-post' ); ?></div>
 							            <?php endif; ?>						            
 										<div class="video_overlay"><i class="fab fa-youtube"></i></div>
 									</div>
