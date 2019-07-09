@@ -110,7 +110,10 @@ if ( $video_hide_mobile && wp_is_mobile() ) {
 					preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $youtube_vid_url, $match);
 					$youtube_id = $match[1];
 					?>
-						<div class="video_slider_item_item swiper-slide item-<?php echo $vid_item;?>">
+						<div class="video_slider_item swiper-slide item-<?php echo $vid_item;?>">
+							<div class="video_slider_item_title">
+								<div class="video_item_title"><?php echo $video_slider_title; ?></div>
+							</div>
 						<?php if( $video_open_style == 'on-page' ): ?>
 							<div class="content_youtube_vid_container">
 								<?php
