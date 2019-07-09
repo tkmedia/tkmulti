@@ -163,7 +163,7 @@ if ( $video_hide_mobile && wp_is_mobile() ) {
 						<?php endif; ?>
 						</div>
 
-				    <?php $vid_item; endwhile; ?>
+				    <?php $vid_item++; endwhile; ?>
 					</div>
 				</div>
 			    <!-- Add Arrows -->
