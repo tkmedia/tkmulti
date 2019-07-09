@@ -78,12 +78,12 @@ if ( $img_content_hide_mobile && wp_is_mobile() ) {
 					<?php if( $img_content_type == 'title_top' ): ?>
 						<div class="img_content_item_row">
 							<?php if( $img_content_title ){ ?>
-								<div class="img_content_title_top content_<?php echo $img_content_align; ?>">
-								<?php if( $img_content_subtitle ){ ?><span class="img_content_subtitle" style="color:<?php echo $img_content_title_color; ?>;"><?php echo $img_content_subtitle; ?></span><?php } ?>	
-							<?php if( $img_content_img ){ ?>
+							<div class="img_content_title_top content_<?php echo $img_content_align; ?>">
 								<<?php echo $img_content_title_h; ?> class="img_content_title" style="font-size:<?php echo $img_content_title_s; ?>px;color:<?php echo $img_content_title_color; ?>;">
 									<?php echo $img_content_title; ?>
 								</<?php echo $img_content_title_h; ?>>
+								<?php if( $img_content_subtitle ){ ?><span class="img_content_subtitle" style="color:<?php echo $img_content_title_color; ?>;"><?php echo $img_content_subtitle; ?></span><?php } ?>	
+								<?php if( $img_content_img ){ ?>
 							</div>
 							<?php } ?>	
 							<div class="img_content_item_img">
