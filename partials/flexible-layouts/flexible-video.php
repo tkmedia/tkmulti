@@ -145,10 +145,10 @@ if ( $video_hide_mobile && wp_is_mobile() ) {
 				
 						<?php if( $video_open_style == 'in-popup' ): ?>
 							<div class="media_item_video">
-								<a data-fancybox href="<?php echo $video_slider_link; ?>&amp;autoplay=1&amp;rel=0&amp;controls=1&amp;loop=1&amp;playlist=<?php echo $slider_vid_youtube_id; ?>" class="">	
+								<a data-fancybox href="<?php echo $video_slider_link; ?>&amp;autoplay=1&amp;rel=0&amp;controls=1&amp;loop=1&amp;playlist=<?php echo $youtube_id; ?>" class="">	
 									<div class="video_grid_item_bg_1 video_item_bg img_youtube">
 							            <?php if( $video_image_type == 'from-vid' ): ?>
-							            <img src="https://img.youtube.com/vi/<?php echo $slider_vid_youtube_id; ?>/maxresdefault.jpg">
+							            <img src="https://img.youtube.com/vi/<?php echo $youtube_id; ?>/maxresdefault.jpg">
 							            <?php endif; ?>
 							            <?php if( $video_image_type == 'custom-img' ): ?>
 							            <?php echo wp_get_attachment_image( $video_slider_img, 'inside-post' ); ?>
