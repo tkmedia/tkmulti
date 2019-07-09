@@ -97,19 +97,18 @@ if ( $video_hide_mobile && wp_is_mobile() ) {
 					$video_slider_title_color = get_sub_field('flex_video_slider_title_color');
 					$video_slider_link = get_sub_field('flex_video_slider_link');
 					
-					$youtube_slider_vid_url = get_sub_field('flex_video_slider_link', false, false);
+					//second false skip ACF pre-processcing
+					$youtube_vid_url = get_sub_field('flex_video_slider_link', false, false);
 					//get wp_oEmed object, not a public method. new WP_oEmbed() would also be possible
-					$slider_vid_oembed = _wp_oembed_get_object();
+					$oembed = _wp_oembed_get_object();
 					//get provider
-					$slider_vid_provider = $slider_vid_oembed->get_provider($youtube_slider_vid_url);
+					$provider = $oembed->get_provider($youtube_vid_url);
 					//fetch oembed data as an object
-					$slider_vid_oembed_data = $slider_vid_oembed->fetch( $slider_vid_provider, $youtube_slider_vid_url );
-					$slider_vid_thumbnail = $slider_vid_oembed_data->thumbnail_url;
-					$slider_vid_iframe = $slider_vid_oembed_data->html;
-					preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $youtube_slider_vid_url, $match);
-					$slider_vid_youtube_id = $match[1];									
-					
-					
+					$oembed_data = $oembed->fetch( $provider, $youtube_vid_url );
+					$thumbnail = $oembed_data->thumbnail_url;
+					$iframe = $oembed_data->html;
+					preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $youtube_vid_url, $match);
+					$youtube_id = $match[1];
 					?>
 						<div class="video_slider_item_item swiper-slide item-<?php echo $item;?>">
 						<?php if( $video_open_style == 'on-page' ): ?>
