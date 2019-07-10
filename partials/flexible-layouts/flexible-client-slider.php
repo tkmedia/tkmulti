@@ -96,7 +96,7 @@ if ( $client_slider_hide_mobile && wp_is_mobile() ) {
 											 <?php echo wp_get_attachment_image( $client_img, $client_slider_size ); ?>
 											</div>
 											<?php if( $client_title ){ ?>
-												<p class="client_title" style="color:<?php echo $client_title_color; ?>;"><?php echo $img_content_subtitle; ?></p>
+												<p class="client_title" style="color:<?php echo $client_title_color; ?>;"><?php echo $client_title; ?></p>
 											<?php } ?>	
 											<?php if( $client_subtitle ) { ?>
 												<div class="client_subtitle" style="color:<?php echo $client_title_color; ?>;"><?php echo $client_subtitle; ?></div>
