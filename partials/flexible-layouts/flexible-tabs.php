@@ -35,7 +35,7 @@ if ( $tabs_hide_mobile && wp_is_mobile() ) {
 					<!-- Begin .qa_tabs -->
 					<div class="VerticalTab fc_VerticalTab VerticalTab_1 tabs_ver_1 row-flex">
 					<?php if( have_rows('flex_tabs') ): ?>
-						<ul class="resp-tabs-list hor_1 col-sm-5">
+						<ul class="resp-tabs-list hor_1 col-sm-4">
 						<?php $i = 1; while( have_rows('flex_tabs') ): the_row(); 
 							// vars
 							$tabs_button_title = get_sub_field('flex_tabs_button_title');
@@ -55,7 +55,7 @@ if ( $tabs_hide_mobile && wp_is_mobile() ) {
 						</ul>
 						<?php endif; ?>
 						<?php if( have_rows('flex_tabs') ): ?>	
-						<div class="resp-tabs-container hor_1 col-sm-7">
+						<div class="resp-tabs-container hor_1 col-sm-8">
 						<?php $i = 1; while( have_rows('flex_tabs') ): the_row();
 							// vars
 							$tabs_content_bg = get_sub_field('flex_tabs_content_bg');
