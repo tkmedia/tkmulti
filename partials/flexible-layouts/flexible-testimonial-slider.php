@@ -5,11 +5,15 @@ $testimonial_slider_mobile = get_sub_field('flex_testimonial_slider_mobile');
 $testimonial_slider_hide_mobile = get_sub_field('flex_testimonial_slider_hide_mobile');
 $testimonial_slider_break = get_sub_field('flex_testimonial_slider_break');
 $testimonial_slider_block_align = get_sub_field('flex_testimonial_slider_block_align');
+$testimonial_slider_animation = get_sub_field('flex_testimonial_slider_animation');
 
 $testimonial_slider = get_sub_field('flex_testimonial_slider');
 $testimonial_slider_style = get_sub_field('flex_testimonial_slider_style');
 $testimonial_slider_count = get_sub_field('flex_testimonial_slider_count');
-$testimonial_slider_animation = get_sub_field('flex_testimonial_slider_animation');
+
+$testimonial_slider_title_color = get_sub_field('testimonial_slider_title_color');
+$testimonial_slider_content_color = get_sub_field('testimonial_slider_content_color');
+$testimonial_slider_name_color = get_sub_field('testimonial_slider_name_color');
 
 if ( $testimonial_slider_hide_mobile && wp_is_mobile() ) {
 //HIDE ON MOBILE
@@ -42,13 +46,13 @@ if ( $testimonial_slider_hide_mobile && wp_is_mobile() ) {
 													<div class="testimonial_slider_item_img">
 														<?php echo wp_get_attachment_image( $testimonial_slider_img, 'menu-50' ); ?>
 													</div>
-													<div class="testimonial_slider_item_title">
+													<div class="testimonial_slider_item_title" style="color:<?php echo $testimonial_slider_title_color;?>;">
 														<?php echo $testimonial_slider_title; ?>
 													</div>
-													<div class="testimonial_slider_item_content">
+													<div class="testimonial_slider_item_content" style="color:<?php echo $testimonial_slider_content_color;?>;">
 														<?php echo $testimonial_slider_content; ?>
 													</div>
-													<div class="testimonial_slider_item_name">
+													<div class="testimonial_slider_item_name" style="color:<?php echo $testimonial_slider_name_color;?>;">
 														<?php echo $testimonial_slider_name; ?>
 													</div>
 												</div>
@@ -63,13 +67,13 @@ if ( $testimonial_slider_hide_mobile && wp_is_mobile() ) {
 														<?php echo wp_get_attachment_image( $testimonial_slider_img, 'full' ); ?>
 													</div>
 													<div class="testimonial_slider_item_text">
-														<div class="testimonial_slider_item_title">
+														<div class="testimonial_slider_item_title" style="color:<?php echo $testimonial_slider_title_color;?>;">
 															<?php echo $testimonial_slider_title; ?>
 														</div>
-														<div class="testimonial_slider_item_content">
+														<div class="testimonial_slider_item_content" style="color:<?php echo $testimonial_slider_content_color;?>;">
 															<?php echo $testimonial_slider_content; ?>
 														</div>
-														<div class="testimonial_slider_item_name">
+														<div class="testimonial_slider_item_name" style="color:<?php echo $testimonial_slider_name_color;?>;">
 															<?php echo $testimonial_slider_name; ?>
 														</div>
 													</div>
