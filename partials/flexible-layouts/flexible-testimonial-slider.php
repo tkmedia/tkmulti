@@ -112,8 +112,8 @@ if ( $testimonial_slider_hide_mobile && wp_is_mobile() ) {
 					}
 					        
 		        }
-		        //$('#section-<?php echo $row;?>-<?php echo $count;?> .swiper-button-next').show();
-		        //$('#section-<?php echo $row;?>-<?php echo $count;?> .swiper-button-prev').show();
+		        $('#section-<?php echo $row;?>-<?php echo $count;?> .swiper-button-next').hide();
+		        $('#section-<?php echo $row;?>-<?php echo $count;?> .swiper-button-prev').hide();
 		    } else {
 		        options<?php echo $row;?><?php echo $count;?> = {
 		            loop: false,
