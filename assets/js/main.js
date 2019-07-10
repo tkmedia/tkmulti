@@ -414,9 +414,7 @@ jQuery(function($) {
 		closed: '', // accordion or '' Start closed if in accordion view
 		tabidentify: 'hor_1', // The tab groups identifier
 		active_Hash: false,// activate hash
-	    activetab_bg: false, // background color for active tabs in this group
-	    inactive_bg: false, // background color for inactive tabs in this group
-		//inactive_bg: '#f9f9f9',
+		inactive_bg: '#f9f9f9',
 		activate: function(event) { // Callback function if tab is switched
 			var $tab = $(this);
 			var $info = $('#nested-tabInfo2');
