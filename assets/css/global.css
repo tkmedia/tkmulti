@@ -1435,7 +1435,7 @@ button, input {overflow: visible;}
 .readmore button.btn.btn-main {border: none;background: #272727;color: #fff;height: 50px;padding: 0 50px;cursor: pointer;}
 
 .title-area, a, button, input:focus, input[type="button"], input[type="reset"], input[type="submit"], textarea:focus, .button, .gallery img, #home-top-slider, #article-page-top, #header.container, #header-top, .header-phone, #header-menu, .sub_category_button, .page-article-link, .footer-contact, .footer-contact, .menu > ul > li,
-button.main_btn:before, button.main_btn:after {
+button.main_btn:before, button.main_btn:after, #branding {
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
     -ms-transition: all .3s ease-in-out;
