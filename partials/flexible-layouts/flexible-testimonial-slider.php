@@ -56,7 +56,26 @@ if ( $testimonial_slider_hide_mobile && wp_is_mobile() ) {
 										</div>
 										<?php } ?>
 										<?php if( $testimonial_slider_style == 'style2' ){ ?>
-										
+										<div class="testimonial_slider_item_container swiper-slide">
+											<div class="testimonial_slider_item_wrap">
+												<div class="testimonial_slider_item">
+													<div class="testimonial_slider_item_img">
+														<?php echo wp_get_attachment_image( $testimonial_slider_img, 'full' ); ?>
+													</div>
+													<div class="testimonial_slider_item_text">
+														<div class="testimonial_slider_item_title">
+															<?php echo $testimonial_slider_title; ?>
+														</div>
+														<div class="testimonial_slider_item_content">
+															<?php echo $testimonial_slider_content; ?>
+														</div>
+														<div class="testimonial_slider_item_name">
+															<?php echo $testimonial_slider_name; ?>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
 										<?php } ?>
 										
 									<?php endwhile; ?>
