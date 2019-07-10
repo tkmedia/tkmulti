@@ -73,7 +73,7 @@ if ( $tabs_hide_mobile && wp_is_mobile() ) {
 									</div>
 									<?php } ?>
 									<div class="tabcontent_content">
-										<?php if( $tabs_content_title || $tabs_content && $tabs_content_btn_link ) { ?>
+										<?php if( $tabs_content_btn_link ) { ?>
 										<div class="tabcontent_content_wrap">
 										<?php } ?>
 											<?php if( $tabs_content_title ) { ?>
@@ -83,15 +83,13 @@ if ( $tabs_hide_mobile && wp_is_mobile() ) {
 											<div class="tabcontent_content_text" style="color:<?php echo $tabs_content_color; ?>;"><?php echo $tabs_content; ?></div>
 											<?php } ?>
 											</div>
-											<?php if( $tabs_content_btn_link ) { ?>
-											<a href="<?php echo $tabs_content_btn_link; ?>">
-												<button class="section_readmore_link tab_btn">
-												<?php echo $tabs_content_btn; ?>
-												</button>
-											</a>
-											<?php } ?>
-										<?php if( $tabs_content_title || $tabs_content && $tabs_content_btn_link ) { ?>
+										<?php if( $tabs_content_btn_link ) { ?>
 										</div>
+										<a href="<?php echo $tabs_content_btn_link; ?>">
+											<button class="section_readmore_link tab_btn">
+											<?php echo $tabs_content_btn; ?>
+											</button>
+										</a>
 										<?php } ?>
 									</div>
 								</div>
