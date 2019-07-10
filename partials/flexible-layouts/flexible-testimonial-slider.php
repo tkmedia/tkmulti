@@ -122,6 +122,8 @@ if ( $testimonial_slider_hide_mobile && wp_is_mobile() ) {
 		            watchOverflow: true,
 		            navigation: false,
 		        }
+		        $('#section-<?php echo $row;?>-<?php echo $count;?> .swiper-button-next').hide();
+		        $('#section-<?php echo $row;?>-<?php echo $count;?> .swiper-button-prev').hide();
 		    }
 		    var qaSlider<?php echo $row;?><?php echo $count;?> = new Swiper('#section-<?php echo $row;?>-<?php echo $count;?> .swiper-container ', options<?php echo $row;?><?php echo $count;?>);	
 		    
