@@ -3555,6 +3555,12 @@ h2.page_qa_title.section_title.section_title_color, h2.page_links_title.section_
 .qa_icon_plusminus .page_qa_row_accordion .page_qa_item_question.q_open:before {content: "\f056";}
 .accordion_question {font-size: 20px;}
 
+/* ## Flex Tabs
+--------------------------------------------- */
+.content_page_tabs .tabs-text .tabs_button_title {font-size: 20px;}
+.content_page_tabs .tabs-text .tabs_button_subtitle {}
+
+
 /* Open Hours */
 #open-display.open > .timerange.inactive,
 #open-display.open .days {display: none;}
