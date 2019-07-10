@@ -62,11 +62,31 @@ if ( $tabs_hide_mobile && wp_is_mobile() ) {
 							$tabs_content_title = get_sub_field('flex_tabs_content_title');
 							$tabs_content_color = get_sub_field('flex_tabs_content_color');
 							$tabs_content = get_sub_field('flex_tabs_content');
-							$tabs_content = get_sub_field('flex_tabs_content_btn');
-							$tabs_content = get_sub_field('flex_tabs_content_btn_link');
+							$tabs_content_btn = get_sub_field('flex_tabs_content_btn');
+							$tabs_content_btn_link = get_sub_field('flex_tabs_content_btn_link');
 							?>								
 							<div class="tabcontent fc-tab-<?php echo $i; ?>">
-								<div class="tabcontent_contanier"><?php echo $tabs_content; ?></div>
+								<div class="tabcontent_contanier">
+									<?php if( $tabs_content_bg ) { ?>
+									<div class="tabcontent_img">
+									 <?php echo wp_get_attachment_image( $tabs_content_bg, 'full' ); ?>
+									</div>
+									<?php } ?>
+									<div class="tabcontent_content">
+										<?php if( $tabs_content_title ) { ?>
+										<div class="tabcontent_content_title" style="color:<?php echo $tabs_content_color; ?>;"><?php echo $tabs_content_title; ?></div>
+										<?php } ?>
+										<?php if( $tabs_content ) { ?>
+										<div class="tabcontent_content_text" style="color:<?php echo $tabs_content_color; ?>;"><?php echo $tabs_content; ?></div>
+										<?php } ?>
+										<?php if( $tabs_content_btn_link ) { ?>
+										<a href="<?php echo $tabs_content_btn_link; ?>">
+											<button class="section_readmore_link watch_btn hoverLink">
+											<?php echo $tabs_content_btn; ?>
+											</button>
+										</a>
+										<?php } ?>
+									</div>
 							</div>
 							<?php $i++;endwhile; ?>								
 						</div>
