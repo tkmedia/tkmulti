@@ -69,7 +69,7 @@ if ( $tabs_hide_mobile && wp_is_mobile() ) {
 								<div class="tabcontent_contanier">
 									<?php if( $tabs_content_bg ) { ?>
 									<div class="tabcontent_img">
-									 <?php echo wp_get_attachment_image( $tabs_content_bg, 'full' ); ?>
+									 <?php echo wp_get_attachment_image( $tabs_content_bg, 'gallery-800' ); ?>
 									</div>
 									<?php } ?>
 									<div class="tabcontent_content">
