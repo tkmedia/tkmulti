@@ -81,7 +81,7 @@ if ( $tabs_hide_mobile && wp_is_mobile() ) {
 										<?php } ?>
 										<?php if( $tabs_content_btn_link ) { ?>
 										<a href="<?php echo $tabs_content_btn_link; ?>">
-											<button class="section_readmore_link watch_btn hoverLink">
+											<button class="section_readmore_link tab_btn">
 											<?php echo $tabs_content_btn; ?>
 											</button>
 										</a>
