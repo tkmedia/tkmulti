@@ -89,6 +89,8 @@ if ( $tabs_hide_mobile && wp_is_mobile() ) {
 												<?php echo $tabs_content_btn; ?>
 												</button>
 											</a>
+											<?php } ?>
+										<?php if( $tabs_content_title || $tabs_content && $tabs_content_btn_link ) { ?>
 										</div>
 										<?php } ?>
 									</div>
