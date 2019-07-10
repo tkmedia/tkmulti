@@ -23,7 +23,7 @@ if ( $tabs_hide_mobile && wp_is_mobile() ) {
 
 		<div class="content_page_tabs flexible_page_element qa_icon_<?php echo $tabs_icon; ?>" itemprop="text">
 			<div class="page_tabs_wrap style_arrow">
-				<?php if( $qa_accordion_title ) { ?>
+				<?php if( $tabs_title ) { ?>
 				<h2 class="section_title section_flex_title title_<?php echo $tabs_title_a; ?>" style="text-align:<?php echo $tabs_title_a; ?> !important;"><?php echo $tabs_title; ?></h2>
 				<?php } ?>				
 				<?php if( $tabs_subtitle ) { ?>
