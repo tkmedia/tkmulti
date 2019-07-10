@@ -87,6 +87,7 @@ if ( $tabs_hide_mobile && wp_is_mobile() ) {
 										</a>
 										<?php } ?>
 									</div>
+								</div>
 							</div>
 							<?php $i++;endwhile; ?>								
 						</div>
