@@ -45,7 +45,10 @@ if ( $tabs_hide_mobile && wp_is_mobile() ) {
 							?>								
 							<li class="tabs-<?php echo $i; ?>">
 								<span class="tabs-text">
-								<div class="accordion_question"><?php echo $tabs_button_title; ?></div>
+								<div class="tabs_button_title"><?php echo $tabs_button_title; ?></div>
+								<?php if( $tabs_button_subtitle ) { ?>	
+								<div class="tabs_button_subtitle"><?php echo $tabs_button_subtitle; ?></div>
+								<?php } ?>
 								</span>
 							</li>
 						<?php $i++;endwhile; ?>
