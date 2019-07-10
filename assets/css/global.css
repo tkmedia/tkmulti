@@ -3501,7 +3501,6 @@ h2.page_qa_title.section_title.section_title_color, h2.page_links_title.section_
 .VerticalTab.tabs_ver_1 .resp-tab-content{border:0!important;padding:20px 40px 10px;}
 .VerticalTab.tabs_ver_1 p{line-height:1.6;}
 .VerticalTab .svg-inline--fa {color: #08114c;}
-.VerticalTab span.tabs-text {line-height: 1.2;}
 .VerticalTab span.tabs-text:before {content: "\f058";font-family: 'Font Awesome 5 Pro';font-style: normal;font-weight: normal;text-decoration: inherit;color: #12a39c;font-size: 28px;padding-right: 0;position: absolute;top: 18px;right: 15px;line-height: 1;}
 
 /* ## Tabs Responsive
