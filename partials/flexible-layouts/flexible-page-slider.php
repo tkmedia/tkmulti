@@ -93,11 +93,6 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 										<?php endif; ?>
 									
 										<div class="page_link_slider_item_img">
-											<div class="page_img">
-												<?php echo the_post_thumbnail('inside-post'); ?>
-												<div class="page_img_border"></div>
-											</div>
-											
 											<?php if( $article_slider_img == 'main_img' ): ?>
 												<div class="page_img">
 													<?php echo the_post_thumbnail('inside-post'); ?>
