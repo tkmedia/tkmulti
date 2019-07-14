@@ -143,14 +143,14 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 												</script>										
 												<?php } ?> 
 											</div>
-											<?php endif; ?>											
+											<?php endif; ?>	
+											<?php if( $article_slider_title_position == 'bottom' ): ?>
+											<div class="page_link_slider_item_title_wrap">
+												<h3 itemprop="name" class="page_link_slider_item_title no-line" style="color:<?php echo $artcile_slider_title_color;?>;justify-content:<?php echo $artcile_slider_title_align;?>;font-size:<?php echo $artcile_slider_title_size;?>;"><?php the_title(); ?></h3>
+											</div>
+											<?php endif; ?>
 										</div>
 
-										<?php if( $article_slider_title_position == 'bottom' ): ?>
-										<div class="page_link_slider_item_title_wrap">
-											<h3 itemprop="name" class="page_link_slider_item_title no-line" style="color:<?php echo $artcile_slider_title_color;?>;justify-content:<?php echo $artcile_slider_title_align;?>;font-size:<?php echo $artcile_slider_title_size;?>;"><?php the_title(); ?></h3>
-										</div>
-										<?php endif; ?>
 										<?php
 										if( $article_slider_title_position == 'bottom' || $article_slider_title_position == 'top' ) { 
 										$excerpt = get_field('page_masthead_excerpt');
