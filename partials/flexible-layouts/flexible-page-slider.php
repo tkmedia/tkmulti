@@ -31,7 +31,7 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 <div class="flex_content_cols <?php echo $artcile_slider_mobile;?> <?php echo $artcile_slider_block_width;?> <?php if( $artcile_slider_break ){ ?><?php echo $artcile_slider_block_align; ?><?php } ?>" <?php if( $artcile_slider_order ){ ?>style="order:<?php echo $artcile_slider_order; ?>;"<?php } ?>>
 	<section id="section-<?php echo $row;?>-<?php echo $count;?>" class="page_flexible page_flexible_content section-<?php echo $row;?>-<?php echo $count;?> count_sections_<?php echo $count;?>" data-aos="<?php echo $article_slider_animation;?>">
 
-		<div class="flexible_articles flexible_page_element flex_articles_slider flex_slider articles_slider_<?php echo $article_slider_style; ?> slider_title_<?php echo $artcile_slider_title_align;?>" itemprop="text">
+		<div class="flexible_articles flexible_page_element flex_articles_slider articles_slider_<?php echo $article_slider_style; ?> slider_title_<?php echo $artcile_slider_title_align;?>" itemprop="text">
 			<div class="page_link_slider_wrap page_link_slider_<?php echo $count;?>">
 				<div class="swiper-container articles_slider_<?php echo $count;?>">
 					<div class="articles_slider_item_row page_slider swiper-wrapper">
@@ -43,7 +43,7 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 					    <div class="page_link_slider_item articles_slider_item swiper-slide item-<?php echo $item;?>">
 							<div class="articles_slider_item_container title_<?php echo $article_slider_title_position;?>">
 								<div class="articles_slider_item_img box_effect">
-									<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'קישור לעמוד %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
+									<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( _e( 'Link to page %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
 										
 									<?php if( $article_slider_style == 'style1' ){ ?>
 									
@@ -274,7 +274,7 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 						    <div class="page_link_slider_item articles_slider_item swiper-slide item-<?php echo $item;?>">
 								<div class="articles_slider_item_container">
 									<div class="articles_slider_item_img box_effect">
-										<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'קישור לעמוד %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
+										<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( _e( 'Link to page %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
 										
 										<?php if( $article_slider_style == 'style1' ){ ?>
 										
