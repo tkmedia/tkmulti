@@ -76,7 +76,6 @@ $slider_effect = get_post_meta( get_the_ID(), 'page_top_slider_effect', true );
 									    
 										<script>					
 										jQuery(function($) {
-											
 										    var innerSlider = new Swiper('.inner_manual_slider', {
 										        pagination: '.inner_manual_slider .swiper-pagination',
 										        paginationClickable: true,
@@ -84,7 +83,6 @@ $slider_effect = get_post_meta( get_the_ID(), 'page_top_slider_effect', true );
 										        spaceBetween: 50,
 										        nested: true
 										    });											
-										
 										}); 
 										</script>					
 									    
