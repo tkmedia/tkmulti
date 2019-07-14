@@ -181,7 +181,7 @@ $slider_effect = get_post_meta( get_the_ID(), 'page_top_slider_effect', true );
 		</div>
 	</div>
 </div>
-<?php if( $inner_manual_slider ) { ?> 
+<?php if( have_rows('inner_manual_slider') ): ?>
 <script>					
 jQuery(function($) {
 	//* ## Page Link Slider */
@@ -246,4 +246,4 @@ jQuery(function($) {
 
 }); 
 </script>					
-<?php } ?>
+<?php endif; ?>
