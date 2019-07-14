@@ -61,7 +61,7 @@ $slider_effect = get_post_meta( get_the_ID(), 'page_top_slider_effect', true );
 												<a href="<?php echo $inner_manual_slider_link; ?>" class="inner_manual_slider_link">
 												<div class="inner_manual_slider_content">
 													<div class="inner_manual_slider_title"><?php echo $inner_manual_slider_title; ?></div>
-													<div class="$inner_manual_slider_image">
+													<div class="inner_manual_slider_image">
 													<?php echo wp_get_attachment_image( $inner_manual_slider_image, 'full' ); ?>
 													</div>
 													<div class="inner_manual_slider_text"><?php echo $inner_manual_slider_text; ?></div>
