@@ -75,6 +75,61 @@ $slider_effect = get_post_meta( get_the_ID(), 'page_top_slider_effect', true );
 									    <div class="swiper-pagination style1"></div>
 									    <div class="swiper-button-next"></div>
 									    <div class="swiper-button-prev"></div>
+									    
+										<script>					
+										jQuery(function($) {
+											//* ## Page Link Slider */
+										    let innerOptions = {};
+										    
+										    if ( $(".masthead_manual .inner_manual_slider .swiper-slide").length > 1 ) {
+										        innerOptions = {
+										            //direction: 'horizontal',
+										            loop: true,
+										            slidesPerView : 1,
+										            autoplayDisableOnInteraction: false,
+													pagination: {
+														el: '.masthead_manual .inner_manual_slider .swiper-pagination',
+														clickable: true,
+													},
+													navigation: {
+														nextEl: '.masthead_manual .inner_manual_slider .swiper-button-next',
+														prevEl: '.masthead_manual .inner_manual_slider .swiper-button-prev',
+													},
+										            paginationClickable: true,
+										            fadeEffect: {
+											            crossFade: true
+										            },
+													speed: 1000,
+													grabCursor: true,
+													watchSlidesProgress: true,
+													mousewheelControl: true,
+													keyboardControl: true,
+													//effect: 'fade',  
+													breakpoints: {
+														768: {
+															navigation: false,
+												        }
+													}
+													        
+										        }
+										        $('.masthead_manual .inner_manual_slider .swiper-button-next').hide();
+										        $('.masthead_manual .inner_manual_slider .swiper-button-prev').hide();
+										    } else {
+										        innerOptions = {
+										            loop: false,
+										            slidesPerView : 1,
+										            autoplay: false,
+										            watchOverflow: true,
+										            navigation: false,
+										        }
+										        $('.masthead_manual .inner_manual_slider .swiper-button-next').hide();
+										        $('.masthead_manual .inner_manual_slider .swiper-button-prev').hide();
+										    }
+										    var innerSlider = new Swiper('.masthead_manual .inner_manual_slider .swiper-container ', innerOptions);	
+										
+										}); 
+										</script>					
+									    
 										<?php endif; ?>										
 									</div>
 								</div>
@@ -181,69 +236,3 @@ $slider_effect = get_post_meta( get_the_ID(), 'page_top_slider_effect', true );
 		</div>
 	</div>
 </div>
-<?php if( have_rows('inner_manual_slider') ): ?>
-<script>					
-jQuery(function($) {
-	//* ## Page Link Slider */
-    let innerOptions = {};
-    
-    if ( $(".masthead_manual .inner_manual_slider .swiper-slide").length > 1 ) {
-        innerOptions = {
-            //direction: 'horizontal',
-            loop: true,
-            slidesPerView : 1,
-            autoplayDisableOnInteraction: false,
-			pagination: {
-				el: '.masthead_manual .inner_manual_slider.swiper-pagination',
-				clickable: true,
-			},
-			navigation: {
-				nextEl: '.masthead_manual .inner_manual_slider .swiper-button-next',
-				prevEl: '.masthead_manual .inner_manual_slider .swiper-button-prev',
-			},
-            paginationClickable: true,
-            fadeEffect: {
-	            crossFade: true
-            },
-			speed: 1000,
-			grabCursor: true,
-			watchSlidesProgress: true,
-			mousewheelControl: true,
-			keyboardControl: true,
-			//effect: 'fade',  
-			breakpoints: {
-				768: {
-					navigation: false,
-		        }
-			}
-			        
-        }
-        $('.masthead_manual .inner_manual_slider .swiper-button-next').hide();
-        $('.masthead_manual .inner_manual_slider .swiper-button-prev').hide();
-    } else {
-        innerOptions = {
-            loop: false,
-            slidesPerView : 1,
-            autoplay: false,
-            watchOverflow: true,
-            navigation: false,
-        }
-        $('.masthead_manual .inner_manual_slider .swiper-button-next').hide();
-        $('.masthead_manual .inner_manual_slider .swiper-button-prev').hide();
-    }
-    var innerSlider = new Swiper('.masthead_manual .inner_manual_slider .swiper-container ', innerOptions);	
-    
-    if ( $(".masthead_manual .inner_manual_slider .swiper-slide:not(.swiper-slide-duplicate)").length > 1 ) {
-        $('.masthead_manual .inner_manual_slider .swiper-button-next').show();
-        $('.masthead_manual .inner_manual_slider .swiper-button-prev').show();		    
-    }
-    
-    if ($(window).width() < 991) {
-	    if ( $(".masthead_manual .inner_manual_slider .swiper-slide:not(.swiper-slide-duplicate)").length > 1 ) {
-			$('.masthead_manual .inner_manual_slider .swiper-pagination').show();
-	    }
-    }							
-
-}); 
-</script>					
-<?php endif; ?>
