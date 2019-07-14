@@ -55,7 +55,7 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 					<?php if( $article_grid_style == 'style1' ){ ?>    
 						<div class="articles_grid_item_container title_<?php echo $article_grid_title_position;?>">
 							<div class="articles_grid_item_img box_effect">
-								<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'קישור לעמוד %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
+								<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( _e( 'Link to page %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
 									
 								<?php if( $article_grid_title_position == 'top' ): ?>
 								<div class="page_link_grid_item_title_wrap">
@@ -142,7 +142,7 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 					<?php } elseif( $article_grid_style == 'style2' ){ ?>	
 						<div class="articles_grid_item_container title_<?php echo $artcile_grid_title_align;?>">
 							<div class="articles_grid_item_container_wrap">
-								<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'קישור לעמוד %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
+								<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( _e( 'Link to page %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
 									<div class="articles_grid_item_row row-flex">
 										<div class="articles_grid_item_img col-xs-12 col-sm-6 col-md-4 col-lg-3">
 											<?php echo the_post_thumbnail($article_grid_img_size); ?>
@@ -174,7 +174,7 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 					<?php } elseif( $article_grid_style == 'style3' ){ ?>		
 						<div class="articles_grid_item_container title_inside">
 							<div class="articles_grid_item_img box_effect">
-								<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'קישור לעמוד %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
+								<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( _e( 'Link to page %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
 									
 								<div class="page_link_grid_item_img">
 									<?php if( $article_grid_img == 'main_img' ): ?>
@@ -264,7 +264,7 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 				    <div class="page_link_grid_item articles_grid_item item-<?php echo $item;?> col-xs-<?= $ag_xs_cols; ?> col-sm-<?= $ag_sm_cols; ?> col-md-<?= $ag_md_cols; ?>">
 						<div class="articles_grid_item_container">
 							<div class="articles_grid_item_img box_effect">
-								<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'קישור לעמוד %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
+								<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( _e( 'Link to page %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
 									
 								<?php if( $article_grid_title_position == 'top' ): ?>
 								<div class="page_link_grid_item_title_wrap">
