@@ -17,6 +17,8 @@ $artcile_slider_title_color = get_sub_field('flex_artcile_slider_title_color');
 $artcile_slider_title_size = get_sub_field('flex_artcile_slider_title_size');
 $artcile_slider_button_color = get_sub_field('flex_artcile_slider_button_color');
 $artcile_slider_title_icon = get_sub_field('flex_artcile_slider_title_icon');
+$article_slider_title_position = get_sub_field('flex_article_slider_title_position');
+
 
 $article_slider_source = get_sub_field('flex_article_slider_source');
 $article_slider_latest = get_sub_field('flex_article_slider_latest');
@@ -84,27 +86,93 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 										}); 
 										</script>
 									<?php } elseif( $article_slider_style == 'style2' ){ ?>	
+									
+										<?php if( $article_slider_title_position == 'top' ): ?>
+										<div class="page_link_slider_item_title_wrap">
+											<h3 itemprop="name" class="page_link_slider_item_title no-line" style="color:<?php echo $artcile_slider_title_color;?>;justify-content:<?php echo $artcile_slider_title_align;?>;font-size:<?php echo $artcile_slider_title_size;?>;"><?php the_title(); ?></h3>
+										</div>
+										<?php endif; ?>
+									
 										<div class="page_link_slider_item_img">
 											<div class="page_img">
 												<?php echo the_post_thumbnail('inside-post'); ?>
 												<div class="page_img_border"></div>
 											</div>
+											
+											<?php if( $article_slider_img == 'main_img' ): ?>
+												<div class="page_img">
+													<?php echo the_post_thumbnail('inside-post'); ?>
+													<div class="page_img_border"></div>
+												</div>
+											<?php endif; ?>
+											
+											<?php if( $article_slider_img == 'main_icon' ):
+												$page_main_icon = get_field('page_main_icon');
+												if( $page_main_icon ) { ?>
+												<div class="page_img hover_img_mask" style="background:url(<?php echo wp_get_attachment_url( $page_main_icon, 'inside-post' ); ?>) 50% 50% / cover no-repeat;">
+													<?php echo the_post_thumbnail('inside-post'); ?>
+												</div>
+												<?php } else { ?> 
+												<div class="page_img">
+													<?php echo the_post_thumbnail('inside-post'); ?> 
+												</div>		
+												<?php }
+											endif; ?>
+											
+											<?php if( $article_slider_title_position == 'inside' ): ?>
+											<div class="page_slider_inside">
+												<h3 itemprop="name" class="page_link_slider_item_title no-line" style="color:<?php echo $artcile_slider_title_color;?>;justify-content:<?php echo $artcile_slider_title_align;?>;font-size:<?php echo $artcile_slider_title_size;?>;"><?php the_title(); ?></h3>
+												<?php 
+												$excerpt = get_field('page_masthead_excerpt');
+												if( $excerpt ) { ?>
+												<div class="articles_slider_item_text">	
+													<div class="page_links_item_intro">
+														<?php 
+														//echo custom_field_excerpt();
+														//echo wp_trim_words($excerpt,7); 
+														echo wp_html_excerpt( $excerpt, $grid_excerpt_length, '...' ); ?>
+													</div>
+												</div>
+												<script>
+												jQuery(function($) {
+													$(window).load(function(){
+														get_text_height();
+													    //function to get current div height
+													    function get_text_height(){
+													        //var footer_height = $('#footer_container').height();
+													        var text_height = $('.section-<?php echo $row;?>-<?php echo $count;?> .item-<?php echo $item;?> .page_links_item_intro').outerHeight();
+													        $('.section-<?php echo $row;?>-<?php echo $count;?> .item-<?php echo $item;?> .page_links_item_intro').css('margin-bottom', -text_height);
+													    }
+												    });	
+												}); 
+												</script>										
+												<?php } ?> 
+											</div>
+											<?php endif; ?>											
 										</div>
+
+										<?php if( $article_slider_title_position == 'bottom' ): ?>
 										<div class="page_link_slider_item_title_wrap">
 											<h3 itemprop="name" class="page_link_slider_item_title no-line" style="color:<?php echo $artcile_slider_title_color;?>;justify-content:<?php echo $artcile_slider_title_align;?>;font-size:<?php echo $artcile_slider_title_size;?>;"><?php the_title(); ?></h3>
-											<?php 
-											$excerpt = get_field('page_masthead_excerpt');
-											if( $excerpt ) { ?>
-											<div class="articles_grid_item_text">	
-												<div class="page_links_item_intro">
-													<?php 
-													//echo custom_field_excerpt();
-													echo wp_trim_words($excerpt,20); 
-													//echo wp_html_excerpt( $excerpt, 30, '...' ); ?>
-												</div>
-											</div>
-											<?php } ?> 
 										</div>
+										<?php endif; ?>
+										<?php
+										if( $article_slider_title_position == 'bottom' || $article_slider_title_position == 'top' ) { 
+										$excerpt = get_field('page_masthead_excerpt');
+										if( $excerpt ) { ?>
+										<div class="articles_grid_item_text">	
+											<div class="page_links_item_intro">
+												<?php 
+												//echo custom_field_excerpt();
+												//echo wp_trim_words($excerpt,7); 
+												echo wp_html_excerpt( $excerpt, $grid_excerpt_length, '...' ); ?>
+											</div>
+										</div>
+										<?php 
+											} 
+										}
+										?> 
+
 									<?php } elseif( $article_slider_style == 'style3' ){ ?>	
 										<div class="page_link_slider_item_img">
 											<?php if( $article_slider_img == 'main_img' ): ?>
