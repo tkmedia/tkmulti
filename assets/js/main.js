@@ -161,7 +161,7 @@ jQuery(function($) {
 	//* ## Home Main slider - style 2 */
     let options1 = {};
     
-    if ( $("#top-slider.style1 .swiper-slide").length > 1 ) {
+    if ( $("#top-slider.style1 > .swiper-slide").length > 1 ) {
         options1 = {
             direction: 'horizontal',
             loop: true,
