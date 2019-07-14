@@ -130,7 +130,7 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 														<?php 
 														//echo custom_field_excerpt();
 														//echo wp_trim_words($excerpt,7); 
-														echo wp_html_excerpt( $excerpt, $grid_excerpt_length, '...' ); ?>
+														echo wp_html_excerpt( $excerpt, 100, '...' ); ?>
 													</div>
 												</div>
 												<script>
