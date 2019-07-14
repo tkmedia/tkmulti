@@ -69,64 +69,23 @@ $slider_effect = get_post_meta( get_the_ID(), 'page_top_slider_effect', true );
 												</a>
 											</div>
 											<?php endwhile; ?>
+										    <!-- Add Arrows -->
+										    <div class="swiper-pagination style1"></div>
+										    <div class="swiper-button-next"></div>
+										    <div class="swiper-button-prev"></div>
 											</div>
 									    </div>
-									    <!-- Add Arrows -->
-									    <div class="swiper-pagination style1"></div>
-									    <div class="swiper-button-next"></div>
-									    <div class="swiper-button-prev"></div>
 									    
 										<script>					
 										jQuery(function($) {
-											//* ## Page Link Slider */
-										    let innerOptions = {};
-										    
-										    if ( $(".masthead_manual .inner_manual_slider .swiper-slide").length > 1 ) {
-										        innerOptions = {
-										            //direction: 'horizontal',
-										            loop: true,
-										            nested: true,
-										            slidesPerView : 1,
-										            autoplayDisableOnInteraction: false,
-													pagination: {
-														el: '.masthead_manual .inner_manual_slider .swiper-pagination',
-														clickable: true,
-													},
-													navigation: {
-														nextEl: '.masthead_manual .inner_manual_slider .swiper-button-next',
-														prevEl: '.masthead_manual .inner_manual_slider .swiper-button-prev',
-													},
-										            paginationClickable: true,
-										            fadeEffect: {
-											            crossFade: true
-										            },
-													speed: 1000,
-													grabCursor: true,
-													watchSlidesProgress: true,
-													mousewheelControl: true,
-													keyboardControl: true,
-													//effect: 'fade',  
-													breakpoints: {
-														768: {
-															navigation: false,
-												        }
-													}
-													        
-										        }
-										        $('.masthead_manual .inner_manual_slider .swiper-button-next').hide();
-										        $('.masthead_manual .inner_manual_slider .swiper-button-prev').hide();
-										    } else {
-										        innerOptions = {
-										            loop: false,
-										            slidesPerView : 1,
-										            autoplay: false,
-										            watchOverflow: true,
-										            navigation: false,
-										        }
-										        $('.masthead_manual .inner_manual_slider .swiper-button-next').hide();
-										        $('.masthead_manual .inner_manual_slider .swiper-button-prev').hide();
-										    }
-										    var innerSlider = new Swiper('.masthead_manual .inner_manual_slider .swiper-container ', innerOptions);	
+											
+										    var innerSlider = new Swiper('.inner_manual_slider', {
+										        pagination: '.inner_manual_slider .swiper-pagination',
+										        paginationClickable: true,
+										        direction: 'horizontal',
+										        spaceBetween: 50,
+										        nested: true
+										    });											
 										
 										}); 
 										</script>					
