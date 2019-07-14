@@ -71,8 +71,6 @@ $slider_effect = get_post_meta( get_the_ID(), 'page_top_slider_effect', true );
 											<?php endwhile; ?>
 										    <!-- Add Arrows -->
 										    <div class="swiper-pagination style1"></div>
-										    <div class="swiper-button-next"></div>
-										    <div class="swiper-button-prev"></div>
 											</div>
 									    </div>
 									    
