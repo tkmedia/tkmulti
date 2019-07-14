@@ -15,16 +15,21 @@ $bulletin_layout = get_sub_field('flex_bulletin_list_layout');
 $bulletin_list_img_position = get_sub_field('bulletin_list_img_position');
 $bulletin_list_img_align = get_sub_field('bulletin_list_img_align');
 $bulletin_list_img_num = get_sub_field('bulletin_list_img_num');
+$bulletin_list_img_mobile_num = get_sub_field('bulletin_list_img_mobile_num');
 $bulletin_list_size = get_sub_field('flex_bulletin_list_size');
 $bulletin_list_icon_size = get_sub_field('flex_bulletin_list_icon_size');
 $bulletin_list_img_size = get_sub_field('flex_bulletin_list_img_size');
 
-if ( $bulletin_list_img_num == 1 ) : $bl_xs_cols = "12"; $bl_sm_cols = "12"; $bl_md_cols = "12"; 
-elseif ( $bulletin_list_img_num == 2 ) : $bl_xs_cols = "12"; $bl_sm_cols = "6"; $bl_md_cols = "6"; 
-elseif ( $bulletin_list_img_num == 3 ) : $bl_xs_cols = "12"; $bl_sm_cols = "4"; $bl_md_cols = "4"; 
-elseif ( $bulletin_list_img_num == 4 ) : $bl_xs_cols = "12"; $bl_sm_cols = "3"; $bl_md_cols = "3";
-elseif ( $bulletin_list_img_num == 5 ) : $bl_xs_cols = "12"; $bl_sm_cols = "3"; $bl_md_cols = "20"; 
-elseif ( $bulletin_list_img_num == 6 ) : $bl_xs_cols = "12"; $bl_sm_cols = "3"; $bl_md_cols = "2"; 
+if ( $bulletin_list_img_mobile_num == 1 ) : $bl_xs_cols = "12"; $bl_sm_cols = "12";
+elseif ( $bulletin_list_img_mobile_num == 2 ) : $bl_xs_cols = "6";
+elseif ( $bulletin_list_img_mobile_num == 3 ) : $bl_xs_cols = "4";
+endif;
+if ( $bulletin_list_img_num == 1 ) : $bl_md_cols = "12"; 
+elseif ( $bulletin_list_img_num == 2 ) : $bl_sm_cols = "6"; $bl_md_cols = "6"; 
+elseif ( $bulletin_list_img_num == 3 ) : $bl_sm_cols = "4"; $bl_md_cols = "4"; 
+elseif ( $bulletin_list_img_num == 4 ) : $bl_sm_cols = "3"; $bl_md_cols = "3";
+elseif ( $bulletin_list_img_num == 5 ) : $bl_sm_cols = "3"; $bl_md_cols = "20"; 
+elseif ( $bulletin_list_img_num == 6 ) : $bl_sm_cols = "3"; $bl_md_cols = "2"; 
 endif; 
 
 if ( $bulletin_list_hide_mobile && wp_is_mobile() ) {
