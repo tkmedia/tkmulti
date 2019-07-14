@@ -85,6 +85,7 @@ $slider_effect = get_post_meta( get_the_ID(), 'page_top_slider_effect', true );
 										        innerOptions = {
 										            //direction: 'horizontal',
 										            loop: true,
+										            nested: true,
 										            slidesPerView : 1,
 										            autoplayDisableOnInteraction: false,
 													pagination: {
