@@ -972,7 +972,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 
 /* Header NO Nav Center Logo
 -------------------------------------------------------------- */
-.header_logo_center_no_nav #branding {display: flex;align-items: center;justify-content: center;}
+.header_logo_center_no_nav #branding {display: flex;align-items: center;justify-content: center;margin: 0 auto;}
 .header_logo_r_no_nav #header-info ul.social-bar,
 .header_logo_center_no_nav #header-info ul.social-bar {height: 100%;top: 0;display: flex;align-items: center;justify-content: center;}
 
