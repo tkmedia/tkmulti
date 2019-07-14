@@ -22,6 +22,7 @@ $article_slider_title_position = get_sub_field('flex_article_slider_title_positi
 $article_slider_source = get_sub_field('flex_article_slider_source');
 $article_slider_latest = get_sub_field('flex_article_slider_latest');
 $article_slider_animation = get_sub_field('flex_article_slider_animation');
+$article_slider_img_size = get_sub_field('flex_article_slider_img_size');
 
 if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 //HIDE ON MOBILE
@@ -50,7 +51,7 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 											<div class="page_img_animated">
 												<div class="page_img_animated_wrap">
 													<div class="page_img_animated_container">
-														<?php echo the_post_thumbnail('inside-post'); ?>
+														<?php echo the_post_thumbnail($article_slider_img_size); ?>
 													</div>
 												</div>
 											</div>
@@ -95,7 +96,7 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 										<div class="page_link_slider_item_img">
 											<?php if( $article_slider_img == 'main_img' ): ?>
 												<div class="page_img">
-													<?php echo the_post_thumbnail('inside-post'); ?>
+													<?php echo the_post_thumbnail($article_slider_img_size); ?>
 													<div class="page_img_border"></div>
 												</div>
 											<?php endif; ?>
@@ -104,11 +105,11 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 												$page_main_icon = get_field('page_main_icon');
 												if( $page_main_icon ) { ?>
 												<div class="page_img hover_img_mask" style="background:url(<?php echo wp_get_attachment_url( $page_main_icon, 'inside-post' ); ?>) 50% 50% / cover no-repeat;">
-													<?php echo the_post_thumbnail('inside-post'); ?>
+													<?php echo the_post_thumbnail($article_slider_img_size); ?>
 												</div>
 												<?php } else { ?> 
 												<div class="page_img">
-													<?php echo the_post_thumbnail('inside-post'); ?> 
+													<?php echo the_post_thumbnail($article_slider_img_size); ?> 
 												</div>		
 												<?php }
 											endif; ?>
@@ -171,7 +172,7 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 										<div class="page_link_slider_item_img">
 											<?php if( $article_slider_img == 'main_img' ): ?>
 											<div class="page_img">
-												<?php echo the_post_thumbnail('product-500c'); ?>
+												<?php echo the_post_thumbnail($article_slider_img_size); ?>
 											</div>
 											<?php endif; ?>
 											
@@ -179,11 +180,11 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 												$page_main_icon = get_field('page_main_icon');
 												if( $page_main_icon ) { ?>
 												<div class="page_img hover_img_mask" style="background:url(<?php echo wp_get_attachment_url( $page_main_icon, 'inside-post-360' ); ?>) 50% 50% / cover no-repeat;">
-													<?php echo the_post_thumbnail('product-500c'); ?>
+													<?php echo the_post_thumbnail($article_slider_img_size); ?>
 												</div>
 												<?php } else { ?> 
 												<div class="page_img">
-													<?php echo the_post_thumbnail('product-500c'); ?> 
+													<?php echo the_post_thumbnail($article_slider_img_size); ?> 
 												</div>		
 												<?php }
 											endif; ?>
@@ -200,7 +201,7 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 									<?php } elseif( $article_slider_style == 'style4' ){ ?>	
 										<div class="page_link_slider_item_img">
 											<div class="page_img">
-												<?php echo the_post_thumbnail('inside-post'); ?>
+												<?php echo the_post_thumbnail($article_slider_img_size); ?>
 											</div>
 											<div class="page_link_slider_item_title_wrap">
 												<div class="page_link_slider_item_title_inner">
@@ -218,7 +219,7 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 									<?php } elseif( $article_slider_style == 'style5' ){ ?>	
 										<div class="page_link_slider_item_img">
 											<div class="page_img">
-												<?php echo the_post_thumbnail('article-400'); ?>
+												<?php echo the_post_thumbnail($article_slider_img_size); ?>
 												<div class="page_img_border"></div>
 											</div>
 										</div>
@@ -281,7 +282,7 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 												<div class="page_img_animated">
 													<div class="page_img_animated_wrap">
 														<div class="page_img_animated_container">
-															<?php echo the_post_thumbnail('inside-post'); ?>
+															<?php echo the_post_thumbnail($article_slider_img_size); ?>
 														</div>
 													</div>
 												</div>
@@ -318,7 +319,7 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 										<?php } elseif( $article_slider_style == 'style2' ){ ?>	
 											<div class="page_link_slider_item_img">
 												<div class="page_img">
-													<?php echo the_post_thumbnail('inside-post'); ?>
+													<?php echo the_post_thumbnail($article_slider_img_size); ?>
 													<div class="page_img_border"></div>
 												</div>
 											</div>
@@ -341,7 +342,7 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 											<div class="page_link_slider_item_img">
 												<?php if( $article_slider_img == 'main_img' ): ?>
 												<div class="page_img">
-													<?php echo the_post_thumbnail('product-500c'); ?>
+													<?php echo the_post_thumbnail($article_slider_img_size); ?>
 												</div>
 												<?php endif; ?>
 												
@@ -349,11 +350,11 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 													$page_main_icon = get_field('page_main_icon');
 													if( $page_main_icon ) { ?>
 													<div class="page_img hover_img_mask" style="background:url(<?php echo wp_get_attachment_url( $page_main_icon, 'inside-post-360' ); ?>) 50% 50% / cover no-repeat;">
-														<?php echo the_post_thumbnail('product-500c'); ?>
+														<?php echo the_post_thumbnail($article_slider_img_size); ?>
 													</div>
 													<?php } else { ?> 
 													<div class="page_img">
-														<?php echo the_post_thumbnail('product-500c'); ?> 
+														<?php echo the_post_thumbnail($article_slider_img_size); ?> 
 													</div>		
 													<?php }
 												endif; ?>
@@ -370,7 +371,7 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 										<?php } elseif( $article_slider_style == 'style4' ){ ?>	
 											<div class="page_link_slider_item_img">
 												<div class="page_img">
-													<?php echo the_post_thumbnail('inside-post'); ?>
+													<?php echo the_post_thumbnail($article_slider_img_size); ?>
 												</div>
 												
 												<div class="page_link_slider_item_title_wrap">
@@ -389,7 +390,7 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 										<?php } elseif( $article_slider_style == 'style5' ){ ?>	
 											<div class="page_link_slider_item_img">
 												<div class="page_img">
-													<?php echo the_post_thumbnail('article-400'); ?>
+													<?php echo the_post_thumbnail($article_slider_img_size); ?>
 													<div class="page_img_border"></div>
 												</div>
 											</div>
