@@ -19,7 +19,6 @@ $artcile_slider_button_color = get_sub_field('flex_artcile_slider_button_color')
 $artcile_slider_title_icon = get_sub_field('flex_artcile_slider_title_icon');
 $article_slider_title_position = get_sub_field('flex_article_slider_title_position');
 
-
 $article_slider_source = get_sub_field('flex_article_slider_source');
 $article_slider_latest = get_sub_field('flex_article_slider_latest');
 $article_slider_animation = get_sub_field('flex_article_slider_animation');
