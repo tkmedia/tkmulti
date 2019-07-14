@@ -167,10 +167,6 @@ if( ! function_exists( 'tkmulti_styles' ) )
 		wp_enqueue_style( 'aos', get_template_directory_uri() .'/assets/css/aos.css', false );
 		wp_enqueue_style( 'fancybox', get_template_directory_uri() .'/assets/css/jquery.fancybox.min.css', false );
 		wp_enqueue_style( 'main-style', get_template_directory_uri() .'/assets/css/main.css', false );
-		
-		// Google Fonts ----------------------------------------------------------
-		wp_enqueue_style( 'tkmulti-fonts', tkmulti_theme_fonts_url() );
-				
 	}
 }
 add_action( 'wp_enqueue_scripts', 'tkmulti_styles' );
@@ -234,19 +230,6 @@ function my_theme_wrapper_end() {
 add_action( 'after_setup_theme', 'woocommerce_support' );
 function woocommerce_support() {
     add_theme_support( 'woocommerce' );
-}
-
-/* ---------------------------------------------------------------------------
- * Theme Fonts URL
- * --------------------------------------------------------------------------- */
-function tkmulti_theme_fonts_url() {
-	$font_families = apply_filters( 'tkmulti_theme_fonts', array( 'Assistant:200,400,600,700' ) );
-	$query_args = array(
-		'family' => implode( '|', $font_families ),
-		'subset' => 'hebrew,latin',
-	);
-	$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-	return esc_url_raw( $fonts_url );
 }
 
 /* ---------------------------------------------------------------------------
