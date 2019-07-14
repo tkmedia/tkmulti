@@ -45,6 +45,32 @@ $slider_effect = get_post_meta( get_the_ID(), 'page_top_slider_effect', true );
 												<?php echo $slider_manual_content; ?>
 											</div>
 										</div>
+										
+										<?php if( have_rows('inner_manual_slider') ): ?>
+										<div class="inner_manual_slider swiper-container">
+											<div class="slides single-slider swiper-wrapper">
+											<?php 
+											while( have_rows('inner_manual_slider') ): the_row(); 
+											$inner_manual_slider_image = get_sub_field('inner_manual_slider_image');
+											$inner_manual_slider_title = get_sub_field('inner_manual_slider_title');
+											$inner_manual_slider_text = get_sub_field('inner_manual_slider_text');
+											$inner_manual_slider_link = get_sub_field('inner_manual_slider_link');
+											?>
+											<div class="inner_manual_slider_slide swiper-slide">
+												<a href="<?php echo $inner_manual_slider_link; ?>" class="inner_manual_slider_link">
+												<div class="inner_manual_slider_content">
+													<div class="inner_manual_slider_title"><?php echo $inner_manual_slider_title; ?></div>
+													<div class="$inner_manual_slider_image">
+													<?php echo wp_get_attachment_image( $inner_manual_slider_image, 'full' ); ?>
+													</div>
+													<div class="inner_manual_slider_text"><?php echo $inner_manual_slider_text; ?></div>
+												</div>
+												</a>
+											</div>
+											<?php endwhile; ?>
+											</div>
+									    </div>
+										<?php endif; ?>										
 									</div>
 								</div>
 			                </div>
