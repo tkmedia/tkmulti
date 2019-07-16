@@ -11,7 +11,7 @@ $btn1_text = get_post_meta( get_the_ID(), 'mobile_page_masthead_btn1_text', true
 $btn1_link = get_post_meta( get_the_ID(), 'mobile_page_masthead_btn1_link', true );
 $btn2_text = get_post_meta( get_the_ID(), 'mobile_page_masthead_btn2_text', true );
 $btn2_link = get_post_meta( get_the_ID(), 'mobile_page_masthead_btn2_link', true );
-
+$intro_bg_color = get_post_meta( get_the_ID(), 'mobile_page_masthead_intro_bg_color', true );
 $page_top_slider_content = get_post_meta( get_the_ID(), 'mobile_page_top_slider_content', true );
 ?>
 
@@ -90,7 +90,7 @@ $page_top_slider_content = get_post_meta( get_the_ID(), 'mobile_page_top_slider_
 					<img src="https://img.youtube.com/vi/<?php echo $youtube_id; ?>/maxresdefault.jpg">
 							
 				</div>
-				<div class="masthead_content wrap row-flex <?php echo($title_hor); ?>-xs <?php echo($title_ver); ?>-xs <?php echo($title_location); ?>">
+				<div class="masthead_content wrap row-flex <?php echo($title_hor); ?>-xs <?php echo($title_ver); ?>-xs <?php echo($title_location); ?>"<?php if ($title_location == 'slider_content_bottom' ) { ?> style="background:<?php echo($intro_bg_color); ?>;"<?php } ?>>
 					<div class="masthead_content_container col-xs-12">
 						<div class="masthead_content_container_wrap">
 							
@@ -243,7 +243,7 @@ $page_top_slider_content = get_post_meta( get_the_ID(), 'mobile_page_top_slider_
 				
 				if( !$masthead_title_hide || $page_masthead_text ) { ?>    
 
-				<div class="masthead_content wrap row-flex <?php echo($title_hor); ?>-xs <?php echo($title_ver); ?>-xs <?php echo($title_location); ?>">
+				<div class="masthead_content wrap row-flex <?php echo($title_hor); ?>-xs <?php echo($title_ver); ?>-xs <?php echo($title_location); ?>"<?php if ($title_location == 'slider_content_bottom' ) { ?> style="background:<?php echo($intro_bg_color); ?>;"<?php } ?>>
 					<div class="masthead_content_container col-xs-12">
 						<div class="masthead_content_container_wrap">
 							
