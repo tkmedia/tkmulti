@@ -76,6 +76,14 @@ if ( $bulletin_list_hide_mobile && wp_is_mobile() ) {
 						<?php } ?>	
 							<div class="flex_bulletin_list_item_wrap <?php echo $bulletin_list_img_position; ?> <?php if( $bulletin_layout == 'row-flex' ) { echo $bulletin_list_img_align; ?>-xs<?php } ?>">
 								
+								<?php if( $bulletin_list_img_position == 'img_block top_title' ): ?>
+									<?php if( $bulletin_list_title ) { ?>
+									<div class="flex_bulletin_list_title" style="color:<?php echo $bulletin_list_title_color; ?>;font-size:<?php echo $bulletin_list_title_size; ?>px;">
+										<?php echo $bulletin_list_title; ?>
+									</div>
+									<?php } ?>
+								<?php endif; ?>	
+								
 								<?php if( $bulletin_list_icon || $bulletin_list_img ) { ?>	
 									<?php if( $bulletin_list_style == 'bulletin_img' ): ?>
 									<div class="flex_bulletin_list_icon bulletin_list_img">
@@ -92,11 +100,13 @@ if ( $bulletin_list_hide_mobile && wp_is_mobile() ) {
 								<?php } ?>
 								
 								<div class="flex_bulletin_list_content">
-									<?php if( $bulletin_list_title ) { ?>
-									<div class="flex_bulletin_list_title" style="color:<?php echo $bulletin_list_title_color; ?>;font-size:<?php echo $bulletin_list_title_size; ?>px;">
-										<?php echo $bulletin_list_title; ?>
-									</div>
-									<?php } ?>
+									<?php if( !$bulletin_list_img_position == 'img_block top_title' ): ?>
+										<?php if( $bulletin_list_title ) { ?>
+										<div class="flex_bulletin_list_title" style="color:<?php echo $bulletin_list_title_color; ?>;font-size:<?php echo $bulletin_list_title_size; ?>px;">
+											<?php echo $bulletin_list_title; ?>
+										</div>
+										<?php } ?>
+									<?php endif; ?>	
 									<?php if( $bulletin_list_text ) { ?>
 									<div class="flex_bulletin_list_text" style="color:<?php echo $bulletin_list_text_color; ?>;font-size:<?php echo $bulletin_list_text_size; ?>px;">
 										<?php echo $bulletin_list_text; ?>
