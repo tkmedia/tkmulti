@@ -6,7 +6,7 @@ $title_location = get_post_meta( get_the_ID(), 'mobile_page_masthead_title_locat
 $title_hor = get_post_meta( get_the_ID(), 'mobile_page_masthead_title_hor', true );
 $title_ver = get_post_meta( get_the_ID(), 'mobile_page_masthead_title_ver', true );
 
-$btn_style = get_post_meta( get_the_ID(), 'mobile_page_masthead_btn_style', true );
+$btn_style = get_post_meta( get_the_ID(), 'mobile_page_masthead_button_style', true );
 $btn1_text = get_post_meta( get_the_ID(), 'mobile_page_masthead_btn1_text', true );
 $btn1_link = get_post_meta( get_the_ID(), 'mobile_page_masthead_btn1_link', true );
 $btn2_text = get_post_meta( get_the_ID(), 'mobile_page_masthead_btn2_text', true );
