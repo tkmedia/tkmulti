@@ -18,6 +18,7 @@ $gallery_slider_thumbs = get_sub_field('flex_gallery_slider_thumbs');
 $gallery_slider_fancybox = get_sub_field('flex_gallery_slider_fancybox');
 $gallery_slider_animation = get_sub_field('flex_gallery_slider_animation');
 $gallery_slider_thumb_count = get_sub_field('flex_gallery_slider_thumb_count');
+$gallery_slider_caption = get_sub_field('flex_gallery_slider_caption');
 
 if ( $gallery_slider_hide_mobile && wp_is_mobile() ) {
 //HIDE ON MOBILE
@@ -106,7 +107,9 @@ if ( $gallery_slider_hide_mobile && wp_is_mobile() ) {
 							                <div class="image-hover">
 							                <?php } ?>
 											<?php echo wp_get_attachment_image( $image['ID'], $gallery_slider_size); ?>
+											<?php if( $gallery_slider_caption ) { ?>
 											<div class="image-caption"><?php echo $image['caption']; ?></div>
+											<?php } ?>
 							                <?php if( $gallery_slider_fancybox ) { ?>
 							                </div>
 							                <i class="far fa-search"></i>
