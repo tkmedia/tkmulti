@@ -40,6 +40,7 @@ $nav_layout = get_option( 'options_menu_item_layout' );
 $top_panel_show = get_option( 'options_header_top_panel_show' );
 $panel_bg_color = get_field('header_top_panel_bg_color','option');
 $panel_font_color = get_field('header_top_panel_font_color','option');
+$header_logo_width = get_field('header_logo_width','option');
 ?>
 
 <body <?php body_class( 'loading' ); ?> <?php tkmulti_schema_body(); ?> id="body-<?php the_ID(); ?>">
@@ -70,7 +71,7 @@ tha_body_top();
 				
 				<div class="header_wrapper wrap">
 					
-					<div id="branding">
+					<div id="branding" style="width:<?php echo $header_logo_width; ?>;">
 						<div class="branding_wrap">
 							<?php get_template_part( 'partials/header/branding-customizer' ); ?>
 						</div>
