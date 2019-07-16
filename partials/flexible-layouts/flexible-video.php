@@ -18,7 +18,7 @@ $video_title = get_sub_field('flex_video_title');
 $video_subtitle = get_sub_field('flex_video_subtitle');
 $video_title_size = get_sub_field('flex_video_title_size');
 $video_subtitle_size = get_sub_field('flex_video_subtitle_size');
-$video_color = get_sub_field('flex_video_title_color');
+$video_title_color = get_sub_field('flex_video_title_color');
 $video_subtitle_color = get_sub_field('flex_video_subtitle_color');
 $video_title_a = get_sub_field('flex_video_title_a');
 
