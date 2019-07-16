@@ -71,7 +71,7 @@ tha_body_top();
 				
 				<div class="header_wrapper wrap">
 					
-					<div id="branding" style="width:<?php echo $header_logo_width; ?>;">
+					<div id="branding" style="width:<?php echo $header_logo_width; ?>px;">
 						<div class="branding_wrap">
 							<?php get_template_part( 'partials/header/branding-customizer' ); ?>
 						</div>
