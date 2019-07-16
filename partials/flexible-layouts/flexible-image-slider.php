@@ -102,7 +102,7 @@ if ( $gallery_slider_hide_mobile && wp_is_mobile() ) {
 					            <?php foreach( $gallery_slider_image as $image ): ?>
 					                <div class="gallery_slide_item swiper-slide">
 						                <?php if( $gallery_slider_fancybox ) { ?>
-						                <a class="image-zoom" data-fancybox="gallery" href="<?php echo $image['url']; ?>" data-caption="<?php echo $s_image['alt']; ?>">
+						                <a class="image-zoom" data-fancybox="gallery" href="<?php echo $image['url']; ?>" data-caption="<?php echo $image['alt']; ?>">
 							                <div class="image-hover">
 							                <?php } ?>
 											<?php echo wp_get_attachment_image( $image['ID'], $gallery_slider_size); ?>
