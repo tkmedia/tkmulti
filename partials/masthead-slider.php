@@ -17,6 +17,7 @@ $btn2_img = get_field('page_masthead_btn2_img');
 
 $page_top_slider_content = get_post_meta( get_the_ID(), 'page_top_slider_content', true );
 $masthead_background_color = get_field('masthead_background_color');
+$intro_bg_color = get_post_meta( get_the_ID(), 'page_masthead_intro_bg_color', true );
 	
 	$masthead_top_divider_section = get_field('masthead_top_divider_section_type');
 	$masthead_top_divider_section_color = get_field('masthead_top_divider_section_color');
@@ -126,7 +127,7 @@ $masthead_background_color = get_field('masthead_background_color');
 					<img src="https://img.youtube.com/vi/<?php echo $youtube_id; ?>/maxresdefault.jpg">
 							
 				</div>
-				<div class="masthead_content wrap row-flex <?php echo($title_hor); ?>-xs <?php echo($title_ver); ?>-xs <?php echo($title_location); ?>">
+				<div class="masthead_content wrap row-flex <?php echo($title_hor); ?>-xs <?php echo($title_ver); ?>-xs <?php echo($title_location); ?>"<?php if ($title_location == 'slider_content_bottom' ) { ?> style="background:<?php echo($intro_bg_color); ?>;"<?php } ?>>
 					<div class="wrap"><div class="masthead_content_container col-xs-12">
 						<div class="masthead_content_container_wrap">
 							
@@ -296,7 +297,7 @@ $masthead_background_color = get_field('masthead_background_color');
 				//if( !$masthead_title_hide || $page_masthead_text ) { ?>
 			    
 			    <div class="masthead_content_overlay"></div>
-				<div class="masthead_content wrap row-flex <?php echo($title_hor); ?>-xs <?php echo($title_ver); ?>-xs <?php echo($title_location); ?>">
+				<div class="masthead_content wrap row-flex <?php echo($title_hor); ?>-xs <?php echo($title_ver); ?>-xs <?php echo($title_location); ?>"<?php if ($title_location == 'slider_content_bottom' ) { ?> style="background:<?php echo($intro_bg_color); ?>;"<?php } ?>>
 					<div class="masthead_content_container col-xs-12">
 						<div class="masthead_content_container_wrap">
 							
