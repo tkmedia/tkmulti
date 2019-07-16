@@ -33,7 +33,7 @@ if ( $video_hide_mobile && wp_is_mobile() ) {
 		<div class="content_youtube_vid flexible_page_element <?php echo $video_open_style;?> <?php echo $video_image_type;?>" itemprop="text">
 			<div class="content_youtube_vid_wrap">
 				
-			<?php if( $video_title || $video_subtitle ) { ?>
+			<?php if( $video_open_style == 'on-page' ): ?>
 			<div class="video_title_wrap">
 				<?php if( $video_title ) { ?>
 				<h2 class="section_title section_flex_title title_<?php echo $video_title_a; ?>" style="text-align:<?php echo $video_title_a; ?> !important;color:<?php echo $video_title_color; ?>;font-size:<?php echo $video_title_size; ?>px;"><?php echo $video_title; ?></h2>
@@ -42,7 +42,7 @@ if ( $video_hide_mobile && wp_is_mobile() ) {
 				<div class="section_subtitle title_<?php echo $video_title_a; ?>" itemprop="headline" style="text-align:<?php echo $video_title_a; ?> !important;color:<?php echo $video_subtitle_color; ?>;font-size:<?php echo $video_subtitle_size; ?>px;"><?php echo $video_subtitle; ?></div>
 				<?php } ?>
 			</div>
-			<?php } ?>
+			<?php endif; ?>
 				
 			<?php if( $video_display == 'video-single' ):
 			//second false skip ACF pre-processcing
