@@ -2429,6 +2429,8 @@ button.section_readmore_link.button_icon_right .button_text_inner {padding-right
 .flex_bulletin_list.icons_medium.row-flex .img_block .bulletin_list_img .list_icon {margin: 0 auto !important;width: 65%;}
 .flex_bulletin_list.icons_big.row-flex .img_block .bulletin_list_img .list_icon {margin: 0 auto !important;width: 100%;}
 
+.flex_bulletin_list_title.top_title {padding-bottom: 30px;}
+
 @media (min-width: 768px) {
 	.flex_bulletin_list_icon {max-width: 100%;padding: 0px;margin: auto;width: 120px;}
 	.flex_bulletin_list_icon .list_icon, .flex_bulletin_list_icon_inner {/* position: relative; *//* height: 0; *//* padding: 0 0 80% 0; *//* margin: 0 auto !important; *//* max-width: 120px; */}
