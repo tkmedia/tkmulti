@@ -293,7 +293,7 @@ $masthead_background_color = get_field('masthead_background_color');
 				$page_masthead_text = wpautop(get_post_meta( get_the_ID(), 'page_masthead_text', true ));
 				$masthead_title_hide = get_post_meta( get_the_ID(), 'page_masthead_title_hide', true );
 				    
-				if( !$masthead_title_hide || $page_masthead_text ) { ?>
+				//if( !$masthead_title_hide || $page_masthead_text ) { ?>
 			    
 			    <div class="masthead_content_overlay"></div>
 				<div class="masthead_content wrap row-flex <?php echo($title_hor); ?>-xs <?php echo($title_ver); ?>-xs <?php echo($title_location); ?>">
@@ -407,7 +407,7 @@ $masthead_background_color = get_field('masthead_background_color');
 					<?php } ?>				
 						
 				</div>
-				<?php } ?>
+				<?php //} ?>
 				
 				<?php if ( !is_front_page() ) { ?>
 				<div class="yoast_breadcrumb breadcrumb_content_in_slider">
