@@ -14,6 +14,14 @@ $video_link = get_sub_field('flex_video_link');
 
 $video_display = get_sub_field('flex_video_display');
 
+$video_title = get_sub_field('flex_video_title');
+$video_subtitle = get_sub_field('flex_video_subtitle');
+$video_title_size = get_sub_field('flex_video_title_size');
+$video_subtitle_size = get_sub_field('flex_video_subtitle_size');
+$video_color = get_sub_field('flex_video_title_color');
+$video_subtitle_color = get_sub_field('flex_video_subtitle_color');
+$video_title_a = get_sub_field('flex_video_title_a');
+
 
 if ( $video_hide_mobile && wp_is_mobile() ) {
 //HIDE ON MOBILE
@@ -24,6 +32,18 @@ if ( $video_hide_mobile && wp_is_mobile() ) {
 		
 		<div class="content_youtube_vid flexible_page_element <?php echo $video_open_style;?> <?php echo $video_image_type;?>" itemprop="text">
 			<div class="content_youtube_vid_wrap">
+				
+			<?php if( $video_title || $video_subtitle ) { ?>
+			<div class="video_title_wrap">
+				<?php if( $video_title ) { ?>
+				<h2 class="section_title section_flex_title title_<?php echo $video_title_a; ?>" style="text-align:<?php echo $video_title_a; ?> !important;color:<?php echo $video_title_color; ?>;font-size:<?php echo $video_title_size; ?>px;"><?php echo $video_title; ?></h2>
+				<?php } ?>
+				<?php if( $video_subtitle ) { ?>
+				<div class="section_subtitle title_<?php echo $video_title_a; ?>" itemprop="headline" style="text-align:<?php echo $video_title_a; ?> !important;color:<?php echo $video_subtitle_color; ?>;font-size:<?php echo $video_subtitle_size; ?>px;"><?php echo $video_subtitle; ?></div>
+				<?php } ?>
+			</div>
+			<?php } ?>
+				
 			<?php if( $video_display == 'video-single' ):
 			//second false skip ACF pre-processcing
 			$youtube_vid_url = get_sub_field('flex_video_link', false, false);
