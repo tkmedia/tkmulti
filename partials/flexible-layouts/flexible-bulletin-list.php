@@ -78,7 +78,7 @@ if ( $bulletin_list_hide_mobile && wp_is_mobile() ) {
 								
 								<?php if( $bulletin_list_img_position == 'img_block top_title' ): ?>
 									<?php if( $bulletin_list_title ) { ?>
-									<div class="flex_bulletin_list_title" style="color:<?php echo $bulletin_list_title_color; ?>;font-size:<?php echo $bulletin_list_title_size; ?>px;">
+									<div class="flex_bulletin_list_title top_title" style="color:<?php echo $bulletin_list_title_color; ?>;font-size:<?php echo $bulletin_list_title_size; ?>px;">
 										<?php echo $bulletin_list_title; ?>
 									</div>
 									<?php } ?>
