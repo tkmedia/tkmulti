@@ -107,7 +107,7 @@ if ( $gallery_slider_hide_mobile && wp_is_mobile() ) {
 							                <div class="image-hover">
 							                <?php } ?>
 											<?php echo wp_get_attachment_image( $image['ID'], $gallery_slider_size); ?>
-											<?php if( $gallery_slider_caption ) { ?>
+											<?php if( $gallery_slider_caption && $image['caption'] ) { ?>
 											<div class="image-caption"><?php echo $image['caption']; ?></div>
 											<?php } ?>
 							                <?php if( $gallery_slider_fancybox ) { ?>
