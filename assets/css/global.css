@@ -2647,7 +2647,9 @@ transition: all .5s;}
 .articles_slider_style3 .articles_slider_item {padding: 0 1px;}
 .articles_slider_style3 .articles_slider_item_container {border: none;}
 .articles_slider_style3 .articles_slider_item h3 {font-size: 21px;justify-content: center;background: #f8f8f8;padding: 20px;line-height: 1.1;}
-.articles_slider_style3 .page_link_slider_item_title_wrap {padding: 0 40px;position: absolute;bottom: 0;right: 0;left: 0;}
+.articles_slider_style3 .articles_slider_item_container.title_inside .page_link_slider_item_title_wrap {padding: 0 40px;position: absolute;bottom: 0;right: 0;left: 0;}
+.articles_slider_style3 .articles_slider_item_container.title_top .page_link_slider_item_title_wrap {position: relative;}
+
 .articles_slider_style3 .page_link_slider_item_img {position: relative;}
 button.page_link_slider_item_button.section_readmore_link.watch_btn.hoverLink.style3 {border: none;background: transparent !important;color: inherit !important;position: relative;padding-left: 30px;}
 .articles_slider_style3 button.page_link_slider_item_button:after {font-family: 'Font Awesome 5 Pro';content: "\f177";font-style: normal;font-weight: normal;text-decoration: inherit;color: inherit;font-size: 20px;padding-right: 0px;position: absolute;top: 9px;left: 0px;}
