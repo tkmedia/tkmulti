@@ -15,7 +15,7 @@ $table_title_a = get_sub_field('flex_table_title_a');
 $table_title_color = get_sub_field('flex_table_title_color');
 $table_subtitle_color = get_sub_field('flex_table_subtitle_color');
 
-$flex_table = get_sub_field('flex_table');
+$flex_table = get_sub_field('flex_table_block');
 
 if ( $table_hide_mobile && wp_is_mobile() ) {
 //HIDE ON MOBILE
