@@ -47,16 +47,16 @@ if ( $table_hide_mobile && wp_is_mobile() ) {
 						    echo '<table border="0">';
 
 						        if ( ! empty( $flex_table['caption'] ) ) {
-						            echo '<caption>' . $$flex_table['caption'] . '</caption>';
+						            echo '<caption>' . $flex_table['caption'] . '</caption>';
 						        }
 
 						        if ( $flex_table['header'] ) {
 						            echo '<thead>';
 						                echo '<tr>';
 						                    foreach ( $flex_table['header'] as $th ) {
-						                        echo '<th>';
+						                        echo '<th><span class="table_cell_header">';
 						                            echo $th['c'];
-						                        echo '</th>';
+						                        echo '</span></th>';
 						                    }
 						                echo '</tr>';
 						            echo '</thead>';
@@ -66,9 +66,9 @@ if ( $table_hide_mobile && wp_is_mobile() ) {
 						            foreach ( $flex_table['body'] as $tr ) {
 						                echo '<tr>';
 						                    foreach ( $tr as $td ) {
-						                        echo '<td>';
+						                        echo '<td><span class="table_cell">';
 						                            echo $td['c'];
-						                        echo '</td>';
+						                        echo '</span></td>';
 						                    }
 						                echo '</tr>';
 						            }
