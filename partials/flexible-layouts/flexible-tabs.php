@@ -72,6 +72,7 @@ if ( $tabs_hide_mobile && wp_is_mobile() ) {
 									 <?php echo wp_get_attachment_image( $tabs_content_bg, 'gallery-800' ); ?>
 									</div>
 									<?php } ?>
+									<?php if( $tabs_content_title || $tabs_content || $tabs_content_btn_link ) { ?>
 									<div class="tabcontent_content">
 										<div class="tabcontent_content_inner">
 										<?php if( $tabs_content_title ) { ?>
@@ -89,6 +90,7 @@ if ( $tabs_hide_mobile && wp_is_mobile() ) {
 										</a>
 										<?php } ?>
 									</div>
+									<?php } ?>
 								</div>
 							</div>
 							<?php $i++;endwhile; ?>								
