@@ -2118,6 +2118,7 @@ h2.side_line:before {content: '';width: 40px;border-bottom: 3px solid #20221d;po
 }
 @media (max-width: 767px) {
 	.container_wrap {padding-left: 0;padding-right: 0;}
+	.page_flexible_content {width:100% !important;}
 }
 
 /* ## List + Image */
