@@ -208,8 +208,7 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 											<h3 itemprop="name" class="page_link_slider_item_title no-line" style="color:<?php echo $artcile_slider_title_color;?>;justify-content:<?php echo $artcile_slider_title_align;?>;font-size:<?php echo $artcile_slider_title_size;?>;"><?php the_title(); ?></h3>
 										</div>
 										<?php endif; ?>
-										<?php 
-										if( $artcile_slider_show_excerpt ) {
+										<?php if( $artcile_slider_show_excerpt ) {
 											$excerpt = get_field('page_masthead_excerpt');
 											if( $excerpt ) { ?>
 											<div class="articles_slider_item_text">	
@@ -220,6 +219,7 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 													echo wp_html_excerpt( $excerpt, 100, '...' ); ?>
 												</div>
 											</div>
+											<?php } ?>
 										<?php } ?>	
 										<?php if( $article_slider_title_position == 'inside' ): ?>	
 										<div class="pagination-button dark">
