@@ -81,7 +81,7 @@ if ( $table_hide_mobile && wp_is_mobile() ) {
 							@media 
 							only screen and (max-width: 760px),
 							(min-device-width: 768px) and (max-device-width: 1024px)  {
-								<?php foreach ( $table_list_row_table['header'] as $th ) { ?>  td:nth-of-type(<?php echo $i++; ?>):before { content: "<?php echo $th['c']; ?>"; }  <?php } ?>
+								<?php foreach ( $flex_table['header'] as $th ) { ?>  td:nth-of-type(<?php echo $i++; ?>):before { content: "<?php echo $th['c']; ?>"; }  <?php } ?>
 							}			
 							</style>				        
 						</div>
