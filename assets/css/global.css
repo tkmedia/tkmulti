@@ -3837,6 +3837,28 @@ transform:translate(0px,0);
 	.masonry_item.omega { width: 100%; }
 }
 
+/* Generic Styling, for Desktops/Laptops */
+.table-list-row table { width: 100%; border-collapse: collapse; }
+/* Zebra striping */
+.table-list-row tr:nth-of-type(odd) { background: #eee; }
+.table-list-row th { background: #333; color: white; font-weight: bold;font-weight: normal; }
+.table-list-row td, .table-list th {padding: 10px 20px; border-bottom: 1px solid #ccc; text-align: right; }
+.table-list-row tr:first-child {border-top: 1px solid #ccc; }
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	.table-list-row table, .table-list-row thead, .table-list-row tbody, .table-list-row th, .table-list-row td, .table-list-row tr { display: block; }
+	/* Hide table headers (but not display: none;, for accessibility) */
+	.table-list-row thead tr { position: absolute;top: -9999px;right: -9999px;}
+	.table-list-row tr { border: 1px solid #ccc; }
+	.table-list-row td { /* Behave  like a "row" */border: none;border-bottom: 1px solid #eee; position: relative;padding-right: 50%; }
+	.table-list-row td:before { /* Now like a table header */position: absolute;/* Top/left values mimic padding */top: 6px;right: 6px;width: 45%; padding-left: 10px; white-space: nowrap;}
+
+}
+
 /* Flex testimonial slider
 -------------------------------------------------------------- */
 .testimonial_slider {position: relative;}
