@@ -24,7 +24,7 @@ $footer_form_id = get_field( 'footer_form_id','option' );
 	<div class="footer_mobile_fix_row row-flex middle-xs center-xs">
 
 		<?php if( $footer_search_show ){ ?>
-		<div class="footer_form_fix_col col-xs-4">
+		<div class="footer_form_fix_col col-xs">
 			<div class="mobile_footer_links">
 				<a data-fancybox data-src="#footer_search" href="javascript:;">
 					<i class="fal fa-search"></i>
@@ -34,7 +34,7 @@ $footer_form_id = get_field( 'footer_form_id','option' );
 		</div>
 		<?php } ?>
 		<?php if( $footer_link_show ){ ?>
-		<div class="footer_form_fix_col col-xs-4">
+		<div class="footer_form_fix_col col-xs">
 			<div class="mobile_footer_links">
 				<a href="<?php echo $footer_fixed_link_page;?>">
 					<?php echo $footer_fixed_link_icon;?>
@@ -44,7 +44,7 @@ $footer_form_id = get_field( 'footer_form_id','option' );
 		</div>
 		<?php } ?>
 		<?php if( $footer_popup_show ){ ?>
-		<div class="footer_form_fix_col col-xs-4">
+		<div class="footer_form_fix_col col-xs">
 			<div class="mobile_footer_links">
 				<a data-fancybox data-src="#contact_form_popup" href="javascript:;">
 					<i class="fal fa-envelope"></i>
