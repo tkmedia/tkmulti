@@ -7,14 +7,21 @@ $footer_fixed_show = get_option( 'options_footer_bar_show' );
 $footer_search_show = get_option( 'options_footer_search_show' );
 $footer_link_show = get_option( 'options_footer_link_show' );
 $footer_popup_show = get_option( 'options_footer_popup_show' );
+$footer_free_link_show = get_option( 'options_footer_free_link_show' );
 
 $footer_fixed_link_btn = get_option( 'options_footer_fixed_link_btn' );
 $footer_fixed_link_page = get_option( 'options_footer_fixed_link_page' );
 $footer_fixed_link_icon = get_field('footer_fixed_link_icon','option');
 
+$footer_fixed_free_link_btn = get_option( 'options_footer_fixed_free_link_btn' );
+$footer_fixed_free_link_page = get_option( 'options_footer_fixed_free_link_page' );
+$footer_fixed_free_link_icon = get_field('footer_fixed_free_link_icon','option');
+
 $footer_form_title = get_option( 'options_footer_form_title' );
 $footer_form_subtitle = get_option( 'options_footer_form_subtitle' );
 $footer_form_id = get_field( 'footer_form_id','option' );
+$footer_fixed_form_icon = get_field('footer_fixed_form_icon','option');
+$footer_fixed_form_btn = get_option( 'options_footer_fixed_form_btn' );
 
 //$footer_content_text = get_field('footer_content_text','option');
 ?>
@@ -43,12 +50,22 @@ $footer_form_id = get_field( 'footer_form_id','option' );
 			</div>
 		</div>
 		<?php } ?>
+		<?php if( $footer_free_link_show ){ ?>
+		<div class="footer_form_fix_col col-xs">
+			<div class="mobile_footer_links">
+				<a href="<?php echo $footer_fixed_free_link_page;?>">
+					<?php echo $footer_fixed_free_link_icon;?>
+					<p><?php echo $footer_fixed_free_link_btn;?></p>
+				</a>
+			</div>
+		</div>
+		<?php } ?>		
 		<?php if( $footer_popup_show ){ ?>
 		<div class="footer_form_fix_col col-xs">
 			<div class="mobile_footer_links">
 				<a data-fancybox data-src="#contact_form_popup" href="javascript:;">
 					<i class="fal fa-envelope"></i>
-					<p><?php _e('Contact', 'tkmulti'); ?></p>
+					<p><?php echo $footer_fixed_form_btn;?></p>
 				</a>
 			</div>
 		</div>
