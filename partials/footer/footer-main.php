@@ -10,7 +10,7 @@ $footer_popup_show = get_option( 'options_footer_popup_show' );
 
 $footer_fixed_link_btn = get_option( 'options_footer_fixed_link_btn' );
 $footer_fixed_link_page = get_option( 'options_footer_fixed_link_page' );
-$footer_fixed_link_icon = get_option( 'options_footer_fixed_link_icon' );
+$footer_fixed_link_icon = get_field('footer_fixed_link_icon','option');
 
 $footer_form_title = get_option( 'options_footer_form_title' );
 $footer_form_subtitle = get_option( 'options_footer_form_subtitle' );
