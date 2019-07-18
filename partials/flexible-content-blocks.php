@@ -28,6 +28,7 @@ if( have_rows('flex_content_rows') ): $row = 1;?>
 		$row_wrap = get_sub_field('flex_content_row_wrap');
 		$row_col_padding = get_sub_field('flex_content_row_col_padding');
 		
+		$content_row_dividers = get_sub_field('flex_content_row_dividers');
 		$top_divider_section = get_sub_field('flex_top_divider_section_type');
 		$top_divider_section_color = get_sub_field('flex_top_divider_section_color');
 		$top_divider_section_bg_color = get_sub_field('flex_top_divider_section_bg_color');
@@ -73,7 +74,7 @@ if( have_rows('flex_content_rows') ): $row = 1;?>
 		set_query_var( 'flex_bottom_divider_section_height', $bottom_divider_section_height );
 		set_query_var( 'flex_bottom_divider_section_position', $bottom_divider_section_position );		
 		
-		if( $top_divider_section ) {
+		if( $top_divider_section && $content_row_dividers) {
 			get_template_part('partials/row-divider-top' );
 		} ?>
 		
@@ -120,7 +121,7 @@ if( have_rows('flex_content_rows') ): $row = 1;?>
 		</div>
 		
 		<?php 
-		if( $bottom_divider_section ) {
+		if( $bottom_divider_section && $content_row_dividers) {
 			get_template_part('partials/row-divider-bottom' );
 		} ?>
 
