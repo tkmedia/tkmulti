@@ -38,7 +38,7 @@ $footer_form_id = get_field( 'footer_form_id','option' );
 			<div class="mobile_footer_links">
 				<a href="<?php echo $footer_fixed_link_page;?>">
 					<?php echo $footer_fixed_link_icon;?>
-					<p><?php echo $footer_full_contnet_block_width;?></p>
+					<p><?php echo $footer_fixed_link_btn;?></p>
 				</a>
 			</div>
 		</div>
