@@ -3876,10 +3876,7 @@ only screen and (max-width: 760px),
 .testimonial_slider_style1 .testimonial_slider_item_container {padding: 0 15px;}
 .testimonial_slider_style1 .testimonial_slider_item_content {text-align: center;}
 .testimonial_slider_style1 .testimonial_slider_item_name {padding-top: 10px;text-align: center;font-size: 15px;}
-.testimonial_slider_container.testimonial_slider_style1 {
-    max-width: 750px;
-    margin: auto;
-}
+.testimonial_slider_container.testimonial_slider_style1 {margin: auto;}
 .testimonial_slider .swiper-button-next:after,
 .testimonial_slider .swiper-container-rtl .swiper-button-prev:after,
 .testimonial_slider .swiper-button-prev:after,
