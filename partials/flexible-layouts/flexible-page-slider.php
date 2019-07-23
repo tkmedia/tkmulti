@@ -256,7 +256,8 @@ if ( $artcile_slider_hide_mobile && wp_is_mobile() ) {
 										</div>
 										<div class="page_link_slider_item_title_wrap">
 											<h3 itemprop="name" class="page_link_slider_item_title no-line" style="color:<?php echo $artcile_slider_title_color;?>;justify-content:<?php echo $artcile_slider_title_align;?>;font-size:<?php echo $artcile_slider_title_size;?>px;"><?php the_title(); ?></h3>
-											<?php if !( $hide_date ){ ?>
+											<?php if ( $hide_date ){ ?>
+											<?php } else { ?>
 											<div class="entry-date"><?php echo get_the_date('d.m.y'); ?></div>
 											<?php } ?>
 										</div>
