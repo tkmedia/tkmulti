@@ -3884,7 +3884,7 @@ only screen and (max-width: 760px),
 .testimonial_slider_style1 .testimonial_slider_item_img {text-align: center;}
 .testimonial_slider_style1 .testimonial_slider_item_img img {width: auto;border-radius: 50%;}
 .testimonial_slider_style1 .testimonial_slider_item_title {font-size: 22px;font-weight: 600;text-align: center;    padding-bottom: 10px;}
-.testimonial_slider_style1 .testimonial_slider_item_container {padding: 0 15px;}
+.testimonial_slider_style1 .testimonial_slider_item_container {padding: 0 30px;}
 .testimonial_slider_style1 .testimonial_slider_item_content {text-align: center;}
 .testimonial_slider_style1 .testimonial_slider_item_name {padding-top: 10px;text-align: center;font-size: 15px;}
 .testimonial_slider_container.testimonial_slider_style1 {margin: auto;}
