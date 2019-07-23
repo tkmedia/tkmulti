@@ -38,6 +38,7 @@ $logo_side = get_option( 'options_header_logo_side' );
 $logo_side_position = get_option( 'options_header_logo_side_position' );
 $nav_layout = get_option( 'options_menu_item_layout' );
 $top_panel_show = get_option( 'options_header_top_panel_show' );
+$top_panel_position = get_option( 'options_top_panel_position' );
 $panel_bg_color = get_field('header_top_panel_bg_color','option');
 $panel_font_color = get_field('header_top_panel_font_color','option');
 $header_logo_width = get_field('header_logo_width','option');
@@ -59,7 +60,7 @@ tha_body_top();
 		<?php get_template_part( 'partials/header/hamburger' ); ?>
 		<?php } ?>
 		<header id="header-container" class="header-bar animated clearfix fixedHeader sticky_header <?php if (is_front_page()) { ?>front_header_container<?php } elseif (is_tax( 'product_cat' ) || is_category() ) { ?>archive_header_container<?php } elseif ( is_singular() ) { ?>deafault_header_container<?php } else { ?>deafault_header_container<?php } ?> <?php echo $logo_side; ?> <?php echo $logo_side_position; ?>" itemscope="itemscope" itemtype="http://schema.org/WPHeader" role="banner">
-			<div class="header_wrapper_bg">
+			<div class="header_wrapper_bg<?php if( $top_panel_show ) { ?> <?php echo $top_panel_position; }?>">
 				<?php tha_header_top(); ?>
 				<?php if( $top_panel_show ) { ?>
 				<div class="header_topbar_container top_panel" style="background:<?php echo $panel_bg_color; ?>;">
