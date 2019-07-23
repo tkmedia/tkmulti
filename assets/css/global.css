@@ -675,10 +675,12 @@ header#header-container.fixedHeader {right: 0;left: 0;top: 0;position: fixed;}
 .sticky_header.header_menu_open {-webkit-transform: translateY(0);-ms-transform: translateY(0);transform: translateY(0);}
 
 @media (min-width: 768px) {
-	.sticky_header.is_hidden.desktop_sticky_fixed {-webkit-transform: translateY(0%);-ms-transform: translateY(0%);transform: translateY(0%);}
+	.desktop_sticky_fixed .sticky_header.is_hidden, 
+	.desktop_sticky_fixed .hamburger.is_hidden {-webkit-transform: translateY(0%);-ms-transform: translateY(0%);transform: translateY(0%);}
 }
 @media (max-width: 767px) {
-	.sticky_header.is_hidden.mobile_sticky_fixed {-webkit-transform: translateY(0%);-ms-transform: translateY(0%);transform: translateY(0%);}
+	.mobile_sticky_fixed .sticky_header.is_hidden, 
+	.mobile_sticky_fixed .hamburger.is_hidden {-webkit-transform: translateY(0%);-ms-transform: translateY(0%);transform: translateY(0%);}
 }
 
 /* Header Main Nav
