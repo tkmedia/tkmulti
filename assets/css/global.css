@@ -1469,8 +1469,8 @@ button.main_btn:hover input[type="submit"] {color: #9e8b59 !important;}
 .swiper-button-prev, .swiper-container-rtl .swiper-button-next {background-image:none;position: absolute;top: 50%;left: 10px;z-index: 999999;}
 .swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after {content: "\e900";font-family: icomoon;font-size: 40px;display: inline-block;color: #fff;line-height: 1;}
 .swiper-pagination-bullet-active {background: #1f1f1f;}
-.swiper-pagination-bullet {width: 10px;height: 10px;}
-
+.swiper-pagination-bullet {width: 10px;height: 10px;margin: 0px 3px;}
+.swiper-pagination {right: 0;left: 0;}
 /* Home Masthead
 -------------------------------------------------------------- */
 #top-slider img {height: 100%;width: 100%;object-fit: cover;}
