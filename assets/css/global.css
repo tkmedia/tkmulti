@@ -3892,6 +3892,11 @@ only screen and (max-width: 760px),
 .testimonial_slider .swiper-container-rtl .swiper-button-prev:after,
 .testimonial_slider .swiper-button-prev:after,
 .testimonial_slider .swiper-container-rtl .swiper-button-next:after {color: #c1c1c1;}
+.testimonial_slider .swiper-button-next, 
+.testimonial_slider .swiper-container-rtl .swiper-button-prev {right: -10px;}
+.testimonial_slider .swiper-button-prev, 
+.testimonial_slider .swiper-container-rtl .swiper-button-next {left: -10px;}
+
 
 /* ## Full Youtube Vid */
 .media_item_video {position: relative;}
