@@ -16,7 +16,7 @@ $page_top_slider_content = get_post_meta( get_the_ID(), 'mobile_page_top_slider_
 ?>
 
 <style>
-	@media (min-width: 992px) {
+	@media (max-width: 991px) {
 		.top-video-container {height:<?php echo $slider_height; ?>vh !important;}
 		#home_masthead #top-slider .single-slider-img, 
 		#home_masthead #top-slider .slides {height:<?php echo $slider_height; ?>vh !important;}
@@ -342,8 +342,8 @@ jQuery(function($) {
 	        var header_height = $('.header_wrapper').outerHeight();
 	        topSlider = $("#home_masthead #top-slider .slides");
 	        topSliderImg = $("#home_masthead #top-slider .single-slider-img");
-	        topSlider.css('height', "calc(100vh - " + header_height + "px)");
-	        topSliderImg.css('height', "calc(100vh - " + header_height + "px)");
+	        topSlider.css('height', "calc(<?php echo $slider_height; ?> - " + header_height + "px)");
+	        topSliderImg.css('height', "calc(<?php echo $slider_height; ?> - " + header_height + "px)");
 	    }
     });	
 
