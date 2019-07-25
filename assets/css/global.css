@@ -1612,10 +1612,10 @@ to {opacity: 1;-webkit-transform: translate3d(0, 0, 0);transform: translate3d(0,
 
 .top-slider-bg.top-slider-bg-multiple .breadcrumb_content_in_slider {position: absolute;bottom: 0;right: 0;width: 100%;
 background: rgb(255,255,255);
-background: -moz-linear-gradient(left,  rgba(255,255,255,1) 0%, rgba(230,230,230,1) 100%);
-background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 0%,rgba(230,230,230,1) 100%);
-background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(230,230,230,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e6e6e6',GradientType=1 );
+background: -moz-linear-gradient(left,  rgba(204,204,204,1) 0%, rgba(243,243,243,1) 100%);
+background: -webkit-linear-gradient(left,  rgba(204,204,204,1) 0%,rgba(243,243,243,1) 100%);
+background: linear-gradient(to right,  rgba(204,204,204,1) 0%,rgba(243,243,243,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#f3f3f3',GradientType=1 );
 }
 @media (min-width: 768px) {
 	.default_page #breadcrumbs {color: #5c5c5c;font-size: 17px;}
