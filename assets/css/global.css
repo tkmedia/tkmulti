@@ -2832,7 +2832,7 @@ body.rtl .gform_wrapper button, button.button.send-form, html[dir=rtl] .gform_wr
 #contact_form_popup.white-popup, #qa_form_popup, #header_form_popup {max-width: 750px;}
 .wpcf7 input, .wpcf7 select, .wpcf7 textarea {margin-bottom: 15px;border: none;height: 50px;background: #efefee;}
 .contact-title-first {text-align: center;line-height: 1.5;font-size: 26px;padding-bottom: 20px;}
-input.wpcf7-form-control.wpcf7-submit {padding: 8px 25px;font-size: 20px;margin-top: 20px;cursor: pointer;margin: 0;border: none;background: #000;color: #fff;font-weight: bold;}
+input.wpcf7-form-control.wpcf7-submit {padding: 8px 25px;font-size: 20px;margin-top: 20px;cursor: pointer;margin: 0;border: none;background: #000;background-color: #000;color: #fff;font-weight: bold;}
 button.text.contact_field.button {background: none;border: none;padding: 0;}
 input.wpcf7-form-control.wpcf7-submit:hover {opacity: 0.7;}
 
@@ -2863,7 +2863,7 @@ select {-webkit-appearance: none;-moz-appearance: none;appearance: none;}
 .flex_form_wrap.dark_form .full_form_subtitle {color: #222;}
 .flex_form_wrap.dark_form input[type=checkbox] {background-color: #efefee;}
 .flex_form_wrap.dark_form input[type=checkbox]:checked{background-color: #fff;}
-.flex_form_wrap.dark_form input.wpcf7-form-control.wpcf7-submit {background: #222;color: #fff;margin-bottom: 15px;}
+.flex_form_wrap.dark_form input.wpcf7-form-control.wpcf7-submit {background: #222;background-color: #222;color: #fff;margin-bottom: 15px;}
 .flex_form_wrap.dark_form textarea {background: transparent;color: #222;border: 1px solid #222;}
 .flex_form_wrap.dark_form input {color: #222;border: 1px solid #222;}
 
