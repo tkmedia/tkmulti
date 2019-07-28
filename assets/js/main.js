@@ -530,7 +530,7 @@ jQuery(function($) {
 	});	
 
 new TypeIt('#myElement', {
-  //strings: "This will be typed!"
+  strings: "This will be typed!"
 }).go();
 	   				
 });
