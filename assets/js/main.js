@@ -529,10 +529,12 @@ jQuery(function($) {
 	    }
 	});	
 
-let myTypeItInstance = new TypeIt('#myElement', {
-  //strings: "This will be typed!"
-});
 
-myTypeItInstance.go();
+	// Typewriter
+	let myTypeItInstance = new TypeIt('.typewriter', {
+	  //strings: "This will be typed!"
+	});
+	
+	myTypeItInstance.go();
 	   				
 });
