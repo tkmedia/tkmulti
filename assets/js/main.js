@@ -528,5 +528,9 @@ jQuery(function($) {
 	        $('.timeline_block_item_bottom').css('height','calc(' + time_height + 'px - 40px)');
 	    }
 	});	
+
+new TypeIt('#myElement', {
+  //strings: "This will be typed!"
+}).go();
 	   				
 });
