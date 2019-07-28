@@ -529,8 +529,10 @@ jQuery(function($) {
 	    }
 	});	
 
-new TypeIt('#myElement', {
-  strings: "This will be typed!"
-}).go();
+let myTypeItInstance = new TypeIt('#myElement', {
+  //strings: "This will be typed!"
+});
+
+myTypeItInstance.go();
 	   				
 });
