@@ -972,7 +972,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 .split_row_box.logo_side_right .header-logo.desktop_logo {margin: 0 0 0 auto;}
 .split_row_box.logo_side_center .header-logo.desktop_logo {margin: 0 auto;}
 
-.split_row_box .logo_side_center #branding {justify-content: center;}
+.split_row_box .logo_side_center #branding {justify-content: center;margin: auto;}
 .split_row_box .logo_side_left #branding {justify-content: flex-end;}
 .split_row_box .logo_side_right #branding {justify-content: flex-start;}
 
