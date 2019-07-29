@@ -61,7 +61,7 @@ tha_body_top();
 		?>
 		<?php get_template_part( 'partials/header/hamburger' ); ?>
 		<?php } ?>
-		<header id="header-container" class="header-bar animated clearfix fixedHeader sticky_header <?php if (is_front_page()) { ?>front_header_container<?php } elseif (is_tax( 'product_cat' ) || is_category() ) { ?>archive_header_container<?php } elseif ( is_singular() ) { ?>deafault_header_container<?php } else { ?>deafault_header_container<?php } ?> <?php echo $logo_side; ?> <?php echo $logo_side_position; ?>" itemscope="itemscope" itemtype="http://schema.org/WPHeader" role="banner">
+		<header id="header-container" class="header-bar animated clearfix fixedHeader sticky_header <?php if (is_front_page()) { ?>front_header_container<?php } elseif (is_tax( 'product_cat' ) || is_category() ) { ?>archive_header_container<?php } elseif ( is_singular() ) { ?>deafault_header_container<?php } else { ?>deafault_header_container<?php } ?> <?php if ($header_style == 'split_row_box normal_menu' || $header_style == 'header_logo_r_no_nav' ) { echo $logo_side; }?> <?php if ($header_style == 'full_row_box normal_menu') { echo $logo_side_position; } ?>" itemscope="itemscope" itemtype="http://schema.org/WPHeader" role="banner">
 			<div class="header_wrapper_bg<?php if( $top_panel_show ) { ?> <?php echo $top_panel_position; }?>">
 				<?php tha_header_top(); ?>
 				<?php if( $top_panel_show ) { ?>
