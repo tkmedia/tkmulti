@@ -18,6 +18,7 @@ $btn2_img = get_field('page_masthead_btn2_img');
 $page_top_slider_content = get_post_meta( get_the_ID(), 'page_top_slider_content', true );
 $masthead_background_color = get_field('masthead_background_color');
 $intro_bg_color = get_post_meta( get_the_ID(), 'page_masthead_intro_bg_color', true );
+$home_masthead_content_title = get_field('home_masthead_content_title','option');
 	
 	$masthead_top_divider_section = get_field('masthead_top_divider_section_type');
 	$masthead_top_divider_section_color = get_field('masthead_top_divider_section_color');
@@ -33,6 +34,7 @@ $intro_bg_color = get_post_meta( get_the_ID(), 'page_masthead_intro_bg_color', t
 
 <style>
 	.top-slider-bg.top-slider-bg-multiple {background:<?php echo $masthead_background_color; ?>;}
+	#home_masthead h1.entry-title.masthead_content_title {font-size:<?php echo $home_masthead_content_title; ?>;}
 	@media (min-width: 992px) {
 		.top-video-container {height:<?php echo $slider_height; ?>vh !important;}
 		#home_masthead #top-slider .single-slider-img, 
