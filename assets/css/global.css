@@ -1035,7 +1035,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 @media only screen and (max-width: 500px) {
 	.header-logo {min-height: 30px;}
 	.header-logo img {height: auto;padding-right: 0px;max-height: 55px;}
-	.full_row_box #branding {width: auto !important;padding-right: 75px;}
+	.full_row_box #branding {width: auto !important;}
 }
 
 /* Branding Logo - Header Center Logo Nav (header_logo_center_nav) */
