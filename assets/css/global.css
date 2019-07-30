@@ -1535,7 +1535,7 @@ h1.entry-title.masthead_content_title:after {content: '';position: absolute;bott
 .masthead_content.wrap.row-flex.bottom-xs.slider_content_inn .masthead_content_container_wrap {padding-top: 30px;border-top: 2px solid rgba(255,255,255,0.2);}
 
 .masthead_content {position: absolute;top: 0;width: 100%;right: 0;left: 0;height: 100%;z-index: 99;}
-.slider_content_bottom {position: relative;}
+.masthead_content.slider_content_bottom {position: relative !important;}
 
 .masthead_content_container_wrap {margin: auto;padding: 0 15px;}
 #home_masthead .single-slider-img:after, #player:after {position: absolute;content: '';top: 0;height: 100%;width: 100%;right: 0;}
@@ -1570,8 +1570,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 .slider_content_bottom .home_masthead_text {text-shadow: none !important;}
 
 /* Masthead slider */
-.slider_content_bottom .masthead_content_container {padding: 20px;}
 .masthead_content_container_wrap {position: relative;padding: 25px;}
+.masthead_content.slider_content_bottom .masthead_content_container {padding: 20px !important;}
 
 #home_masthead .home_masthead_text {-webkit-animation: 3s ease 0s normal forwards 1 fadeInUp;animation: 3s ease 0s normal forwards 1 fadeInUp;animation-delay: 1s;opacity: 0;}
 #home_masthead h1.entry-title.masthead_content_title {-webkit-animation: 3s ease 0s normal forwards 1 fadeInUp;animation: 3s ease 0s normal forwards 1 fadeInUp;animation-delay: .5s;opacity: 0;}
@@ -1654,7 +1654,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', end
 #home_masthead #top-slider .single-slider-img {opacity: 0.85;background: #231f20;}
 
 .default_page .masthead_content_container,
-.default_post .masthead_content_container {padding-bottom: 100px;}
+.default_post .masthead_content_container {padding-bottom: 100px;padding-top: 70px;}
 .yoast_breadcrumb {position: absolute;bottom: 0;width: 100%;right: 0;z-index: 999;font-size: 19px;background: rgba(0,0,0,0.5);color: #fff;padding: 10px 0;}
 span.breadcrumb_last {padding-right: 5px;}
 .yoast_breadcrumb span a {padding: 0 5px;}
