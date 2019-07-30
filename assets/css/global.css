@@ -1387,7 +1387,7 @@ font-family: icomoon;font-size: 40px;display: inline-block;color: #fff;text-shad
 -------------------------------------------------------------- */
 .wrap {max-width: 1200px !important;}
 .wrap_lg {max-width: 1800px !important;padding: 0 40px;margin: 0 auto;}
-body {font-family: 'Assistant', sans-serif !important;line-height: 1.5;font-size: 18px;color: #161922;}
+body {line-height: 1.5;font-size: 18px;color: #161922;}
 body p {line-height: 1.5;font-size: 18px;}
 body.single-post .content_one_column_container,
 body.single-post .content_one_column_container p {font-size: 22px;}
@@ -1733,7 +1733,7 @@ button.main_btn.style3:hover,
 
 /* Clean top Masthead - No Background
 -------------------------------------------------------------- */
-.masthead_clean_title h1.entry-title.masthead_content_title {color: inherit;padding-top: 20px;font-size: 50px;font-weight: 600;padding-bottom: 20px;margin-bottom: 20px;/* border-bottom: 1px solid #e1e1e1; */font-family: 'Assistant', sans-serif;color: #20221d;}
+.masthead_clean_title h1.entry-title.masthead_content_title {color: inherit;padding-top: 20px;font-size: 50px;font-weight: 600;padding-bottom: 20px;margin-bottom: 20px;/* border-bottom: 1px solid #e1e1e1; */color: #20221d;}
 .masthead.masthead_clean_title {text-align: center;}
 .masthead.masthead_clean_title .yoast_breadcrumb {position: relative;background: none;}
 .masthead.masthead_clean_title #breadcrumbs {color: #808080;padding-top: 30px;}
@@ -3314,7 +3314,7 @@ span.button_grid_arrow {width: 20%;justify-content: end;text-align: left;color: 
 
 /* Instagram Grid */
 .eapps-instagram-feed-posts-grid-load-more {line-height: 1 !important;height: auto !important;border-radius: 0 !important;}
-.eapps-instagram-feed-posts-grid-load-more-visible {font-family: 'Assistant', sans-serif !important;padding: 8px 25px !important;font-size: 20px !important;}
+.eapps-instagram-feed-posts-grid-load-more-visible {padding: 8px 25px !important;font-size: 20px !important;}
 
 /* Page Slider Link + Cat Box */
 .cat_slider_box h3.page_link_slider_item_title.no-line {font-size: 24px;line-height: 1;padding: 10px;margin: 0;font-weight: 600;}
