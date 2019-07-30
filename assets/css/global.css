@@ -6,7 +6,6 @@ img.aligncenter,
 img.alignright, 
 img.alignleft {width: auto;}
 
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -1316,10 +1315,11 @@ span.header_phone_num.footer_phone_num {display: block;}
 .header-logo {padding: 15px 0px;}
 
 @media only screen and (max-width: 991px) {
-	.branding {padding-right: 50px;}
+	#branding {padding-right: 50px;}
 }
 @media only screen and (max-width: 767px) {
 	.header-logo {}
+	#branding {padding-right: 0px;}
 }
 
 /* ## Custom Slick Slider
