@@ -1407,7 +1407,6 @@ a:hover {text-decoration: none;}
 .mfp-bg {z-index: 999999999;}
 .page_section {padding: 0 0 55px 0;}
 .Aligner {display: flex;align-items: center;justify-content: center;}
-
 h2.section_title.section_title_icon {position: relative;}
 h2.section_title.section_title_icon:before {content: "\6c";font-family: "star";font-size: 17px;display: inline-block;color: #ad914f;line-height: 1;padding-left: 10px;}
 
