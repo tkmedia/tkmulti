@@ -1839,7 +1839,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	#page_masthead .home_masthead_readmore button.main_btn.full_btn {height: 67px;}
 
 	#page_masthead #page_breadcrumb {position: absolute;width: 100%;bottom: 0;background: rgba(255,255,255,0.7);padding: 20px 0;}
-	.default_page #breadcrumbs {color: #fff;font-size: 17px;}
+	.default_page #breadcrumbs {color: #222;font-size: 17px;}
 	.default_page .masthead_content_subtitle.section_subtitle {padding-top: 15px;max-width: 600px;color: #fff;font-size: 20px;line-height: 1.5;}
 }
 
