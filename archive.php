@@ -266,10 +266,11 @@ $archive_article_style = get_field('archive_article_style', $post_id);
 													
 												<div class="page_link_grid_item_img">
 													<div class="page_img">
-														<?php echo the_post_thumbnail('inside-post'); ?>
-														<?php echo do_shortcode('[rt_reading_time label="Reading Time:" postfix="minutes" postfix_singular="minute"]'); ?>
 														<?php estimated_reading_time(); ?>
-														<?php echo reading_time(); ?>
+														<?php 
+														if( function_exists( 'reading_time' ) ) {	
+															echo reading_time(); 
+														} ?>
 <div class="reading-time">
   <?php echo prefix_estimated_reading_time( get_the_content() ); ?> min read
 </div>														
