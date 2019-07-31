@@ -81,10 +81,9 @@ function theme_add_body_class( $classes ) {
 			get_template_part('partials/flexible-content-blocks'); 
 			
 			$thecontent = get_the_content();
-			//if(!empty($thecontent)) { ?>
+			if(!empty($thecontent)) { ?>
 				<section id="the_content" itemprop="text" class="page_section">
-					<div class="page_the_content">
-						<div class="page_the_content">&nbsp;&nbsp;dddd</div>
+					<div class="page_the_content">	
 					<?php 
 					the_content();
 					wp_link_pages(
@@ -96,7 +95,7 @@ function theme_add_body_class( $classes ) {
 					?>
 					</div>
 				</section>
-			<?php //} ?> 
+			<?php } ?> 
 
 						
 		</div><!-- .entry-content -->
