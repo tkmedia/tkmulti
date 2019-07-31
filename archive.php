@@ -270,6 +270,9 @@ $archive_article_style = get_field('archive_article_style', $post_id);
 														<?php echo do_shortcode('[rt_reading_time label="Reading Time:" postfix="minutes" postfix_singular="minute"]'); ?>
 														<?php estimated_reading_time(); ?>
 														<?php echo reading_time(); ?>
+<div class="reading-time">
+  <?php echo prefix_estimated_reading_time( get_the_content() ); ?> min read
+</div>														
 													</div>
 													<div class="page_grid_inside">
 														<h3 itemprop="name" class="page_link_grid_item_title no-line"><?php the_title(); ?></h3>
