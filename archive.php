@@ -266,6 +266,7 @@ $archive_article_style = get_field('archive_article_style', $post_id);
 													
 												<div class="page_link_grid_item_img">
 													<div class="page_img">
+														<?php echo the_post_thumbnail('inside-post'); ?>
 														<?php 
 														if( function_exists( 'reading_time' ) ) {	
 															echo reading_time(); 
