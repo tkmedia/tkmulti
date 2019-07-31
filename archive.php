@@ -258,6 +258,50 @@ $archive_article_style = get_field('archive_article_style', $post_id);
 											</div>	
 										</div>
 										
+									<?php } elseif( $archive_article_style == 'style4' ){ ?>
+											
+										<div class="articles_grid_item_container title_inside">
+											<div class="articles_grid_item_img box_effect">
+												<a class="page-article-link" href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Link to page %s', 'tkmulti' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark">
+													
+												<div class="page_link_grid_item_img">
+													<div class="page_img">
+														<?php echo the_post_thumbnail('inside-post'); ?>
+														<?php echo do_shortcode('[rt_reading_time label=”Reading Time:” postfix=”minutes”]'); ?>
+													</div>
+													<div class="page_grid_inside">
+														<h3 itemprop="name" class="page_link_grid_item_title no-line"><?php the_title(); ?></h3>
+														<?php 
+														$excerpt = get_field('page_masthead_excerpt');
+														if( $excerpt ) { ?>
+														<div class="articles_grid_item_text">	
+															<div class="page_links_item_intro">
+																<?php 
+																//echo custom_field_excerpt();
+																echo wp_trim_words($excerpt,10,'...'); 
+																//echo wp_html_excerpt( $excerpt, 100, '...' ); ?>
+															</div>
+														</div>
+														<script>
+														jQuery(function($) {
+															$(window).load(function(){
+																get_text_height();
+															    //function to get current div height
+															    function get_text_height(){
+															        //var footer_height = $('#footer_container').height();
+															        var text_height = $('.article_<?= $article; ?> .page_links_item_intro').outerHeight();
+															        $('.article_<?= $article; ?> .page_links_item_intro').css('margin-bottom', -text_height);
+															    }
+														    });	
+														}); 
+														</script>										
+														<?php } ?> 
+													</div>
+												</div>
+												</a>
+											</div>	
+										</div>
+										
 									<?php } ?>	
 									
 								</div>
