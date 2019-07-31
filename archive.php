@@ -222,7 +222,7 @@ $archive_article_style = get_field('archive_article_style', $post_id);
 													
 												<div class="page_link_grid_item_img">
 													<div class="page_img">
-														<?php echo the_post_thumbnail('gallery-800'); ?>
+														<?php echo the_post_thumbnail('product-500'); ?>
 														<div class="page_img_border"></div>
 													</div>
 													<div class="page_grid_inside">
