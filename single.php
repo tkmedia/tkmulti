@@ -84,7 +84,7 @@ function theme_add_body_class( $classes ) {
 			//if(!empty($thecontent)) { ?>
 				<section id="the_content" itemprop="text" class="page_section">
 					<div class="page_the_content">
-						<div class="page_the_content">&nbsp;&nbsp;</div>
+						<div class="page_the_content">&nbsp;&nbsp;dddd</div>
 					<?php 
 					the_content();
 					wp_link_pages(
