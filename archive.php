@@ -268,6 +268,7 @@ $archive_article_style = get_field('archive_article_style', $post_id);
 													<div class="page_img">
 														<?php echo the_post_thumbnail('inside-post'); ?>
 														<?php echo do_shortcode('[rt_reading_time label="Reading Time:" postfix="minutes" postfix_singular="minute"]'); ?>
+														<?php estimated_reading_time(); ?>
 													</div>
 													<div class="page_grid_inside">
 														<h3 itemprop="name" class="page_link_grid_item_title no-line"><?php the_title(); ?></h3>
