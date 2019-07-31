@@ -268,16 +268,25 @@ $archive_article_style = get_field('archive_article_style', $post_id);
 													<div class="page_img">
 														<?php echo the_post_thumbnail('inside-post'); ?>
 														<?php 
-														if( function_exists( 'reading_time' ) ) {	
-															echo reading_time(); 
-														} ?>
+														//if( function_exists( 'reading_time' ) ) {	
+														//	echo reading_time(); 
+														//} ?>
+													</div>
+
+													<div class="post-pre-info">
 														<?php 
 														if( function_exists( 'prefix_estimated_reading_time' ) ) { ?>
 														<div class="reading-time">
-														  <?php echo prefix_estimated_reading_time( get_the_content() ); ?> min read
+														  <?php echo prefix_estimated_reading_time( get_the_content() ); ?><?php _e('Min Read', 'tkmulti'); ?>
 														</div>
 														<?php } ?> 														
+														
+														<?php $post_tags = get_the_tags();
+														if ( $post_tags ) { ?>
+														    <div class="post-pre-info-tag"> | <?php echo $post_tags[0]->name; ?></div>
+														<?php } ?> 
 													</div>
+													
 													<div class="page_grid_inside">
 														<h3 itemprop="name" class="page_link_grid_item_title no-line"><?php the_title(); ?></h3>
 														<?php 
