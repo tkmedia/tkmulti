@@ -166,7 +166,7 @@ $archive_article_style = get_field('archive_article_style', $post_id);
 				        <?php while ( have_posts() ) : the_post(); ?>
 				        
 
-							<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+							<div class="magazine_page_grid_item col-xs-<?= $cg_xs_cols; ?> col-sm-<?= $cg_sm_cols; ?> col-md-<?= $cg_md_cols; ?>">
 								<div class="magazine_page_item_container article_<?= $article; ?>">
 									<?php if( $archive_article_style == 'style1' ){ ?>
 									
