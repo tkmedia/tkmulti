@@ -85,24 +85,6 @@ function tkmulti_clean_nav_menu_classes( $classes ) {
 }
 add_filter( 'nav_menu_css_class', 'tkmulti_clean_nav_menu_classes', 5 );
 /**
- * Clean Post Classes
- *
- */
-function tkmulti_clean_post_classes( $classes ) {
-	if( ! is_array( $classes ) )
-		return $classes;
-	// Change hentry to entry, remove if adding microformat support
-	$key = array_search( 'hentry', $classes );
-	if( false !== $key )
-		$classes = array_replace( $classes, array( $key => 'entry' ) );
-    $allowed_classes = array(
-  		'entry',
-  		'type-' . get_post_type(),
-   	);
-	return array_intersect( $classes, $allowed_classes );
-}
-add_filter( 'post_class', 'tkmulti_clean_post_classes', 5 );
-/**
  * Staff comment class
  *
  */
