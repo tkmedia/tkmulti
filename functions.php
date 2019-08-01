@@ -44,10 +44,10 @@ require_once( get_template_directory() . '/inc/functions/theme-head.php' );
 require_once( get_template_directory() . '/inc/acf-blocks-site.php' );
 
 // Custom template tags for this theme ----------------------------------------
-//require( get_template_directory() . '/inc/functions/template-tags.php' );
+require( get_template_directory() . '/inc/functions/template-tags.php' );
 
 // Custom functions that act independently of the theme templates -------------
-//require( get_template_directory() . '/inc/functions/tweaks.php' );
+require( get_template_directory() . '/inc/functions/tweaks.php' );
 
 // Include our Theme Customizer code. -----------------------------------------
 require( get_template_directory() . '/inc/customizer.php' );
