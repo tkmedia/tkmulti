@@ -103,21 +103,21 @@ function tkmulti_content_nav( $nav_id ) {
  
     ?>
     <nav role="navigation" id="<?php echo $nav_id; ?>" class="<?php echo $nav_class; ?>">
-        <h2 class="assistive-text"><?php _e( 'ניווט בעמודים', 'tkmulti' ); ?></h2>
+        <h2 class="assistive-text"><?php _e( 'Page Navigation', 'tkmulti' ); ?></h2>
  
     <?php if ( is_single() ) : // navigation links for single posts ?>
  
-        <?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'קישור לעמוד הקודם', 'tkmulti' ) . '</span> %title' ); ?>
-        <?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'קישור לעמוד הבא', 'tkmulti' ) . '</span>' ); ?>
+        <?php previous_post_link( '<div class="nav-previous">%link</div>', '<span class="meta-nav">' . _x( '&larr;', 'Previous Page', 'tkmulti' ) . '</span> %title' ); ?>
+        <?php next_post_link( '<div class="nav-next">%link</div>', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next Page', 'tkmulti' ) . '</span>' ); ?>
  
     <?php elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) : // navigation links for home, archive, and search pages ?>
  
         <?php if ( get_next_posts_link() ) : ?>
-        <div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> הקודם', 'tkmulti' ) ); ?></div>
+        <div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Previous', 'tkmulti' ) ); ?></div>
         <?php endif; ?>
  
         <?php if ( get_previous_posts_link() ) : ?>
-        <div class="nav-next"><?php previous_posts_link( __( 'הבא <span class="meta-nav">&rarr;</span>', 'tkmulti' ) ); ?></div>
+        <div class="nav-next"><?php previous_posts_link( __( 'Next <span class="meta-nav">&rarr;</span>', 'tkmulti' ) ); ?></div>
         <?php endif; ?>
  
     <?php endif; ?>
