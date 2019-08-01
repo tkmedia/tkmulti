@@ -267,24 +267,6 @@ $archive_article_style = get_field('archive_article_style', $post_id);
 												<div class="page_link_grid_item_img">
 													<div class="page_img">
 														<?php echo the_post_thumbnail('inside-post'); ?>
-														<?php 
-														//if( function_exists( 'reading_time' ) ) {	
-														//	echo reading_time(); 
-														//} ?>
-													</div>
-
-													<div class="post-pre-info">
-														<?php $post_tags = get_the_tags();
-														if ( $post_tags ) { ?>
-														    <div class="post-pre-info-tag"><?php echo $post_tags[0]->name; ?> | </div>
-														<?php } ?> 
-														<?php 
-														if( function_exists( 'prefix_estimated_reading_time' ) ) { ?>
-														<div class="reading-time">
-														  <?php echo prefix_estimated_reading_time( get_the_content() ); ?> 
-														  <?php _e('Min Read', 'tkmulti'); ?>
-														</div>
-														<?php } ?> 														
 													</div>
 													
 													<div class="page_grid_inside">
@@ -300,19 +282,6 @@ $archive_article_style = get_field('archive_article_style', $post_id);
 																//echo wp_html_excerpt( $excerpt, 100, '...' ); ?>
 															</div>
 														</div>
-														<script>
-														jQuery(function($) {
-															$(window).load(function(){
-																get_text_height();
-															    //function to get current div height
-															    function get_text_height(){
-															        //var footer_height = $('#footer_container').height();
-															        var text_height = $('.article_<?= $article; ?> .page_links_item_intro').outerHeight();
-															        $('.article_<?= $article; ?> .page_links_item_intro').css('margin-bottom', -text_height);
-															    }
-														    });	
-														}); 
-														</script>										
 														<?php } ?> 
 													</div>
 												</div>
