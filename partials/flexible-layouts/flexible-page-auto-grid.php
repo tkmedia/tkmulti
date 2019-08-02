@@ -71,7 +71,8 @@ if ( $article_auto_grid_hide_mobile && wp_is_mobile() ) {
 							'depth' => 1,
 							'post__not_in' => array( $post->ID ),
 							//'post_parent'    => $post->ID,
-							'child_of' => $post->post_parent,
+							'post_parent'    => $post->post_parent,
+							//'child_of' => $post->post_parent,
 							'exclude' => $post->ID,
 						);
 				    } else {
