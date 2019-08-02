@@ -15,6 +15,7 @@ $article_auto_grid_style = get_sub_field('flex_article_auto_grid_style');
 
 $article_auto_grid_source = get_sub_field('flex_article_auto_grid_source');
 $article_auto_grid_perpage = get_sub_field('flex_article_auto_grid_perpage');
+$grid_show_subtitle = get_sub_field('flex_article_auto_grid_show_subtitle');
 $grid_show_info = get_sub_field('flex_article_auto_grid_show_info');
 $grid_excerpt_length = get_sub_field('flex_article_auto_grid_excerpt_length');
 $flex_article_auto_grid = get_sub_field('flex_article_auto_grid');
@@ -132,14 +133,20 @@ if ( $article_auto_grid_hide_mobile && wp_is_mobile() ) {
 										<h3 itemprop="name" class="page_link_grid_item_title no-line" style="font-size: <?php echo $article_auto_grid_title_size;?>px;color:<?php echo $article_auto_grid_title_color;?>;"><?php the_title(); ?></h3>
 										<?php 
 										$excerpt = get_field('page_masthead_excerpt');
-										if( $excerpt ) { ?>
+										$page_masthead_subtitle = get_field('page_masthead_subtitle');
+										if( $grid_show_subtitle || $grid_show_info ) { ?>
 										<div class="articles_grid_item_text">	
+											<?php if( $grid_show_subtitle ) { ?>	
+											<div class="page_links_item_subtitle"><?php echo $page_masthead_subtitle;?></div>
+											<?php } ?>
+											<?php if( $excerpt && $grid_show_info  ) { ?>
 											<div class="page_links_item_intro">
 												<?php 
 												//echo custom_field_excerpt();
 												//echo wp_trim_words($excerpt,7); 
 												echo wp_html_excerpt( $excerpt, $grid_excerpt_length, '...' ); ?>
 											</div>
+											<?php } ?>
 										</div>
 										<script>
 										jQuery(function($) {
