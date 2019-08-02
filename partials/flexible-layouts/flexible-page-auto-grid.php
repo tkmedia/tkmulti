@@ -64,7 +64,7 @@ if ( $article_auto_grid_hide_mobile && wp_is_mobile() ) {
 						);
 				    } elseif( $article_auto_grid_source == 'sibling' ) {
 						$argsA = array(
-							//'post_type' => 'page',
+							'post_type' => 'page',
 							'order'          => 'ASC',
 							'orderby'        => 'menu_order',
 							'posts_per_page' => $article_auto_grid_perpage,
