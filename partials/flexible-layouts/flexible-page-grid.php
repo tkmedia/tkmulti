@@ -13,7 +13,6 @@ $artcile_grid_title_align = get_sub_field('flex_article_grid_title_align');
 $artcile_grid_title_color = get_sub_field('flex_article_grid_title_color');
 $article_grid_style = get_sub_field('flex_article_grid_style');
 
-$article_grid_source = get_sub_field('flex_article_grid_source');
 $flex_article_grid_paginate = get_sub_field('flex_article_grid_paginate');
 $flex_article_grid_perpage = get_sub_field('flex_article_grid_perpage');
 $grid_show_info = get_sub_field('flex_article_grid_show_info');
