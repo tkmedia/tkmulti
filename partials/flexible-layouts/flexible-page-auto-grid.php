@@ -62,6 +62,18 @@ if ( $article_auto_grid_hide_mobile && wp_is_mobile() ) {
 							'post__not_in' => array( $post->ID ),
 							'post_parent'    => $post->ID,
 						);
+				    } elseif( $article_auto_grid_source == 'sibling' ) {
+						$argsA = array(
+							//'post_type' => 'page',
+							'order'          => 'ASC',
+							'orderby'        => 'menu_order',
+							'posts_per_page' => $article_auto_grid_perpage,
+							'depth' => 1,
+							'post__not_in' => array( $post->ID ),
+							//'post_parent'    => $post->ID,
+							'child_of' => $post->post_parent,
+							'exclude' => $post->ID,
+						);
 				    } else {
 						$argsA = array(
 							'post_type' => 'post',
