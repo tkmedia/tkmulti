@@ -14,8 +14,7 @@ $article_auto_grid_title_color = get_sub_field('flex_article_auto_grid_title_col
 $article_auto_grid_style = get_sub_field('flex_article_auto_grid_style');
 
 $article_auto_grid_source = get_sub_field('flex_article_auto_grid_source');
-$flex_article_auto_grid_paginate = get_sub_field('flex_article_auto_grid_paginate');
-$flex_article_auto_grid_perpage = get_sub_field('flex_article_auto_grid_perpage');
+$article_auto_grid_perpage = get_sub_field('flex_article_auto_grid_perpage');
 $grid_show_info = get_sub_field('flex_article_auto_grid_show_info');
 $grid_excerpt_length = get_sub_field('flex_article_auto_grid_excerpt_length');
 $flex_article_auto_grid = get_sub_field('flex_article_auto_grid');
@@ -44,21 +43,21 @@ if ( $article_auto_grid_hide_mobile && wp_is_mobile() ) {
 								
 				<div class="articles_grid_item_row page_grid row-flex">
 				    <?php
-				    if( $article_slider_source == 'page' ) {
+				    if( $article_auto_grid_source == 'page' ) {
 					$argsA = array(
 							'post_type' => 'page',
 							'order'          => 'ASC',
 							'orderby'	=> 'rand',
-							'posts_per_page' => $article_slider_latest,
+							'posts_per_page' => $article_auto_grid_perpage,
 							'depth' => 1,
 							'post__not_in' => array( $post->ID ),
 						);
-				    } elseif( $article_slider_source == 'child' ) {
+				    } elseif( $article_auto_grid_source == 'child' ) {
 						$argsA = array(
 							'post_type' => 'page',
 							'order'          => 'ASC',
 							'orderby'        => 'menu_order',
-							'posts_per_page' => $article_slider_latest,
+							'posts_per_page' => $article_auto_grid_perpage,
 							'depth' => 1,
 							'post__not_in' => array( $post->ID ),
 							'post_parent'    => $post->ID,
@@ -68,7 +67,7 @@ if ( $article_auto_grid_hide_mobile && wp_is_mobile() ) {
 							'post_type' => 'post',
 							'order'          => 'ASC',
 							'orderby'	=> 'rand',
-							'posts_per_page' => $article_slider_latest,
+							'posts_per_page' => $article_auto_grid_perpage,
 							'depth' => 1,
 							'post__not_in' => array( $post->ID ),
 						);
