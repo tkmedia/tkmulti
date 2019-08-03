@@ -74,16 +74,6 @@ jQuery(function($) {
 /* Page Element Blocks */
 /* ---------------------------------------------------------------------- */	
 
-    $('.scroll_down').on('click', function () {
-
-        var fuller = $(this).closest('.flex_content_rows').next('.flex_content_rows'),
-            section = $(this).closest('.flex_content_rows');
-
-        fuller.animate({
-            scrollTop: fuller.offset().top + 0
-        }, 700);
-
-    });
     
 	//* ## Home Main slider */
 	var topSliderCount = $('#top-slider.style2').find('.swiper-slide').length;
