@@ -282,7 +282,7 @@ $home_masthead_content_title = get_field('home_masthead_content_title','option')
 
 					<div id="scroll_down">
 					  <div class="scroll_down">
-						  <a href="#"><span></span><span></span><span></span></a>
+						  <a href="#flex-row-1"><span></span><span></span><span></span></a>
 					  </div>
 					</div>
 			    </div>
