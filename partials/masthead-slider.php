@@ -282,7 +282,7 @@ $home_masthead_content_title = get_field('home_masthead_content_title','option')
 
 					<div id="scroll_down">
 					  <div class="scroll_down">
-						  <a href="#next"><span></span><span></span><span></span></a>
+						  <span></span><span></span><span></span>
 					  </div>
 					</div>
 			    </div>
