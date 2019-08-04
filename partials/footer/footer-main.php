@@ -171,7 +171,7 @@ $footer_fixed_form_btn = get_option( 'options_footer_fixed_form_btn' );
 					<div id="footer-section-<?php echo $fcount;?>" class="footer_search_bar footer_content_cols <?php echo $footer_search_bar_mobile;?> <?php echo $footer_search_bar_block_width;?>">
 						<div class="footer-block footer-section-<?php echo $fcount;?>">
 							<div class="footer_block_inner">
-								<?php if( $footer_full_contnet_title ){ ?>
+								<?php if( $footer_search_bar_show ){ ?>
 									<div class="footer_search_bar_container">
 										<?php get_search_form(); ?>
 									</div>
@@ -196,7 +196,7 @@ $footer_fixed_form_btn = get_option( 'options_footer_fixed_form_btn' );
 					<div id="footer-section-<?php echo $fcount;?>" class="footer_social_links footer_content_cols <?php echo $footer_social_links_mobile;?> <?php echo $footer_social_links_block_width;?>">
 						<div class="footer-block footer-section-<?php echo $fcount;?>">
 							<div class="footer_block_inner">
-								<?php if( $footer_full_contnet_title ){ ?>
+								<?php if( $footer_social_links_row ){ ?>
 									<div class="footer_social_links_container">
 										<div class="footer_social_row">
 											<ul class="social-bar">
