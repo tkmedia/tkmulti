@@ -181,6 +181,45 @@ $footer_fixed_form_btn = get_option( 'options_footer_fixed_form_btn' );
 					</div>	
 					<?php } ?>
 					<?php endif; ?>			
+
+					<?php if( get_row_layout() == 'footer_social_links' ):
+							
+					$footer_social_links_block_width = get_sub_field('footer_social_links_block_width');
+					$footer_social_links_mobile = get_sub_field('footer_social_links_mobile');
+					$footer_social_links_hide_mobile = get_sub_field('footer_social_links_hide_mobile');
+					$footer_social_links_row = get_sub_field('footer_social_links_row');
+	
+					if ( $footer_social_links_hide_mobile && wp_is_mobile() ) {
+					//HIDE ON MOBILE
+					} else { ?>
+					
+					<div id="footer-section-<?php echo $fcount;?>" class="footer_social_links footer_content_cols <?php echo $footer_social_links_mobile;?> <?php echo $footer_social_links_block_width;?>">
+						<div class="footer-block footer-section-<?php echo $fcount;?>">
+							<div class="footer_block_inner">
+								<?php if( $footer_full_contnet_title ){ ?>
+									<div class="footer_social_links_container">
+										<div class="footer_social_row">
+											<ul class="social-bar">
+												<?php while ( have_rows('footer_social_links_row') ) : the_row(); 
+												$footer_social_icon = get_sub_field('footer_social_links_icon');
+												$footer_social_link = get_sub_field('footer_social_links_link');
+												$footer_social_text = get_sub_field('footer_social_links_text');
+												?>
+												<li class="social-item">
+													<a href="<?php echo $footer_social_link; ?>" target="_blank" class="social_media">
+														<?php echo $footer_social_icon; ?>
+													</a>
+												</li>
+											    <?php endwhile; ?>
+											</ul>
+										</div>
+									</div>
+								<?php } ?>
+							</div>
+						</div>
+					</div>	
+					<?php } ?>
+					<?php endif; ?>			
 				
 					<?php if( get_row_layout() == 'footer_nav' ):
 							
