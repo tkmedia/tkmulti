@@ -156,6 +156,31 @@ $footer_fixed_form_btn = get_option( 'options_footer_fixed_form_btn' );
 					</div>	
 					<?php } ?>
 					<?php endif; ?>			
+
+					<?php if( get_row_layout() == 'footer_search_bar' ):
+							
+					$footer_search_bar_block_width = get_sub_field('footer_search_bar_block_width');
+					$footer_search_bar_mobile = get_sub_field('footer_search_bar_mobile');
+					$footer_search_bar_hide_mobile = get_sub_field('footer_search_bar_hide_mobile');
+					$footer_search_bar_show = get_sub_field('footer_search_bar_show');
+	
+					if ( $footer_search_bar_hide_mobile && wp_is_mobile() ) {
+					//HIDE ON MOBILE
+					} else { ?>
+					
+					<div id="footer-section-<?php echo $fcount;?>" class="footer_search_bar footer_content_cols <?php echo $footer_search_bar_mobile;?> <?php echo $footer_search_bar_block_width;?>">
+						<div class="footer-block footer-section-<?php echo $fcount;?>">
+							<div class="footer_block_inner">
+								<?php if( $footer_full_contnet_title ){ ?>
+									<div class="footer_search_bar_container">
+										<?php get_search_form(); ?>
+									</div>
+								<?php } ?>
+							</div>
+						</div>
+					</div>	
+					<?php } ?>
+					<?php endif; ?>			
 				
 					<?php if( get_row_layout() == 'footer_nav' ):
 							
