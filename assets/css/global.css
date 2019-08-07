@@ -997,7 +997,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 .header_logo_center_no_nav #branding {display: flex;align-items: center;justify-content: center;}
 .header_logo_r_no_nav #header-info ul.social-bar,
 .header_logo_center_no_nav #header-info ul.social-bar {height: 100%;top: 0;display: flex;align-items: center;justify-content: center;}
+
 @media (min-width: 992px) {
+	.header_logo_center_no_nav .header_wrapper_bg.top_panel_side {justify-content: space-between;}
+	.header_logo_center_no_nav .header_wrapper_bg.top_panel_side .top_panel {margin-right: 0;}
 	.header_logo_center_no_nav .header_wrapper {margin: auto;}
 	.header_logo_center_no_nav #branding {margin: 0 auto !important;padding-right: 0px !important;}
 
