@@ -873,6 +873,7 @@ li.social-item.site_phone a {color: #fff !important;}
 
 @media (max-width: 991px) {
 	#header-info ul.social-bar {top: 15px;}
+	li.social-item.site_phone {margin-right: 0px;}
 }
 @media (max-width: 767px) {
 	#header-info ul.social-bar {top: 10px;}
