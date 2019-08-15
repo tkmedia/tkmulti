@@ -2386,8 +2386,10 @@ button.section_readmore_link.button_icon_right {display: flex;align-items: cente
 button.section_readmore_link.button_icon_left .flex_main_button_icon {order: 1;margin-right: 10px;}
 button.section_readmore_link.button_icon_right .flex_main_button_icon {order: -1;margin-left: 10px;}
 
-button.section_readmore_link.button_icon_left .button_text_inner {padding-left: 15px;}
-button.section_readmore_link.button_icon_right .button_text_inner {padding-right: 15px;}
+button.section_readmore_link.button_icon_left .flex_main_button_icon, 
+button.section_readmore_link.button_icon_left .flex_main_button_img {padding-right: 15px;}
+button.section_readmore_link.button_icon_right .flex_main_button_icon, 
+button.section_readmore_link.button_icon_right .flex_main_button_img {padding-left: 15px;}
 
 /* Custom Icon + Text Box */
 .flex_custom_icon_img figure {text-align: center;}
