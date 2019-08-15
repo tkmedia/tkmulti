@@ -3627,6 +3627,55 @@ h2.page_qa_title.section_title.section_title_color, h2.page_links_title.section_
 @media (min-width: 768px) {
 	.content_page_tabs .VerticalTab.tabs_ver_1 .resp-tab-content {height: 100%;}
 }
+.content_page_tabs .VerticalTab span.tabs-text {line-height: none;}
+.content_page_tabs .VerticalTab.tabs_ver_1.resp-vtabs ul.resp-tabs-list {background: #040e22;}
+.content_page_tabs .VerticalTab.tabs_ver_1 .resp-tabs-list li:before {content: none;}
+.content_page_tabs.qa_icon_no-icon .VerticalTab span.tabs-text:before {content: none;}
+.content_page_tabs .VerticalTab.tabs_ver_1 .resp-tab-content {padding: 0;}
+.tabcontent_content {background: rgba(5,14,35,.7);}
+.tabcontent_content_title {line-height: 1.1;font-size: 30px;font-weight: bold;color: #fff;text-transform: uppercase;padding-bottom: 15px;}
+.tabcontent_content_text {color: #fff;}
+.tabcontent_content_text p {line-height: 1.3;}
+button.section_readmore_link.tab_btn, button.section_readmore_link.tab_btn:hover {
+color: #fff;
+background: rgb(25,151,203);
+background: -moz-linear-gradient(45deg, rgba(25,151,203,1) 0%, rgba(40,107,178,1) 100%);
+background: -webkit-linear-gradient(45deg, rgba(25,151,203,1) 0%,rgba(40,107,178,1) 100%);
+background: linear-gradient(45deg, rgba(25,151,203,1) 0%,rgba(40,107,178,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1997cb', endColorstr='#286bb2',GradientType=1 );
+border: none;padding: 15px 30px;border-radius: 50px;text-transform: uppercase;font-size: 15px;letter-spacing: 2px;line-height: 1;}
+.content_page_tabs .tabcontent_img {height: 100%;}
+.content_page_tabs .tabcontent_img img {width: 100%;height: 100%;object-fit: cover;}
+.content_page_tabs .tabs-text .tabs_button_title {font-size: 17px;text-transform: uppercase;font-weight: 400;color: #fff;    line-height: 1;}
+.content_page_tabs .VerticalTab.tabs_ver_1 .resp-tabs-list li {background-color: #050e23 !important;border-bottom: 2px solid #1e2739 !important;padding: 30px !important;}
+.content_page_tabs .VerticalTab.tabs_ver_1 .resp-tabs-list .resp-tab-active {
+background: rgb(25,151,203) !important;
+background: -moz-linear-gradient(45deg, rgba(25,151,203,1) 0%, rgba(40,107,178,1) 100%) !important;
+background: -webkit-linear-gradient(45deg, rgba(25,151,203,1) 0%,rgba(40,107,178,1) 100%) !important;
+background: linear-gradient(45deg, rgba(25,151,203,1) 0%,rgba(40,107,178,1) 100%) !important;
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1997cb', endColorstr='#286bb2',GradientType=1 ) !important;
+}
+.content_page_tabs .VerticalTab.tabs_ver_1 .resp-tabs-list li:hover {background-color: #2770b4!important}
+.content_page_tabs .tabs-text .tabs_button_subtitle {font-size: 15px;color: #fff;line-height: 1.3;text-transform: initial;}
+
+.content_page_tabs .resp-accordion {background: #050e23 !important;padding: 30px !important;}
+.content_page_tabs .resp-tab-active {
+background: rgb(25,151,203) !important;
+background: -moz-linear-gradient(45deg, rgba(25,151,203,1) 0%, rgba(40,107,178,1) 100%) !important;
+background: -webkit-linear-gradient(45deg, rgba(25,151,203,1) 0%,rgba(40,107,178,1) 100%) !important;
+background: linear-gradient(45deg, rgba(25,151,203,1) 0%,rgba(40,107,178,1) 100%) !important;
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1997cb', endColorstr='#286bb2',GradientType=1 ) !important;
+
+}
+@media (min-width: 1200px) {
+	.content_page_tabs .tabcontent_content {display: flex;align-items: center;justify-content: center;}
+	button.section_readmore_link.tab_btn {overflow: hidden;white-space: nowrap;}
+}
+@media (min-width: 768px) {
+	.content_page_tabs .tabcontent_contanier {height: 100%;position: relative;}
+	.content_page_tabs .tabcontent_content {position: absolute;bottom: 0;}
+}
+
 
 /* Open Hours */
 #open-display.open > .timerange.inactive,
