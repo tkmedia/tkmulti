@@ -6,6 +6,7 @@ $link_grid_hide_mobile = get_sub_field('flex_manual_link_grid_hide_mobile');
 $link_grid_break = get_sub_field('flex_manual_link_grid_break');
 $link_grid_block_align = get_sub_field('flex_manual_link_grid_block_align');
 $link_grid_style = get_sub_field('flex_manual_link_grid_style');
+$link_grid_slider = get_sub_field('flex_manual_link_grid_slider');
 
 $link_grid_type = get_sub_field( 'flex_manual_link_grid_type' );
 $link_grid_grid = get_sub_field( 'flex_manual_link_grid_grid' );
@@ -32,13 +33,13 @@ if ( $link_grid_hide_mobile && wp_is_mobile() ) {
 	<section id="section-<?php echo $row;?>-<?php echo $count;?>" class="page_flexible page_flexible_content section-<?php echo $row;?>-<?php echo $count;?> count_sections_<?php echo $count;?>" data-aos="<?php echo $link_grid_animation;?>">
 
 		<div class="masonary_grid_link <?php echo $link_grid_type; ?> grid-<?php echo $link_grid_style; ?> <?php echo $text_position; ?> flexible_page_element" itemprop="text">
-			<div class="masonary_grid_link_wrap">
+			<div class="masonary_grid_link_wrap masonary_grid-<?php echo $count;?>">
 
 				<?php if( $link_grid_grid ) { ?>
-				<div class="masonary_grid <?php if( $link_grid_bw ) { ?>masonary_bw<?php } ?>">
+				<div class="masonary_grid <?php if( $link_grid_bw ) { ?>masonary_bw<?php } ?><?php if( $link_grid_slider ) { ?> swiper-container<?php } ?>">
 
 					<?php if( $link_grid_type == 'box-layout' ) { ?>
-					<div class="layout row-flex center-xs">
+					<div class="layout <?php if( $link_grid_slider ) { ?>swiper-wrapper<?php } else { ?>row-flex center-xs<?php } ?>">
 					<?php while ( have_rows('flex_manual_link_grid_grid') ) : the_row();
 						$flex_masonary_img = get_sub_field('flex_masonary_img');
 						$flex_masonary_title = get_sub_field('flex_masonary_title');
@@ -46,7 +47,7 @@ if ( $link_grid_hide_mobile && wp_is_mobile() ) {
 						$flex_masonary_link = get_sub_field('flex_masonary_link');
 						$flex_masonary_title_color = get_sub_field('flex_masonary_title_color');
 					?>
-					    <div class="grid-item col-xs-<?php echo $m_xs_cols; ?> col-sm-<?php echo $m_sm_cols; ?> col-md-<?php echo $m_md_cols; ?> col-lg-<?php echo $m_lg_cols; ?>">
+					    <div class="grid-item <?php if( $link_grid_slider ) { ?>swiper-slide<?php } else { ?>col-xs-<?php echo $m_xs_cols; ?> col-sm-<?php echo $m_sm_cols; ?> col-md-<?php echo $m_md_cols; ?> col-lg-<?php echo $m_lg_cols; ?><?php } ?>">
 							<a href="<?php echo $flex_masonary_link; ?>" class="img_info_link">
 							<div class="grid-item-inner">
 								<div class="grid-item-inner-img-bg">
@@ -75,13 +76,13 @@ if ( $link_grid_hide_mobile && wp_is_mobile() ) {
 					</div>
 
 					<?php } elseif( $link_grid_type == 'vid-layout' ) { ?>
-					<div class="layout row-flex">
+					<div class="layout <?php if( $link_grid_slider ) { ?>swiper-wrapper<?php } else { ?>row-flex<?php } ?>">
 					<?php while ( have_rows('flex_manual_link_grid_grid') ) : the_row();
 						$flex_masonary_img = get_sub_field('flex_masonary_img');
 						$flex_masonary_vid_link = get_sub_field('flex_masonary_vid_link');
 						$flex_masonary_vid_title = get_sub_field('flex_masonary_vid_title');
 					?>
-					    <div class="grid-item col-xs-<?php echo $m_xs_cols; ?> col-sm-<?php echo $m_sm_cols; ?> col-md-<?php echo $m_md_cols; ?>">
+					    <div class="grid-item <?php if( $link_grid_slider ) { ?>swiper-slide<?php } else { ?>col-xs-<?php echo $m_xs_cols; ?> col-sm-<?php echo $m_sm_cols; ?> col-md-<?php echo $m_md_cols; ?><?php } ?>">
 							<a data-fancybox href="<?php echo $flex_masonary_vid_link; ?>">
 								<?php if( $flex_masonary_vid_title ) { ?>
 								<div class="flex_masonary_vid_title"><?php echo $flex_masonary_vid_title; ?></div>
@@ -90,7 +91,7 @@ if ( $link_grid_hide_mobile && wp_is_mobile() ) {
 								<?php echo wp_get_attachment_image( $flex_masonary_img, 'gallery-800' ); ?>
 								<div class="flex_masonary_content img_cen_cen">
 									<div class="flex_masonary_content_wrap">
-										<i class="fal fa-play-circle"></i>
+										<span class="video_item_icon"><i class="fas fa-play"></i></span>
 									</div>
 								</div>
 							</div>
@@ -134,13 +135,20 @@ if ( $link_grid_hide_mobile && wp_is_mobile() ) {
 					</div>
 
 					<?php } ?>
+					
+					<?php if( $link_grid_slider ) { ?>
+				    <!-- Add Arrows -->
+				    <div class="swiper-pagination"></div>
+				    <div class="swiper-button-next"></div>
+				    <div class="swiper-button-prev"></div>
+					<?php } ?>
 
 				</div>
 				<?php } ?>
 
 			</div>
 		</div>
-		<?php if( $link_grid_type == 'grid-layout' || $link_grid_type == 'flex-layout' ): ?>
+		<?php if( $link_grid_type == 'grid-layout' || $link_grid_type == 'flex-layout' || $link_grid_slider ): ?>
 		<script>
 		jQuery(function($) {
 			<?php if( $link_grid_type == 'grid-layout' ): ?>
@@ -171,6 +179,73 @@ if ( $link_grid_hide_mobile && wp_is_mobile() ) {
 			$('.flex-layout .grid-item').addClass('col-xs-12');
 			//$('.flex-layout .col_layout:nth-child(odd) .grid-item').addClass('col-sm-6');
 			<?php endif; ?>
+			
+			<?php if( $link_grid_slider ) { ?>
+			
+		    let options<?php echo $row;?><?php echo $count;?> = {};
+		    
+		    if ( $("#section-<?php echo $row;?>-<?php echo $count;?> .swiper-slide").length > 1 ) {
+		        options<?php echo $row;?><?php echo $count;?> = {
+		            //direction: 'horizontal',
+		            loop: true,
+		            slidesPerView : <?php echo $link_grid_count;?>,
+		            autoplayDisableOnInteraction: false,
+					pagination: {
+						el: '#section-<?php echo $row;?>-<?php echo $count;?> .swiper-pagination',
+						clickable: true,
+					},
+					navigation: {
+						nextEl: '#section-<?php echo $row;?>-<?php echo $count;?> .swiper-button-next',
+						prevEl: '#section-<?php echo $row;?>-<?php echo $count;?> .swiper-button-prev',
+					},
+		            paginationClickable: true,
+		            fadeEffect: {
+			            crossFade: true
+		            },
+					speed: 1000,
+					grabCursor: true,
+					watchSlidesProgress: true,
+					mousewheelControl: true,
+					keyboardControl: true,
+					//effect: 'fade',  
+					breakpoints: {
+						768: {
+							slidesPerView : 2,
+				        },
+						520: {
+							slidesPerView : 1,
+				        }
+					}
+					        
+		        }
+		        //$('#section-<?php echo $row;?>-<?php echo $count;?> .swiper-button-next').show();
+		        //$('#section-<?php echo $row;?>-<?php echo $count;?> .swiper-button-prev').show();
+		    } else {
+		        options<?php echo $row;?><?php echo $count;?> = {
+		            loop: false,
+		            slidesPerView : <?php echo $link_grid_count;?>,
+		            autoplay: false,
+		            watchOverflow: true,
+		            navigation: false,
+		        }
+		    }
+		    var topSlider<?php echo $row;?><?php echo $count;?> = new Swiper('#section-<?php echo $row;?>-<?php echo $count;?> .swiper-container ', options<?php echo $row;?><?php echo $count;?>);	
+		    
+		    if ( $("#section-<?php echo $row;?>-<?php echo $count;?> .swiper-slide:not(.swiper-slide-duplicate)").length > <?php echo $link_grid_count;?> ) {
+		        $('#section-<?php echo $row;?>-<?php echo $count;?> .swiper-button-next').show();
+		        $('#section-<?php echo $row;?>-<?php echo $count;?> .swiper-button-prev').show();
+		        $('#section-<?php echo $row;?>-<?php echo $count;?> .swiper-pagination').show();		    
+		    }
+		    
+		    if ($(window).width() < 991) {
+			    if ( $("#section-<?php echo $row;?>-<?php echo $count;?> .swiper-slide:not(.swiper-slide-duplicate)").length > 1 ) {
+					$('#section-<?php echo $row;?>-<?php echo $count;?> .swiper-pagination').show();
+			    }
+		    }							
+								    
+		    <?php } ?>		
+			
+			
 		});
 		</script>
 		<?php endif; ?>
