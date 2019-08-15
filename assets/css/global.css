@@ -2300,6 +2300,25 @@ span.si_services_item_icon i {font-weight: 300 !important;}
 .title_clean-underline h2.title-left:after, .title_clean-underline h3.title-left:after {left: 0;right: auto;}
 .title_clean-underline span {display: block;padding-top: 10px;}
 
+.flex_style_title_wrap.border-full, 
+.flex_style_title_wrap.border-part, 
+.flex_style_title_wrap.border-all {display: inline-block;position: relative;padding: 40px;}
+
+.flex_style_title_wrap.border-full {padding: 60px;position: relative;}
+.flex_style_title_wrap.border-full:before {content: '';top:0;right: 0;width: 50px;height: 50px;border-top:2px solid #83d1d9;border-right: 2px solid #83d1d9;position: absolute; }
+.flex_style_title_wrap.border-full:after {content: '';bottom:0;left: 0;width: 50px;height: 50px;border-bottom:2px solid #83d1d9;border-left: 2px solid #83d1d9;position: absolute; }
+.flex_style_title_wrap.border-full span:before {content: '';top:0;left: 0;width: 50px;height: 50px;border-top:2px solid #83d1d9;border-left: 2px solid #83d1d9;position: absolute; }
+.flex_style_title_wrap.border-full span:after {content: '';bottom:0;right: 0;width: 50px;height: 50px;border-bottom:2px solid #83d1d9;border-right: 2px solid #83d1d9;position: absolute; }
+.flex_style_title_wrap.border-part:before {content: '';top:0;left: 0;width: 50px;height: 50px;border-top:2px solid #83d1d9;border-left: 2px solid #83d1d9;position: absolute;}
+.flex_style_title_wrap.border-part:after {content: '';bottom:0;right: 0;width: 50px;height: 50px;border-bottom:2px solid #83d1d9;border-right: 2px solid #83d1d9;position: absolute;}
+
+.flex_style_title_wrap.border-full.border-big:before {width: 90px;height: 90px;}
+.flex_style_title_wrap.border-full.border-big:after {width: 90px;height: 90px;}
+.flex_style_title_wrap.border-full.border-big span:before {width: 90px;height: 90px;}
+.flex_style_title_wrap.border-full.border-big span:after {width: 90px;height: 90px;}
+.flex_style_title_wrap.border-part.border-big:before {width: 90px;height: 90px;}
+.flex_style_title_wrap.border-part.border-big:after {width: 90px;height: 90px;}
+
 /* Full Content */
 .content_one_column h2.section_title {font-size: 44px;padding-right: 15px;border-right: 3px solid #dedede;line-height: 1;}
 .content_one_column .section_subtitle, .content_one_column .section_subtitle p {font-size: 25px;font-weight: 600;padding-bottom: 10px;line-height: 1;}
