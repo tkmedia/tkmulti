@@ -220,6 +220,53 @@ $footer_fixed_form_btn = get_option( 'options_footer_fixed_form_btn' );
 					</div>	
 					<?php } ?>
 					<?php endif; ?>			
+
+					<?php if( get_row_layout() == 'footer_icon_list' ):
+							
+					$footer_icon_list_block_width = get_sub_field('footer_icon_list_block_width');
+					$footer_icon_list_mobile = get_sub_field('footer_icon_list_mobile');
+					$footer_icon_list_hide_mobile = get_sub_field('footer_icon_list_hide_mobile');
+					$footer_icon_list_list = get_sub_field('footer_icon_list_list');
+					$footer_icon_list_title = get_sub_field('footer_icon_list_title');
+					$footer_icon_list_title_size = get_sub_field('footer_icon_list_title_size');
+					$footer_icon_list_title_color = get_sub_field('footer_icon_list_title_color');
+					if ( $footer_icon_list_hide_mobile && wp_is_mobile() ) {
+					//HIDE ON MOBILE
+					} else { ?>
+					
+					<div id="footer-section-<?php echo $fcount;?>" class="footer_icon_list footer_content_cols <?php echo $footer_icon_list_mobile;?> <?php echo $footer_icon_list_block_width;?>">
+						<div class="footer-block footer-section-<?php echo $fcount;?>">
+							<div class="footer_block_inner">
+								<?php if( $footer_icon_list_title ){ ?>
+								<div class="footer_icon_list_title_wrap footer_title">
+									<div class="footer_icon_list_title" style="font-size:<?php echo $footer_icon_list_title_size; ?>px;color:<?php echo $footer_icon_list_title_color; ?>;"><?php echo $footer_icon_list_title; ?></div>
+								</div>
+								<?php } ?>
+								<?php if( $footer_icon_list_list ){ ?>
+									<div class="footer_icon_list_container">
+										<div class="footer_icon_list_row">
+											<ul class="footer_icon_list">
+												<?php while ( have_rows('footer_icon_list_list') ) : the_row(); 
+												$footer_icon_list_icon = get_sub_field('footer_icon_list_icon');
+												$footer_icon_list_text = get_sub_field('footer_icon_list_text');
+												$footer_icon_list_link = get_sub_field('footer_icon_list_link');
+												?>
+												<li class="footer_icon_list_item">
+													<a href="<?php echo $footer_icon_list_link; ?>">
+														<div class="footer_icon_list_icon"><?php echo $footer_icon_list_icon; ?></div>
+														<div class="footer_icon_list_text"><?php echo $footer_icon_list_text; ?></div>
+													</a>
+												</li>
+											    <?php endwhile; ?>
+											</ul>
+										</div>
+									</div>
+								<?php } ?>
+							</div>
+						</div>
+					</div>	
+					<?php } ?>
+					<?php endif; ?>			
 				
 					<?php if( get_row_layout() == 'footer_nav' ):
 							
