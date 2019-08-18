@@ -1246,10 +1246,15 @@ span.header_phone_num.footer_phone_num {display: block;}
 .footer_new_products .swiper-button-next, .footer_new_products .swiper-container-rtl .swiper-button-prev {right: 0; top: 60%;}
 .footer_new_products .swiper-button-prev, .footer_new_products .swiper-container-rtl .swiper-button-prev {left: 0; top: 60%;}
 
+.footer_title {padding-bottom: 10px;font-size: 20px;font-weight: 600;}
+.footer_icon_list_icon {display: inline-block;width: 35px;}
+.footer_icon_list_text {display: inline-block;}
+
 @media (max-width: 767px) {
 	.footer_logo_slide_img figure {margin: 0 10px;}
 	.contact_box_btn_inner {padding: 10px;}
 	.new_products_item_img {height: 130px;}
+	.footer_content_cols {padding-bottom: 30px;}
 }
 
 /* ## Sticky Footer
