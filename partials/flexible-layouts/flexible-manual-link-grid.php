@@ -15,6 +15,14 @@ $text_position = get_sub_field('flex_manual_link_grid_text_position');
 $link_grid_count = get_sub_field('flex_manual_link_grid_count');
 $link_grid_animation = get_sub_field('flex_manual_link_grid_animation');
 
+$manual_link_title = get_sub_field('flex_manual_link_title');
+$manual_link_title_size = get_sub_field('flex_manual_link_title_size');
+$manual_link_title_color = get_sub_field('flex_manual_link_title_color');
+$manual_link_title_align = get_sub_field('flex_manual_link_title_align');
+$manual_link_subtitle = get_sub_field('flex_manual_link_subtitle');
+$manual_link_subtitle_size = get_sub_field('flex_manual_link_subtitle_size');
+$manual_link_subtitle_color = get_sub_field('flex_manual_link_subtitle_color');
+
 	if ( $link_grid_count == 1 ) : $m_xs_cols = "12"; $m_sm_cols = "12"; $m_md_cols = "12"; $m_lg_cols = "12";
 	elseif ( $link_grid_count == 2 ) : $m_xs_cols = "12"; $m_sm_cols = "6"; $m_md_cols = "6"; $m_lg_cols = "6";
 	elseif ( $link_grid_count == 3 ) : $m_xs_cols = "6"; $m_sm_cols = "4"; $m_md_cols = "4"; $m_lg_cols = "4";
@@ -33,6 +41,18 @@ if ( $link_grid_hide_mobile && wp_is_mobile() ) {
 	<section id="section-<?php echo $row;?>-<?php echo $count;?>" class="page_flexible page_flexible_content section-<?php echo $row;?>-<?php echo $count;?> count_sections_<?php echo $count;?>" data-aos="<?php echo $link_grid_animation;?>">
 
 		<div class="masonary_grid_link <?php echo $link_grid_type; ?> grid-<?php echo $link_grid_style; ?> <?php echo $text_position; ?> flexible_page_element" itemprop="text">
+			
+			<?php if( $manual_link_title || $manual_link_subtitle ) { ?>
+			<div class="masonary_grid_link_title_wrap">
+				<?php if( $manual_link_title ) { ?>
+				<h2 class="section_title section_flex_title title_<?php echo $manual_link_title_align; ?>" style="text-align:<?php echo $manual_link_title_align; ?> !important;color:<?php echo $manual_link_subtitle_color; ?>;font-size:<?php echo $manual_link_title_size; ?>px;"><?php echo $manual_link_title; ?></h2>
+				<?php } ?>
+				<?php if( $manual_link_subtitle ) { ?>
+				<div class="section_subtitle title_<?php echo $manual_link_title_align; ?>" itemprop="headline" style="text-align:<?php echo $$manual_link_title_align; ?> !important;color:<?php echo $one_subtitle_color; ?>;font-size:<?php echo $manual_link_subtitle_size; ?>px;"><?php echo $manual_link_subtitle; ?></div>
+				<?php } ?>
+			</div>
+			<?php } ?>
+			
 			<div class="masonary_grid_link_wrap masonary_grid-<?php echo $count;?>">
 
 				<?php if( $link_grid_grid ) { ?>
