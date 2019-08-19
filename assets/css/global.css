@@ -1499,6 +1499,7 @@ button.main_btn:hover input[type="submit"] {color: #9e8b59 !important;}
 .swiper-pagination-bullet-active {background: #1f1f1f;}
 .swiper-pagination-bullet {width: 10px;height: 10px;margin: 0px 3px;}
 .swiper-pagination {right: 0;left: 0;}
+
 /* Home Masthead
 -------------------------------------------------------------- */
 #top-slider img {height: 100%;width: 100%;object-fit: cover;}
@@ -1715,6 +1716,10 @@ button.main_btn.style3:hover,
 #masthead_slider_controls .swiper-container-rtl .swiper-button-next:after,
 #masthead_slider_controls .swiper-button-next:after,
 #masthead_slider_controls .swiper-container-rtl .swiper-button-next:after {speak: none;font-style: normal;font-weight: 400;font-variant: normal;text-transform: none;line-height: 1;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;display: block;color: #333;font-size: 30px;}
+
+#main-top-slider.no_overlay .slides {background: none !important;}
+#main-top-slider.no_overlay .single-slider-img {background: none !important;opacity: 1 !important;}
+#main-top-slider.no_overlay .single-slider-img:after {background: none !important;}
 
 @media (min-width: 768px) {
 
