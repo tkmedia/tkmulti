@@ -101,6 +101,8 @@ if ( $link_grid_hide_mobile && wp_is_mobile() ) {
 						$flex_masonary_img = get_sub_field('flex_masonary_img');
 						$flex_masonary_vid_link = get_sub_field('flex_masonary_vid_link');
 						$flex_masonary_vid_title = get_sub_field('flex_masonary_vid_title');
+						preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $flex_masonary_vid_link, $match);
+						$youtube_id = $match[1];
 					?>
 					    <div class="grid-item <?php if( $link_grid_slider ) { ?>swiper-slide<?php } else { ?>col-xs-<?php echo $m_xs_cols; ?> col-sm-<?php echo $m_sm_cols; ?> col-md-<?php echo $m_md_cols; ?><?php } ?>">
 							<a data-fancybox href="<?php echo $flex_masonary_vid_link; ?>">
@@ -108,7 +110,11 @@ if ( $link_grid_hide_mobile && wp_is_mobile() ) {
 								<div class="flex_masonary_vid_title"><?php echo $flex_masonary_vid_title; ?></div>
 								<?php } ?>
 							<div class="grid-item-inner">
+					            <?php if( $flex_masonary_img ) { ?>
 								<?php echo wp_get_attachment_image( $flex_masonary_img, 'gallery-800' ); ?>
+					            <?php } else { ?>						            
+					            <img src="https://img.youtube.com/vi/<?php echo $youtube_id; ?>/maxresdefault.jpg">
+					            <?php } ?>
 								<div class="flex_masonary_content img_cen_cen">
 									<div class="flex_masonary_content_wrap">
 										<span class="video_item_icon"><i class="fas fa-play"></i></span>
