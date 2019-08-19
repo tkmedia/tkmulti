@@ -5,6 +5,7 @@ $slider_effect = get_post_meta( get_the_ID(), 'page_top_slider_effect', true );
 $title_location = get_post_meta( get_the_ID(), 'page_masthead_title_location', true );
 $title_hor = get_post_meta( get_the_ID(), 'page_masthead_title_hor', true );
 $title_ver = get_post_meta( get_the_ID(), 'page_masthead_title_ver', true );
+$slider_overlay = get_field('page_top_slider_overlay');
 
 $btn_type = get_post_meta( get_the_ID(), 'page_masthead_btn_type', true );
 $btn_style = get_post_meta( get_the_ID(), 'page_masthead_button_style', true );
@@ -65,7 +66,7 @@ $home_masthead_content_title = get_field('home_masthead_content_title','option')
 		set_query_var( 'masthead_bottom_divider_section_position', $masthead_bottom_divider_section_position );	
 		?>	
 	<!-- Top Slider -->
-		<div id="main-top-slider">
+		<div id="main-top-slider" class="<?php if( $slider_overlay ) { ?>no_overlay<?php } else { ?>show_overlay<?php } ?>">
 
 		<?php if( $page_top_slider_content == 'youtube_vid' ) { ?>
 				
