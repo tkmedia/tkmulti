@@ -869,7 +869,7 @@ li.social-item {display: inline-block;color: #8e8f90;position: relative;padding:
 li.social-item button.footer-toggle-contact {background: transparent;cursor: pointer;color: #8e8f90;padding: 0;height: auto;font-size: inherit;}
 li.social-item.site_phone {border-right: 1px solid #8e8f90;padding-right: 20px;margin-right: 10px;font-size: 20px;}
 li.social-item.site_phone i {color: #fff;padding-left: 10px;}
-li.social-item.site_phone a {color: #fff !important;}
+li.social-item.site_phone a {color: #fff;}
 
 .header_light li.social-item {color: #222;}
 .header_light li.social-item.site_phone a {color: #222 !important;}
