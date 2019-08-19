@@ -15,6 +15,14 @@ $testimonial_slider_title_color = get_sub_field('testimonial_slider_title_color'
 $testimonial_slider_content_color = get_sub_field('testimonial_slider_content_color');
 $testimonial_slider_name_color = get_sub_field('testimonial_slider_name_color');
 
+$testimonial_slider_title = get_sub_field('testimonial_slider_title');
+$testimonial_slider_title_size = get_sub_field('testimonial_slider_title_size');
+$testimonial_slider_title_color = get_sub_field('testimonial_slider_title_color');
+$testimonial_slider_title_align = get_sub_field('testimonial_slider_title_align');
+$testimonial_slider_subtitle = get_sub_field('testimonial_slider_subtitle');
+$testimonial_slider_subtitle_size = get_sub_field('testimonial_slider_subtitle_size');
+$testimonial_slider_subtitle_color = get_sub_field('testimonial_slider_subtitle_color');
+
 if ( $testimonial_slider_hide_mobile && wp_is_mobile() ) {
 //HIDE ON MOBILE
 } else { ?>
@@ -24,6 +32,18 @@ if ( $testimonial_slider_hide_mobile && wp_is_mobile() ) {
 
 		<div class="testimonial_slider flexible_page_element" itemprop="text">
 			<div class="testimonial_slider_container testimonial_slider_<?php echo $testimonial_slider_style;?>">
+				
+				<?php if( $testimonial_slider_title || $testimonial_slider_subtitle ) { ?>
+				<div class="masonary_grid_link_title_wrap">
+					<?php if( $testimonial_slider_title ) { ?>
+					<h2 class="section_title section_flex_title title_<?php echo $testimonial_slider_title_align; ?>" style="text-align:<?php echo $testimonial_slider_title_align; ?> !important;color:<?php echo $testimonial_slider_subtitle_color; ?>;font-size:<?php echo $testimonial_slider_title_size; ?>px;"><?php echo $testimonial_slider_title; ?></h2>
+					<?php } ?>
+					<?php if( $testimonial_slider_subtitle ) { ?>
+					<div class="section_subtitle title_<?php echo $testimonial_slider_title_align; ?>" itemprop="headline" style="text-align:<?php echo $$testimonial_slider_title_align; ?> !important;color:<?php echo $testimonial_slider_subtitle_size; ?>;font-size:<?php echo $testimonial_slider_subtitle_size; ?>px;"><?php echo $testimonial_slider_subtitle; ?></div>
+					<?php } ?>
+				</div>
+				<?php } ?>	
+							
 				<div class="testimonial_slider_wrap">
 					<div class="testimonial_slider_row">
 						<div class="testimonial_slider_col">
