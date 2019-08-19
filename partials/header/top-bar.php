@@ -7,6 +7,7 @@ $show_phone = get_field('header_top_panel_phone_show','option');
 $show_nav = get_field('header_top_panel_nav_show','option');
 $panel_bg_color = get_field('header_top_panel_bg_color','option');
 $panel_font_color = get_field('header_top_panel_font_color','option');
+$panel_text = get_field('header_top_panel_right','option');
 
 if( have_rows('header_top_nav_left','option') || $header_phone || $show_nav ): ?>
 <div id="header-info">
@@ -34,6 +35,11 @@ if( have_rows('header_top_nav_left','option') || $header_phone || $show_nav ): ?
 	    </li>
 	    <?php } ?>
 	</ul>
+	
+	<?php if( $panel_text ) { ?>
+	<div id="panel_text" class="panel_text"><?php echo $panel_text; ?></div>
+	<?php } ?>	
+	
 	<?php if( $show_nav ) { ?>
 	<style>#menu-panel>li {color:<?php echo $panel_font_color; ?>!important;}</style>
 	<div id="panel-nav" class="panel-nav" role="navigation">
