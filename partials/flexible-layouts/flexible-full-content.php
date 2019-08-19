@@ -62,6 +62,7 @@ if ( $one_hide_mobile && wp_is_mobile() ) {
 						<?php echo $one_column_text; ?>
 					</div>
 					<?php if( $one_column_btn ) { ?>
+					<div class="one_column_btn section_readmore_link_wrap">
 						<?php if( $one_col_link_type == 'page_link' ): ?>
 						<a href="<?php echo $button_page_link; ?>" class="<?php echo $one_col_btn_color; ?>">
 						<?php endif; ?>	
@@ -72,7 +73,8 @@ if ( $one_hide_mobile && wp_is_mobile() ) {
 						<a data-fancybox data-src="#popop-form-<?php echo $row;?>-<?php echo $count;?>" href="javascript:;">
 						<?php endif; ?>	
 						<button class="section_readmore_link watch_btn hoverLink"><?php echo $one_column_btn; ?></button>
-					</a>
+						</a>
+					</div>
 					<?php } ?>
 				</div>
 			</div>
