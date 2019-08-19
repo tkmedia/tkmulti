@@ -1593,6 +1593,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 #home_masthead h1.entry-title.masthead_content_title {-webkit-animation: 3s ease 0s normal forwards 1 fadeInUp;animation: 3s ease 0s normal forwards 1 fadeInUp;animation-delay: .5s;opacity: 0;}
 #home_masthead .custom_icon_btn.masthead_btn {-webkit-animation: 3s ease 0s normal forwards 1 fadeInUp;animation: 3s ease 0s normal forwards 1 fadeInUp;animation-delay: 1s;opacity: 0;}
 .masthead_full_slider .masthead_content > .masthead_content_container {max-width: 800px !important;}
+.masthead_content.slider_content_bottom .masthead_content_container {max-width: 100% !important;}
+.masthead_content.slider_content_bottom .masthead_content_container_wrap {padding: 0;}
 @-webkit-keyframes fadeInUp {
 from {opacity: 0;-webkit-transform: translate3d(0, 100%, 0);transform: translate3d(0, 100%, 0);}
 to {opacity: 1;-webkit-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);}
