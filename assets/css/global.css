@@ -2493,6 +2493,9 @@ button.section_readmore_link.button_icon_right .flex_main_button_img {padding-le
 
 .flex_bulletin_list_title.top_title {padding-bottom: 30px;}
 
+.bulletin_list_img_bw img{-webkit-filter: grayscale(100%);filter: grayscale(100%); /* FF 35+ */}
+.flex_bulletin_list_item_wrap:hover .bulletin_list_img_bw img  {transition: filter .5s ease-in-out;-webkit-filter: grayscale(0%);filter: grayscale(0%);}
+
 @media (min-width: 768px) {
 	.flex_bulletin_list_icon {max-width: 100%;padding: 0px;margin: auto;width: 120px;}
 	.flex_bulletin_list_icon .list_icon, .flex_bulletin_list_icon_inner {/* position: relative; *//* height: 0; *//* padding: 0 0 80% 0; *//* margin: 0 auto !important; *//* max-width: 120px; */}
