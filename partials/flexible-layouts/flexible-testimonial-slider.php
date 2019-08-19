@@ -15,13 +15,13 @@ $testimonial_slider_title_color = get_sub_field('testimonial_slider_title_color'
 $testimonial_slider_content_color = get_sub_field('testimonial_slider_content_color');
 $testimonial_slider_name_color = get_sub_field('testimonial_slider_name_color');
 
-$testimonial_slider_title = get_sub_field('testimonial_slider_title');
-$testimonial_slider_title_size = get_sub_field('testimonial_slider_title_size');
-$testimonial_slider_title_color = get_sub_field('testimonial_slider_title_color');
-$testimonial_slider_title_align = get_sub_field('testimonial_slider_title_align');
-$testimonial_slider_subtitle = get_sub_field('testimonial_slider_subtitle');
-$testimonial_slider_subtitle_size = get_sub_field('testimonial_slider_subtitle_size');
-$testimonial_slider_subtitle_color = get_sub_field('testimonial_slider_subtitle_color');
+$testimonial_slider_title = get_sub_field('testimonial_slider_main_title');
+$testimonial_slider_title_size = get_sub_field('testimonial_slider_main_title_size');
+$testimonial_slider_title_color = get_sub_field('testimonial_slider_main_title_color');
+$testimonial_slider_title_align = get_sub_field('testimonial_slider_main_title_align');
+$testimonial_slider_subtitle = get_sub_field('testimonial_slider_main_subtitle');
+$testimonial_slider_subtitle_size = get_sub_field('testimonial_slider_main_subtitle_size');
+$testimonial_slider_subtitle_color = get_sub_field('testimonial_slider_main_subtitle_color');
 
 if ( $testimonial_slider_hide_mobile && wp_is_mobile() ) {
 //HIDE ON MOBILE
