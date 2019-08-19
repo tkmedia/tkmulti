@@ -30,7 +30,7 @@ if( have_rows('header_top_nav_left','option') || $header_phone || $show_nav ): ?
 	    <li class="social-item site_phone" id="top_panel_phone">
 		    <a href="tel:<?php echo $header_phone; ?>" style="color:<?php echo $panel_font_color; ?>;">
 			    <span class="site_phone_pre"><?php echo $header_phone; ?></span>
-			    <i class="fas fa-phone-volume" style="color:<?php echo $panel_font_color; ?>!important;"></i>
+			    <i class="fas fa-phone-volume" style="color:<?php echo $panel_font_color; ?>;"></i>
 		    </a>
 	    </li>
 	    <?php } ?>
