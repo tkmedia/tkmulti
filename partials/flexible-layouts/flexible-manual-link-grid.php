@@ -113,7 +113,7 @@ if ( $link_grid_hide_mobile && wp_is_mobile() ) {
 					            <?php if( $flex_masonary_img ) { ?>
 								<?php echo wp_get_attachment_image( $flex_masonary_img, 'gallery-800' ); ?>
 					            <?php } else { ?>						            
-					            <img src="https://img.youtube.com/vi/<?php echo $youtube_id; ?>/maxresdefault.jpg">
+					            <img src="https://img.youtube.com/vi/<?php echo $youtube_id; ?>/hqdefault.jpg">
 					            <?php } ?>
 								<div class="flex_masonary_content img_cen_cen">
 									<div class="flex_masonary_content_wrap">
