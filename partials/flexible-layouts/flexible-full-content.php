@@ -86,9 +86,7 @@ if ( $one_hide_mobile && wp_is_mobile() ) {
 		$popup_contact_subtext = get_option( 'options_default_flex_form_subtitle' );
 		?>
 		<div style="display: none;max-width: 700px;" id="popop-form-<?php echo $row;?>-<?php echo $count;?>" class="button-popop-form">
-		
 			<div class="button-popop-form-wrap">
-				
 				<div class="button-popop-form-row">
 					<div class="button-popop-form-col form-image col-xs-12">
 						<?php if( $popup_contact_title ) { ?>
@@ -110,9 +108,7 @@ if ( $one_hide_mobile && wp_is_mobile() ) {
 						</div>
 					</div>
 				</div>
-				
 			</div>
-		
 		</div>
 		<?php endif; ?>
 		
