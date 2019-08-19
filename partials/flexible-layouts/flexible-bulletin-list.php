@@ -64,6 +64,7 @@ if ( $bulletin_list_hide_mobile && wp_is_mobile() ) {
 						$bulletin_list_text = get_sub_field('bulletin_list_text');
 						$bulletin_list_text_color = get_sub_field('bulletin_list_text_color');
 						$bulletin_list_text_size = get_sub_field('bulletin_list_text_size');
+						$bulletin_list_icon_img_bw = get_sub_field('bulletin_list_icon_img_bw');
 						
 					?>
 						<?php if( $bulletin_layout == 'row-flex' ) { ?>
@@ -86,7 +87,7 @@ if ( $bulletin_list_hide_mobile && wp_is_mobile() ) {
 								
 								<?php if( $bulletin_list_icon || $bulletin_list_img ) { ?>	
 									<?php if( $bulletin_list_style == 'bulletin_img' ): ?>
-									<div class="flex_bulletin_list_icon bulletin_list_img">
+									<div class="flex_bulletin_list_icon bulletin_list_img<?php if( $bulletin_list_icon_img_bw ) { ?> bulletin_list_img_bw<?php } ?>">
 										<div class="list_icon">
 											<?php echo wp_get_attachment_image( $bulletin_list_img, $bulletin_list_img_size ); ?>
 										</div>
