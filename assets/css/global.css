@@ -1776,7 +1776,7 @@ button.main_btn.style3:hover,
 /* Clean top Masthead
 -------------------------------------------------------------- */
 .masthead_clean #top-slider .single-slider-img,
-.masthead_clean #top-slider .slides {height: 30vh !important;}
+.masthead_clean #top-slider .slides {height: 50vh !important;}
 .masthead_clean .masthead_clean_content {position: absolute;bottom: 0;width: 100%;right: 0;left: 0;z-index: 99;background: rgba(0,0,0,0.2);padding: 10px 0;top: 0;}
 .masthead_clean .masthead_content {position: relative;}
 .masthead_clean .masthead_content_container_wrap {margin: auto;}
