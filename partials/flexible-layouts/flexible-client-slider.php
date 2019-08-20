@@ -8,6 +8,7 @@ $client_slider_break = get_sub_field('flex_client_slider_break');
 $client_slider_block_align = get_sub_field('flex_client_slider_block_align');
 
 $client_src = get_sub_field('flex_client_src');
+$client_type = get_sub_field('flex_client_slider_image_type');
 $client_slider_count = get_sub_field('flex_client_slider_count');
 $client_slider_count_mobile = get_sub_field('flex_client_slider_count_mobile');
 $client_slider_size = get_sub_field('flex_client_slider_size');
@@ -25,7 +26,9 @@ if ( $client_slider_hide_mobile && wp_is_mobile() ) {
 	<section id="section-<?php echo $row;?>-<?php echo $count;?>" class="page_flexible page_flexible_content section-<?php echo $row;?>-<?php echo $count;?> count_sections_<?php echo $count;?>" data-aos="<?php echo $client_slider_animation;?>">
 		
 		<div class="client_slider flexible_page_element" itemprop="text">
-			<div class="client_slider_wrap slider-<?php echo $count;?> type-<?php echo $client_src;?> <?php echo $client_slider_image_effect;?>">				
+			<div class="client_slider_wrap slider-<?php echo $count;?> type-<?php echo $client_src;?> <?php echo $client_slider_image_effect;?> client-<?php echo $client_type;?>">
+				
+			<?php if( $client_type == 'slider' ) { ?>				
 
 				<?php if( $client_src == 'option' ) { ?>
 
@@ -172,7 +175,95 @@ if ( $client_slider_hide_mobile && wp_is_mobile() ) {
 					
 				}); 				
 				</script>								
+			
+			
+			<?php 
+			if( $client_type == 'grid' ) {				
+
+			if ( $client_slider_count == 1 ) : $c_xs_cols = $client_slider_count_mobile; $g_md_cols = "12";
+			elseif ( $client_slider_count == 2 ) : $c_xs_cols = $client_slider_count_mobile; $c_md_cols = "6";
+			elseif ( $client_slider_count == 3 ) : $c_xs_cols = $client_slider_count_mobile; $c_md_cols = "4";
+			elseif ( $client_slider_count == 4 ) : $c_xs_cols = $client_slider_count_mobile; $c_md_cols = "3";
+			elseif ( $client_slider_count == 5 ) : $c_xs_cols = $client_slider_count_mobile; $c_md_cols = "20"; 
+			elseif ( $client_slider_count == 6 ) : $c_xs_cols = $client_slider_count_mobile; $c_md_cols = "2";
+			elseif ( $client_slider_count == 7 ) : $c_xs_cols = $client_slider_count_mobile; $c_md_cols = "seven"; 
+			elseif ( $client_slider_count == 8 ) : $c_xs_cols = $client_slider_count_mobile; $c_md_cols = "eight";  
+			endif; ?>
+
+				<?php if( $client_src == 'option' ) { ?>
+
+				<div class="client_slider_col gallery_slider_image">
+					<div class="summary-gallery-new">
+						<div class="full-nomargin">
+						    <div class="client-top-<?php echo $count;?> row-flex">
+					            <?php foreach( $client_slider_image_options as $image ): ?>
+					                <div class="client_slide_item col-xs-<?php echo $c_xs_cols; ?> col-md-<?php echo $g_md_cols; ?>">
+						                <div class="client_slide_item_inner">
+										<?php echo wp_get_attachment_image( $image['ID'], $client_slider_size); ?>
+						                </div>
+					                </div>
+					            <?php endforeach; ?>
+						    </div>
+						</div>
+					</div>
+				</div>
 				
+				<?php } elseif( $client_src == 'from-page' ) { ?>
+
+				<div class="client_slider_col gallery_slider_image">
+					<div class="summary-gallery-new">
+						<div class="full-nomargin">
+						    <div class="client-top-<?php echo $count;?> row-flex">
+					            <?php foreach( $client_slider_image_page as $image ): ?>
+					                <div class="client_slide_item col-xs-<?php echo $c_xs_cols; ?> col-md-<?php echo $g_md_cols; ?>">
+						                <div class="client_slide_item_inner">
+										<?php echo wp_get_attachment_image( $image['ID'], $client_slider_size); ?>
+						                </div>
+					                </div>
+					            <?php endforeach; ?>
+						    </div>
+						</div>
+					</div>
+				</div>
+
+				<?php } elseif( $client_src == 'from-page-repeater' ) { ?>
+
+				<div class="client_slider_col gallery_slider_image">
+					<div class="summary-gallery-new">
+						<div class="full-nomargin">
+						    <div class="client-top-<?php echo $count;?> row-flex">
+								<?php $client_item = 1; while ( have_rows('flex_client_slider_repeater') ) : the_row();
+								$client_img = get_sub_field('flex_client_slider_r_img');
+								$client_title = get_sub_field('flex_client_slider_r_title');
+								$client_title_color = get_sub_field('flex_client_slider_r_title_color');
+								$client_subtitle = get_sub_field('flex_client_slider_r_subtitle');
+								$client_link = get_sub_field('flex_client_slider_r_link');
+								?>
+									<div class="client_slide_item col-xs-<?php echo $c_xs_cols; ?> col-md-<?php echo $g_md_cols; ?>">
+									<?php if( $client_link ){ ?><a href="<?php echo $client_link; ?>"><?php } ?>
+										<div class="client_slide_item_inner">
+											<div class="client_slide_item_img">
+											 <?php echo wp_get_attachment_image( $client_img, $client_slider_size ); ?>
+											</div>
+											<?php if( $client_title ){ ?>
+												<p class="client_title" style="color:<?php echo $client_title_color; ?>;"><?php echo $client_title; ?></p>
+											<?php } ?>	
+											<?php if( $client_subtitle ) { ?>
+												<div class="client_subtitle" style="color:<?php echo $client_title_color; ?>;"><?php echo $client_subtitle; ?></div>
+											<?php } ?>
+										</div> 
+									<?php if( $client_link ){ ?></a><?php } ?>
+									</div>
+								<?php $client_item++; endwhile; ?>
+						    </div>
+						</div>
+					</div>
+				</div>
+
+				<?php } ?>
+
+			<?php } ?>
+			
 			</div>
 		</div>
 	</section>
