@@ -154,6 +154,13 @@ $home_masthead_content_title = get_field('home_masthead_content_title','option')
 								<?php } ?>
 							</h1>
 							<?php } ?>
+							<?php if ( !is_front_page() ) { ?>
+							<div class="yoast_breadcrumb">
+								<div class="yoast_breadcrumb_wrap">
+								<?php if ( function_exists('yoast_breadcrumb') ) {yoast_breadcrumb('<div id="breadcrumbs">','</div>');} ?>
+								</div>
+							</div>
+							<?php } ?>
 							<?php if( $page_masthead_text ) { ?>
 							<div class="home_masthead_text" style="color: <?php echo($text_color); ?>;"><?php echo $page_masthead_text; ?></div>
 							<?php } ?>
@@ -192,7 +199,7 @@ $home_masthead_content_title = get_field('home_masthead_content_title','option')
 							</h1>
 							<?php } ?>
 							<?php if ( !is_front_page() ) { ?>
-							<div class="yoast_breadcrumb">
+							<div class="yoast_breadcrumb breadcrumb_content_in_slider">
 								<div class="yoast_breadcrumb_wrap">
 								<?php if ( function_exists('yoast_breadcrumb') ) {yoast_breadcrumb('<div id="breadcrumbs">','</div>');} ?>
 								</div>
