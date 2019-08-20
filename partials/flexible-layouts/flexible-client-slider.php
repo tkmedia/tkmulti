@@ -18,6 +18,14 @@ $client_slider_image_effect = get_sub_field( 'flex_client_slider_image_effect' )
 $client_slider_image = get_option( 'options_client_slider_image' );
 $client_slider_image_options = get_field('client_slider_image','option');
 
+$flex_client_title = get_sub_field('flex_client_title');
+$flex_client_title_size = get_sub_field('flex_client_title_size');
+$flex_client_title_color = get_sub_field('flex_client_title_color');
+$flex_client_title_align = get_sub_field('flex_client_title_align');
+$flex_client_subtitle = get_sub_field('flex_client_subtitle');
+$flex_client_subtitle_size = get_sub_field('flex_client_subtitle_size');
+$flex_client_subtitle_color = get_sub_field('flex_client_subtitle_color');
+
 if ( $client_slider_hide_mobile && wp_is_mobile() ) {
 //HIDE ON MOBILE
 } else { ?>
@@ -26,6 +34,18 @@ if ( $client_slider_hide_mobile && wp_is_mobile() ) {
 	<section id="section-<?php echo $row;?>-<?php echo $count;?>" class="page_flexible page_flexible_content section-<?php echo $row;?>-<?php echo $count;?> count_sections_<?php echo $count;?>" data-aos="<?php echo $client_slider_animation;?>">
 		
 		<div class="client_slider flexible_page_element" itemprop="text">
+			
+			<?php if( $flex_client_title || $flex_client_subtitle ) { ?>
+			<div class="masonary_grid_link_title_wrap">
+				<?php if( $flex_client_title ) { ?>
+				<h2 class="section_title section_flex_title title_<?php echo $flex_client_title_align; ?>" style="text-align:<?php echo $flex_client_title_align; ?> !important;color:<?php echo $flex_client_subtitle_color; ?>;font-size:<?php echo $flex_client_title_size; ?>px;"><?php echo $flex_client_title; ?></h2>
+				<?php } ?>
+				<?php if( $flex_client_subtitle ) { ?>
+				<div class="section_subtitle title_<?php echo $flex_client_title_align; ?>" itemprop="headline" style="text-align:<?php echo $flex_client_title_align; ?> !important;color:<?php echo $flex_client_subtitle_color; ?>;font-size:<?php echo $flex_client_subtitle_size; ?>px;"><?php echo $flex_client_subtitle; ?></div>
+				<?php } ?>
+			</div>
+			<?php } ?>
+			
 			<div class="client_slider_wrap slider-<?php echo $count;?> type-<?php echo $client_src;?> <?php echo $client_slider_image_effect;?> client-<?php echo $client_type;?>">
 				
 			<?php if( $client_type == 'slider' ) : ?>				
