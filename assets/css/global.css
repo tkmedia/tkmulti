@@ -3094,7 +3094,7 @@ transition:         all 0.3s ease-in-out;
 /* ## Client Slider */
 .type-from-page .client_slide_item {height: 150px;}
 .type-from-page .client_slide_item_inner {height: 100%;padding: 10px 15px;}
-.type-from-page .client_slide_item_inner img {object-fit: contain;height: 100%;width: 100%;filter: gray;filter: grayscale(1);-webkit-filter: grayscale(1);opacity: .5;}
+.type-from-page .client_slide_item_inner img {object-fit: contain;height: 100%;width: 100%;}
 .type-from-page.bw-effect .client_slide_item_inner img {filter: gray;filter: grayscale(1);-webkit-filter: grayscale(1);opacity: .5;}
 .type-from-page.bw-effect-hover .client_slide_item_inner:hover img {filter: gray;filter: grayscale(1);-webkit-filter: grayscale(1);opacity: .5;}
 
