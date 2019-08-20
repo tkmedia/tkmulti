@@ -48,7 +48,7 @@ if ( $link_grid_hide_mobile && wp_is_mobile() ) {
 				<h2 class="section_title section_flex_title title_<?php echo $manual_link_title_align; ?>" style="text-align:<?php echo $manual_link_title_align; ?> !important;color:<?php echo $manual_link_subtitle_color; ?>;font-size:<?php echo $manual_link_title_size; ?>px;"><?php echo $manual_link_title; ?></h2>
 				<?php } ?>
 				<?php if( $manual_link_subtitle ) { ?>
-				<div class="section_subtitle title_<?php echo $manual_link_title_align; ?>" itemprop="headline" style="text-align:<?php echo $$manual_link_title_align; ?> !important;color:<?php echo $one_subtitle_color; ?>;font-size:<?php echo $manual_link_subtitle_size; ?>px;"><?php echo $manual_link_subtitle; ?></div>
+				<div class="section_subtitle title_<?php echo $manual_link_title_align; ?>" itemprop="headline" style="text-align:<?php echo $manual_link_title_align; ?> !important;color:<?php echo $manual_link_subtitle_color; ?>;font-size:<?php echo $manual_link_subtitle_size; ?>px;"><?php echo $manual_link_subtitle; ?></div>
 				<?php } ?>
 			</div>
 			<?php } ?>
