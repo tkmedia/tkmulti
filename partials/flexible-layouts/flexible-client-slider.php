@@ -28,7 +28,7 @@ if ( $client_slider_hide_mobile && wp_is_mobile() ) {
 		<div class="client_slider flexible_page_element" itemprop="text">
 			<div class="client_slider_wrap slider-<?php echo $count;?> type-<?php echo $client_src;?> <?php echo $client_slider_image_effect;?> client-<?php echo $client_type;?>">
 				
-			<?php if( $client_type == 'slider' ) { ?>				
+			<?php if( $client_type == 'slider' ) : ?>				
 
 				<?php if( $client_src == 'option' ) { ?>
 
@@ -176,9 +176,10 @@ if ( $client_slider_hide_mobile && wp_is_mobile() ) {
 				}); 				
 				</script>								
 			
+			<?php endif; ?>
 			
 			<?php 
-			if( $client_type == 'grid' ) {				
+			if( $client_type == 'grid' ) :				
 
 			if ( $client_slider_count == 1 ) : $c_xs_cols = $client_slider_count_mobile; $g_md_cols = "12";
 			elseif ( $client_slider_count == 2 ) : $c_xs_cols = $client_slider_count_mobile; $c_md_cols = "6";
@@ -262,7 +263,7 @@ if ( $client_slider_hide_mobile && wp_is_mobile() ) {
 
 				<?php } ?>
 
-			<?php } ?>
+			<?php endif; ?>
 			
 			</div>
 		</div>
