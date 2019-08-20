@@ -152,6 +152,7 @@ if ( $testimonial_slider_hide_mobile && wp_is_mobile() ) {
 					breakpoints: {
 						768: {
 							navigation: false,
+							slidesPerView : 1,
 				        }
 					}
 					        
