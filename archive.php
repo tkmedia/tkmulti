@@ -45,7 +45,7 @@ $archive_article_style = get_field('archive_article_style', $post_id);
 					<div id="main-top-slider">
 					
 						<div class="top-slider-bg top-slider-bg-multiple">
-						    <div id="top-slider" class="swiper-container style3 swiper-scale-effect" style="direction: ltr;height: 30vh !important;">
+						    <div id="top-slider" class="swiper-container style3 swiper-scale-effect" style="direction: ltr;height: 50vh !important;">
 						        <?php if ($archive_main_img) { ?>
 						        <div class="slides single-slider">
 							        <div class="single-slider-img single-slider-item">
