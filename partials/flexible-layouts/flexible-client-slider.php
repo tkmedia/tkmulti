@@ -13,6 +13,7 @@ $client_slider_count_mobile = get_sub_field('flex_client_slider_count_mobile');
 $client_slider_size = get_sub_field('flex_client_slider_size');
 
 $client_slider_image_page = get_sub_field( 'flex_client_slider_image' );
+$client_slider_image_effect = get_sub_field( 'flex_client_slider_image_effect' );
 $client_slider_image = get_option( 'options_client_slider_image' );
 $client_slider_image_options = get_field('client_slider_image','option');
 
@@ -24,7 +25,7 @@ if ( $client_slider_hide_mobile && wp_is_mobile() ) {
 	<section id="section-<?php echo $row;?>-<?php echo $count;?>" class="page_flexible page_flexible_content section-<?php echo $row;?>-<?php echo $count;?> count_sections_<?php echo $count;?>" data-aos="<?php echo $client_slider_animation;?>">
 		
 		<div class="client_slider flexible_page_element" itemprop="text">
-			<div class="client_slider_wrap slider-<?php echo $count;?> type-<?php echo $client_src;?>">				
+			<div class="client_slider_wrap slider-<?php echo $count;?> type-<?php echo $client_src;?> <?php echo $client_slider_image_effect;?>">				
 
 				<?php if( $client_src == 'option' ) { ?>
 
