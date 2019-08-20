@@ -12,6 +12,7 @@ $client_slider_count = get_sub_field('flex_client_slider_count');
 $client_slider_count_mobile = get_sub_field('flex_client_slider_count_mobile');
 $client_slider_size = get_sub_field('flex_client_slider_size');
 
+$client_slider_image_page = get_sub_field( 'flex_client_slider_image' );
 $client_slider_image = get_option( 'options_client_slider_image' );
 $client_slider_image_options = get_field('client_slider_image','option');
 
@@ -57,7 +58,7 @@ if ( $client_slider_hide_mobile && wp_is_mobile() ) {
 						<div class="full-nomargin">
 						    <div class="swiper-container client-top-<?php echo $count;?>">
 							    <div class="swiper-wrapper">
-					            <?php foreach( $client_slider_image as $image ): ?>
+					            <?php foreach( $client_slider_image_page as $image ): ?>
 					                <div class="client_slide_item swiper-slide">
 						                <div class="client_slide_item_inner">
 										<?php echo wp_get_attachment_image( $image['ID'], $client_slider_size); ?>
