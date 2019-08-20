@@ -181,7 +181,7 @@ if ( $client_slider_hide_mobile && wp_is_mobile() ) {
 			<?php 
 			if( $client_type == 'grid' ) :				
 
-			if ( $client_slider_count == 1 ) : $c_xs_cols = $client_slider_count_mobile; $g_md_cols = "12";
+			if ( $client_slider_count == 1 ) : $c_xs_cols = $client_slider_count_mobile; $c_md_cols = "12";
 			elseif ( $client_slider_count == 2 ) : $c_xs_cols = $client_slider_count_mobile; $c_md_cols = "6";
 			elseif ( $client_slider_count == 3 ) : $c_xs_cols = $client_slider_count_mobile; $c_md_cols = "4";
 			elseif ( $client_slider_count == 4 ) : $c_xs_cols = $client_slider_count_mobile; $c_md_cols = "3";
@@ -198,7 +198,7 @@ if ( $client_slider_hide_mobile && wp_is_mobile() ) {
 						<div class="full-nomargin">
 						    <div class="client-top-<?php echo $count;?> row-flex">
 					            <?php foreach( $client_slider_image_options as $image ): ?>
-					                <div class="client_slide_item col-xs-<?php echo $c_xs_cols; ?> col-md-<?php echo $g_md_cols; ?>">
+					                <div class="client_slide_item col-xs-<?php echo $c_xs_cols; ?> col-md-<?php echo $c_md_cols; ?>">
 						                <div class="client_slide_item_inner">
 										<?php echo wp_get_attachment_image( $image['ID'], $client_slider_size); ?>
 						                </div>
@@ -216,7 +216,7 @@ if ( $client_slider_hide_mobile && wp_is_mobile() ) {
 						<div class="full-nomargin">
 						    <div class="client-top-<?php echo $count;?> row-flex">
 					            <?php foreach( $client_slider_image_page as $image ): ?>
-					                <div class="client_slide_item col-xs-<?php echo $c_xs_cols; ?> col-md-<?php echo $g_md_cols; ?>">
+					                <div class="client_slide_item col-xs-<?php echo $c_xs_cols; ?> col-md-<?php echo $c_md_cols; ?>">
 						                <div class="client_slide_item_inner">
 										<?php echo wp_get_attachment_image( $image['ID'], $client_slider_size); ?>
 						                </div>
@@ -240,7 +240,7 @@ if ( $client_slider_hide_mobile && wp_is_mobile() ) {
 								$client_subtitle = get_sub_field('flex_client_slider_r_subtitle');
 								$client_link = get_sub_field('flex_client_slider_r_link');
 								?>
-									<div class="client_slide_item col-xs-<?php echo $c_xs_cols; ?> col-md-<?php echo $g_md_cols; ?>">
+									<div class="client_slide_item col-xs-<?php echo $c_xs_cols; ?> col-md-<?php echo $c_md_cols; ?>">
 									<?php if( $client_link ){ ?><a href="<?php echo $client_link; ?>"><?php } ?>
 										<div class="client_slide_item_inner">
 											<div class="client_slide_item_img">
