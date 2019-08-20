@@ -223,7 +223,7 @@ $home_masthead_content_title = get_field('home_masthead_content_title','option')
 				</div>
 				<?php if ( !is_front_page() && $title_location == 'slider_content_inn' ) { ?>
 				<div class="yoast_breadcrumb breadcrumb_content_in_slider">
-					<div class="yoast_breadcrumb_wrap">
+					<div class="yoast_breadcrumb_wrap wrap">
 					<?php if ( function_exists('yoast_breadcrumb') ) {yoast_breadcrumb('<div id="breadcrumbs">','</div>');} ?>
 					</div>
 				</div>
