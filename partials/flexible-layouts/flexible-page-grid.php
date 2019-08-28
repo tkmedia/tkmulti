@@ -128,7 +128,7 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 								<?php endif; ?>
 								
 								<?php
-								if( $grid_show_info && $article_grid_title_position == 'bottom' || $article_grid_title_position == 'top' ) { 
+								if( $grid_show_info && $article_grid_title_position == 'bottom' || $grid_show_info && $article_grid_title_position == 'top' ) { 
 								$excerpt = get_field('page_masthead_excerpt');
 								if( $excerpt ) { ?>
 								<div class="articles_grid_item_text">	
@@ -207,7 +207,7 @@ if ( $article_grid_hide_mobile && wp_is_mobile() ) {
 										<h3 itemprop="name" class="page_link_grid_item_title no-line" style="font-size: <?php echo $artcile_grid_title_size;?>px;color:<?php echo $artcile_grid_title_color;?>;"><?php the_title(); ?></h3>
 										<?php 
 										$excerpt = get_field('page_masthead_excerpt');
-										if( $excerpt ) { ?>
+										if( $excerpt && $grid_show_info ) { ?>
 										<div class="articles_grid_item_text">	
 											<div class="page_links_item_intro">
 												<?php 
