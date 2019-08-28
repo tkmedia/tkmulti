@@ -74,6 +74,48 @@ jQuery(function($) {
 /* Page Element Blocks */
 /* ---------------------------------------------------------------------- */	
 
+	//* ## CSS Object-fit IE */
+	var userAgent, ieReg, ie;
+	userAgent = window.navigator.userAgent;
+	ieReg = /msie|Trident.*rv[ :]*11\./gi;
+	ie = ieReg.test(userAgent);
+	IEobjectfitCover = $('.flex_image_img.img_cover, #home_masthead .single-slider-objectfit, .articles_grid_item_row.cat_slider_box .page_img, .product_main_slider .gallery-thumbs .slide-inner, .masonary_grid .layout .grid-item .grid-item-inner, .gallery_slider .gallery_slide_item .gallery_slide_item_img');
+	IEobjectfitContain = $('.articles_grid_item_row.cat_page_slider .page_img, footer .new_products_item_img, .articles_grid_item_container .page_img, .product_main_slider .gallery-top .slide-inner');
+	
+	if(ie) {
+		IEobjectfitCover.each(function () {
+			var $container = $(this),
+			    imgUrl = $container.find("img").prop("src");
+			if (imgUrl) {
+			  $container.css("backgroundImage", 'url(' + imgUrl + ')').addClass("cover-object-fit");
+			}
+		});
+		
+		IEobjectfitContain.each(function () {
+			var $container = $(this),
+			    imgUrl = $container.find("img").prop("src");
+			if (imgUrl) {
+			  $container.css("backgroundImage", 'url(' + imgUrl + ')').addClass("contain-object-fit");
+			}
+		});
+	}
+
+	objectfitCover = $('');
+	objectfitContain = $('.client_slider_wrap.type-from-page-repeater .client_slide_item_inner .client_slide_item_img .client_img');
+	objectfitCover.each(function () {
+		var $container = $(this),
+		    imgUrl = $container.find("img").prop("src");
+		if (imgUrl) {
+		  $container.css("backgroundImage", 'url(' + imgUrl + ')').addClass("cover-object-fit");
+		}
+	});
+	objectfitContain.each(function () {
+		var $container = $(this),
+		    imgUrl = $container.find("img").prop("src");
+		if (imgUrl) {
+		  $container.css("backgroundImage", 'url(' + imgUrl + ')').addClass("contain-object-fit");
+		}
+	});
     
 	//* ## Home Main slider */
 	var topSliderCount = $('#top-slider.style2').find('.swiper-slide').length;
