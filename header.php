@@ -26,6 +26,9 @@
 	wp_head();
 	tha_head_bottom();
 	?>
+	
+	<?php the_field('site_head_code','option');?>
+	
 </head>
 
 <?php
