@@ -19,6 +19,6 @@ endif; ?>
 <?php endif; ?>
 
 <?php wp_footer(); ?>
-
+<?php the_field('site_footer_code','option');?>
 </body>
 </html>
