@@ -4043,9 +4043,9 @@ only screen and (max-width: 760px),
 .flex_content_row_divider_bottom svg {display: block;width: -webkit-calc(100% + 1.3px);width: calc(100% + 1.3px);position: relative;}
 .flex_content_row_divider_top.style-opacity-clouds {width: -webkit-calc(200% + 1.3px);width: calc(200% + 1.3px);}
 @media (max-width: 767px) {
-	.flex_content_row_divider_top svg {width: calc(200% + 1.3px);}
-	.flex_content_row_divider_bottom svg {width: calc(200% + 1.3px);}
-	.flex_content_row_divider_top.style-opacity-clouds {width: -webkit-calc(300% + 1.3px);width: calc(300% + 1.3px);}
+	.flex_content_row_divider_top svg {width: calc(200% + 1.3px);overflow: hidden;}
+	.flex_content_row_divider_bottom svg {width: calc(200% + 1.3px);overflow: hidden;}
+	.flex_content_row_divider_top.style-opacity-clouds {width: -webkit-calc(300% + 1.3px);width: calc(300% + 1.3px);overflow: hidden;}
 }
 
 .flex_content_row_divider_bottom.style-right-tilt svg,
