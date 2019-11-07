@@ -1012,6 +1012,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 	.header_logo_center_no_nav #branding {margin: 0 auto !important;}
 
 }
+
+header#header-container.front_header_container.logo_side_right .top_panel_side .header_wrapper .header_topbar_container {display: none;}
+
 /* Header Branding logo
 -------------------------------------------------------------- */
 #branding {order: 1;display: flex;align-items: center;width: 200px;}
